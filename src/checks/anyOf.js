@@ -1,0 +1,35 @@
+// @flow
+import _ from 'lodash';
+import type {Context} from '../index.js';
+import root from './root.js';
+import util from '../util.js';
+
+const anyOf = (schema: Object, symbol: string, context: Context): Array<string> => {
+  if (schema.anyOf) {
+    const countSym = context.gensym();
+    const errorSym = context.gensym();
+    const subcontext = {
+      ...context,
+      error: () => [`${errorSym} = true;`],
+    };
+    const checks = _.flatMap(schema.anyOf, (subSchema) => {
+      return [
+        `${errorSym} = false;`,
+        ...root(subSchema, symbol, subcontext).map(util.indent),
+        `${errorSym} && ${countSym}++;`,
+      ];
+    });
+    return [
+      `var ${countSym} = 0;`,
+      `var ${errorSym};`,
+      ...checks,
+      `if (${countSym} === ${schema.anyOf.length}) {`,
+      ...context.error().map(util.indent),
+      '}',
+    ];
+  } else {
+    return [];
+  }
+};
+
+export default anyOf;

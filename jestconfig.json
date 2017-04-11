@@ -1,0 +1,7 @@
+{
+  "roots": ["src"],
+  "moduleFileExtensions": ["js", "json"],
+  "transform": {
+    "\\.jsx?$": "babel-jest"
+  }
+}
