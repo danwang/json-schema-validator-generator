@@ -1,6 +1,6 @@
 // @flow
 import util from '../util.js';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 
 // Generates all checks for
 //   - minimum/maximum (number)

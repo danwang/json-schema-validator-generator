@@ -1,7 +1,7 @@
 // @flow
 import path from 'path';
 import fs from 'fs';
-import generate from '../index.js';
+import generateValidator from '../generate-validator.js';
 
 const WHITELIST = [
   // 'additionalItems.json',
@@ -44,12 +44,11 @@ const singleTest = (test, code, validator) => {
 
 const testGroup = (group) => {
   const {description, schema, tests} = group;
-  const code = generate(schema, 'json');
+  const code = generateValidator(schema, 'validator');
   it('matches snapshot', () => {
     expect(code).toMatchSnapshot();
   });
-  // $FlowFixMe Need Function to test codegen
-  const validator = Function('json', code); // eslint-disable-line no-new-func
+  const validator = eval(`(function(){return ${code};})()`); // eslint-disable-line no-eval
   describe(description, () => {
     tests.forEach((test) => singleTest(test, code, validator));
   });

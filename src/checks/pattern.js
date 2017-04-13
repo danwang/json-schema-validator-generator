@@ -1,6 +1,6 @@
 // @flow
 import util from '../util.js';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 
 const pattern = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (schema.pattern) {

@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
 import util from '../util.js';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 
 const schemaPredicate = (schema: Object, symbol: string): ?string => {
   if (typeof schema.type === 'string') {

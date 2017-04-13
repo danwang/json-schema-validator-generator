@@ -1,6 +1,6 @@
 // @flow
 import _ from 'lodash';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 import root from './root.js';
 import util from '../util.js';
 

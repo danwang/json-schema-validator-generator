@@ -11,7 +11,7 @@ import properties from './properties.js';
 import required from './required.js';
 import type from './type.js';
 
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 
 const root = (schema: Object, symbol: string, context: Context): Array<string> => {
   return [

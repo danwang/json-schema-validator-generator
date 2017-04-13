@@ -2,7 +2,7 @@
 import _ from 'lodash';
 import root from './root.js';
 import util from '../util.js';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 
 const additionalChecks = (
   properties: ?Object,

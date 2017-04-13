@@ -1,6 +1,6 @@
 // @flow
 import util from '../util.js';
-import type {Context} from '../index.js';
+import type {Context} from '../types.js';
 import root from './root.js';
 
 const not = (schema: Object, symbol: string, context: Context): Array<string> => {
