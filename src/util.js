@@ -11,7 +11,7 @@ const gengensym = (prefix: string = 'v') => {
   return () => `${prefix}${i++}`;
 };
 
-type Type = (
+export type BaseType = (
   'integer' |
   'number' |
   'string' |
@@ -20,7 +20,7 @@ type Type = (
   'boolean' |
   'null'
 );
-const primitivePredicate = (type: Type, symbol: string): string => {
+const primitivePredicate = (type: BaseType, symbol: string): string => {
   switch (type) {
     case 'integer':
       return `typeof ${symbol} === 'number' && ${symbol} % 1 === 0`;
@@ -52,8 +52,12 @@ const ifs = (predicate: string, body: string | Array<string>): Array<string> => 
 
 // Wraps lines of code in a check such that it only executes when the value of
 // `symbol` is the type
-const typeCheck = (type: Type, symbol: string, lines: Array<string>): Array<string> => {
-  return ifs(primitivePredicate(type, symbol), lines);
+const typeCheck = (type: BaseType, symbol: string, lines: Array<string>): Array<string> => {
+  if (lines.length === 0) {
+    return [];
+  } else {
+    return ifs(primitivePredicate(type, symbol), lines);
+  }
 };
 
 export default {

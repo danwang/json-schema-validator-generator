@@ -151,11 +151,15 @@ return v0;"
 
 exports[`allOf.json matches snapshot 3`] = `
 "var v0 = [];
-if (json > 30) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json > 30) {
+    v0.push(true);
+  }
 }
-if (json < 20) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json < 20) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
@@ -170,8 +174,10 @@ v2 = false;
   }
 v2 && v1++;
 v2 = false;
-  if (json < 2) {
-    v2 = true;
+  if (typeof json === 'number') {
+    if (json < 2) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 if (v1 === 2) {
@@ -185,13 +191,17 @@ exports[`anyOf.json matches snapshot 2`] = `
 var v1 = 0;
 var v2;
 v2 = false;
-  if (json.length > 2) {
-    v2 = true;
+  if (typeof json === 'string') {
+    if (json.length > 2) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 v2 = false;
-  if (json.length < 4) {
-    v2 = true;
+  if (typeof json === 'string') {
+    if (json.length < 4) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 if (v1 === 2) {
@@ -221,8 +231,10 @@ exports[`default.json matches snapshot 2`] = `
 if (json && typeof json === 'object' && !Array.isArray(json)) {
   var v1 = json.bar;
   if (v1 !== undefined) {
-    if (v1.length < 4) {
-      v0.push(true);
+    if (typeof v1 === 'string') {
+      if (v1.length < 4) {
+        v0.push(true);
+      }
     }
     if (!(typeof v1 === 'string')) {
       v0.push(true);
@@ -351,8 +363,10 @@ return v0;"
 
 exports[`maxLength.json matches snapshot 1`] = `
 "var v0 = [];
-if (json.length > 2) {
-  v0.push(true);
+if (typeof json === 'string') {
+  if (json.length > 2) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
@@ -369,16 +383,20 @@ return v0;"
 
 exports[`maximum.json matches snapshot 1`] = `
 "var v0 = [];
-if (json > 3) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json > 3) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
 
 exports[`maximum.json matches snapshot 2`] = `
 "var v0 = [];
-if (json >= 3) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json >= 3) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
@@ -395,8 +413,10 @@ return v0;"
 
 exports[`minLength.json matches snapshot 1`] = `
 "var v0 = [];
-if (json.length < 2) {
-  v0.push(true);
+if (typeof json === 'string') {
+  if (json.length < 2) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
@@ -413,16 +433,20 @@ return v0;"
 
 exports[`minimum.json matches snapshot 1`] = `
 "var v0 = [];
-if (json < 1.1) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json < 1.1) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
 
 exports[`minimum.json matches snapshot 2`] = `
 "var v0 = [];
-if (json <= 1.1) {
-  v0.push(true);
+if (typeof json === 'number') {
+  if (json <= 1.1) {
+    v0.push(true);
+  }
 }
 return v0;"
 `;
@@ -495,8 +519,10 @@ v2 = false;
   }
 v2 && v1++;
 v2 = false;
-  if (json < 2) {
-    v2 = true;
+  if (typeof json === 'number') {
+    if (json < 2) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 if (v1 !== 2 - 1) {
@@ -510,13 +536,17 @@ exports[`oneOf.json matches snapshot 2`] = `
 var v1 = 0;
 var v2;
 v2 = false;
-  if (json.length < 2) {
-    v2 = true;
+  if (typeof json === 'string') {
+    if (json.length < 2) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 v2 = false;
-  if (json.length > 4) {
-    v2 = true;
+  if (typeof json === 'string') {
+    if (json.length > 4) {
+      v2 = true;
+    }
   }
 v2 && v1++;
 if (v1 !== 2 - 1) {
@@ -578,8 +608,10 @@ if (json && typeof json === 'object' && !Array.isArray(json)) {
       v3 = true;
     }
     if (v1.match(/aaa*/)) {
-      if (v2 > 20) {
-        v0.push(true);
+      if (typeof v2 === 'number') {
+        if (v2 > 20) {
+          v0.push(true);
+        }
       }
       v3 = true;
     }
