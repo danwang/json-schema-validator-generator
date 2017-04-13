@@ -4,62 +4,67 @@ import root from './root.js';
 import util from '../util.js';
 import type {Context} from '../index.js';
 
-const additionalBody = (
-  additionalProperties: Object | false,
-  symbol: string,
-  context: Context,
-): Array<string> => {
-  if (additionalProperties === false) {
-    return context.error();
-  } else {
-    return root(additionalProperties, symbol, context);
-  }
-};
-
-const _additional = (
-  additionalProperties: Object | false,
-  hitSym: string,
-  valSym: string,
-  context: Context,
-): Array<string> => {
-  return util.ifs(
-    `${hitSym} === false`,
-    additionalBody(additionalProperties, valSym, context),
-  );
-};
-
-const _additionalProperties = (
+const additionalChecks = (
   properties: ?Object,
   patternProperties: ?Object,
-  additionalProperties: ?Object,
+  additionalProperties: void | Object | false,
   keySym: string,
   valSym: string,
-  hitSym: string,
   context: Context,
 ): Array<string> => {
-  // Check all properties
-  const propertyChecks = _.flatMap(properties, (subSchema, key) => util.ifs(
-    `${keySym} === "${key}"`,
-    [
-      ...root(subSchema, valSym, context),
-      `${hitSym} = true;`,
-    ],
-  ));
+  // This generates a block of code like
+  //   if (key === "key1") { (check for subschema) }
+  //   if (key === "key2") { (check for subschema) }
+  //   if (key.match(/pattern1/)) { (check for subschema) }
+  //   if (key.match(/pattern2/)) { (check for subschema) }
+  //   if (!hit) { (check for additionalProperties subschema) }
+  const propertyChecks = _.map(properties, (subSchema, key) => ({
+    predicate: `${keySym} === "${key}"`,
+    subSchema,
+  }));
+  const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
+    predicate: `${keySym}.match(/${pattern}/)`,
+    subSchema,
+  }));
+  const allChecks = [...propertyChecks, ...patternChecks];
 
-  const patternChecks = _.flatMap(patternProperties, (subSchema, pattern) => {
-    return util.ifs(
-      `${keySym}.match(/${pattern}/)`,
+  if (additionalProperties === undefined) {
+    // There are properties/patternProperties, but no additionalProperties. In
+    // this case, we don't need to mark non-matches
+    return _.flatMap(allChecks, ({predicate, subSchema}) => util.ifs(
+      predicate,
+      root(subSchema, valSym, context),
+    ));
+  } else if (allChecks.length === 0) {
+    // There are no properties nor patternProperties, but additionalProperties.
+    // In this case, we can always run additionalProperties checks.
+    if (additionalProperties === false) {
+      return context.error();
+    } else {
+      return root(additionalProperties, valSym, context);
+    }
+  } else {
+    // There are both properties/patternProperties and additionalProperties. In
+    // this case, we need to check if we've hit a property/patternProperty to
+    // decide whether or not to check additionalProperties.
+    const hitSym = context.gensym();
+    const checks = _.flatMap(allChecks, ({predicate, subSchema}) => util.ifs(
+      predicate,
       [
         ...root(subSchema, valSym, context),
         `${hitSym} = true;`,
       ],
+    ));
+    const additionalCheck = util.ifs(
+      `${hitSym} === false`,
+      additionalProperties === false ? context.error() : root(additionalProperties, valSym, context),
     );
-  });
-
-  return [
-    ...propertyChecks,
-    ...patternChecks,
-  ];
+    return [
+      `var ${hitSym} = false;`,
+      ...checks,
+      ...additionalCheck,
+    ];
+  }
 };
 
 const properties = (schema: Object, symbol: string, context: Context): Array<string> => {
@@ -76,25 +81,17 @@ const properties = (schema: Object, symbol: string, context: Context): Array<str
     //   }
     const keySym = context.gensym();
     const valSym = context.gensym();
-    const hitSym = context.gensym();
 
     const loop = [
       `for (var ${keySym} in ${symbol}) {`,
       util.indent(`var ${valSym} = ${symbol}[${keySym}];`),
-      util.indent(`var ${hitSym} = false;`),
-      ..._additionalProperties(
+      ...additionalChecks(
         schema.properties,
         schema.patternProperties,
         schema.additionalProperties,
         keySym,
         valSym,
-        hitSym,
         context,
-      ).map(util.indent),
-      ...(
-        schema.additionalProperties !== undefined ?
-        _additional(schema.additionalProperties, hitSym, valSym, context) :
-        []
       ).map(util.indent),
       '}',
     ];

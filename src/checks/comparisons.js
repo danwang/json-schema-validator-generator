@@ -7,7 +7,6 @@ import type {Context} from '../index.js';
 //   - minLength/maxLength (string)
 //   - minItems/maxItems (array)
 //   - minProperties/maxProperties (object)
-
 const comparison = (symbol: string, comparator: string, base: any, error: Array<string>): Array<string> => {
   if (base !== undefined) {
     return util.ifs(`${symbol} ${comparator} ${base}`, error);

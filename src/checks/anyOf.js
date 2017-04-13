@@ -15,7 +15,7 @@ const anyOf = (schema: Object, symbol: string, context: Context): Array<string> 
     const checks = _.flatMap(schema.anyOf, (subSchema) => {
       return [
         `${errorSym} = false;`,
-        ...root(subSchema, symbol, subcontext).map(util.indent),
+        ...root(subSchema, symbol, subcontext),
         `${errorSym} && ${countSym}++;`,
       ];
     });
