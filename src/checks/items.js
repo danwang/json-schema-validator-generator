@@ -10,9 +10,10 @@ const items = (schema: Object, symbol: string, context: Context): Array<string> 
       const item = context.gensym();
       return [
         `var ${item} = ${symbol}[${i}];`,
-        `if (${item} !== undefined) {`,
-        ...root(subSchema, item, context).map(util.indent),
-        '}',
+        ...util.ifs(
+          `${item} !== undefined`,
+          root(subSchema, item, context),
+        ),
       ];
     });
   } else if (schema.items) {

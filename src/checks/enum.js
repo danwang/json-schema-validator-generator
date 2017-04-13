@@ -8,31 +8,29 @@ const _enum = (schema: Object, symbol: string, context: Context): Array<string> 
     const match = context.gensym();
     const checks = _.flatMap(schema.enum, (value) => {
       if (typeof value === 'number' || typeof value === 'boolean') {
-        return [
-          `if (${symbol} === ${value}) {`,
-          util.indent(`${match}++;`),
-          '}',
-        ];
+        return util.ifs(
+          `${symbol} === ${value}`,
+          `${match}++;`,
+        );
       } else if (typeof value === 'string') {
-        return [
-          `if (${symbol} === "${value}") {`,
-          util.indent(`${match}++;`),
-          '}',
-        ];
+        return util.ifs(
+          `${symbol} === "${value}"`,
+          `${match}++;`,
+        );
       } else {
-        return [
-          `if (JSON.stringify(${symbol}) === '${JSON.stringify(value)}') {`,
-          util.indent(`${match}++;`),
-          '}',
-        ];
+        return util.ifs(
+          `JSON.stringify(${symbol}) === '${JSON.stringify(value)}'`,
+          `${match}++;`,
+        );
       }
     });
     return [
       `var ${match} = 0;`,
       ...checks,
-      `if (${match} === 0) {`,
-      ...context.error().map(util.indent),
-      '}',
+      ...util.ifs(
+        `${match} === 0`,
+        context.error(),
+      ),
     ];
   } else {
     return [];

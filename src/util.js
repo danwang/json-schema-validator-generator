@@ -41,14 +41,19 @@ const primitivePredicate = (type: Type, symbol: string): string => {
   }
 };
 
+const ifs = (predicate: string, body: string | Array<string>): Array<string> => {
+  const bodyLines = (typeof body === 'string') ? [body] : body;
+  return [
+    `if (${predicate}) {`,
+    ...bodyLines.map(indent),
+    '}',
+  ];
+};
+
 // Wraps lines of code in a check such that it only executes when the value of
 // `symbol` is the type
 const typeCheck = (type: Type, symbol: string, lines: Array<string>): Array<string> => {
-  return [
-    `if (${primitivePredicate(type, symbol)}) {`,
-    ...lines.map(indent),
-    '}',
-  ];
+  return ifs(primitivePredicate(type, symbol), lines);
 };
 
 export default {
@@ -56,5 +61,6 @@ export default {
   indentLines,
   gengensym,
   primitivePredicate,
+  ifs,
   typeCheck,
 };

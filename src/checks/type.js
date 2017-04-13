@@ -24,11 +24,10 @@ const schemaPredicate = (schema: Object, symbol: string): ?string => {
 const type = (schema: Object, symbol: string, context: Context): Array<string> => {
   const check = schemaPredicate(schema, symbol);
   if (check) {
-    return [
-      `if (!(${check})) {`,
-      ...context.error().map(util.indent),
-      '}',
-    ];
+    return util.ifs(
+      `!(${check})`,
+      context.error(),
+    );
   } else {
     return [];
   }

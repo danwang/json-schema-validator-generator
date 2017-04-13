@@ -22,11 +22,10 @@ const _additional = (
   valSym: string,
   context: Context,
 ): Array<string> => {
-  return [
-    `if (${hitSym} === false) {`,
-    ...additionalBody(additionalProperties, valSym, context).map(util.indent),
-    '}',
-  ];
+  return util.ifs(
+    `${hitSym} === false`,
+    additionalBody(additionalProperties, valSym, context),
+  );
 };
 
 const _additionalProperties = (
@@ -39,22 +38,22 @@ const _additionalProperties = (
   context: Context,
 ): Array<string> => {
   // Check all properties
-  const propertyChecks = _.flatMap(properties, (subSchema, key) => {
-    return [
-      `if (${keySym} === "${key}") {`,
-      ...root(subSchema, valSym, context).map(util.indent),
-      util.indent(`${hitSym} = true;`),
-      '}',
-    ];
-  });
+  const propertyChecks = _.flatMap(properties, (subSchema, key) => util.ifs(
+    `${keySym} === "${key}"`,
+    [
+      ...root(subSchema, valSym, context),
+      `${hitSym} = true;`,
+    ],
+  ));
 
   const patternChecks = _.flatMap(patternProperties, (subSchema, pattern) => {
-    return [
-      `if (${keySym}.match(/${pattern}/)) {`,
-      ...root(subSchema, valSym, context).map(util.indent),
-      util.indent(`${hitSym} = true;`),
-      '}',
-    ];
+    return util.ifs(
+      `${keySym}.match(/${pattern}/)`,
+      [
+        ...root(subSchema, valSym, context),
+        `${hitSym} = true;`,
+      ],
+    );
   });
 
   return [
@@ -106,9 +105,10 @@ const properties = (schema: Object, symbol: string, context: Context): Array<str
       const sym = context.gensym();
       return [
         `var ${sym} = ${symbol}.${key};`,
-        `if (${sym} !== undefined) {`,
-        ...root(subSchema, sym, context).map(util.indent),
-        '}',
+        ...util.ifs(
+          `${sym} !== undefined`,
+          root(subSchema, sym, context),
+        ),
       ];
     });
     return util.typeCheck('object', symbol, checks);

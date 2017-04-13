@@ -13,9 +13,10 @@ const not = (schema: Object, symbol: string, context: Context): Array<string> =>
     return [
       `var ${errorSym} = false;`,
       ...root(schema.not, symbol, subcontext),
-      `if (!${errorSym}) {`,
-      ...context.error().map(util.indent),
-      '}',
+      ...util.ifs(
+        `!${errorSym}`,
+        context.error(),
+      ),
     ];
   } else {
     return [];

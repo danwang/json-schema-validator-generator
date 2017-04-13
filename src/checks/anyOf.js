@@ -23,9 +23,10 @@ const anyOf = (schema: Object, symbol: string, context: Context): Array<string> 
       `var ${countSym} = 0;`,
       `var ${errorSym};`,
       ...checks,
-      `if (${countSym} === ${schema.anyOf.length}) {`,
-      ...context.error().map(util.indent),
-      '}',
+      ...util.ifs(
+        `${countSym} === ${schema.anyOf.length}`,
+        context.error(),
+      ),
     ];
   } else {
     return [];

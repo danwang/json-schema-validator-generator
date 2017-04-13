@@ -39,9 +39,10 @@ const oneOf = (schema: Object, symbol: string, context: Context): Array<string> 
       `var ${countSym} = 0;`,
       `var ${errorSym};`,
       ...checks,
-      `if (${countSym} !== ${schema.oneOf.length} - 1) {`,
-      ...context.error().map(util.indent),
-      '}',
+      ...util.ifs(
+        `${countSym} !== ${schema.oneOf.length} - 1`,
+        context.error(),
+      ),
     ];
   } else {
     return [];
