@@ -44,7 +44,7 @@ const singleTest = (test, code, validator) => {
 
 const testGroup = (group) => {
   const {description, schema, tests} = group;
-  const code = generateValidator(schema, 'validator');
+  const code = generateValidator(schema);
   it('matches snapshot', () => {
     expect(code).toMatchSnapshot();
   });

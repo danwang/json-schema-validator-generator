@@ -1,46 +1,46 @@
 // @flow
+/* eslint-disable no-use-before-define */
 import _ from 'lodash';
 
 type MixedType = {type: 'mixed'};
-
 type BooleanType = {type: 'boolean'};
 type NullType = {type: 'null'};
 type NumberType = {type: 'number'};
 type StringType = {type: 'string'};
 
-type ExactType = {
+export type ExactType = {
   type: 'exact',
   value: mixed,
 };
-type OptionalType = {
+export type OptionalType = {
   type: 'optional',
-  childType: FlowType, // eslint-disable-line no-use-before-define
+  child: FlowType,
 };
-type ArrayType = {
+export type ArrayType = {
   type: 'array',
-  itemType: FlowType, // eslint-disable-line no-use-before-define
+  child: FlowType,
 };
-type TupleType = {
+export type TupleType = {
   type: 'tuple',
-  childTypes: Array<FlowType>, // eslint-disable-line no-use-before-define
+  children: Array<FlowType>,
 };
-type RecordType = {
+export type RecordType = {
   type: 'record',
   fields: {
-    [key: string]: FlowType, // eslint-disable-line no-use-before-define
+    [key: string]: FlowType,
   },
 };
-type MapType = {
+export type MapType = {
   type: 'map',
-  valueType: FlowType, // eslint-disable-line no-use-before-define
+  child: FlowType,
 };
-type UnionType = {
+export type UnionType = {
   type: 'union',
-  childTypes: Array<FlowType>, // eslint-disable-line no-use-before-define
+  children: Array<FlowType>,
 };
-type IntersectionType = {
+export type IntersectionType = {
   type: 'intersection',
-  childTypes: Array<FlowType>, // eslint-disable-line no-use-before-define
+  children: Array<FlowType>,
 };
 
 export type FlowType = (
@@ -66,13 +66,13 @@ export const Number: NumberType = {type: 'number'};
 export const String: StringType = {type: 'string'};
 
 export const Exact = (value: mixed): ExactType => ({type: 'exact', value});
-export const Optional = (childType: FlowType): OptionalType => ({type: 'optional', childType});
-export const Array = (itemType: FlowType): ArrayType => ({type: 'array', itemType});
-export const Tuple = (childTypes: Array<FlowType>): TupleType => ({type: 'tuple', childTypes});
+export const Optional = (child: FlowType): OptionalType => ({type: 'optional', child});
+export const Array = (child: FlowType): ArrayType => ({type: 'array', child});
+export const Tuple = (children: Array<FlowType>): TupleType => ({type: 'tuple', children});
 export const Record = (fields: {[key: string]: FlowType}): RecordType => ({type: 'record', fields});
-export const Map = (valueType: FlowType): MapType => ({type: 'map', valueType});
-export const Union = (childTypes: Array<FlowType>): UnionType => ({type: 'union', childTypes});
-export const Intersection = (childTypes: Array<FlowType>): IntersectionType => ({type: 'intersection', childTypes});
+export const Map = (child: FlowType): MapType => ({type: 'map', child});
+export const Union = (children: Array<FlowType>): UnionType => ({type: 'union', children});
+export const Intersection = (children: Array<FlowType>): IntersectionType => ({type: 'intersection', children});
 
 const flowType = (schema: Object): FlowType => {
   if (schema.enum) {
@@ -84,31 +84,25 @@ const flowType = (schema: Object): FlowType => {
   } else if (schema.type) {
     if (typeof schema.type === 'string') {
       switch (schema.type) {
-        case 'boolean':
-          return Boolean;
-        case 'null':
-          return Null;
-        case 'integer':
-        case 'number':
-          return Number;
-        case 'string':
-          return String;
-        case 'object':
-          return objectFlowType(schema); // eslint-disable-line no-use-before-define
-        case 'array':
-          return arrayFlowType(schema); // eslint-disable-line no-use-before-define
-        default:
-          return Mixed;
+        case 'boolean': return Boolean;
+        case 'null': return Null;
+        case 'integer': return Number;
+        case 'number': return Number;
+        case 'string': return String;
+        case 'object': return objectFlowType(schema);
+        case 'array': return arrayFlowType(schema);
+        default: return Mixed;
       }
     } else {
-      // type can be either:
-      //   - A string
-      //   - An array of strings or schemas
-      // so we transform to an array of schemas and reduce later
+      // type can be either a string or an array of strings or schemas, so we
+      // transform to an array of schemas and reduce later
       const typeArray = (typeof schema.type === 'string') ? [schema.type] : schema.type;
       const schemaArray = _.map(typeArray, (stringOrSchema) => {
         if (typeof stringOrSchema === 'string') {
-          return {type: stringOrSchema};
+          return {
+            ...schema,
+            type: stringOrSchema,
+          };
         } else {
           return stringOrSchema;
         }
@@ -151,26 +145,40 @@ const arrayFlowType = (schema: Object): FlowType => {
   }
 };
 
+const simplifyOptional = (ft: OptionalType) => {
+  const {child} = ft;
+  const simplified = simplify(child);
+  switch (child.type) {
+    case 'optional':
+    case 'mixed':
+      return simplified;
+    default:
+      return Optional(simplified);
+  }
+};
+const simplifyArray = (ft: ArrayType) => Array(simplify(ft.child));
+const simplifyMap = (ft: MapType) => Map(simplify(ft.child));
+const simplifyTuple = (ft: TupleType) => Tuple(_.map(ft.children, simplify));
+const simplifyRecord = (ft: RecordType) => Record(_.mapValues(ft.fields, simplify));
+const simplifyIU = <T: IntersectionType | UnionType>(Constructor: (c: Array<FlowType>) => T, ft: T) => {
+  const {children} = ft;
+  if (children.length === 1) {
+    return simplify(children[0]);
+  } else {
+    const mappedChildren = _.map(_.uniqWith(children, _.isEqual), simplify);
+    return Constructor(mappedChildren);
+  }
+};
+
 const simplify = (ft: FlowType): FlowType => {
   switch (ft.type) {
-    case 'optional':
-      const {childType} = ft;
-      if (childType.type === 'optional') {
-        return simplify(childType);
-      } else {
-        return Optional(simplify(ft.childType));
-      }
-    case 'union':
-    case 'intersection':
-      if (ft.childTypes.length === 1) {
-        return simplify(ft.childTypes[0]);
-      } else {
-        const childTypes = _.map(_.uniqWith(ft.childTypes, _.isEqual), simplify);
-        return ({
-          type: ft.type,
-          childTypes,
-        }: any);
-      }
+    case 'optional': return simplifyOptional(ft);
+    case 'array': return simplifyArray(ft);
+    case 'map': return simplifyMap(ft);
+    case 'tuple': return simplifyTuple(ft);
+    case 'record': return simplifyRecord(ft);
+    case 'union': return simplifyIU(Union, ft);
+    case 'intersection': return simplifyIU(Intersection, ft);
     default:
       return ft;
   }

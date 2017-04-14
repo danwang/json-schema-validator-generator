@@ -1,0 +1,1976 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stripe openapi generates flow types for account 1`] = `
+"{
+  active_payment_methods: Array<mixed>,
+  business_name: ?string,
+  business_url: ?string,
+  charges_enabled: boolean,
+  country: string,
+  debit_negative_balances: boolean,
+  decline_charge_on: mixed,
+  default_currency: string,
+  details_submitted: boolean,
+  display_name: ?string,
+  email: ?string,
+  external_accounts: {
+    data: Array<{[key: string]: mixed}>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  id: string,
+  legal_entity: mixed,
+  managed: boolean,
+  mcc: ?string,
+  metadata: ?{[key: string]: mixed},
+  object: string,
+  orders: mixed,
+  payout_schedule: mixed,
+  payout_statement_descriptor: ?string,
+  payouts_enabled: boolean,
+  product_description: ?string,
+  statement_descriptor: ?string,
+  support_email: ?string,
+  support_phone: ?string,
+  timezone: ?string,
+  tos_acceptance: mixed,
+  verification: mixed,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for balance_transaction 1`] = `
+"{
+  amount: number,
+  available_on: number,
+  created: number,
+  currency: string,
+  description: ?string,
+  fee: number,
+  fee_details: mixed,
+  id: string,
+  net: number,
+  object: string,
+  source: ?string,
+  status: string,
+  type: string,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for card 1`] = `
+"{
+  account: ?string,
+  address_city: ?string,
+  address_country: ?string,
+  address_line1: ?string,
+  address_line1_check: ?string,
+  address_line2: ?string,
+  address_state: ?string,
+  address_zip: ?string,
+  address_zip_check: ?string,
+  available_payout_methods: ?Array<mixed>,
+  brand: string,
+  country: ?string,
+  currency: ?string,
+  customer: ?string,
+  cvc_check: ?string,
+  default_for_currency: ?boolean,
+  dynamic_last4: ?string,
+  estimated_availability: ?string,
+  exp_month: number,
+  exp_year: number,
+  fingerprint: ?string,
+  funding: string,
+  google_reference: ?string,
+  id: string,
+  last4: string,
+  metadata: {[key: string]: mixed},
+  name: ?string,
+  object: string,
+  recipient: ?string,
+  three_d_secure: ?{[key: string]: mixed},
+  tokenization_method: ?string,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for charge 1`] = `
+"{
+  amount: number,
+  amount_authorized: ?number,
+  amount_captured: number,
+  amount_refunded: number,
+  application: ?string,
+  application_fee: ?string,
+  balance_transaction: ?string,
+  captured: boolean,
+  card: mixed,
+  created: number,
+  currency: string,
+  customer: ?string,
+  description: ?string,
+  destination: ?string,
+  dispute: ?string,
+  failure_code: ?string,
+  failure_message: ?string,
+  fraud_details: ?{[key: string]: mixed},
+  id: string,
+  invoice: ?string,
+  livemode: boolean,
+  metadata: {[key: string]: mixed},
+  object: string,
+  on_behalf_of: ?string,
+  order: ?string,
+  outcome: mixed,
+  paid: boolean,
+  receipt_email: ?string,
+  receipt_number: ?string,
+  refunded: boolean,
+  refunds: {
+    data: Array<mixed>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  review: ?string,
+  shipping: mixed,
+  source_transfer: ?string,
+  statement_descriptor: ?string,
+  status: string,
+  transfer: ?string,
+  transfer_group: ?string,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for coupon 1`] = `
+"{
+  amount_off: ?number,
+  created: number,
+  currency: ?string,
+  duration: string,
+  duration_in_months: ?number,
+  id: string,
+  livemode: boolean,
+  max_redemptions: ?number,
+  metadata: {[key: string]: mixed},
+  object: string,
+  percent_off: ?number,
+  redeem_by: ?number,
+  times_redeemed: number,
+  valid: boolean,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for customer 1`] = `
+"{
+  account_balance: number,
+  alipay_accounts: ?{
+    data: Array<mixed>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  bank_accounts: ?{
+    data: Array<mixed>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  business_vat_id: ?string,
+  cards: {
+    data: Array<mixed>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  created: number,
+  currency: ?string,
+  default_bank_account: ?string,
+  default_card: ?string,
+  default_source: ?string,
+  delinquent: ?boolean,
+  description: ?string,
+  discount: mixed,
+  email: ?string,
+  id: string,
+  livemode: boolean,
+  metadata: {[key: string]: mixed},
+  object: string,
+  shipping: mixed,
+  sources: {
+    data: Array<{[key: string]: mixed}>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+  subscriptions: {
+    data: Array<mixed>,
+    has_more: boolean,
+    object: \\"list\\",
+    total_count: ?number,
+    url: string,
+  },
+}"
+`;
+
+exports[`Stripe openapi generates flow types for discount 1`] = `
+"{
+  coupon: mixed,
+  customer: ?string,
+  end: ?number,
+  object: string,
+  start: number,
+  subscription: ?string,
+}"
+`;
+
+exports[`Stripe openapi generates flow types for dispute 1`] = `
+"{
+  amount: number,
+  balance_transactions: mixed,
+  charge: string,
+  created: number,
+  currency: string,
+  evidence: {[key: string]: mixed},
+  evidence_details: {[key: string]: mixed},
+  id: string,
+  is_charge_refundable: boolean,
+  livemode: boolean,
+  metadata: {[key: string]: mixed},
+  object: string,
+  reason: string,
+  status: string,
+}"
+`;
+
+exports[`Stripe openapi generates validators for account 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.active_payment_methods;
+    if (v2 !== undefined) {
+      if (!(Array.isArray(v2))) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.business_name;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.business_url;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.charges_enabled;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.country;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.debit_negative_balances;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.decline_charge_on;
+    if (v8 !== undefined) {
+    }
+    var v9 = v0.default_currency;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.details_submitted;
+    if (v10 !== undefined) {
+      if (!(typeof v10 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.display_name;
+    if (v11 !== undefined) {
+      if (!(typeof v11 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.email;
+    if (v12 !== undefined) {
+      if (!(typeof v12 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.external_accounts;
+    if (v13 !== undefined) {
+      if (v13 && typeof v13 === 'object' && !Array.isArray(v13)) {
+        var v14 = v13.data;
+        if (v14 !== undefined) {
+          if (Array.isArray(v14)) {
+            var v15 = 0;
+            for (; v15 < v14.length; v15++) {
+            if (!(v14[v15] && typeof v14[v15] === 'object' && !Array.isArray(v14[v15]))) {
+              v1.push(true);
+            }
+            }
+          }
+          if (!(Array.isArray(v14))) {
+            v1.push(true);
+          }
+        }
+        var v16 = v13.has_more;
+        if (v16 !== undefined) {
+          if (!(typeof v16 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v17 = v13.object;
+        if (v17 !== undefined) {
+          var v18 = 0;
+          if (v17 === \\"list\\") {
+            v18++;
+          }
+          if (v18 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v17 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v19 = v13.total_count;
+        if (v19 !== undefined) {
+          if (!(typeof v19 === 'number' && v19 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v20 = v13.url;
+        if (v20 !== undefined) {
+          if (!(typeof v20 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v13 && typeof v13 === 'object' && !Array.isArray(v13)) {
+        if (v13.data === undefined) {
+          v1.push(true);
+        }
+        if (v13.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v13.object === undefined) {
+          v1.push(true);
+        }
+        if (v13.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v13 && typeof v13 === 'object' && !Array.isArray(v13))) {
+        v1.push(true);
+      }
+    }
+    var v21 = v0.id;
+    if (v21 !== undefined) {
+      if (!(typeof v21 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v22 = v0.legal_entity;
+    if (v22 !== undefined) {
+    }
+    var v23 = v0.managed;
+    if (v23 !== undefined) {
+      if (!(typeof v23 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v24 = v0.mcc;
+    if (v24 !== undefined) {
+      if (!(typeof v24 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v25 = v0.metadata;
+    if (v25 !== undefined) {
+      if (!(v25 && typeof v25 === 'object' && !Array.isArray(v25))) {
+        v1.push(true);
+      }
+    }
+    var v26 = v0.object;
+    if (v26 !== undefined) {
+      if (!(typeof v26 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v27 = v0.orders;
+    if (v27 !== undefined) {
+    }
+    var v28 = v0.payout_schedule;
+    if (v28 !== undefined) {
+    }
+    var v29 = v0.payout_statement_descriptor;
+    if (v29 !== undefined) {
+      if (!(typeof v29 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v30 = v0.payouts_enabled;
+    if (v30 !== undefined) {
+      if (!(typeof v30 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v31 = v0.product_description;
+    if (v31 !== undefined) {
+      if (!(typeof v31 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v32 = v0.statement_descriptor;
+    if (v32 !== undefined) {
+      if (!(typeof v32 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v33 = v0.support_email;
+    if (v33 !== undefined) {
+      if (!(typeof v33 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v34 = v0.support_phone;
+    if (v34 !== undefined) {
+      if (!(typeof v34 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v35 = v0.timezone;
+    if (v35 !== undefined) {
+      if (!(typeof v35 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v36 = v0.tos_acceptance;
+    if (v36 !== undefined) {
+    }
+    var v37 = v0.verification;
+    if (v37 !== undefined) {
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.active_payment_methods === undefined) {
+      v1.push(true);
+    }
+    if (v0.charges_enabled === undefined) {
+      v1.push(true);
+    }
+    if (v0.country === undefined) {
+      v1.push(true);
+    }
+    if (v0.debit_negative_balances === undefined) {
+      v1.push(true);
+    }
+    if (v0.decline_charge_on === undefined) {
+      v1.push(true);
+    }
+    if (v0.default_currency === undefined) {
+      v1.push(true);
+    }
+    if (v0.details_submitted === undefined) {
+      v1.push(true);
+    }
+    if (v0.external_accounts === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.legal_entity === undefined) {
+      v1.push(true);
+    }
+    if (v0.managed === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.payout_schedule === undefined) {
+      v1.push(true);
+    }
+    if (v0.payouts_enabled === undefined) {
+      v1.push(true);
+    }
+    if (v0.tos_acceptance === undefined) {
+      v1.push(true);
+    }
+    if (v0.verification === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for balance_transaction 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.amount;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.available_on;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.created;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'number' && v4 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.currency;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.description;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.fee;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'number' && v7 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.fee_details;
+    if (v8 !== undefined) {
+    }
+    var v9 = v0.id;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.net;
+    if (v10 !== undefined) {
+      if (!(typeof v10 === 'number' && v10 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.object;
+    if (v11 !== undefined) {
+      if (!(typeof v11 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.source;
+    if (v12 !== undefined) {
+      if (!(typeof v12 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.status;
+    if (v13 !== undefined) {
+      if (!(typeof v13 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v14 = v0.type;
+    if (v14 !== undefined) {
+      if (!(typeof v14 === 'string')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      v1.push(true);
+    }
+    if (v0.available_on === undefined) {
+      v1.push(true);
+    }
+    if (v0.created === undefined) {
+      v1.push(true);
+    }
+    if (v0.currency === undefined) {
+      v1.push(true);
+    }
+    if (v0.fee === undefined) {
+      v1.push(true);
+    }
+    if (v0.fee_details === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.net === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.status === undefined) {
+      v1.push(true);
+    }
+    if (v0.type === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for card 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.account;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.address_city;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.address_country;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.address_line1;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.address_line1_check;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.address_line2;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.address_state;
+    if (v8 !== undefined) {
+      if (!(typeof v8 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v9 = v0.address_zip;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.address_zip_check;
+    if (v10 !== undefined) {
+      if (!(typeof v10 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.available_payout_methods;
+    if (v11 !== undefined) {
+      if (!(Array.isArray(v11))) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.brand;
+    if (v12 !== undefined) {
+      if (!(typeof v12 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.country;
+    if (v13 !== undefined) {
+      if (!(typeof v13 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v14 = v0.currency;
+    if (v14 !== undefined) {
+      if (!(typeof v14 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v15 = v0.customer;
+    if (v15 !== undefined) {
+      if (!(typeof v15 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v16 = v0.cvc_check;
+    if (v16 !== undefined) {
+      if (!(typeof v16 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v17 = v0.default_for_currency;
+    if (v17 !== undefined) {
+      if (!(typeof v17 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v18 = v0.dynamic_last4;
+    if (v18 !== undefined) {
+      if (!(typeof v18 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v19 = v0.estimated_availability;
+    if (v19 !== undefined) {
+      if (!(typeof v19 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v20 = v0.exp_month;
+    if (v20 !== undefined) {
+      if (!(typeof v20 === 'number' && v20 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v21 = v0.exp_year;
+    if (v21 !== undefined) {
+      if (!(typeof v21 === 'number' && v21 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v22 = v0.fingerprint;
+    if (v22 !== undefined) {
+      if (!(typeof v22 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v23 = v0.funding;
+    if (v23 !== undefined) {
+      if (!(typeof v23 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v24 = v0.google_reference;
+    if (v24 !== undefined) {
+      if (!(typeof v24 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v25 = v0.id;
+    if (v25 !== undefined) {
+      if (!(typeof v25 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v26 = v0.last4;
+    if (v26 !== undefined) {
+      if (!(typeof v26 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v27 = v0.metadata;
+    if (v27 !== undefined) {
+      if (!(v27 && typeof v27 === 'object' && !Array.isArray(v27))) {
+        v1.push(true);
+      }
+    }
+    var v28 = v0.name;
+    if (v28 !== undefined) {
+      if (!(typeof v28 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v29 = v0.object;
+    if (v29 !== undefined) {
+      if (!(typeof v29 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v30 = v0.recipient;
+    if (v30 !== undefined) {
+      if (!(typeof v30 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v31 = v0.three_d_secure;
+    if (v31 !== undefined) {
+      if (!(v31 && typeof v31 === 'object' && !Array.isArray(v31))) {
+        v1.push(true);
+      }
+    }
+    var v32 = v0.tokenization_method;
+    if (v32 !== undefined) {
+      if (!(typeof v32 === 'string')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.brand === undefined) {
+      v1.push(true);
+    }
+    if (v0.exp_month === undefined) {
+      v1.push(true);
+    }
+    if (v0.exp_year === undefined) {
+      v1.push(true);
+    }
+    if (v0.funding === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.last4 === undefined) {
+      v1.push(true);
+    }
+    if (v0.metadata === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for charge 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.amount;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.amount_authorized;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.amount_captured;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'number' && v4 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.amount_refunded;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'number' && v5 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.application;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.application_fee;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.balance_transaction;
+    if (v8 !== undefined) {
+      if (!(typeof v8 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v9 = v0.captured;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.card;
+    if (v10 !== undefined) {
+    }
+    var v11 = v0.created;
+    if (v11 !== undefined) {
+      if (!(typeof v11 === 'number' && v11 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.currency;
+    if (v12 !== undefined) {
+      if (!(typeof v12 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.customer;
+    if (v13 !== undefined) {
+      if (!(typeof v13 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v14 = v0.description;
+    if (v14 !== undefined) {
+      if (!(typeof v14 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v15 = v0.destination;
+    if (v15 !== undefined) {
+      if (!(typeof v15 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v16 = v0.dispute;
+    if (v16 !== undefined) {
+      if (!(typeof v16 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v17 = v0.failure_code;
+    if (v17 !== undefined) {
+      if (!(typeof v17 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v18 = v0.failure_message;
+    if (v18 !== undefined) {
+      if (!(typeof v18 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v19 = v0.fraud_details;
+    if (v19 !== undefined) {
+      if (!(v19 && typeof v19 === 'object' && !Array.isArray(v19))) {
+        v1.push(true);
+      }
+    }
+    var v20 = v0.id;
+    if (v20 !== undefined) {
+      if (!(typeof v20 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v21 = v0.invoice;
+    if (v21 !== undefined) {
+      if (!(typeof v21 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v22 = v0.livemode;
+    if (v22 !== undefined) {
+      if (!(typeof v22 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v23 = v0.metadata;
+    if (v23 !== undefined) {
+      if (!(v23 && typeof v23 === 'object' && !Array.isArray(v23))) {
+        v1.push(true);
+      }
+    }
+    var v24 = v0.object;
+    if (v24 !== undefined) {
+      if (!(typeof v24 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v25 = v0.on_behalf_of;
+    if (v25 !== undefined) {
+      if (!(typeof v25 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v26 = v0.order;
+    if (v26 !== undefined) {
+      if (!(typeof v26 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v27 = v0.outcome;
+    if (v27 !== undefined) {
+    }
+    var v28 = v0.paid;
+    if (v28 !== undefined) {
+      if (!(typeof v28 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v29 = v0.receipt_email;
+    if (v29 !== undefined) {
+      if (!(typeof v29 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v30 = v0.receipt_number;
+    if (v30 !== undefined) {
+      if (!(typeof v30 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v31 = v0.refunded;
+    if (v31 !== undefined) {
+      if (!(typeof v31 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v32 = v0.refunds;
+    if (v32 !== undefined) {
+      if (v32 && typeof v32 === 'object' && !Array.isArray(v32)) {
+        var v33 = v32.data;
+        if (v33 !== undefined) {
+          if (Array.isArray(v33)) {
+            var v34 = 0;
+            for (; v34 < v33.length; v34++) {
+            }
+          }
+          if (!(Array.isArray(v33))) {
+            v1.push(true);
+          }
+        }
+        var v35 = v32.has_more;
+        if (v35 !== undefined) {
+          if (!(typeof v35 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v36 = v32.object;
+        if (v36 !== undefined) {
+          var v37 = 0;
+          if (v36 === \\"list\\") {
+            v37++;
+          }
+          if (v37 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v36 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v38 = v32.total_count;
+        if (v38 !== undefined) {
+          if (!(typeof v38 === 'number' && v38 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v39 = v32.url;
+        if (v39 !== undefined) {
+          if (!(typeof v39 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v32 && typeof v32 === 'object' && !Array.isArray(v32)) {
+        if (v32.data === undefined) {
+          v1.push(true);
+        }
+        if (v32.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v32.object === undefined) {
+          v1.push(true);
+        }
+        if (v32.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v32 && typeof v32 === 'object' && !Array.isArray(v32))) {
+        v1.push(true);
+      }
+    }
+    var v40 = v0.review;
+    if (v40 !== undefined) {
+      if (!(typeof v40 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v41 = v0.shipping;
+    if (v41 !== undefined) {
+    }
+    var v42 = v0.source_transfer;
+    if (v42 !== undefined) {
+      if (!(typeof v42 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v43 = v0.statement_descriptor;
+    if (v43 !== undefined) {
+      if (!(typeof v43 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v44 = v0.status;
+    if (v44 !== undefined) {
+      if (!(typeof v44 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v45 = v0.transfer;
+    if (v45 !== undefined) {
+      if (!(typeof v45 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v46 = v0.transfer_group;
+    if (v46 !== undefined) {
+      if (!(typeof v46 === 'string')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      v1.push(true);
+    }
+    if (v0.amount_captured === undefined) {
+      v1.push(true);
+    }
+    if (v0.amount_refunded === undefined) {
+      v1.push(true);
+    }
+    if (v0.captured === undefined) {
+      v1.push(true);
+    }
+    if (v0.created === undefined) {
+      v1.push(true);
+    }
+    if (v0.currency === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.livemode === undefined) {
+      v1.push(true);
+    }
+    if (v0.metadata === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.paid === undefined) {
+      v1.push(true);
+    }
+    if (v0.refunded === undefined) {
+      v1.push(true);
+    }
+    if (v0.refunds === undefined) {
+      v1.push(true);
+    }
+    if (v0.status === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for coupon 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.amount_off;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.created;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.currency;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.duration;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.duration_in_months;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'number' && v6 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.id;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.livemode;
+    if (v8 !== undefined) {
+      if (!(typeof v8 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v9 = v0.max_redemptions;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'number' && v9 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.metadata;
+    if (v10 !== undefined) {
+      if (!(v10 && typeof v10 === 'object' && !Array.isArray(v10))) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.object;
+    if (v11 !== undefined) {
+      if (!(typeof v11 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.percent_off;
+    if (v12 !== undefined) {
+      if (!(typeof v12 === 'number' && v12 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.redeem_by;
+    if (v13 !== undefined) {
+      if (!(typeof v13 === 'number' && v13 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v14 = v0.times_redeemed;
+    if (v14 !== undefined) {
+      if (!(typeof v14 === 'number' && v14 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v15 = v0.valid;
+    if (v15 !== undefined) {
+      if (!(typeof v15 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.created === undefined) {
+      v1.push(true);
+    }
+    if (v0.duration === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.livemode === undefined) {
+      v1.push(true);
+    }
+    if (v0.metadata === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.times_redeemed === undefined) {
+      v1.push(true);
+    }
+    if (v0.valid === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for customer 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.account_balance;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.alipay_accounts;
+    if (v3 !== undefined) {
+      if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
+        var v4 = v3.data;
+        if (v4 !== undefined) {
+          if (Array.isArray(v4)) {
+            var v5 = 0;
+            for (; v5 < v4.length; v5++) {
+            }
+          }
+          if (!(Array.isArray(v4))) {
+            v1.push(true);
+          }
+        }
+        var v6 = v3.has_more;
+        if (v6 !== undefined) {
+          if (!(typeof v6 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v7 = v3.object;
+        if (v7 !== undefined) {
+          var v8 = 0;
+          if (v7 === \\"list\\") {
+            v8++;
+          }
+          if (v8 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v7 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v9 = v3.total_count;
+        if (v9 !== undefined) {
+          if (!(typeof v9 === 'number' && v9 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v10 = v3.url;
+        if (v10 !== undefined) {
+          if (!(typeof v10 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
+        if (v3.data === undefined) {
+          v1.push(true);
+        }
+        if (v3.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v3.object === undefined) {
+          v1.push(true);
+        }
+        if (v3.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v3 && typeof v3 === 'object' && !Array.isArray(v3))) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.bank_accounts;
+    if (v11 !== undefined) {
+      if (v11 && typeof v11 === 'object' && !Array.isArray(v11)) {
+        var v12 = v11.data;
+        if (v12 !== undefined) {
+          if (Array.isArray(v12)) {
+            var v13 = 0;
+            for (; v13 < v12.length; v13++) {
+            }
+          }
+          if (!(Array.isArray(v12))) {
+            v1.push(true);
+          }
+        }
+        var v14 = v11.has_more;
+        if (v14 !== undefined) {
+          if (!(typeof v14 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v15 = v11.object;
+        if (v15 !== undefined) {
+          var v16 = 0;
+          if (v15 === \\"list\\") {
+            v16++;
+          }
+          if (v16 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v15 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v17 = v11.total_count;
+        if (v17 !== undefined) {
+          if (!(typeof v17 === 'number' && v17 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v18 = v11.url;
+        if (v18 !== undefined) {
+          if (!(typeof v18 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v11 && typeof v11 === 'object' && !Array.isArray(v11)) {
+        if (v11.data === undefined) {
+          v1.push(true);
+        }
+        if (v11.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v11.object === undefined) {
+          v1.push(true);
+        }
+        if (v11.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v11 && typeof v11 === 'object' && !Array.isArray(v11))) {
+        v1.push(true);
+      }
+    }
+    var v19 = v0.business_vat_id;
+    if (v19 !== undefined) {
+      if (!(typeof v19 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v20 = v0.cards;
+    if (v20 !== undefined) {
+      if (v20 && typeof v20 === 'object' && !Array.isArray(v20)) {
+        var v21 = v20.data;
+        if (v21 !== undefined) {
+          if (Array.isArray(v21)) {
+            var v22 = 0;
+            for (; v22 < v21.length; v22++) {
+            }
+          }
+          if (!(Array.isArray(v21))) {
+            v1.push(true);
+          }
+        }
+        var v23 = v20.has_more;
+        if (v23 !== undefined) {
+          if (!(typeof v23 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v24 = v20.object;
+        if (v24 !== undefined) {
+          var v25 = 0;
+          if (v24 === \\"list\\") {
+            v25++;
+          }
+          if (v25 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v24 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v26 = v20.total_count;
+        if (v26 !== undefined) {
+          if (!(typeof v26 === 'number' && v26 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v27 = v20.url;
+        if (v27 !== undefined) {
+          if (!(typeof v27 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v20 && typeof v20 === 'object' && !Array.isArray(v20)) {
+        if (v20.data === undefined) {
+          v1.push(true);
+        }
+        if (v20.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v20.object === undefined) {
+          v1.push(true);
+        }
+        if (v20.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v20 && typeof v20 === 'object' && !Array.isArray(v20))) {
+        v1.push(true);
+      }
+    }
+    var v28 = v0.created;
+    if (v28 !== undefined) {
+      if (!(typeof v28 === 'number' && v28 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v29 = v0.currency;
+    if (v29 !== undefined) {
+      if (!(typeof v29 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v30 = v0.default_bank_account;
+    if (v30 !== undefined) {
+      if (!(typeof v30 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v31 = v0.default_card;
+    if (v31 !== undefined) {
+      if (!(typeof v31 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v32 = v0.default_source;
+    if (v32 !== undefined) {
+      if (!(typeof v32 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v33 = v0.delinquent;
+    if (v33 !== undefined) {
+      if (!(typeof v33 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v34 = v0.description;
+    if (v34 !== undefined) {
+      if (!(typeof v34 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v35 = v0.discount;
+    if (v35 !== undefined) {
+    }
+    var v36 = v0.email;
+    if (v36 !== undefined) {
+      if (!(typeof v36 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v37 = v0.id;
+    if (v37 !== undefined) {
+      if (!(typeof v37 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v38 = v0.livemode;
+    if (v38 !== undefined) {
+      if (!(typeof v38 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v39 = v0.metadata;
+    if (v39 !== undefined) {
+      if (!(v39 && typeof v39 === 'object' && !Array.isArray(v39))) {
+        v1.push(true);
+      }
+    }
+    var v40 = v0.object;
+    if (v40 !== undefined) {
+      if (!(typeof v40 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v41 = v0.shipping;
+    if (v41 !== undefined) {
+    }
+    var v42 = v0.sources;
+    if (v42 !== undefined) {
+      if (v42 && typeof v42 === 'object' && !Array.isArray(v42)) {
+        var v43 = v42.data;
+        if (v43 !== undefined) {
+          if (Array.isArray(v43)) {
+            var v44 = 0;
+            for (; v44 < v43.length; v44++) {
+            if (!(v43[v44] && typeof v43[v44] === 'object' && !Array.isArray(v43[v44]))) {
+              v1.push(true);
+            }
+            }
+          }
+          if (!(Array.isArray(v43))) {
+            v1.push(true);
+          }
+        }
+        var v45 = v42.has_more;
+        if (v45 !== undefined) {
+          if (!(typeof v45 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v46 = v42.object;
+        if (v46 !== undefined) {
+          var v47 = 0;
+          if (v46 === \\"list\\") {
+            v47++;
+          }
+          if (v47 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v46 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v48 = v42.total_count;
+        if (v48 !== undefined) {
+          if (!(typeof v48 === 'number' && v48 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v49 = v42.url;
+        if (v49 !== undefined) {
+          if (!(typeof v49 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v42 && typeof v42 === 'object' && !Array.isArray(v42)) {
+        if (v42.data === undefined) {
+          v1.push(true);
+        }
+        if (v42.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v42.object === undefined) {
+          v1.push(true);
+        }
+        if (v42.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v42 && typeof v42 === 'object' && !Array.isArray(v42))) {
+        v1.push(true);
+      }
+    }
+    var v50 = v0.subscriptions;
+    if (v50 !== undefined) {
+      if (v50 && typeof v50 === 'object' && !Array.isArray(v50)) {
+        var v51 = v50.data;
+        if (v51 !== undefined) {
+          if (Array.isArray(v51)) {
+            var v52 = 0;
+            for (; v52 < v51.length; v52++) {
+            }
+          }
+          if (!(Array.isArray(v51))) {
+            v1.push(true);
+          }
+        }
+        var v53 = v50.has_more;
+        if (v53 !== undefined) {
+          if (!(typeof v53 === 'boolean')) {
+            v1.push(true);
+          }
+        }
+        var v54 = v50.object;
+        if (v54 !== undefined) {
+          var v55 = 0;
+          if (v54 === \\"list\\") {
+            v55++;
+          }
+          if (v55 === 0) {
+            v1.push(true);
+          }
+          if (!(typeof v54 === 'string')) {
+            v1.push(true);
+          }
+        }
+        var v56 = v50.total_count;
+        if (v56 !== undefined) {
+          if (!(typeof v56 === 'number' && v56 % 1 === 0)) {
+            v1.push(true);
+          }
+        }
+        var v57 = v50.url;
+        if (v57 !== undefined) {
+          if (!(typeof v57 === 'string')) {
+            v1.push(true);
+          }
+        }
+      }
+      if (v50 && typeof v50 === 'object' && !Array.isArray(v50)) {
+        if (v50.data === undefined) {
+          v1.push(true);
+        }
+        if (v50.has_more === undefined) {
+          v1.push(true);
+        }
+        if (v50.object === undefined) {
+          v1.push(true);
+        }
+        if (v50.url === undefined) {
+          v1.push(true);
+        }
+      }
+      if (!(v50 && typeof v50 === 'object' && !Array.isArray(v50))) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.account_balance === undefined) {
+      v1.push(true);
+    }
+    if (v0.cards === undefined) {
+      v1.push(true);
+    }
+    if (v0.created === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.livemode === undefined) {
+      v1.push(true);
+    }
+    if (v0.metadata === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.sources === undefined) {
+      v1.push(true);
+    }
+    if (v0.subscriptions === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for discount 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.coupon;
+    if (v2 !== undefined) {
+    }
+    var v3 = v0.customer;
+    if (v3 !== undefined) {
+      if (!(typeof v3 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v4 = v0.end;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'number' && v4 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.object;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.start;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'number' && v6 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.subscription;
+    if (v7 !== undefined) {
+      if (!(typeof v7 === 'string')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.coupon === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.start === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;
+
+exports[`Stripe openapi generates validators for dispute 1`] = `
+"function(v0) {
+  var v1 = [];
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    var v2 = v0.amount;
+    if (v2 !== undefined) {
+      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v3 = v0.balance_transactions;
+    if (v3 !== undefined) {
+    }
+    var v4 = v0.charge;
+    if (v4 !== undefined) {
+      if (!(typeof v4 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v5 = v0.created;
+    if (v5 !== undefined) {
+      if (!(typeof v5 === 'number' && v5 % 1 === 0)) {
+        v1.push(true);
+      }
+    }
+    var v6 = v0.currency;
+    if (v6 !== undefined) {
+      if (!(typeof v6 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v7 = v0.evidence;
+    if (v7 !== undefined) {
+      if (!(v7 && typeof v7 === 'object' && !Array.isArray(v7))) {
+        v1.push(true);
+      }
+    }
+    var v8 = v0.evidence_details;
+    if (v8 !== undefined) {
+      if (!(v8 && typeof v8 === 'object' && !Array.isArray(v8))) {
+        v1.push(true);
+      }
+    }
+    var v9 = v0.id;
+    if (v9 !== undefined) {
+      if (!(typeof v9 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v10 = v0.is_charge_refundable;
+    if (v10 !== undefined) {
+      if (!(typeof v10 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v11 = v0.livemode;
+    if (v11 !== undefined) {
+      if (!(typeof v11 === 'boolean')) {
+        v1.push(true);
+      }
+    }
+    var v12 = v0.metadata;
+    if (v12 !== undefined) {
+      if (!(v12 && typeof v12 === 'object' && !Array.isArray(v12))) {
+        v1.push(true);
+      }
+    }
+    var v13 = v0.object;
+    if (v13 !== undefined) {
+      if (!(typeof v13 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v14 = v0.reason;
+    if (v14 !== undefined) {
+      if (!(typeof v14 === 'string')) {
+        v1.push(true);
+      }
+    }
+    var v15 = v0.status;
+    if (v15 !== undefined) {
+      if (!(typeof v15 === 'string')) {
+        v1.push(true);
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      v1.push(true);
+    }
+    if (v0.balance_transactions === undefined) {
+      v1.push(true);
+    }
+    if (v0.charge === undefined) {
+      v1.push(true);
+    }
+    if (v0.created === undefined) {
+      v1.push(true);
+    }
+    if (v0.currency === undefined) {
+      v1.push(true);
+    }
+    if (v0.evidence === undefined) {
+      v1.push(true);
+    }
+    if (v0.evidence_details === undefined) {
+      v1.push(true);
+    }
+    if (v0.id === undefined) {
+      v1.push(true);
+    }
+    if (v0.is_charge_refundable === undefined) {
+      v1.push(true);
+    }
+    if (v0.livemode === undefined) {
+      v1.push(true);
+    }
+    if (v0.metadata === undefined) {
+      v1.push(true);
+    }
+    if (v0.object === undefined) {
+      v1.push(true);
+    }
+    if (v0.reason === undefined) {
+      v1.push(true);
+    }
+    if (v0.status === undefined) {
+      v1.push(true);
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    v1.push(true);
+  }
+  return v1;
+}"
+`;

@@ -19,7 +19,7 @@ const type = (schema: Object, symbol: string, context: Context): Array<string> =
     return typeOrSchema(schema.type, symbol, context);
   } else if (Array.isArray(schema.type)) {
     if (schema.type.length === 1) {
-      return typeOrSchema(schema[0], symbol, context);
+      return typeOrSchema(schema.type[0], symbol, context);
     } else if (schema.type.length > 1) {
       if (_.every(schema.type, (t) => (typeof t === 'string'))) {
         const predicate = _.map(schema.type, (t: string) => {

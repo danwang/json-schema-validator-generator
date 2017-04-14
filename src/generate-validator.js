@@ -2,7 +2,7 @@
 import util from './util.js';
 import root from './checks/root.js';
 
-const generateValidator = (schema: Object, name: string) => {
+const generateValidator = (schema: Object) => {
   const gensym = util.gengensym();
   const argSym = gensym();
   const errorSym = gensym();

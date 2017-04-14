@@ -1,3 +1,6 @@
 [submodule "JSON-Schema-Test-Suite"]
 	path = JSON-Schema-Test-Suite
 	url = git@github.com:json-schema-org/JSON-Schema-Test-Suite.git
+[submodule "openapi"]
+	path = openapi
+	url = https://github.com/stripe/openapi

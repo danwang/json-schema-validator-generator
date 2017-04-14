@@ -1,7 +1,9 @@
 // @flow
+import _ from 'lodash';
 
 const INDENT = '  ';
 const indent = (line: string) => `${INDENT}${line}`;
+const indentN = (line: string, count: number) => `${_.repeat(INDENT, count)}${line}`;
 const indentLines = (lines: Array<string>, depth: number) => {
   return lines.map((l) => `${INDENT.repeat(depth)}${l}`);
 };
@@ -62,6 +64,7 @@ const typeCheck = (type: BaseType, symbol: string, lines: Array<string>): Array<
 
 export default {
   indent,
+  indentN,
   indentLines,
   gengensym,
   primitivePredicate,
