@@ -64,9 +64,11 @@ const testFile = (testsPath, fileName) => {
   }
 };
 
-const testsPath = path.join(__dirname, '../../', 'JSON-Schema-Test-Suite/tests/draft4/');
-fs.readdirSync(testsPath).forEach((fileName) => {
-  if (fileName.match(/.*\.json$/)) {
-    testFile(testsPath, fileName);
-  }
+describe('JSON Schema test suite', () => {
+  const testsPath = path.join(__dirname, '../../', 'JSON-Schema-Test-Suite/tests/draft4/');
+  fs.readdirSync(testsPath).forEach((fileName) => {
+    if (fileName.match(/.*\.json$/)) {
+      testFile(testsPath, fileName);
+    }
+  });
 });

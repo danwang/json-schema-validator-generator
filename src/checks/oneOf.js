@@ -31,7 +31,7 @@ const oneOf = (schema: Object, symbol: string, context: Context): Array<string> 
     const checks = _.flatMap(schema.oneOf, (subSchema) => {
       return [
         `${errorSym} = false;`,
-        ...root(subSchema, symbol, subcontext).map(util.indent),
+        ...root(subSchema, symbol, subcontext),
         `${errorSym} && ${countSym}++;`,
       ];
     });

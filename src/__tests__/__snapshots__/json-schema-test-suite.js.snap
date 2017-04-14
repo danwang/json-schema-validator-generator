@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`additionalProperties.json matches snapshot 1`] = `
+exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -25,7 +25,7 @@ exports[`additionalProperties.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`additionalProperties.json matches snapshot 2`] = `
+exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -49,7 +49,7 @@ exports[`additionalProperties.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`additionalProperties.json matches snapshot 3`] = `
+exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -64,7 +64,7 @@ exports[`additionalProperties.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`additionalProperties.json matches snapshot 4`] = `
+exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -79,7 +79,7 @@ exports[`additionalProperties.json matches snapshot 4`] = `
 }"
 `;
 
-exports[`allOf.json matches snapshot 1`] = `
+exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -112,7 +112,7 @@ exports[`allOf.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`allOf.json matches snapshot 2`] = `
+exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -158,7 +158,7 @@ exports[`allOf.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`allOf.json matches snapshot 3`] = `
+exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'number') {
@@ -175,7 +175,7 @@ exports[`allOf.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`anyOf.json matches snapshot 1`] = `
+exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
@@ -199,7 +199,7 @@ exports[`anyOf.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`anyOf.json matches snapshot 2`] = `
+exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
@@ -228,7 +228,7 @@ exports[`anyOf.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`default.json matches snapshot 1`] = `
+exports[`JSON Schema test suite default.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -243,7 +243,7 @@ exports[`default.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`default.json matches snapshot 2`] = `
+exports[`JSON Schema test suite default.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -263,7 +263,7 @@ exports[`default.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`enum.json matches snapshot 1`] = `
+exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
@@ -283,7 +283,7 @@ exports[`enum.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`enum.json matches snapshot 2`] = `
+exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
@@ -309,7 +309,7 @@ exports[`enum.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`enum.json matches snapshot 3`] = `
+exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -346,7 +346,7 @@ exports[`enum.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`items.json matches snapshot 1`] = `
+exports[`JSON Schema test suite items.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (Array.isArray(v0)) {
@@ -361,7 +361,7 @@ exports[`items.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`items.json matches snapshot 2`] = `
+exports[`JSON Schema test suite items.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   var v2 = v0[0];
@@ -380,7 +380,7 @@ exports[`items.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`maxItems.json matches snapshot 1`] = `
+exports[`JSON Schema test suite maxItems.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (Array.isArray(v0)) {
@@ -392,7 +392,7 @@ exports[`maxItems.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`maxLength.json matches snapshot 1`] = `
+exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'string') {
@@ -404,7 +404,7 @@ exports[`maxLength.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`maxProperties.json matches snapshot 1`] = `
+exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -416,7 +416,7 @@ exports[`maxProperties.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`maximum.json matches snapshot 1`] = `
+exports[`JSON Schema test suite maximum.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'number') {
@@ -428,7 +428,7 @@ exports[`maximum.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`maximum.json matches snapshot 2`] = `
+exports[`JSON Schema test suite maximum.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'number') {
@@ -440,7 +440,7 @@ exports[`maximum.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`minItems.json matches snapshot 1`] = `
+exports[`JSON Schema test suite minItems.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (Array.isArray(v0)) {
@@ -452,7 +452,7 @@ exports[`minItems.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`minLength.json matches snapshot 1`] = `
+exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'string') {
@@ -464,7 +464,7 @@ exports[`minLength.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`minProperties.json matches snapshot 1`] = `
+exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -476,7 +476,7 @@ exports[`minProperties.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`minimum.json matches snapshot 1`] = `
+exports[`JSON Schema test suite minimum.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'number') {
@@ -488,7 +488,7 @@ exports[`minimum.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`minimum.json matches snapshot 2`] = `
+exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'number') {
@@ -500,7 +500,7 @@ exports[`minimum.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`not.json matches snapshot 1`] = `
+exports[`JSON Schema test suite not.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   var v2 = false;
@@ -514,7 +514,7 @@ exports[`not.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`not.json matches snapshot 2`] = `
+exports[`JSON Schema test suite not.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   var v2 = false;
@@ -528,7 +528,7 @@ exports[`not.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`not.json matches snapshot 3`] = `
+exports[`JSON Schema test suite not.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   var v2 = false;
@@ -550,7 +550,7 @@ exports[`not.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`not.json matches snapshot 4`] = `
+exports[`JSON Schema test suite not.json matches snapshot 4`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -566,22 +566,22 @@ exports[`not.json matches snapshot 4`] = `
 }"
 `;
 
-exports[`oneOf.json matches snapshot 1`] = `
+exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
   var v3;
   v3 = false;
-    if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
-      v3 = true;
-    }
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    v3 = true;
+  }
   v3 && v2++;
   v3 = false;
-    if (typeof v0 === 'number') {
-      if (v0 < 2) {
-        v3 = true;
-      }
+  if (typeof v0 === 'number') {
+    if (v0 < 2) {
+      v3 = true;
     }
+  }
   v3 && v2++;
   if (v2 !== 2 - 1) {
     v1.push(true);
@@ -590,24 +590,24 @@ exports[`oneOf.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`oneOf.json matches snapshot 2`] = `
+exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   var v2 = 0;
   var v3;
   v3 = false;
-    if (typeof v0 === 'string') {
-      if (v0.length < 2) {
-        v3 = true;
-      }
+  if (typeof v0 === 'string') {
+    if (v0.length < 2) {
+      v3 = true;
     }
+  }
   v3 && v2++;
   v3 = false;
-    if (typeof v0 === 'string') {
-      if (v0.length > 4) {
-        v3 = true;
-      }
+  if (typeof v0 === 'string') {
+    if (v0.length > 4) {
+      v3 = true;
     }
+  }
   v3 && v2++;
   if (v2 !== 2 - 1) {
     v1.push(true);
@@ -619,7 +619,7 @@ exports[`oneOf.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`pattern.json matches snapshot 1`] = `
+exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'string') {
@@ -631,7 +631,7 @@ exports[`pattern.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`pattern.json matches snapshot 2`] = `
+exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (typeof v0 === 'string') {
@@ -643,7 +643,7 @@ exports[`pattern.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`patternProperties.json matches snapshot 1`] = `
+exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -660,7 +660,7 @@ exports[`patternProperties.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`patternProperties.json matches snapshot 2`] = `
+exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -684,7 +684,7 @@ exports[`patternProperties.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`patternProperties.json matches snapshot 3`] = `
+exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -706,7 +706,7 @@ exports[`patternProperties.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`properties.json matches snapshot 1`] = `
+exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -727,7 +727,7 @@ exports[`properties.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`properties.json matches snapshot 2`] = `
+exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -770,7 +770,7 @@ exports[`properties.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`required.json matches snapshot 1`] = `
+exports[`JSON Schema test suite required.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -790,7 +790,7 @@ exports[`required.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`required.json matches snapshot 2`] = `
+exports[`JSON Schema test suite required.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -802,7 +802,7 @@ exports[`required.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 1`] = `
+exports[`JSON Schema test suite type.json matches snapshot 1`] = `
 "function(v0) {
   var v1 = [];
   if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
@@ -812,7 +812,7 @@ exports[`type.json matches snapshot 1`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 2`] = `
+exports[`JSON Schema test suite type.json matches snapshot 2`] = `
 "function(v0) {
   var v1 = [];
   if (!(typeof v0 === 'number')) {
@@ -822,7 +822,7 @@ exports[`type.json matches snapshot 2`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 3`] = `
+exports[`JSON Schema test suite type.json matches snapshot 3`] = `
 "function(v0) {
   var v1 = [];
   if (!(typeof v0 === 'string')) {
@@ -832,7 +832,7 @@ exports[`type.json matches snapshot 3`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 4`] = `
+exports[`JSON Schema test suite type.json matches snapshot 4`] = `
 "function(v0) {
   var v1 = [];
   if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
@@ -842,7 +842,7 @@ exports[`type.json matches snapshot 4`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 5`] = `
+exports[`JSON Schema test suite type.json matches snapshot 5`] = `
 "function(v0) {
   var v1 = [];
   if (!(Array.isArray(v0))) {
@@ -852,7 +852,7 @@ exports[`type.json matches snapshot 5`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 6`] = `
+exports[`JSON Schema test suite type.json matches snapshot 6`] = `
 "function(v0) {
   var v1 = [];
   if (!(typeof v0 === 'boolean')) {
@@ -862,7 +862,7 @@ exports[`type.json matches snapshot 6`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 7`] = `
+exports[`JSON Schema test suite type.json matches snapshot 7`] = `
 "function(v0) {
   var v1 = [];
   if (!(v0 === null)) {
@@ -872,7 +872,7 @@ exports[`type.json matches snapshot 7`] = `
 }"
 `;
 
-exports[`type.json matches snapshot 8`] = `
+exports[`JSON Schema test suite type.json matches snapshot 8`] = `
 "function(v0) {
   var v1 = [];
   if (!((typeof v0 === 'number' && v0 % 1 === 0) || (typeof v0 === 'string'))) {
