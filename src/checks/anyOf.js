@@ -1,29 +1,31 @@
 // @flow
 import _ from 'lodash';
 import type {Context} from '../types.js';
-import util from '../util.js';
+import Ast from '../jsast/ast.js';
+import type {JsAst} from '../jsast/ast.js';
 
-const anyOf = (schema: Object, symbol: string, context: Context): Array<string> => {
+const anyOf = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.anyOf) {
     // var count = 0;
     // check1(schema) === null && count++;
     // check2(schema) === null && count++;
     // if (count === 0) { (error) }
-    const countSym = context.gensym();
-    const checks = _.map(schema.anyOf, (subSchema) => {
+    const count = context.gensym();
+
+    const checks: Array<JsAst> = _.map(schema.anyOf, (subSchema) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return `(${fnSym}(${symbol}) === null) && ${countSym}++`;
+      return Ast.Binop.And(
+        Ast.Binop.Eq(`${fnSym}(${symbol})`, 'null'),
+        `${count}++`,
+      );
     });
-    return [
-      `var ${countSym} = 0;`,
-      ...checks,
-      ...util.ifs(
-        `${countSym} === 0`,
-        context.error(),
-      ),
-    ];
+    return Ast.Body(
+      Ast.Assignment(count, '0'),
+      Ast.Body(...checks),
+      Ast.If(Ast.Binop.Eq(count, '0'), context.error()),
+    );
   } else {
-    return [];
+    return Ast.Empty;
   }
 };
 

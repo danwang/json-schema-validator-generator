@@ -249,177 +249,178 @@ exports[`Stripe openapi generates flow types for dispute 1`] = `
 `;
 
 exports[`Stripe openapi generates validators for account 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.active_payment_methods;
+    v1 = v0.active_payment_methods;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.business_name;
+    v2 = v0.business_name;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.business_url;
+    v3 = v0.business_url;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.charges_enabled;
+    v4 = v0.charges_enabled;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.country;
+    v5 = v0.country;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.debit_negative_balances;
+    v6 = v0.debit_negative_balances;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.decline_charge_on;
+    v7 = v0.decline_charge_on;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.default_currency;
+    v8 = v0.default_currency;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.details_submitted;
+    v9 = v0.details_submitted;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.display_name;
+    v10 = v0.display_name;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.email;
+    v11 = v0.email;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.external_accounts;
+    v12 = v0.external_accounts;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.id;
+    v13 = v0.id;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.legal_entity;
+    v14 = v0.legal_entity;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
       }
     }
-    var v15 = v0.managed;
+    v15 = v0.managed;
     if (v15 !== undefined) {
       if (f15(v15) !== null) {
         return \\"error\\";
       }
     }
-    var v16 = v0.mcc;
+    v16 = v0.mcc;
     if (v16 !== undefined) {
       if (f16(v16) !== null) {
         return \\"error\\";
       }
     }
-    var v17 = v0.metadata;
+    v17 = v0.metadata;
     if (v17 !== undefined) {
       if (f17(v17) !== null) {
         return \\"error\\";
       }
     }
-    var v18 = v0.object;
+    v18 = v0.object;
     if (v18 !== undefined) {
       if (f18(v18) !== null) {
         return \\"error\\";
       }
     }
-    var v19 = v0.orders;
+    v19 = v0.orders;
     if (v19 !== undefined) {
       if (f19(v19) !== null) {
         return \\"error\\";
       }
     }
-    var v20 = v0.payout_schedule;
+    v20 = v0.payout_schedule;
     if (v20 !== undefined) {
       if (f20(v20) !== null) {
         return \\"error\\";
       }
     }
-    var v21 = v0.payout_statement_descriptor;
+    v21 = v0.payout_statement_descriptor;
     if (v21 !== undefined) {
       if (f21(v21) !== null) {
         return \\"error\\";
       }
     }
-    var v22 = v0.payouts_enabled;
+    v22 = v0.payouts_enabled;
     if (v22 !== undefined) {
       if (f22(v22) !== null) {
         return \\"error\\";
       }
     }
-    var v23 = v0.product_description;
+    v23 = v0.product_description;
     if (v23 !== undefined) {
       if (f23(v23) !== null) {
         return \\"error\\";
       }
     }
-    var v24 = v0.statement_descriptor;
+    v24 = v0.statement_descriptor;
     if (v24 !== undefined) {
       if (f24(v24) !== null) {
         return \\"error\\";
       }
     }
-    var v25 = v0.support_email;
+    v25 = v0.support_email;
     if (v25 !== undefined) {
       if (f25(v25) !== null) {
         return \\"error\\";
       }
     }
-    var v26 = v0.support_phone;
+    v26 = v0.support_phone;
     if (v26 !== undefined) {
       if (f26(v26) !== null) {
         return \\"error\\";
       }
     }
-    var v27 = v0.timezone;
+    v27 = v0.timezone;
     if (v27 !== undefined) {
       if (f27(v27) !== null) {
         return \\"error\\";
       }
     }
-    var v28 = v0.tos_acceptance;
+    v28 = v0.tos_acceptance;
     if (v28 !== undefined) {
       if (f28(v28) !== null) {
         return \\"error\\";
       }
     }
-    var v29 = v0.verification;
+    v29 = v0.verification;
     if (v29 !== undefined) {
       if (f29(v29) !== null) {
         return \\"error\\";
@@ -481,96 +482,97 @@ exports[`Stripe openapi generates validators for account 1`] = `
   }
   return null;
 }
-var f1 = function(v30) {
+function f1(v30) {
   if (!(Array.isArray(v30))) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v31) {
+function f2(v31) {
   if (!(typeof v31 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v32) {
+function f3(v32) {
   if (!(typeof v32 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v33) {
+function f4(v33) {
   if (!(typeof v33 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v34) {
+function f5(v34) {
   if (!(typeof v34 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v35) {
+function f6(v35) {
   if (!(typeof v35 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v36) {
+function f7(v36) {
   return null;
 }
-var f8 = function(v37) {
+function f8(v37) {
   if (!(typeof v37 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v38) {
+function f9(v38) {
   if (!(typeof v38 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v39) {
+function f10(v39) {
   if (!(typeof v39 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v40) {
+function f11(v40) {
   if (!(typeof v40 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v41) {
+function f12(v41) {
+  var v42, v43, v44, v45, v46;
   if (v41 && typeof v41 === 'object' && !Array.isArray(v41)) {
-    var v42 = v41.data;
+    v42 = v41.data;
     if (v42 !== undefined) {
       if (f30(v42) !== null) {
         return \\"error\\";
       }
     }
-    var v43 = v41.has_more;
+    v43 = v41.has_more;
     if (v43 !== undefined) {
       if (f31(v43) !== null) {
         return \\"error\\";
       }
     }
-    var v44 = v41.object;
+    v44 = v41.object;
     if (v44 !== undefined) {
       if (f32(v44) !== null) {
         return \\"error\\";
       }
     }
-    var v45 = v41.total_count;
+    v45 = v41.total_count;
     if (v45 !== undefined) {
       if (f33(v45) !== null) {
         return \\"error\\";
       }
     }
-    var v46 = v41.url;
+    v46 = v41.url;
     if (v46 !== undefined) {
       if (f34(v46) !== null) {
         return \\"error\\";
@@ -596,101 +598,102 @@ var f12 = function(v41) {
   }
   return null;
 }
-var f13 = function(v47) {
+function f13(v47) {
   if (!(typeof v47 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f14 = function(v48) {
+function f14(v48) {
   return null;
 }
-var f15 = function(v49) {
+function f15(v49) {
   if (!(typeof v49 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f16 = function(v50) {
+function f16(v50) {
   if (!(typeof v50 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f17 = function(v51) {
+function f17(v51) {
   if (!(v51 && typeof v51 === 'object' && !Array.isArray(v51))) {
     return \\"error\\";
   }
   return null;
 }
-var f18 = function(v52) {
+function f18(v52) {
   if (!(typeof v52 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f19 = function(v53) {
+function f19(v53) {
   return null;
 }
-var f20 = function(v54) {
+function f20(v54) {
   return null;
 }
-var f21 = function(v55) {
+function f21(v55) {
   if (!(typeof v55 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f22 = function(v56) {
+function f22(v56) {
   if (!(typeof v56 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f23 = function(v57) {
+function f23(v57) {
   if (!(typeof v57 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f24 = function(v58) {
+function f24(v58) {
   if (!(typeof v58 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f25 = function(v59) {
+function f25(v59) {
   if (!(typeof v59 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f26 = function(v60) {
+function f26(v60) {
   if (!(typeof v60 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f27 = function(v61) {
+function f27(v61) {
   if (!(typeof v61 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f28 = function(v62) {
+function f28(v62) {
   return null;
 }
-var f29 = function(v63) {
+function f29(v63) {
   return null;
 }
-var f30 = function(v64) {
+function f30(v64) {
+  var v65, v66;
   if (Array.isArray(v64)) {
-    var v65 = 0;
-    var v66 = null;
+    v65 = 0;
+    v66 = null;
     for (; v65 < v64.length; v65++) {
-      v66 = f35(v64[v65])
+      v66 = f35(v64[v65]);
       if (v66 !== null) {
-        return v66
+        return v66;
       }
     }
   }
@@ -699,16 +702,17 @@ var f30 = function(v64) {
   }
   return null;
 }
-var f31 = function(v67) {
+function f31(v67) {
   if (!(typeof v67 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f32 = function(v68) {
-  var v69 = 0;
+function f32(v68) {
+  var v69;
+  v69 = 0;
   if (v68 === \\"list\\") {
-    v69++;
+    v69++
   }
   if (v69 === 0) {
     return \\"error\\";
@@ -718,19 +722,19 @@ var f32 = function(v68) {
   }
   return null;
 }
-var f33 = function(v70) {
+function f33(v70) {
   if (!(typeof v70 === 'number' && v70 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f34 = function(v71) {
+function f34(v71) {
   if (!(typeof v71 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f35 = function(v72) {
+function f35(v72) {
   if (!(v72 && typeof v72 === 'object' && !Array.isArray(v72))) {
     return \\"error\\";
   }
@@ -740,81 +744,82 @@ return f0;"
 `;
 
 exports[`Stripe openapi generates validators for balance_transaction 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.amount;
+    v1 = v0.amount;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.available_on;
+    v2 = v0.available_on;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.created;
+    v3 = v0.created;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.currency;
+    v4 = v0.currency;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.description;
+    v5 = v0.description;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.fee;
+    v6 = v0.fee;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.fee_details;
+    v7 = v0.fee_details;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.id;
+    v8 = v0.id;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.net;
+    v9 = v0.net;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.object;
+    v10 = v0.object;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.source;
+    v11 = v0.source;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.status;
+    v12 = v0.status;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.type;
+    v13 = v0.type;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
@@ -861,76 +866,76 @@ exports[`Stripe openapi generates validators for balance_transaction 1`] = `
   }
   return null;
 }
-var f1 = function(v14) {
+function f1(v14) {
   if (!(typeof v14 === 'number' && v14 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v15) {
+function f2(v15) {
   if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v16) {
+function f3(v16) {
   if (!(typeof v16 === 'number' && v16 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v17) {
+function f4(v17) {
   if (!(typeof v17 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v18) {
+function f5(v18) {
   if (!(typeof v18 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v19) {
+function f6(v19) {
   if (!(typeof v19 === 'number' && v19 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v20) {
+function f7(v20) {
   return null;
 }
-var f8 = function(v21) {
+function f8(v21) {
   if (!(typeof v21 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v22) {
+function f9(v22) {
   if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v23) {
+function f10(v23) {
   if (!(typeof v23 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v24) {
+function f11(v24) {
   if (!(typeof v24 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v25) {
+function f12(v25) {
   if (!(typeof v25 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v26) {
+function f13(v26) {
   if (!(typeof v26 === 'string')) {
     return \\"error\\";
   }
@@ -940,189 +945,190 @@ return f0;"
 `;
 
 exports[`Stripe openapi generates validators for card 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.account;
+    v1 = v0.account;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.address_city;
+    v2 = v0.address_city;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.address_country;
+    v3 = v0.address_country;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.address_line1;
+    v4 = v0.address_line1;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.address_line1_check;
+    v5 = v0.address_line1_check;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.address_line2;
+    v6 = v0.address_line2;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.address_state;
+    v7 = v0.address_state;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.address_zip;
+    v8 = v0.address_zip;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.address_zip_check;
+    v9 = v0.address_zip_check;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.available_payout_methods;
+    v10 = v0.available_payout_methods;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.brand;
+    v11 = v0.brand;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.country;
+    v12 = v0.country;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.currency;
+    v13 = v0.currency;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.customer;
+    v14 = v0.customer;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
       }
     }
-    var v15 = v0.cvc_check;
+    v15 = v0.cvc_check;
     if (v15 !== undefined) {
       if (f15(v15) !== null) {
         return \\"error\\";
       }
     }
-    var v16 = v0.default_for_currency;
+    v16 = v0.default_for_currency;
     if (v16 !== undefined) {
       if (f16(v16) !== null) {
         return \\"error\\";
       }
     }
-    var v17 = v0.dynamic_last4;
+    v17 = v0.dynamic_last4;
     if (v17 !== undefined) {
       if (f17(v17) !== null) {
         return \\"error\\";
       }
     }
-    var v18 = v0.estimated_availability;
+    v18 = v0.estimated_availability;
     if (v18 !== undefined) {
       if (f18(v18) !== null) {
         return \\"error\\";
       }
     }
-    var v19 = v0.exp_month;
+    v19 = v0.exp_month;
     if (v19 !== undefined) {
       if (f19(v19) !== null) {
         return \\"error\\";
       }
     }
-    var v20 = v0.exp_year;
+    v20 = v0.exp_year;
     if (v20 !== undefined) {
       if (f20(v20) !== null) {
         return \\"error\\";
       }
     }
-    var v21 = v0.fingerprint;
+    v21 = v0.fingerprint;
     if (v21 !== undefined) {
       if (f21(v21) !== null) {
         return \\"error\\";
       }
     }
-    var v22 = v0.funding;
+    v22 = v0.funding;
     if (v22 !== undefined) {
       if (f22(v22) !== null) {
         return \\"error\\";
       }
     }
-    var v23 = v0.google_reference;
+    v23 = v0.google_reference;
     if (v23 !== undefined) {
       if (f23(v23) !== null) {
         return \\"error\\";
       }
     }
-    var v24 = v0.id;
+    v24 = v0.id;
     if (v24 !== undefined) {
       if (f24(v24) !== null) {
         return \\"error\\";
       }
     }
-    var v25 = v0.last4;
+    v25 = v0.last4;
     if (v25 !== undefined) {
       if (f25(v25) !== null) {
         return \\"error\\";
       }
     }
-    var v26 = v0.metadata;
+    v26 = v0.metadata;
     if (v26 !== undefined) {
       if (f26(v26) !== null) {
         return \\"error\\";
       }
     }
-    var v27 = v0.name;
+    v27 = v0.name;
     if (v27 !== undefined) {
       if (f27(v27) !== null) {
         return \\"error\\";
       }
     }
-    var v28 = v0.object;
+    v28 = v0.object;
     if (v28 !== undefined) {
       if (f28(v28) !== null) {
         return \\"error\\";
       }
     }
-    var v29 = v0.recipient;
+    v29 = v0.recipient;
     if (v29 !== undefined) {
       if (f29(v29) !== null) {
         return \\"error\\";
       }
     }
-    var v30 = v0.three_d_secure;
+    v30 = v0.three_d_secure;
     if (v30 !== undefined) {
       if (f30(v30) !== null) {
         return \\"error\\";
       }
     }
-    var v31 = v0.tokenization_method;
+    v31 = v0.tokenization_method;
     if (v31 !== undefined) {
       if (f31(v31) !== null) {
         return \\"error\\";
@@ -1160,187 +1166,187 @@ exports[`Stripe openapi generates validators for card 1`] = `
   }
   return null;
 }
-var f1 = function(v32) {
+function f1(v32) {
   if (!(typeof v32 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v33) {
+function f2(v33) {
   if (!(typeof v33 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v34) {
+function f3(v34) {
   if (!(typeof v34 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v35) {
+function f4(v35) {
   if (!(typeof v35 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v36) {
+function f5(v36) {
   if (!(typeof v36 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v37) {
+function f6(v37) {
   if (!(typeof v37 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v38) {
+function f7(v38) {
   if (!(typeof v38 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f8 = function(v39) {
+function f8(v39) {
   if (!(typeof v39 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v40) {
+function f9(v40) {
   if (!(typeof v40 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v41) {
+function f10(v41) {
   if (!(Array.isArray(v41))) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v42) {
+function f11(v42) {
   if (!(typeof v42 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v43) {
+function f12(v43) {
   if (!(typeof v43 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v44) {
+function f13(v44) {
   if (!(typeof v44 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f14 = function(v45) {
+function f14(v45) {
   if (!(typeof v45 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f15 = function(v46) {
+function f15(v46) {
   if (!(typeof v46 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f16 = function(v47) {
+function f16(v47) {
   if (!(typeof v47 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f17 = function(v48) {
+function f17(v48) {
   if (!(typeof v48 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f18 = function(v49) {
+function f18(v49) {
   if (!(typeof v49 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f19 = function(v50) {
+function f19(v50) {
   if (!(typeof v50 === 'number' && v50 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f20 = function(v51) {
+function f20(v51) {
   if (!(typeof v51 === 'number' && v51 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f21 = function(v52) {
+function f21(v52) {
   if (!(typeof v52 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f22 = function(v53) {
+function f22(v53) {
   if (!(typeof v53 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f23 = function(v54) {
+function f23(v54) {
   if (!(typeof v54 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f24 = function(v55) {
+function f24(v55) {
   if (!(typeof v55 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f25 = function(v56) {
+function f25(v56) {
   if (!(typeof v56 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f26 = function(v57) {
+function f26(v57) {
   if (!(v57 && typeof v57 === 'object' && !Array.isArray(v57))) {
     return \\"error\\";
   }
   return null;
 }
-var f27 = function(v58) {
+function f27(v58) {
   if (!(typeof v58 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f28 = function(v59) {
+function f28(v59) {
   if (!(typeof v59 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f29 = function(v60) {
+function f29(v60) {
   if (!(typeof v60 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f30 = function(v61) {
+function f30(v61) {
   if (!(v61 && typeof v61 === 'object' && !Array.isArray(v61))) {
     return \\"error\\";
   }
   return null;
 }
-var f31 = function(v62) {
+function f31(v62) {
   if (!(typeof v62 === 'string')) {
     return \\"error\\";
   }
@@ -1350,231 +1356,232 @@ return f0;"
 `;
 
 exports[`Stripe openapi generates validators for charge 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.amount;
+    v1 = v0.amount;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.amount_authorized;
+    v2 = v0.amount_authorized;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.amount_captured;
+    v3 = v0.amount_captured;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.amount_refunded;
+    v4 = v0.amount_refunded;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.application;
+    v5 = v0.application;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.application_fee;
+    v6 = v0.application_fee;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.balance_transaction;
+    v7 = v0.balance_transaction;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.captured;
+    v8 = v0.captured;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.card;
+    v9 = v0.card;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.created;
+    v10 = v0.created;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.currency;
+    v11 = v0.currency;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.customer;
+    v12 = v0.customer;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.description;
+    v13 = v0.description;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.destination;
+    v14 = v0.destination;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
       }
     }
-    var v15 = v0.dispute;
+    v15 = v0.dispute;
     if (v15 !== undefined) {
       if (f15(v15) !== null) {
         return \\"error\\";
       }
     }
-    var v16 = v0.failure_code;
+    v16 = v0.failure_code;
     if (v16 !== undefined) {
       if (f16(v16) !== null) {
         return \\"error\\";
       }
     }
-    var v17 = v0.failure_message;
+    v17 = v0.failure_message;
     if (v17 !== undefined) {
       if (f17(v17) !== null) {
         return \\"error\\";
       }
     }
-    var v18 = v0.fraud_details;
+    v18 = v0.fraud_details;
     if (v18 !== undefined) {
       if (f18(v18) !== null) {
         return \\"error\\";
       }
     }
-    var v19 = v0.id;
+    v19 = v0.id;
     if (v19 !== undefined) {
       if (f19(v19) !== null) {
         return \\"error\\";
       }
     }
-    var v20 = v0.invoice;
+    v20 = v0.invoice;
     if (v20 !== undefined) {
       if (f20(v20) !== null) {
         return \\"error\\";
       }
     }
-    var v21 = v0.livemode;
+    v21 = v0.livemode;
     if (v21 !== undefined) {
       if (f21(v21) !== null) {
         return \\"error\\";
       }
     }
-    var v22 = v0.metadata;
+    v22 = v0.metadata;
     if (v22 !== undefined) {
       if (f22(v22) !== null) {
         return \\"error\\";
       }
     }
-    var v23 = v0.object;
+    v23 = v0.object;
     if (v23 !== undefined) {
       if (f23(v23) !== null) {
         return \\"error\\";
       }
     }
-    var v24 = v0.on_behalf_of;
+    v24 = v0.on_behalf_of;
     if (v24 !== undefined) {
       if (f24(v24) !== null) {
         return \\"error\\";
       }
     }
-    var v25 = v0.order;
+    v25 = v0.order;
     if (v25 !== undefined) {
       if (f25(v25) !== null) {
         return \\"error\\";
       }
     }
-    var v26 = v0.outcome;
+    v26 = v0.outcome;
     if (v26 !== undefined) {
       if (f26(v26) !== null) {
         return \\"error\\";
       }
     }
-    var v27 = v0.paid;
+    v27 = v0.paid;
     if (v27 !== undefined) {
       if (f27(v27) !== null) {
         return \\"error\\";
       }
     }
-    var v28 = v0.receipt_email;
+    v28 = v0.receipt_email;
     if (v28 !== undefined) {
       if (f28(v28) !== null) {
         return \\"error\\";
       }
     }
-    var v29 = v0.receipt_number;
+    v29 = v0.receipt_number;
     if (v29 !== undefined) {
       if (f29(v29) !== null) {
         return \\"error\\";
       }
     }
-    var v30 = v0.refunded;
+    v30 = v0.refunded;
     if (v30 !== undefined) {
       if (f30(v30) !== null) {
         return \\"error\\";
       }
     }
-    var v31 = v0.refunds;
+    v31 = v0.refunds;
     if (v31 !== undefined) {
       if (f31(v31) !== null) {
         return \\"error\\";
       }
     }
-    var v32 = v0.review;
+    v32 = v0.review;
     if (v32 !== undefined) {
       if (f32(v32) !== null) {
         return \\"error\\";
       }
     }
-    var v33 = v0.shipping;
+    v33 = v0.shipping;
     if (v33 !== undefined) {
       if (f33(v33) !== null) {
         return \\"error\\";
       }
     }
-    var v34 = v0.source_transfer;
+    v34 = v0.source_transfer;
     if (v34 !== undefined) {
       if (f34(v34) !== null) {
         return \\"error\\";
       }
     }
-    var v35 = v0.statement_descriptor;
+    v35 = v0.statement_descriptor;
     if (v35 !== undefined) {
       if (f35(v35) !== null) {
         return \\"error\\";
       }
     }
-    var v36 = v0.status;
+    v36 = v0.status;
     if (v36 !== undefined) {
       if (f36(v36) !== null) {
         return \\"error\\";
       }
     }
-    var v37 = v0.transfer;
+    v37 = v0.transfer;
     if (v37 !== undefined) {
       if (f37(v37) !== null) {
         return \\"error\\";
       }
     }
-    var v38 = v0.transfer_group;
+    v38 = v0.transfer_group;
     if (v38 !== undefined) {
       if (f38(v38) !== null) {
         return \\"error\\";
@@ -1630,207 +1637,208 @@ exports[`Stripe openapi generates validators for charge 1`] = `
   }
   return null;
 }
-var f1 = function(v39) {
+function f1(v39) {
   if (!(typeof v39 === 'number' && v39 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v40) {
+function f2(v40) {
   if (!(typeof v40 === 'number' && v40 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v41) {
+function f3(v41) {
   if (!(typeof v41 === 'number' && v41 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v42) {
+function f4(v42) {
   if (!(typeof v42 === 'number' && v42 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v43) {
+function f5(v43) {
   if (!(typeof v43 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v44) {
+function f6(v44) {
   if (!(typeof v44 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v45) {
+function f7(v45) {
   if (!(typeof v45 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f8 = function(v46) {
+function f8(v46) {
   if (!(typeof v46 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v47) {
+function f9(v47) {
   return null;
 }
-var f10 = function(v48) {
+function f10(v48) {
   if (!(typeof v48 === 'number' && v48 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v49) {
+function f11(v49) {
   if (!(typeof v49 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v50) {
+function f12(v50) {
   if (!(typeof v50 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v51) {
+function f13(v51) {
   if (!(typeof v51 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f14 = function(v52) {
+function f14(v52) {
   if (!(typeof v52 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f15 = function(v53) {
+function f15(v53) {
   if (!(typeof v53 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f16 = function(v54) {
+function f16(v54) {
   if (!(typeof v54 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f17 = function(v55) {
+function f17(v55) {
   if (!(typeof v55 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f18 = function(v56) {
+function f18(v56) {
   if (!(v56 && typeof v56 === 'object' && !Array.isArray(v56))) {
     return \\"error\\";
   }
   return null;
 }
-var f19 = function(v57) {
+function f19(v57) {
   if (!(typeof v57 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f20 = function(v58) {
+function f20(v58) {
   if (!(typeof v58 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f21 = function(v59) {
+function f21(v59) {
   if (!(typeof v59 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f22 = function(v60) {
+function f22(v60) {
   if (!(v60 && typeof v60 === 'object' && !Array.isArray(v60))) {
     return \\"error\\";
   }
   return null;
 }
-var f23 = function(v61) {
+function f23(v61) {
   if (!(typeof v61 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f24 = function(v62) {
+function f24(v62) {
   if (!(typeof v62 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f25 = function(v63) {
+function f25(v63) {
   if (!(typeof v63 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f26 = function(v64) {
+function f26(v64) {
   return null;
 }
-var f27 = function(v65) {
+function f27(v65) {
   if (!(typeof v65 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f28 = function(v66) {
+function f28(v66) {
   if (!(typeof v66 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f29 = function(v67) {
+function f29(v67) {
   if (!(typeof v67 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f30 = function(v68) {
+function f30(v68) {
   if (!(typeof v68 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f31 = function(v69) {
+function f31(v69) {
+  var v70, v71, v72, v73, v74;
   if (v69 && typeof v69 === 'object' && !Array.isArray(v69)) {
-    var v70 = v69.data;
+    v70 = v69.data;
     if (v70 !== undefined) {
       if (f39(v70) !== null) {
         return \\"error\\";
       }
     }
-    var v71 = v69.has_more;
+    v71 = v69.has_more;
     if (v71 !== undefined) {
       if (f40(v71) !== null) {
         return \\"error\\";
       }
     }
-    var v72 = v69.object;
+    v72 = v69.object;
     if (v72 !== undefined) {
       if (f41(v72) !== null) {
         return \\"error\\";
       }
     }
-    var v73 = v69.total_count;
+    v73 = v69.total_count;
     if (v73 !== undefined) {
       if (f42(v73) !== null) {
         return \\"error\\";
       }
     }
-    var v74 = v69.url;
+    v74 = v69.url;
     if (v74 !== undefined) {
       if (f43(v74) !== null) {
         return \\"error\\";
@@ -1856,53 +1864,54 @@ var f31 = function(v69) {
   }
   return null;
 }
-var f32 = function(v75) {
+function f32(v75) {
   if (!(typeof v75 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f33 = function(v76) {
+function f33(v76) {
   return null;
 }
-var f34 = function(v77) {
+function f34(v77) {
   if (!(typeof v77 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f35 = function(v78) {
+function f35(v78) {
   if (!(typeof v78 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f36 = function(v79) {
+function f36(v79) {
   if (!(typeof v79 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f37 = function(v80) {
+function f37(v80) {
   if (!(typeof v80 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f38 = function(v81) {
+function f38(v81) {
   if (!(typeof v81 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f39 = function(v82) {
+function f39(v82) {
+  var v83, v84;
   if (Array.isArray(v82)) {
-    var v83 = 0;
-    var v84 = null;
+    v83 = 0;
+    v84 = null;
     for (; v83 < v82.length; v83++) {
-      v84 = f44(v82[v83])
+      v84 = f44(v82[v83]);
       if (v84 !== null) {
-        return v84
+        return v84;
       }
     }
   }
@@ -1911,16 +1920,17 @@ var f39 = function(v82) {
   }
   return null;
 }
-var f40 = function(v85) {
+function f40(v85) {
   if (!(typeof v85 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f41 = function(v86) {
-  var v87 = 0;
+function f41(v86) {
+  var v87;
+  v87 = 0;
   if (v86 === \\"list\\") {
-    v87++;
+    v87++
   }
   if (v87 === 0) {
     return \\"error\\";
@@ -1930,106 +1940,107 @@ var f41 = function(v86) {
   }
   return null;
 }
-var f42 = function(v88) {
+function f42(v88) {
   if (!(typeof v88 === 'number' && v88 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f43 = function(v89) {
+function f43(v89) {
   if (!(typeof v89 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f44 = function(v90) {
+function f44(v90) {
   return null;
 }
 return f0;"
 `;
 
 exports[`Stripe openapi generates validators for coupon 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.amount_off;
+    v1 = v0.amount_off;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.created;
+    v2 = v0.created;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.currency;
+    v3 = v0.currency;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.duration;
+    v4 = v0.duration;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.duration_in_months;
+    v5 = v0.duration_in_months;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.id;
+    v6 = v0.id;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.livemode;
+    v7 = v0.livemode;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.max_redemptions;
+    v8 = v0.max_redemptions;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.metadata;
+    v9 = v0.metadata;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.object;
+    v10 = v0.object;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.percent_off;
+    v11 = v0.percent_off;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.redeem_by;
+    v12 = v0.redeem_by;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.times_redeemed;
+    v13 = v0.times_redeemed;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.valid;
+    v14 = v0.valid;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
@@ -2067,85 +2078,85 @@ exports[`Stripe openapi generates validators for coupon 1`] = `
   }
   return null;
 }
-var f1 = function(v15) {
+function f1(v15) {
   if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v16) {
+function f2(v16) {
   if (!(typeof v16 === 'number' && v16 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v17) {
+function f3(v17) {
   if (!(typeof v17 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v18) {
+function f4(v18) {
   if (!(typeof v18 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v19) {
+function f5(v19) {
   if (!(typeof v19 === 'number' && v19 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v20) {
+function f6(v20) {
   if (!(typeof v20 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v21) {
+function f7(v21) {
   if (!(typeof v21 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f8 = function(v22) {
+function f8(v22) {
   if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v23) {
+function f9(v23) {
   if (!(v23 && typeof v23 === 'object' && !Array.isArray(v23))) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v24) {
+function f10(v24) {
   if (!(typeof v24 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v25) {
+function f11(v25) {
   if (!(typeof v25 === 'number' && v25 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v26) {
+function f12(v26) {
   if (!(typeof v26 === 'number' && v26 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v27) {
+function f13(v27) {
   if (!(typeof v27 === 'number' && v27 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f14 = function(v28) {
+function f14(v28) {
   if (!(typeof v28 === 'boolean')) {
     return \\"error\\";
   }
@@ -2155,129 +2166,130 @@ return f0;"
 `;
 
 exports[`Stripe openapi generates validators for customer 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.account_balance;
+    v1 = v0.account_balance;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.alipay_accounts;
+    v2 = v0.alipay_accounts;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.bank_accounts;
+    v3 = v0.bank_accounts;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.business_vat_id;
+    v4 = v0.business_vat_id;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.cards;
+    v5 = v0.cards;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.created;
+    v6 = v0.created;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.currency;
+    v7 = v0.currency;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.default_bank_account;
+    v8 = v0.default_bank_account;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.default_card;
+    v9 = v0.default_card;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.default_source;
+    v10 = v0.default_source;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.delinquent;
+    v11 = v0.delinquent;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.description;
+    v12 = v0.description;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.discount;
+    v13 = v0.discount;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.email;
+    v14 = v0.email;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
       }
     }
-    var v15 = v0.id;
+    v15 = v0.id;
     if (v15 !== undefined) {
       if (f15(v15) !== null) {
         return \\"error\\";
       }
     }
-    var v16 = v0.livemode;
+    v16 = v0.livemode;
     if (v16 !== undefined) {
       if (f16(v16) !== null) {
         return \\"error\\";
       }
     }
-    var v17 = v0.metadata;
+    v17 = v0.metadata;
     if (v17 !== undefined) {
       if (f17(v17) !== null) {
         return \\"error\\";
       }
     }
-    var v18 = v0.object;
+    v18 = v0.object;
     if (v18 !== undefined) {
       if (f18(v18) !== null) {
         return \\"error\\";
       }
     }
-    var v19 = v0.shipping;
+    v19 = v0.shipping;
     if (v19 !== undefined) {
       if (f19(v19) !== null) {
         return \\"error\\";
       }
     }
-    var v20 = v0.sources;
+    v20 = v0.sources;
     if (v20 !== undefined) {
       if (f20(v20) !== null) {
         return \\"error\\";
       }
     }
-    var v21 = v0.subscriptions;
+    v21 = v0.subscriptions;
     if (v21 !== undefined) {
       if (f21(v21) !== null) {
         return \\"error\\";
@@ -2318,39 +2330,40 @@ exports[`Stripe openapi generates validators for customer 1`] = `
   }
   return null;
 }
-var f1 = function(v22) {
+function f1(v22) {
   if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v23) {
+function f2(v23) {
+  var v24, v25, v26, v27, v28;
   if (v23 && typeof v23 === 'object' && !Array.isArray(v23)) {
-    var v24 = v23.data;
+    v24 = v23.data;
     if (v24 !== undefined) {
       if (f22(v24) !== null) {
         return \\"error\\";
       }
     }
-    var v25 = v23.has_more;
+    v25 = v23.has_more;
     if (v25 !== undefined) {
       if (f23(v25) !== null) {
         return \\"error\\";
       }
     }
-    var v26 = v23.object;
+    v26 = v23.object;
     if (v26 !== undefined) {
       if (f24(v26) !== null) {
         return \\"error\\";
       }
     }
-    var v27 = v23.total_count;
+    v27 = v23.total_count;
     if (v27 !== undefined) {
       if (f25(v27) !== null) {
         return \\"error\\";
       }
     }
-    var v28 = v23.url;
+    v28 = v23.url;
     if (v28 !== undefined) {
       if (f26(v28) !== null) {
         return \\"error\\";
@@ -2376,33 +2389,34 @@ var f2 = function(v23) {
   }
   return null;
 }
-var f3 = function(v29) {
+function f3(v29) {
+  var v30, v31, v32, v33, v34;
   if (v29 && typeof v29 === 'object' && !Array.isArray(v29)) {
-    var v30 = v29.data;
+    v30 = v29.data;
     if (v30 !== undefined) {
       if (f27(v30) !== null) {
         return \\"error\\";
       }
     }
-    var v31 = v29.has_more;
+    v31 = v29.has_more;
     if (v31 !== undefined) {
       if (f28(v31) !== null) {
         return \\"error\\";
       }
     }
-    var v32 = v29.object;
+    v32 = v29.object;
     if (v32 !== undefined) {
       if (f29(v32) !== null) {
         return \\"error\\";
       }
     }
-    var v33 = v29.total_count;
+    v33 = v29.total_count;
     if (v33 !== undefined) {
       if (f30(v33) !== null) {
         return \\"error\\";
       }
     }
-    var v34 = v29.url;
+    v34 = v29.url;
     if (v34 !== undefined) {
       if (f31(v34) !== null) {
         return \\"error\\";
@@ -2428,39 +2442,40 @@ var f3 = function(v29) {
   }
   return null;
 }
-var f4 = function(v35) {
+function f4(v35) {
   if (!(typeof v35 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v36) {
+function f5(v36) {
+  var v37, v38, v39, v40, v41;
   if (v36 && typeof v36 === 'object' && !Array.isArray(v36)) {
-    var v37 = v36.data;
+    v37 = v36.data;
     if (v37 !== undefined) {
       if (f32(v37) !== null) {
         return \\"error\\";
       }
     }
-    var v38 = v36.has_more;
+    v38 = v36.has_more;
     if (v38 !== undefined) {
       if (f33(v38) !== null) {
         return \\"error\\";
       }
     }
-    var v39 = v36.object;
+    v39 = v36.object;
     if (v39 !== undefined) {
       if (f34(v39) !== null) {
         return \\"error\\";
       }
     }
-    var v40 = v36.total_count;
+    v40 = v36.total_count;
     if (v40 !== undefined) {
       if (f35(v40) !== null) {
         return \\"error\\";
       }
     }
-    var v41 = v36.url;
+    v41 = v36.url;
     if (v41 !== undefined) {
       if (f36(v41) !== null) {
         return \\"error\\";
@@ -2486,111 +2501,112 @@ var f5 = function(v36) {
   }
   return null;
 }
-var f6 = function(v42) {
+function f6(v42) {
   if (!(typeof v42 === 'number' && v42 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v43) {
+function f7(v43) {
   if (!(typeof v43 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f8 = function(v44) {
+function f8(v44) {
   if (!(typeof v44 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v45) {
+function f9(v45) {
   if (!(typeof v45 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v46) {
+function f10(v46) {
   if (!(typeof v46 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v47) {
+function f11(v47) {
   if (!(typeof v47 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v48) {
+function f12(v48) {
   if (!(typeof v48 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v49) {
+function f13(v49) {
   return null;
 }
-var f14 = function(v50) {
+function f14(v50) {
   if (!(typeof v50 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f15 = function(v51) {
+function f15(v51) {
   if (!(typeof v51 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f16 = function(v52) {
+function f16(v52) {
   if (!(typeof v52 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f17 = function(v53) {
+function f17(v53) {
   if (!(v53 && typeof v53 === 'object' && !Array.isArray(v53))) {
     return \\"error\\";
   }
   return null;
 }
-var f18 = function(v54) {
+function f18(v54) {
   if (!(typeof v54 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f19 = function(v55) {
+function f19(v55) {
   return null;
 }
-var f20 = function(v56) {
+function f20(v56) {
+  var v57, v58, v59, v60, v61;
   if (v56 && typeof v56 === 'object' && !Array.isArray(v56)) {
-    var v57 = v56.data;
+    v57 = v56.data;
     if (v57 !== undefined) {
       if (f37(v57) !== null) {
         return \\"error\\";
       }
     }
-    var v58 = v56.has_more;
+    v58 = v56.has_more;
     if (v58 !== undefined) {
       if (f38(v58) !== null) {
         return \\"error\\";
       }
     }
-    var v59 = v56.object;
+    v59 = v56.object;
     if (v59 !== undefined) {
       if (f39(v59) !== null) {
         return \\"error\\";
       }
     }
-    var v60 = v56.total_count;
+    v60 = v56.total_count;
     if (v60 !== undefined) {
       if (f40(v60) !== null) {
         return \\"error\\";
       }
     }
-    var v61 = v56.url;
+    v61 = v56.url;
     if (v61 !== undefined) {
       if (f41(v61) !== null) {
         return \\"error\\";
@@ -2616,33 +2632,34 @@ var f20 = function(v56) {
   }
   return null;
 }
-var f21 = function(v62) {
+function f21(v62) {
+  var v63, v64, v65, v66, v67;
   if (v62 && typeof v62 === 'object' && !Array.isArray(v62)) {
-    var v63 = v62.data;
+    v63 = v62.data;
     if (v63 !== undefined) {
       if (f42(v63) !== null) {
         return \\"error\\";
       }
     }
-    var v64 = v62.has_more;
+    v64 = v62.has_more;
     if (v64 !== undefined) {
       if (f43(v64) !== null) {
         return \\"error\\";
       }
     }
-    var v65 = v62.object;
+    v65 = v62.object;
     if (v65 !== undefined) {
       if (f44(v65) !== null) {
         return \\"error\\";
       }
     }
-    var v66 = v62.total_count;
+    v66 = v62.total_count;
     if (v66 !== undefined) {
       if (f45(v66) !== null) {
         return \\"error\\";
       }
     }
-    var v67 = v62.url;
+    v67 = v62.url;
     if (v67 !== undefined) {
       if (f46(v67) !== null) {
         return \\"error\\";
@@ -2668,14 +2685,15 @@ var f21 = function(v62) {
   }
   return null;
 }
-var f22 = function(v68) {
+function f22(v68) {
+  var v69, v70;
   if (Array.isArray(v68)) {
-    var v69 = 0;
-    var v70 = null;
+    v69 = 0;
+    v70 = null;
     for (; v69 < v68.length; v69++) {
-      v70 = f47(v68[v69])
+      v70 = f47(v68[v69]);
       if (v70 !== null) {
-        return v70
+        return v70;
       }
     }
   }
@@ -2684,16 +2702,17 @@ var f22 = function(v68) {
   }
   return null;
 }
-var f23 = function(v71) {
+function f23(v71) {
   if (!(typeof v71 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f24 = function(v72) {
-  var v73 = 0;
+function f24(v72) {
+  var v73;
+  v73 = 0;
   if (v72 === \\"list\\") {
-    v73++;
+    v73++
   }
   if (v73 === 0) {
     return \\"error\\";
@@ -2703,26 +2722,27 @@ var f24 = function(v72) {
   }
   return null;
 }
-var f25 = function(v74) {
+function f25(v74) {
   if (!(typeof v74 === 'number' && v74 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f26 = function(v75) {
+function f26(v75) {
   if (!(typeof v75 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f27 = function(v76) {
+function f27(v76) {
+  var v77, v78;
   if (Array.isArray(v76)) {
-    var v77 = 0;
-    var v78 = null;
+    v77 = 0;
+    v78 = null;
     for (; v77 < v76.length; v77++) {
-      v78 = f48(v76[v77])
+      v78 = f48(v76[v77]);
       if (v78 !== null) {
-        return v78
+        return v78;
       }
     }
   }
@@ -2731,16 +2751,17 @@ var f27 = function(v76) {
   }
   return null;
 }
-var f28 = function(v79) {
+function f28(v79) {
   if (!(typeof v79 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f29 = function(v80) {
-  var v81 = 0;
+function f29(v80) {
+  var v81;
+  v81 = 0;
   if (v80 === \\"list\\") {
-    v81++;
+    v81++
   }
   if (v81 === 0) {
     return \\"error\\";
@@ -2750,26 +2771,27 @@ var f29 = function(v80) {
   }
   return null;
 }
-var f30 = function(v82) {
+function f30(v82) {
   if (!(typeof v82 === 'number' && v82 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f31 = function(v83) {
+function f31(v83) {
   if (!(typeof v83 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f32 = function(v84) {
+function f32(v84) {
+  var v85, v86;
   if (Array.isArray(v84)) {
-    var v85 = 0;
-    var v86 = null;
+    v85 = 0;
+    v86 = null;
     for (; v85 < v84.length; v85++) {
-      v86 = f49(v84[v85])
+      v86 = f49(v84[v85]);
       if (v86 !== null) {
-        return v86
+        return v86;
       }
     }
   }
@@ -2778,16 +2800,17 @@ var f32 = function(v84) {
   }
   return null;
 }
-var f33 = function(v87) {
+function f33(v87) {
   if (!(typeof v87 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f34 = function(v88) {
-  var v89 = 0;
+function f34(v88) {
+  var v89;
+  v89 = 0;
   if (v88 === \\"list\\") {
-    v89++;
+    v89++
   }
   if (v89 === 0) {
     return \\"error\\";
@@ -2797,26 +2820,27 @@ var f34 = function(v88) {
   }
   return null;
 }
-var f35 = function(v90) {
+function f35(v90) {
   if (!(typeof v90 === 'number' && v90 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f36 = function(v91) {
+function f36(v91) {
   if (!(typeof v91 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f37 = function(v92) {
+function f37(v92) {
+  var v93, v94;
   if (Array.isArray(v92)) {
-    var v93 = 0;
-    var v94 = null;
+    v93 = 0;
+    v94 = null;
     for (; v93 < v92.length; v93++) {
-      v94 = f50(v92[v93])
+      v94 = f50(v92[v93]);
       if (v94 !== null) {
-        return v94
+        return v94;
       }
     }
   }
@@ -2825,16 +2849,17 @@ var f37 = function(v92) {
   }
   return null;
 }
-var f38 = function(v95) {
+function f38(v95) {
   if (!(typeof v95 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f39 = function(v96) {
-  var v97 = 0;
+function f39(v96) {
+  var v97;
+  v97 = 0;
   if (v96 === \\"list\\") {
-    v97++;
+    v97++
   }
   if (v97 === 0) {
     return \\"error\\";
@@ -2844,26 +2869,27 @@ var f39 = function(v96) {
   }
   return null;
 }
-var f40 = function(v98) {
+function f40(v98) {
   if (!(typeof v98 === 'number' && v98 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f41 = function(v99) {
+function f41(v99) {
   if (!(typeof v99 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f42 = function(v100) {
+function f42(v100) {
+  var v101, v102;
   if (Array.isArray(v100)) {
-    var v101 = 0;
-    var v102 = null;
+    v101 = 0;
+    v102 = null;
     for (; v101 < v100.length; v101++) {
-      v102 = f51(v100[v101])
+      v102 = f51(v100[v101]);
       if (v102 !== null) {
-        return v102
+        return v102;
       }
     }
   }
@@ -2872,16 +2898,17 @@ var f42 = function(v100) {
   }
   return null;
 }
-var f43 = function(v103) {
+function f43(v103) {
   if (!(typeof v103 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f44 = function(v104) {
-  var v105 = 0;
+function f44(v104) {
+  var v105;
+  v105 = 0;
   if (v104 === \\"list\\") {
-    v105++;
+    v105++
   }
   if (v105 === 0) {
     return \\"error\\";
@@ -2891,73 +2918,74 @@ var f44 = function(v104) {
   }
   return null;
 }
-var f45 = function(v106) {
+function f45(v106) {
   if (!(typeof v106 === 'number' && v106 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f46 = function(v107) {
+function f46(v107) {
   if (!(typeof v107 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f47 = function(v108) {
+function f47(v108) {
   return null;
 }
-var f48 = function(v109) {
+function f48(v109) {
   return null;
 }
-var f49 = function(v110) {
+function f49(v110) {
   return null;
 }
-var f50 = function(v111) {
+function f50(v111) {
   if (!(v111 && typeof v111 === 'object' && !Array.isArray(v111))) {
     return \\"error\\";
   }
   return null;
 }
-var f51 = function(v112) {
+function f51(v112) {
   return null;
 }
 return f0;"
 `;
 
 exports[`Stripe openapi generates validators for discount 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.coupon;
+    v1 = v0.coupon;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.customer;
+    v2 = v0.customer;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.end;
+    v3 = v0.end;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.object;
+    v4 = v0.object;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.start;
+    v5 = v0.start;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.subscription;
+    v6 = v0.subscription;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
@@ -2980,34 +3008,34 @@ exports[`Stripe openapi generates validators for discount 1`] = `
   }
   return null;
 }
-var f1 = function(v7) {
+function f1(v7) {
   return null;
 }
-var f2 = function(v8) {
+function f2(v8) {
   if (!(typeof v8 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f3 = function(v9) {
+function f3(v9) {
   if (!(typeof v9 === 'number' && v9 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v10) {
+function f4(v10) {
   if (!(typeof v10 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v11) {
+function f5(v11) {
   if (!(typeof v11 === 'number' && v11 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v12) {
+function f6(v12) {
   if (!(typeof v12 === 'string')) {
     return \\"error\\";
   }
@@ -3017,87 +3045,88 @@ return f0;"
 `;
 
 exports[`Stripe openapi generates validators for dispute 1`] = `
-"var f0 = function(v0) {
+"function f0(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v1 = v0.amount;
+    v1 = v0.amount;
     if (v1 !== undefined) {
       if (f1(v1) !== null) {
         return \\"error\\";
       }
     }
-    var v2 = v0.balance_transactions;
+    v2 = v0.balance_transactions;
     if (v2 !== undefined) {
       if (f2(v2) !== null) {
         return \\"error\\";
       }
     }
-    var v3 = v0.charge;
+    v3 = v0.charge;
     if (v3 !== undefined) {
       if (f3(v3) !== null) {
         return \\"error\\";
       }
     }
-    var v4 = v0.created;
+    v4 = v0.created;
     if (v4 !== undefined) {
       if (f4(v4) !== null) {
         return \\"error\\";
       }
     }
-    var v5 = v0.currency;
+    v5 = v0.currency;
     if (v5 !== undefined) {
       if (f5(v5) !== null) {
         return \\"error\\";
       }
     }
-    var v6 = v0.evidence;
+    v6 = v0.evidence;
     if (v6 !== undefined) {
       if (f6(v6) !== null) {
         return \\"error\\";
       }
     }
-    var v7 = v0.evidence_details;
+    v7 = v0.evidence_details;
     if (v7 !== undefined) {
       if (f7(v7) !== null) {
         return \\"error\\";
       }
     }
-    var v8 = v0.id;
+    v8 = v0.id;
     if (v8 !== undefined) {
       if (f8(v8) !== null) {
         return \\"error\\";
       }
     }
-    var v9 = v0.is_charge_refundable;
+    v9 = v0.is_charge_refundable;
     if (v9 !== undefined) {
       if (f9(v9) !== null) {
         return \\"error\\";
       }
     }
-    var v10 = v0.livemode;
+    v10 = v0.livemode;
     if (v10 !== undefined) {
       if (f10(v10) !== null) {
         return \\"error\\";
       }
     }
-    var v11 = v0.metadata;
+    v11 = v0.metadata;
     if (v11 !== undefined) {
       if (f11(v11) !== null) {
         return \\"error\\";
       }
     }
-    var v12 = v0.object;
+    v12 = v0.object;
     if (v12 !== undefined) {
       if (f12(v12) !== null) {
         return \\"error\\";
       }
     }
-    var v13 = v0.reason;
+    v13 = v0.reason;
     if (v13 !== undefined) {
       if (f13(v13) !== null) {
         return \\"error\\";
       }
     }
-    var v14 = v0.status;
+    v14 = v0.status;
     if (v14 !== undefined) {
       if (f14(v14) !== null) {
         return \\"error\\";
@@ -3153,82 +3182,82 @@ exports[`Stripe openapi generates validators for dispute 1`] = `
   }
   return null;
 }
-var f1 = function(v15) {
+function f1(v15) {
   if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f2 = function(v16) {
+function f2(v16) {
   return null;
 }
-var f3 = function(v17) {
+function f3(v17) {
   if (!(typeof v17 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f4 = function(v18) {
+function f4(v18) {
   if (!(typeof v18 === 'number' && v18 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-var f5 = function(v19) {
+function f5(v19) {
   if (!(typeof v19 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f6 = function(v20) {
+function f6(v20) {
   if (!(v20 && typeof v20 === 'object' && !Array.isArray(v20))) {
     return \\"error\\";
   }
   return null;
 }
-var f7 = function(v21) {
+function f7(v21) {
   if (!(v21 && typeof v21 === 'object' && !Array.isArray(v21))) {
     return \\"error\\";
   }
   return null;
 }
-var f8 = function(v22) {
+function f8(v22) {
   if (!(typeof v22 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f9 = function(v23) {
+function f9(v23) {
   if (!(typeof v23 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f10 = function(v24) {
+function f10(v24) {
   if (!(typeof v24 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-var f11 = function(v25) {
+function f11(v25) {
   if (!(v25 && typeof v25 === 'object' && !Array.isArray(v25))) {
     return \\"error\\";
   }
   return null;
 }
-var f12 = function(v26) {
+function f12(v26) {
   if (!(typeof v26 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f13 = function(v27) {
+function f13(v27) {
   if (!(typeof v27 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-var f14 = function(v28) {
+function f14(v28) {
   if (!(typeof v28 === 'string')) {
     return \\"error\\";
   }

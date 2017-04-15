@@ -3,6 +3,9 @@ import _ from 'lodash';
 import util from '../util.js';
 import type {Context} from '../types.js';
 
+import Ast from '../jsast/ast.js';
+import type {JsAst} from '../jsast/ast.js';
+
 const additionalChecks = (
   properties: ?Object,
   patternProperties: ?Object,
@@ -10,7 +13,7 @@ const additionalChecks = (
   keySym: string,
   valSym: string,
   context: Context,
-): Array<string> => {
+): JsAst => {
   // This generates a block of code like
   //   if (key === "key1" && error(check1(data))) { (error) }
   //   if (key === "key2" && error(check2(data))) { (error) }
@@ -30,16 +33,16 @@ const additionalChecks = (
   if (additionalProperties === undefined) {
     // There are properties/patternProperties, but no additionalProperties. In
     // this case, we don't need to mark non-matches
-    return _.flatMap(allChecks, ({predicate, subSchema}) => {
+    return Ast.Body(..._.map(allChecks, ({predicate, subSchema}) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return util.ifs(
+      return Ast.If(
         predicate,
-        util.ifs(
-          `${fnSym}(${valSym}) !== null`,
+        Ast.If(
+          Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
           context.error(),
         ),
       );
-    });
+    }));
   } else if (allChecks.length === 0) {
     // There are no properties nor patternProperties, but additionalProperties.
     // In this case, we can always run additionalProperties checks.
@@ -47,8 +50,8 @@ const additionalChecks = (
       return context.error();
     } else {
       const fnSym = context.symbolForSchema(additionalProperties);
-      return util.ifs(
-        `${fnSym}(${valSym}) !== null`,
+      return Ast.If(
+        Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
         context.error(),
       );
     }
@@ -57,33 +60,33 @@ const additionalChecks = (
     // this case, we need to check if we've hit a property/patternProperty to
     // decide whether or not to check additionalProperties.
     const hitSym = context.gensym();
-    const checks = _.flatMap(allChecks, ({predicate, subSchema}) => {
+    const checks = _.map(allChecks, ({predicate, subSchema}) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return util.ifs(
+      return Ast.If(
         predicate,
-        util.ifs(
-          `${fnSym}(${valSym}) !== null`,
+        Ast.If(
+          Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
           context.error(),
-          `${hitSym} = true;`,
+          Ast.Assignment(hitSym, 'true'),
         ),
       );
     });
-    const additionalCheck = util.ifs(
-      `${hitSym} === false`,
-      additionalProperties === false ? context.error() : util.ifs(
+    const additionalCheck = Ast.If(
+      Ast.Binop.Eq(hitSym, 'false'),
+      additionalProperties === false ? context.error() : Ast.If(
         `${context.symbolForSchema(additionalProperties)}(${valSym}) !== null`,
         context.error(),
       ),
     );
-    return [
-      `var ${hitSym} = false;`,
+    return Ast.Body(
+      Ast.Assignment(hitSym, 'false'),
       ...checks,
-      ...additionalCheck,
-    ];
+      additionalCheck,
+    );
   }
 };
 
-const properties = (schema: Object, symbol: string, context: Context): Array<string> => {
+const properties = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.patternProperties || schema.additionalProperties) {
     // Need to loop through all properties to check. We'll generate a loop:
     //   for (var key in json) {
@@ -98,39 +101,37 @@ const properties = (schema: Object, symbol: string, context: Context): Array<str
     const keySym = context.gensym();
     const valSym = context.gensym();
 
-    const loop = [
-      `for (var ${keySym} in ${symbol}) {`,
-      util.indent(`var ${valSym} = ${symbol}[${keySym}];`),
-      ...additionalChecks(
+    const loop = Ast.ForIn(keySym, Ast.Literal(symbol), Ast.Body(
+      Ast.Assignment(valSym, `${symbol}[${keySym}]`),
+      additionalChecks(
         schema.properties,
         schema.patternProperties,
         schema.additionalProperties,
         keySym,
         valSym,
         context,
-      ).map(util.indent),
-      '}',
-    ];
+      ),
+    ));
     return util.typeCheck('object', symbol, loop);
   } else if (schema.properties) {
     // Static list of properties to check
-    const checks = _.flatMap(schema.properties, (subSchema, key) => {
+    const checks = Ast.Body(..._.flatMap(schema.properties, (subSchema, key) => {
       const fnSym = context.symbolForSchema(subSchema);
       const sym = context.gensym();
-      return [
-        `var ${sym} = ${symbol}.${key};`,
-        ...util.ifs(
-          `${sym} !== undefined`,
-          util.ifs(
-            `${fnSym}(${sym}) !== null`,
+      return Ast.Body(
+        Ast.Assignment(sym, `${symbol}.${key}`),
+        Ast.If(
+          Ast.Binop.Neq(sym, 'undefined'),
+          Ast.If(
+            Ast.Binop.Neq(`${fnSym}(${sym})`, 'null'),
             context.error(),
           ),
         ),
-      ];
-    });
+      );
+    }));
     return util.typeCheck('object', symbol, checks);
   } else {
-    return [];
+    return Ast.Empty;
   }
 };
 

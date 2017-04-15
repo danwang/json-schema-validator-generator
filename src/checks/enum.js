@@ -1,39 +1,31 @@
 // @flow
 import _ from 'lodash';
 import type {Context} from '../types.js';
-import util from '../util.js';
+import Ast from '../jsast/ast.js';
+import type {JsAst} from '../jsast/ast.js';
 
-const _enum = (schema: Object, symbol: string, context: Context): Array<string> => {
+const _enum = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.enum) {
     const match = context.gensym();
-    const checks = _.flatMap(schema.enum, (value) => {
+    const checks: Array<JsAst> = _.map(schema.enum, (value) => {
       if (typeof value === 'number' || typeof value === 'boolean') {
-        return util.ifs(
-          `${symbol} === ${value}`,
-          `${match}++;`,
-        );
+        return Ast.If(Ast.Binop.Eq(symbol, _.toString(value)), `${match}++`);
       } else if (typeof value === 'string') {
-        return util.ifs(
-          `${symbol} === "${value}"`,
-          `${match}++;`,
-        );
+        return Ast.If(Ast.Binop.Eq(symbol, `"${value}"`), `${match}++`);
       } else {
-        return util.ifs(
-          `JSON.stringify(${symbol}) === '${JSON.stringify(value)}'`,
-          `${match}++;`,
+        return Ast.If(
+          Ast.Binop.Eq(`JSON.stringify(${symbol})`, `'${JSON.stringify(value)}'`),
+          `${match}++`,
         );
       }
     });
-    return [
-      `var ${match} = 0;`,
-      ...checks,
-      ...util.ifs(
-        `${match} === 0`,
-        context.error(),
-      ),
-    ];
+    return Ast.Body(
+      Ast.Assignment(match, '0'),
+      Ast.Body(...checks),
+      Ast.If(Ast.Binop.Eq(match, '0'), context.error()),
+    );
   } else {
-    return [];
+    return Ast.Empty;
   }
 };
 

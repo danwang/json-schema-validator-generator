@@ -1,5 +1,7 @@
 // @flow
 import _ from 'lodash';
+import Ast from './jsast/ast.js';
+import type {JsAst} from './jsast/ast.js';
 
 const INDENT = '  ';
 const indent = (line: string) => `${INDENT}${line}`;
@@ -63,12 +65,8 @@ elseBody?: string | Array<string>,
 
 // Wraps lines of code in a check such that it only executes when the value of
 // `symbol` is the type
-const typeCheck = (type: BaseType, symbol: string, lines: Array<string>): Array<string> => {
-  if (lines.length === 0) {
-    return [];
-  } else {
-    return ifs(primitivePredicate(type, symbol), lines);
-  }
+const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
+  return Ast.If(primitivePredicate(type, symbol), body);
 };
 
 export default {

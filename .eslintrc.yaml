@@ -1,5 +1,7 @@
 ---
 extends: 'stripe'
+rules:
+  no-duplicate-imports: 0
 env:
   jest: true
 parser: 'babel-eslint'

@@ -1,9 +1,10 @@
 // @flow
 import _ from 'lodash';
-import util from '../util.js';
 import type {Context} from '../types.js';
+import Ast from '../jsast/ast.js';
+import type {JsAst} from '../jsast/ast.js';
 
-const oneOf = (schema: Object, symbol: string, context: Context): Array<string> => {
+const oneOf = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.oneOf) {
     // var count = 0;
     //
@@ -12,23 +13,17 @@ const oneOf = (schema: Object, symbol: string, context: Context): Array<string> 
     //
     // if (count !== 1) { (error) }
     const count = context.gensym();
-    const checks = _.flatMap(schema.oneOf, (subSchema) => {
+    const checks = _.map(schema.oneOf, (subSchema) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return util.ifs(
-        `${fnSym}(${symbol}) === null`,
-        `${count}++;`,
-      );
+      return Ast.If(Ast.Binop.Eq(`${fnSym}(${symbol})`, 'null'), `${count}++`);
     });
-    return [
-      `var ${count} = 0;`,
-      ...checks,
-      ...util.ifs(
-        `${count} !== 1`,
-        context.error(),
-      ),
-    ];
+    return Ast.Body(
+      Ast.Assignment(count, '0'),
+      Ast.Body(...checks),
+      Ast.If(Ast.Binop.Neq(count, '1'), context.error()),
+    );
   } else {
-    return [];
+    return Ast.Empty;
   }
 };
 

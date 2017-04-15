@@ -2,37 +2,43 @@
 import _ from 'lodash';
 import util from '../util.js';
 import type {Context} from '../types.js';
+import Ast from '../jsast/ast.js';
+import type {JsAst} from '../jsast/ast.js';
 
-const items = (schema: Object, symbol: string, context: Context): Array<string> => {
+const items = (schema: Object, symbol: string, context: Context): JsAst => {
   if (Array.isArray(schema.items)) {
     // Tuple. Handle each item individually.
-    return _.flatMap(schema.items, (subSchema, i) => {
+    const checks = _.map(schema.items, (subSchema, i) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return [
-        ...util.ifs(
-          `${i} < ${symbol}.length && ${fnSym}(${symbol}[${i}]) !== null`,
-          context.error(),
+      return Ast.If(
+        Ast.Binop.And(
+          Ast.Binop.Lt(`${i}`, `${symbol}.length`),
+          Ast.Binop.Neq(`${fnSym}(${symbol}[${i}])`, 'null'),
         ),
-      ];
+        context.error(),
+      );
     });
+    return Ast.Body(...checks);
   } else if (schema.items) {
     const fnSym = context.symbolForSchema(schema.items);
     const counter = context.gensym();
     const result = context.gensym();
-    const loop = [
-      `var ${counter} = 0;`,
-      `var ${result} = null;`,
-      `for (; ${counter} < ${symbol}.length; ${counter}++) {`,
-      util.indent(`${result} = ${fnSym}(${symbol}[${counter}])`),
-      ...util.ifs(
-        `${result} !== null`,
-        `return ${result}`,
-      ).map(util.indent),
-      '}',
-    ];
-    return util.typeCheck('array', symbol, loop);
+    const check = Ast.Body(
+      Ast.Assignment(counter, '0'),
+      Ast.Assignment(result, 'null'),
+      Ast.For(
+        Ast.Empty,
+        Ast.Binop.Lt(counter, `${symbol}.length`),
+        Ast.Literal(`${counter}++`),
+        Ast.Body(
+          Ast.Assignment(result, `${fnSym}(${symbol}[${counter}])`),
+          Ast.If(Ast.Binop.Neq(result, 'null'), Ast.Return(result)),
+        ),
+      ),
+    );
+    return util.typeCheck('array', symbol, check);
   } else {
-    return [];
+    return Ast.Empty;
   }
 };
 

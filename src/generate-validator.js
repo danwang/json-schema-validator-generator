@@ -1,5 +1,8 @@
 // @flow
 import root from './checks/root.js';
+import Ast from './jsast/ast.js';
+import simplify from './jsast/simplify.js';
+import render from './jsast/render.js';
 
 const gengensym = () => {
   const cache = {};
@@ -9,15 +12,16 @@ const gengensym = () => {
   };
 };
 
-const generateValidator = (schema: Object) => {
+const generateValidator = (schema: Object): string => {
   const gensym = gengensym();
 
   const cache = new WeakMap();
   const schemas = [];
 
   const context = {
+    gengensym,
     gensym,
-    error: () => ['return "error";'],
+    error: () => Ast.Return('"error"'),
     symbolForSchema: (schm: Object): string => {
       if (!cache.has(schm)) {
         cache.set(schm, gensym('f'));
@@ -33,10 +37,13 @@ const generateValidator = (schema: Object) => {
     results.push(root(schemas[i], context));
     i++;
   }
-  return [
-    ...results.map((l) => l.join('\n')),
-    `return ${context.symbolForSchema(schema)};`,
-  ].join('\n');
+  const simplified = simplify(Ast.Body(
+    ...results,
+    Ast.Return(context.symbolForSchema(schema)),
+  ));
+  // console.log(JSON.stringify(simplified, null, 2));
+  // console.log(render(simplified));
+  return render(simplified);
 };
 
 export default generateValidator;

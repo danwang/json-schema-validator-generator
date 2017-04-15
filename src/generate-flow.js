@@ -2,7 +2,6 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import flowType from './flow-type.js';
-// eslint-disable-next-line no-duplicate-imports
 import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from './flow-type.js';
 import util from './util.js';
 

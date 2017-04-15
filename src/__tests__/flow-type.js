@@ -13,7 +13,7 @@ import flowType, {
   Union,
   Intersection,
 } from '../flow-type.js';
-import type {FlowType} from '../flow-type.js'; // eslint-disable-line no-duplicate-imports
+import type {FlowType} from '../flow-type.js';
 
 const assertType = (schema: Object, ft: FlowType) => {
   expect(flowType(schema)).toEqual(ft);
