@@ -10,22 +10,27 @@ export type JsAst = (
   ForType |
   ForInType |
   EmptyType |
-  ExprType
+  Function1Type |
+  BinopType |
+  EmptyType |
+  LiteralType |
+  CallType |
+  NotType
 );
 type AssignmentType = {
   type: 'assignment',
   variable: string,
-  value: ExprType,
+  value: JsAst,
 };
 export type IfType = {
   type: 'if',
-  predicate: ExprType,
+  predicate: JsAst,
   body: JsAst,
   elseBody: JsAst,
 };
 type ReturnType = {
   type: 'return',
-  value: ExprType,
+  value: JsAst,
 };
 export type BodyType = {
   type: 'body',
@@ -33,26 +38,19 @@ export type BodyType = {
 };
 export type ForType = {
   type: 'for',
-  init: ExprType,
-  condition: ExprType,
-  loop: ExprType,
+  init: JsAst,
+  condition: JsAst,
+  loop: JsAst,
   body: JsAst,
 };
 export type ForInType = {
   type: 'forin',
   variable: string,
-  iterator: ExprType,
+  iterator: JsAst,
   body: JsAst,
 };
 type EmptyType = {type: 'empty'};
 
-// Expressions
-export type ExprType = (
-  Function1Type |
-  BinopType |
-  EmptyType |
-  LiteralType
-);
 export type Function1Type = {
   type: 'function1',
   name: ?string,
@@ -61,19 +59,28 @@ export type Function1Type = {
 };
 type BinopType = {
   type: 'binop',
-  left: ExprType,
+  left: JsAst,
   comparator: string,
-  right: ExprType,
+  right: JsAst,
 };
 type LiteralType = {
   type: 'literal',
   value: string,
 };
+type CallType = {
+  type: 'call',
+  fn: LiteralType,
+  arg: LiteralType,
+};
+type NotType = {
+  type: 'not',
+  child: JsAst,
+};
 
 const Function1 = (argument: string, body: JsAst, name: ?string): Function1Type => {
   return {type: 'function1', argument, body, name};
 };
-const _Binop = (comparator: string) => (left: ExprType | string, right: ExprType | string): BinopType => {
+const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
   return {
     type: 'binop',
     comparator,
@@ -81,14 +88,14 @@ const _Binop = (comparator: string) => (left: ExprType | string, right: ExprType
     right: (typeof right === 'string') ? Literal(right) : right,
   };
 };
-const Assignment = (variable: string, value: ExprType | string): AssignmentType => {
+const Assignment = (variable: string, value: JsAst | string): AssignmentType => {
   return {
     type: 'assignment',
     variable,
     value: (typeof value === 'string') ? Literal(value) : value,
   };
 };
-const If = (predicate: ExprType | string, body: JsAst | string, elseBody: JsAst | string = Empty): IfType => {
+const If = (predicate: JsAst | string, body: JsAst | string, elseBody: JsAst | string = Empty): IfType => {
   return {
     type: 'if',
     predicate: (typeof predicate === 'string') ? Literal(predicate) : predicate,
@@ -96,7 +103,7 @@ const If = (predicate: ExprType | string, body: JsAst | string, elseBody: JsAst 
     elseBody: (typeof elseBody === 'string') ? Literal(elseBody) : elseBody,
   };
 };
-const Return = (value: ExprType | string): ReturnType => {
+const Return = (value: JsAst | string): ReturnType => {
   return {
     type: 'return',
     value: (typeof value === 'string') ? Literal(value) : value,
@@ -104,16 +111,29 @@ const Return = (value: ExprType | string): ReturnType => {
 };
 const Body = (...body: Array<JsAst>): BodyType => ({type: 'body', body});
 const For = (
-  init: ExprType,
-  condition: ExprType,
-  loop: ExprType,
+  init: JsAst,
+  condition: JsAst,
+  loop: JsAst,
   body: JsAst,
 ): ForType => ({type: 'for', init, condition, loop, body});
-const ForIn = (variable: string, iterator: ExprType, body: JsAst): ForInType => {
+const ForIn = (variable: string, iterator: JsAst, body: JsAst): ForInType => {
   return {type: 'forin', variable, iterator, body};
 };
 const Empty = {type: 'empty'};
 const Literal = (value: string): LiteralType => ({type: 'literal', value});
+const Call = (fn: string, arg: string) => {
+  return {
+    type: 'call',
+    fn: Literal(fn),
+    arg: Literal(arg),
+  };
+};
+const Not = (child: JsAst | string): NotType => {
+  return {
+    type: 'not',
+    child: (typeof child === 'string') ? Literal(child) : child,
+  };
+};
 
 export default {
   Function1,
@@ -136,4 +156,6 @@ export default {
   ForIn,
   Empty,
   Literal,
+  Call,
+  Not,
 };

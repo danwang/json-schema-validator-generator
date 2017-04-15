@@ -9,7 +9,7 @@ const not = (schema: Object, symbol: string, context: Context): JsAst => {
     const result = context.gensym();
 
     return Ast.Body(
-      Ast.Assignment(result, `${fnSym}(${symbol})`),
+      Ast.Assignment(result, Ast.Call(fnSym, symbol)),
       Ast.If(Ast.Binop.Eq(result, 'null'), context.error()),
     );
   } else {

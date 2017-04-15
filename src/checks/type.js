@@ -5,26 +5,26 @@ import type {Context} from '../types.js';
 import Ast from '../jsast/ast.js';
 import type {JsAst} from '../jsast/ast.js';
 
-const predicate = (type: string | Object, symbol: string, context: Context): string => {
+const predicate = (type: string | Object, symbol: string, context: Context) => {
   if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
     return util.primitivePredicate(type, symbol);
   } else {
     const fnSym = context.symbolForSchema(type);
-    return `${fnSym}(${symbol}) === null`;
+    return Ast.Binop.Eq(Ast.Call(fnSym, symbol), 'null');
   }
 };
 
 const type = (schema: Object, symbol: string, context: Context): JsAst => {
   if (typeof schema.type === 'string') {
     return Ast.If(
-      `!(${util.primitivePredicate(schema.type, symbol)})`,
+      Ast.Not(util.primitivePredicate(schema.type, symbol)),
       context.error(),
     );
   } else if (Array.isArray(schema.type)) {
     if (schema.type.length === 1) {
       return Ast.If(
-        `!(${predicate(schema.type[0], symbol, context)})`,
+        Ast.Not(predicate(schema.type[0], symbol, context)),
         context.error(),
       );
     } else if (schema.type.length > 1) {
@@ -37,7 +37,7 @@ const type = (schema: Object, symbol: string, context: Context): JsAst => {
       const count = context.gensym();
       const checks = _.map(schema.type, (typeOrSubSchema) => {
         return Ast.If(
-          `!(${predicate(typeOrSubSchema, symbol, context)})`,
+          Ast.Not(predicate(typeOrSubSchema, symbol, context)),
           `${count}++;`,
         );
       });

@@ -79,6 +79,10 @@ const render = (ast: JsAst, depth: number = 0) => {
       return `${render(ast.left, depth)} ${ast.comparator} ${render(ast.right, depth)}`;
     case 'literal':
       return indent(ast.value, depth);
+    case 'call':
+      return indent(`${render(ast.fn)}(${render(ast.arg)})`, depth);
+    case 'not':
+      return indent(`!(${render(ast.child)})`, depth);
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

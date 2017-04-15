@@ -1,4 +1,5 @@
 // @flow
+/* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import type {JsAst} from './ast.js';
 
@@ -40,6 +41,10 @@ const _getVars = (ast: JsAst): Array<string> => {
       ];
     case 'literal':
       return [];
+    case 'call':
+      return [];
+    case 'not':
+      return getVars(ast.child);
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

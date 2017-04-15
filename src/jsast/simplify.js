@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {JsAst, ExprType, IfType, BodyType} from './ast.js';
+import type {JsAst, IfType, BodyType} from './ast.js';
 import Ast from './ast.js';
 
 const simplifyIf = (ast: IfType): JsAst => {
@@ -11,7 +11,7 @@ const simplifyIf = (ast: IfType): JsAst => {
     return Ast.Empty;
   } else {
     return Ast.If(
-      simplifyExpr(ast.predicate),
+      simplify(ast.predicate),
       body,
       elseBody,
     );
@@ -36,22 +36,10 @@ const simplifyBody = (ast: BodyType): JsAst => {
   }
 };
 
-const simplifyExpr = (ast: ExprType): ExprType => {
-  switch (ast.type) {
-    case 'function1':
-      return Ast.Function1(ast.argument, simplify(ast.body), ast.name);
-    case 'binop':
-    case 'empty':
-    case 'literal':
-    default:
-      return ast;
-  }
-};
-
 const simplify = (ast: JsAst): JsAst => {
   switch (ast.type) {
     case 'assignment':
-      return Ast.Assignment(ast.variable, simplifyExpr(ast.value));
+      return Ast.Assignment(ast.variable, simplify(ast.value));
     case 'if':
       return simplifyIf(ast);
     case 'return':
@@ -63,7 +51,7 @@ const simplify = (ast: JsAst): JsAst => {
     case 'empty':
       return ast;
     case 'function1':
-      return simplifyExpr(ast);
+      return Ast.Function1(ast.argument, simplify(ast.body), ast.name);
     case 'binop':
     default:
       return ast;

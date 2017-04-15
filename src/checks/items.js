@@ -13,7 +13,7 @@ const items = (schema: Object, symbol: string, context: Context): JsAst => {
       return Ast.If(
         Ast.Binop.And(
           Ast.Binop.Lt(`${i}`, `${symbol}.length`),
-          Ast.Binop.Neq(`${fnSym}(${symbol}[${i}])`, 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), 'null'),
         ),
         context.error(),
       );
@@ -31,7 +31,7 @@ const items = (schema: Object, symbol: string, context: Context): JsAst => {
         Ast.Binop.Lt(counter, `${symbol}.length`),
         Ast.Literal(`${counter}++`),
         Ast.Body(
-          Ast.Assignment(result, `${fnSym}(${symbol}[${counter}])`),
+          Ast.Assignment(result, Ast.Call(fnSym, `${symbol}[${counter}]`)),
           Ast.If(Ast.Binop.Neq(result, 'null'), Ast.Return(result)),
         ),
       ),

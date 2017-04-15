@@ -10,7 +10,7 @@ const allOf = (schema: Object, symbol: string, context: Context): JsAst => {
       const fnSym = context.symbolForSchema(subSchema);
       const result = context.gensym();
       return Ast.Body(
-        Ast.Assignment(result, `${fnSym}(${symbol})`),
+        Ast.Assignment(result, Ast.Call(fnSym, symbol)),
         Ast.If(
           Ast.Binop.Neq(result, 'null'),
           context.error(),

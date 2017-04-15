@@ -15,7 +15,7 @@ const oneOf = (schema: Object, symbol: string, context: Context): JsAst => {
     const count = context.gensym();
     const checks = _.map(schema.oneOf, (subSchema) => {
       const fnSym = context.symbolForSchema(subSchema);
-      return Ast.If(Ast.Binop.Eq(`${fnSym}(${symbol})`, 'null'), `${count}++`);
+      return Ast.If(Ast.Binop.Eq(Ast.Call(fnSym, symbol), 'null'), `${count}++`);
     });
     return Ast.Body(
       Ast.Assignment(count, '0'),

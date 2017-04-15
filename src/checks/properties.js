@@ -38,7 +38,7 @@ const additionalChecks = (
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
           context.error(),
         ),
       );
@@ -51,7 +51,7 @@ const additionalChecks = (
     } else {
       const fnSym = context.symbolForSchema(additionalProperties);
       return Ast.If(
-        Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
+        Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
         context.error(),
       );
     }
@@ -65,7 +65,7 @@ const additionalChecks = (
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(`${fnSym}(${valSym})`, 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
           context.error(),
           Ast.Assignment(hitSym, 'true'),
         ),
@@ -123,7 +123,7 @@ const properties = (schema: Object, symbol: string, context: Context): JsAst => 
         Ast.If(
           Ast.Binop.Neq(sym, 'undefined'),
           Ast.If(
-            Ast.Binop.Neq(`${fnSym}(${sym})`, 'null'),
+            Ast.Binop.Neq(Ast.Call(fnSym, sym), 'null'),
             context.error(),
           ),
         ),

@@ -4,6 +4,8 @@ import root from './checks/root.js';
 import Ast from './jsast/ast.js';
 import simplify from './jsast/simplify.js';
 import render from './jsast/render.js';
+import uniqFuncs from './jsast/uniq-funcs.js';
+import type {Function1Type} from './jsast/ast.js';
 
 const gengensym = () => {
   const cache = {};
@@ -40,14 +42,14 @@ const generateValidator = (schema: Object): string => {
     symbolForSchema,
   });
 
-  const results = [root(schema, makeContext())];
+  const results: Array<Function1Type> = [root(schema, makeContext())];
   let i = 1;
   while (i < schemas.length) {
     results.push(root(schemas[i], makeContext()));
     i++;
   }
   const simplified = simplify(Ast.Body(
-    ...results,
+    ...uniqFuncs(results),
     Ast.Return(symbolForSchema(schema)),
   ));
   // console.log(JSON.stringify(simplified, null, 2));
