@@ -15,14 +15,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
         }
       }
       if (v1 === \\"bar\\") {
-        if (f2(v2) !== null) {
+        if (f1(v2) !== null) {
           return \\"error\\";
         } else {
           v3 = true;
         }
       }
       if (v1.match(/^v/)) {
-        if (f3(v2) !== null) {
+        if (f1(v2) !== null) {
           return \\"error\\";
         } else {
           v3 = true;
@@ -36,12 +36,6 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
   return null;
 }
 function f1(v4) {
-  return null;
-}
-function f2(v5) {
-  return null;
-}
-function f3(v6) {
   return null;
 }
 return f0;"
@@ -62,14 +56,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
         }
       }
       if (v1 === \\"bar\\") {
-        if (f2(v2) !== null) {
+        if (f1(v2) !== null) {
           return \\"error\\";
         } else {
           v3 = true;
         }
       }
       if (v3 === false) {
-        if (f3(v2) !== null) {
+        if (f2(v2) !== null) {
           return \\"error\\";
         }
       }
@@ -81,10 +75,7 @@ function f1(v4) {
   return null;
 }
 function f2(v5) {
-  return null;
-}
-function f3(v6) {
-  if (!(typeof v6 === 'boolean')) {
+  if (!(typeof v5 === 'boolean')) {
     return \\"error\\";
   }
   return null;
@@ -126,7 +117,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
     }
     v2 = v0.bar;
     if (v2 !== undefined) {
-      if (f2(v2) !== null) {
+      if (f1(v2) !== null) {
         return \\"error\\";
       }
     }
@@ -134,9 +125,6 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
   return null;
 }
 function f1(v3) {
-  return null;
-}
-function f2(v4) {
   return null;
 }
 return f0;"
@@ -1106,7 +1094,7 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
     }
     v2 = v0.bar;
     if (v2 !== undefined) {
-      if (f2(v2) !== null) {
+      if (f1(v2) !== null) {
         return \\"error\\";
       }
     }
@@ -1119,9 +1107,6 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
   return null;
 }
 function f1(v3) {
-  return null;
-}
-function f2(v4) {
   return null;
 }
 return f0;"

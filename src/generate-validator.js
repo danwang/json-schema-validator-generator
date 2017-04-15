@@ -1,4 +1,5 @@
 // @flow
+import _ from 'lodash';
 import root from './checks/root.js';
 import Ast from './jsast/ast.js';
 import simplify from './jsast/simplify.js';
@@ -24,8 +25,13 @@ const generateValidator = (schema: Object): string => {
     error: () => Ast.Return('"error"'),
     symbolForSchema: (schm: Object): string => {
       if (!cache.has(schm)) {
-        cache.set(schm, gensym('f'));
-        schemas.push(schm);
+        const match = _.find(schemas, (s) => _.isEqual(s, schm));
+        if (match) {
+          cache.set(schm, cache.get(match));
+        } else {
+          cache.set(schm, gensym('f'));
+          schemas.push(schm);
+        }
       }
       return (cache.get(schm): any);
     },
