@@ -1,20 +1,16 @@
 // @flow
 import util from '../util.js';
 import type {Context} from '../types.js';
-import root from './root.js';
 
 const not = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (schema.not) {
-    const errorSym = context.gensym();
-    const subcontext = {
-      ...context,
-      error: () => [`${errorSym} = true;`],
-    };
+    const fnSym = context.symbolForSchema(schema.not);
+    const result = context.gensym();
+
     return [
-      `var ${errorSym} = false;`,
-      ...root(schema.not, symbol, subcontext),
+      `var ${result} = ${fnSym}(${symbol});`,
       ...util.ifs(
-        `!${errorSym}`,
+        `${result} === null`,
         context.error(),
       ),
     ];

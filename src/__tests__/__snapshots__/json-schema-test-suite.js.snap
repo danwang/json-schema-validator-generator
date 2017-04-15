@@ -1,883 +1,1197 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      var v4 = false;
-      if (v2 === \\"foo\\") {
-        v4 = true;
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      var v3 = false;
+      if (v1 === \\"foo\\") {
+        if (f1(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
       }
-      if (v2 === \\"bar\\") {
-        v4 = true;
+      if (v1 === \\"bar\\") {
+        if (f2(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
       }
-      if (v2.match(/^v/)) {
-        v4 = true;
+      if (v1.match(/^v/)) {
+        if (f3(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
       }
-      if (v4 === false) {
-        v1.push(true);
+      if (v3 === false) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v4) {
+  return null;
+}
+var f2 = function(v5) {
+  return null;
+}
+var f3 = function(v6) {
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      var v4 = false;
-      if (v2 === \\"foo\\") {
-        v4 = true;
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      var v3 = false;
+      if (v1 === \\"foo\\") {
+        if (f1(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
       }
-      if (v2 === \\"bar\\") {
-        v4 = true;
+      if (v1 === \\"bar\\") {
+        if (f2(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
       }
-      if (v4 === false) {
-        if (!(typeof v3 === 'boolean')) {
-          v1.push(true);
+      if (v3 === false) {
+        if (f3(v2) !== null) {
+          return \\"error\\";
         }
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v4) {
+  return null;
+}
+var f2 = function(v5) {
+  return null;
+}
+var f3 = function(v6) {
+  if (!(typeof v6 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      if (!(typeof v3 === 'boolean')) {
-        v1.push(true);
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      if (f1(v2) !== null) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
     }
-    var v3 = v0.bar;
-    if (v3 !== undefined) {
+    var v2 = v0.bar;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
+      }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  return null;
+}
+var f2 = function(v4) {
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.bar;
-    if (v2 !== undefined) {
-      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
-        v1.push(true);
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 !== null) {
+    return \\"error\\";
+  }
+  var v2 = f2(v0);
+  if (v2 !== null) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f1 = function(v3) {
+  if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
+    var v4 = v3.bar;
+    if (v4 !== undefined) {
+      if (f3(v4) !== null) {
+        return \\"error\\";
       }
     }
   }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    if (v0.bar === undefined) {
-      v1.push(true);
+  if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
+    if (v3.bar === undefined) {
+      return \\"error\\";
     }
   }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v3 = v0.foo;
-    if (v3 !== undefined) {
-      if (!(typeof v3 === 'string')) {
-        v1.push(true);
+  return null;
+}
+var f2 = function(v5) {
+  if (v5 && typeof v5 === 'object' && !Array.isArray(v5)) {
+    var v6 = v5.foo;
+    if (v6 !== undefined) {
+      if (f4(v6) !== null) {
+        return \\"error\\";
       }
     }
   }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    if (v0.foo === undefined) {
-      v1.push(true);
+  if (v5 && typeof v5 === 'object' && !Array.isArray(v5)) {
+    if (v5.foo === undefined) {
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f3 = function(v7) {
+  if (!(typeof v7 === 'number' && v7 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f4 = function(v8) {
+  if (!(typeof v8 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
-      if (!(typeof v2 === 'string')) {
-        v1.push(true);
-      }
-    }
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 !== null) {
+    return \\"error\\";
+  }
+  var v2 = f2(v0);
+  if (v2 !== null) {
+    return \\"error\\";
   }
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    if (v0.foo === undefined) {
-      v1.push(true);
-    }
-  }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v3 = v0.baz;
+    var v3 = v0.bar;
     if (v3 !== undefined) {
-      if (!(v3 === null)) {
-        v1.push(true);
-      }
-    }
-  }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    if (v0.baz === undefined) {
-      v1.push(true);
-    }
-  }
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v4 = v0.bar;
-    if (v4 !== undefined) {
-      if (!(typeof v4 === 'number' && v4 % 1 === 0)) {
-        v1.push(true);
+      if (f3(v3) !== null) {
+        return \\"error\\";
       }
     }
   }
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     if (v0.bar === undefined) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v4) {
+  if (v4 && typeof v4 === 'object' && !Array.isArray(v4)) {
+    var v5 = v4.foo;
+    if (v5 !== undefined) {
+      if (f4(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v4 && typeof v4 === 'object' && !Array.isArray(v4)) {
+    if (v4.foo === undefined) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+var f2 = function(v6) {
+  if (v6 && typeof v6 === 'object' && !Array.isArray(v6)) {
+    var v7 = v6.baz;
+    if (v7 !== undefined) {
+      if (f5(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v6 && typeof v6 === 'object' && !Array.isArray(v6)) {
+    if (v6.baz === undefined) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+var f3 = function(v8) {
+  if (!(typeof v8 === 'number' && v8 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f4 = function(v9) {
+  if (!(typeof v9 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f5 = function(v10) {
+  if (!(v10 === null)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
-  if (typeof v0 === 'number') {
-    if (v0 > 30) {
-      v1.push(true);
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 !== null) {
+    return \\"error\\";
+  }
+  var v2 = f2(v0);
+  if (v2 !== null) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f1 = function(v3) {
+  if (typeof v3 === 'number') {
+    if (v3 > 30) {
+      return \\"error\\";
     }
   }
-  if (typeof v0 === 'number') {
-    if (v0 < 20) {
-      v1.push(true);
+  return null;
+}
+var f2 = function(v4) {
+  if (typeof v4 === 'number') {
+    if (v4 < 20) {
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
-  var v3;
-  v3 = false;
-  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
-    v3 = true;
+"var f0 = function(v0) {
+  var v1 = 0;
+  (f1(v0) === null) && v1++
+  (f2(v0) === null) && v1++
+  if (v1 === 0) {
+    return \\"error\\";
   }
-  v3 && v2++;
-  v3 = false;
-  if (typeof v0 === 'number') {
-    if (v0 < 2) {
-      v3 = true;
+  return null;
+}
+var f1 = function(v2) {
+  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v3) {
+  if (typeof v3 === 'number') {
+    if (v3 < 2) {
+      return \\"error\\";
     }
   }
-  v3 && v2++;
-  if (v2 === 2) {
-    v1.push(true);
-  }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
-  var v3;
-  v3 = false;
-  if (typeof v0 === 'string') {
-    if (v0.length > 2) {
-      v3 = true;
-    }
-  }
-  v3 && v2++;
-  v3 = false;
-  if (typeof v0 === 'string') {
-    if (v0.length < 4) {
-      v3 = true;
-    }
-  }
-  v3 && v2++;
-  if (v2 === 2) {
-    v1.push(true);
+"var f0 = function(v0) {
+  var v1 = 0;
+  (f1(v0) === null) && v1++
+  (f2(v0) === null) && v1++
+  if (v1 === 0) {
+    return \\"error\\";
   }
   if (!(typeof v0 === 'string')) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  if (typeof v2 === 'string') {
+    if (v2.length > 2) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+var f2 = function(v3) {
+  if (typeof v3 === 'string') {
+    if (v3.length < 4) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite default.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
-      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
-        v1.push(true);
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite default.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.bar;
-    if (v2 !== undefined) {
-      if (typeof v2 === 'string') {
-        if (v2.length < 4) {
-          v1.push(true);
-        }
-      }
-      if (!(typeof v2 === 'string')) {
-        v1.push(true);
+    var v1 = v0.bar;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  if (typeof v2 === 'string') {
+    if (v2.length < 4) {
+      return \\"error\\";
+    }
+  }
+  if (!(typeof v2 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
+"var f0 = function(v0) {
+  var v1 = 0;
   if (v0 === 1) {
-    v2++;
+    v1++;
   }
   if (v0 === 2) {
-    v2++;
+    v1++;
   }
   if (v0 === 3) {
-    v2++;
+    v1++;
   }
-  if (v2 === 0) {
-    v1.push(true);
+  if (v1 === 0) {
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
+"var f0 = function(v0) {
+  var v1 = 0;
   if (v0 === 6) {
-    v2++;
+    v1++;
   }
   if (v0 === \\"foo\\") {
-    v2++;
+    v1++;
   }
   if (JSON.stringify(v0) === '[]') {
-    v2++;
+    v1++;
   }
   if (v0 === true) {
-    v2++;
+    v1++;
   }
   if (JSON.stringify(v0) === '{\\"foo\\":12}') {
-    v2++;
+    v1++;
   }
-  if (v2 === 0) {
-    v1.push(true);
+  if (v1 === 0) {
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
-      var v3 = 0;
-      if (v2 === \\"foo\\") {
-        v3++;
-      }
-      if (v3 === 0) {
-        v1.push(true);
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
       }
     }
-    var v4 = v0.bar;
-    if (v4 !== undefined) {
-      var v5 = 0;
-      if (v4 === \\"bar\\") {
-        v5++;
-      }
-      if (v5 === 0) {
-        v1.push(true);
+    var v2 = v0.bar;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
       }
     }
   }
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     if (v0.bar === undefined) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
   if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  var v4 = 0;
+  if (v3 === \\"foo\\") {
+    v4++;
+  }
+  if (v4 === 0) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v5) {
+  var v6 = 0;
+  if (v5 === \\"bar\\") {
+    v6++;
+  }
+  if (v6 === 0) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite items.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (Array.isArray(v0)) {
-    var v2 = 0;
-    for (; v2 < v0.length; v2++) {
-    if (!(typeof v0[v2] === 'number' && v0[v2] % 1 === 0)) {
-      v1.push(true);
-    }
+    var v1 = 0;
+    var v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f1(v0[v1])
+      if (v2 !== null) {
+        return v2
+      }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite items.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = v0[0];
-  if (v2 !== undefined) {
-    if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
-      v1.push(true);
-    }
+"var f0 = function(v0) {
+  if (0 < v0.length && f1(v0[0]) !== null) {
+    return \\"error\\";
   }
-  var v3 = v0[1];
-  if (v3 !== undefined) {
-    if (!(typeof v3 === 'string')) {
-      v1.push(true);
-    }
+  if (1 < v0.length && f2(v0[1]) !== null) {
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v1) {
+  if (!(typeof v1 === 'number' && v1 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v2) {
+  if (!(typeof v2 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite maxItems.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (Array.isArray(v0)) {
     if (v0.length > 2) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'string') {
     if (v0.length > 2) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     if (Object.keys(v0).length > 2) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite maximum.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'number') {
     if (v0 > 3) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite maximum.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'number') {
     if (v0 >= 3) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite minItems.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (Array.isArray(v0)) {
     if (v0.length < 1) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'string') {
     if (v0.length < 2) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     if (Object.keys(v0).length < 1) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite minimum.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'number') {
     if (v0 < 1.1) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'number') {
     if (v0 <= 1.1) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = false;
-  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
-    v2 = true;
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 === null) {
+    return \\"error\\";
   }
-  if (!v2) {
-    v1.push(true);
+  return null;
+}
+var f1 = function(v2) {
+  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = false;
-  if (!((typeof v0 === 'number' && v0 % 1 === 0) || (typeof v0 === 'boolean'))) {
-    v2 = true;
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 === null) {
+    return \\"error\\";
   }
-  if (!v2) {
-    v1.push(true);
+  return null;
+}
+var f1 = function(v2) {
+  var v3 = 0;
+  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+    v3++;
   }
-  return v1;
-}"
+  if (!(typeof v2 === 'boolean')) {
+    v3++;
+  }
+  if (v3 === 2) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = false;
-  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v3 = v0.foo;
+"var f0 = function(v0) {
+  var v1 = f1(v0);
+  if (v1 === null) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f1 = function(v2) {
+  if (v2 && typeof v2 === 'object' && !Array.isArray(v2)) {
+    var v3 = v2.foo;
     if (v3 !== undefined) {
-      if (!(typeof v3 === 'string')) {
-        v2 = true;
+      if (f2(v3) !== null) {
+        return \\"error\\";
       }
     }
   }
-  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
-    v2 = true;
+  if (!(v2 && typeof v2 === 'object' && !Array.isArray(v2))) {
+    return \\"error\\";
   }
-  if (!v2) {
-    v1.push(true);
+  return null;
+}
+var f2 = function(v4) {
+  if (!(typeof v4 === 'string')) {
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 4`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
-      var v3 = false;
-      if (!v3) {
-        v1.push(true);
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  var v3 = f2(v2);
+  if (v3 === null) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v4) {
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
-  var v3;
-  v3 = false;
-  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
-    v3 = true;
+"var f0 = function(v0) {
+  var v1 = 0;
+  if (f1(v0) === null) {
+    v1++;
   }
-  v3 && v2++;
-  v3 = false;
-  if (typeof v0 === 'number') {
-    if (v0 < 2) {
-      v3 = true;
+  if (f2(v0) === null) {
+    v1++;
+  }
+  if (v1 !== 1) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f1 = function(v2) {
+  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v3) {
+  if (typeof v3 === 'number') {
+    if (v3 < 2) {
+      return \\"error\\";
     }
   }
-  v3 && v2++;
-  if (v2 !== 2 - 1) {
-    v1.push(true);
-  }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
-  var v2 = 0;
-  var v3;
-  v3 = false;
-  if (typeof v0 === 'string') {
-    if (v0.length < 2) {
-      v3 = true;
-    }
+"var f0 = function(v0) {
+  var v1 = 0;
+  if (f1(v0) === null) {
+    v1++;
   }
-  v3 && v2++;
-  v3 = false;
-  if (typeof v0 === 'string') {
-    if (v0.length > 4) {
-      v3 = true;
-    }
+  if (f2(v0) === null) {
+    v1++;
   }
-  v3 && v2++;
-  if (v2 !== 2 - 1) {
-    v1.push(true);
+  if (v1 !== 1) {
+    return \\"error\\";
   }
   if (!(typeof v0 === 'string')) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  if (typeof v2 === 'string') {
+    if (v2.length < 2) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+var f2 = function(v3) {
+  if (typeof v3 === 'string') {
+    if (v3.length > 4) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'string') {
     if (!v0.match(/^a*$/)) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (typeof v0 === 'string') {
     if (!v0.match(/a+/)) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      if (v2.match(/f.*o/)) {
-        if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
-          v1.push(true);
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      if (v1.match(/f.*o/)) {
+        if (f1(v2) !== null) {
+          return \\"error\\";
         }
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      if (v2.match(/a*/)) {
-        if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
-          v1.push(true);
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      if (v1.match(/a*/)) {
+        if (f1(v2) !== null) {
+          return \\"error\\";
         }
       }
-      if (v2.match(/aaa*/)) {
-        if (typeof v3 === 'number') {
-          if (v3 > 20) {
-            v1.push(true);
-          }
+      if (v1.match(/aaa*/)) {
+        if (f2(v2) !== null) {
+          return \\"error\\";
         }
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v4) {
+  if (typeof v4 === 'number') {
+    if (v4 > 20) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      if (v2.match(/[0-9]{2,}/)) {
-        if (!(typeof v3 === 'boolean')) {
-          v1.push(true);
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      if (v1.match(/[0-9]{2,}/)) {
+        if (f1(v2) !== null) {
+          return \\"error\\";
         }
       }
-      if (v2.match(/X_/)) {
-        if (!(typeof v3 === 'string')) {
-          v1.push(true);
+      if (v1.match(/X_/)) {
+        if (f2(v2) !== null) {
+          return \\"error\\";
         }
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v4) {
+  if (!(typeof v4 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
-      if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
-        v1.push(true);
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
       }
     }
-    var v3 = v0.bar;
-    if (v3 !== undefined) {
-      if (!(typeof v3 === 'string')) {
-        v1.push(true);
+    var v2 = v0.bar;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v4) {
+  if (!(typeof v4 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    for (var v2 in v0) {
-      var v3 = v0[v2];
-      var v4 = false;
-      if (v2 === \\"foo\\") {
-        if (Array.isArray(v3)) {
-          if (v3.length > 3) {
-            v1.push(true);
-          }
+    for (var v1 in v0) {
+      var v2 = v0[v1];
+      var v3 = false;
+      if (v1 === \\"foo\\") {
+        if (f1(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
         }
-        if (!(Array.isArray(v3))) {
-          v1.push(true);
-        }
-        v4 = true;
       }
-      if (v2 === \\"bar\\") {
-        if (!(Array.isArray(v3))) {
-          v1.push(true);
+      if (v1 === \\"bar\\") {
+        if (f2(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
         }
-        v4 = true;
       }
-      if (v2.match(/f.o/)) {
-        if (Array.isArray(v3)) {
-          if (v3.length < 2) {
-            v1.push(true);
-          }
+      if (v1.match(/f.o/)) {
+        if (f3(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
         }
-        v4 = true;
       }
-      if (v4 === false) {
-        if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
-          v1.push(true);
+      if (v3 === false) {
+        if (f4(v2) !== null) {
+          return \\"error\\";
         }
       }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v4) {
+  if (Array.isArray(v4)) {
+    if (v4.length > 3) {
+      return \\"error\\";
+    }
+  }
+  if (!(Array.isArray(v4))) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f2 = function(v5) {
+  if (!(Array.isArray(v5))) {
+    return \\"error\\";
+  }
+  return null;
+}
+var f3 = function(v6) {
+  if (Array.isArray(v6)) {
+    if (v6.length < 2) {
+      return \\"error\\";
+    }
+  }
+  return null;
+}
+var f4 = function(v7) {
+  if (!(typeof v7 === 'number' && v7 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite required.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
     }
-    var v3 = v0.bar;
-    if (v3 !== undefined) {
+    var v2 = v0.bar;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
+      }
     }
   }
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     if (v0.foo === undefined) {
-      v1.push(true);
+      return \\"error\\";
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v3) {
+  return null;
+}
+var f2 = function(v4) {
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite required.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
-    var v2 = v0.foo;
-    if (v2 !== undefined) {
+    var v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
     }
   }
-  return v1;
-}"
+  return null;
+}
+var f1 = function(v2) {
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 1`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 2`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(typeof v0 === 'number')) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 3`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(typeof v0 === 'string')) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 4`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 5`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(Array.isArray(v0))) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 6`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(typeof v0 === 'boolean')) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 7`] = `
-"function(v0) {
-  var v1 = [];
+"var f0 = function(v0) {
   if (!(v0 === null)) {
-    v1.push(true);
+    return \\"error\\";
   }
-  return v1;
-}"
+  return null;
+}
+return f0;"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 8`] = `
-"function(v0) {
-  var v1 = [];
-  if (!((typeof v0 === 'number' && v0 % 1 === 0) || (typeof v0 === 'string'))) {
-    v1.push(true);
+"var f0 = function(v0) {
+  var v1 = 0;
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    v1++;
   }
-  return v1;
-}"
+  if (!(typeof v0 === 'string')) {
+    v1++;
+  }
+  if (v1 === 2) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
 `;

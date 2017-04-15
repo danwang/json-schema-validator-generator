@@ -43,11 +43,20 @@ const primitivePredicate = (type: BaseType, symbol: string): string => {
   }
 };
 
-const ifs = (predicate: string, body: string | Array<string>): Array<string> => {
+const ifs = (
+  predicate: string,
+  body: string | Array<string>,
+elseBody?: string | Array<string>,
+): Array<string> => {
   const bodyLines = (typeof body === 'string') ? [body] : body;
+  const elseLines = elseBody ? [
+    '} else {',
+    ...((typeof elseBody === 'string') ? [elseBody] : elseBody).map(indent),
+  ] : [];
   return [
     `if (${predicate}) {`,
     ...bodyLines.map(indent),
+    ...elseLines,
     '}',
   ];
 };

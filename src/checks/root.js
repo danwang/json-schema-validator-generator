@@ -11,10 +11,14 @@ import properties from './properties.js';
 import required from './required.js';
 import type from './type.js';
 
+import util from '../util.js';
 import type {Context} from '../types.js';
 
-const root = (schema: Object, symbol: string, context: Context): Array<string> => {
-  return [
+const root = (schema: Object, context: Context): Array<string> => {
+  const fnSym = context.symbolForSchema(schema);
+  const symbol = context.gensym();
+
+  const body = [
     ...allOf(schema, symbol, context),
     ...anyOf(schema, symbol, context),
     ..._enum(schema, symbol, context),
@@ -26,6 +30,13 @@ const root = (schema: Object, symbol: string, context: Context): Array<string> =
     ...properties(schema, symbol, context),
     ...required(schema, symbol, context),
     ...type(schema, symbol, context),
+  ];
+
+  return [
+    `var ${fnSym} = function(${symbol}) {`,
+    ...body.map(util.indent),
+    util.indent('return null;'),
+    '}',
   ];
 };
 

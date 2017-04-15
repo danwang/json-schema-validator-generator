@@ -2,45 +2,28 @@
 import _ from 'lodash';
 import util from '../util.js';
 import type {Context} from '../types.js';
-import root from './root.js';
 
 const oneOf = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (schema.oneOf) {
-    // To validate oneOf, we count errors using a boolean and a count:
-    //   var count = 0;
-    //   var error;
+    // var count = 0;
     //
-    //   error = false;
-    //   (subschema 1)
-    //   error && count++;
+    // if (check1(data) === null) { count++ }
+    // if (check2(data) === null) { count++ }
     //
-    //   error = false;
-    //   (subschema 1)
-    //   error && count++;
-    //
-    //   if (count !== total - 1) {
-    //     (doesn't match oneOf)
-    //   }
-    //
-    const countSym = context.gensym();
-    const errorSym = context.gensym();
-    const subcontext = {
-      ...context,
-      error: () => [`${errorSym} = true;`],
-    };
+    // if (count !== 1) { (error) }
+    const count = context.gensym();
     const checks = _.flatMap(schema.oneOf, (subSchema) => {
-      return [
-        `${errorSym} = false;`,
-        ...root(subSchema, symbol, subcontext),
-        `${errorSym} && ${countSym}++;`,
-      ];
+      const fnSym = context.symbolForSchema(subSchema);
+      return util.ifs(
+        `${fnSym}(${symbol}) === null`,
+        `${count}++;`,
+      );
     });
     return [
-      `var ${countSym} = 0;`,
-      `var ${errorSym};`,
+      `var ${count} = 0;`,
       ...checks,
       ...util.ifs(
-        `${countSym} !== ${schema.oneOf.length} - 1`,
+        `${count} !== 1`,
         context.error(),
       ),
     ];

@@ -1,14 +1,24 @@
 // @flow
 import _ from 'lodash';
 import type {Context} from '../types.js';
-import root from './root.js';
+import util from '../util.js';
 
-const oneOf = (schema: Object, symbol: string, context: Context): Array<string> => {
+const allOf = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (schema.allOf) {
-    return _.flatMap(schema.allOf, (subSchema) => root(subSchema, symbol, context));
+    return _.flatMap(schema.allOf, (subSchema) => {
+      const fnSym = context.symbolForSchema(subSchema);
+      const resultSym = context.gensym();
+      return [
+        `var ${resultSym} = ${fnSym}(${symbol});`,
+        ...util.ifs(
+          `${resultSym} !== null`,
+          context.error(),
+        ),
+      ];
+    });
   } else {
     return [];
   }
 };
 
-export default oneOf;
+export default allOf;

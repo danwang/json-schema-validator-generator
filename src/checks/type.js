@@ -2,55 +2,51 @@
 import _ from 'lodash';
 import util from '../util.js';
 import type {Context} from '../types.js';
-import root from './root.js';
 
-const typeOrSchema = (tos: string | Object, symbol: string, context: Context): Array<string> => {
-  if (typeof tos === 'string') {
+const predicate = (type: string | Object, symbol: string, context: Context): string => {
+  if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
-    const predicate = util.primitivePredicate(tos, symbol);
-    return util.ifs(`!(${predicate})`, context.error());
+    return util.primitivePredicate(type, symbol);
   } else {
-    return root(tos, symbol, context);
+    const fnSym = context.symbolForSchema(type);
+    return `${fnSym}(${symbol}) === null`;
   }
 };
 
 const type = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (typeof schema.type === 'string') {
-    return typeOrSchema(schema.type, symbol, context);
+    return util.ifs(
+      `!(${util.primitivePredicate(schema.type, symbol)})`,
+      context.error(),
+    );
   } else if (Array.isArray(schema.type)) {
     if (schema.type.length === 1) {
-      return typeOrSchema(schema.type[0], symbol, context);
+      return util.ifs(
+        `!(${predicate(schema.type[0], symbol, context)})`,
+        context.error(),
+      );
     } else if (schema.type.length > 1) {
-      if (_.every(schema.type, (t) => (typeof t === 'string'))) {
-        const predicate = _.map(schema.type, (t: string) => {
-          // $FlowFixMe Wait until we can refine string -> enum
-          return `(${util.primitivePredicate(t, symbol)})`;
-        }).join(' || ');
-        return util.ifs(`!(${predicate})`, context.error());
-      } else {
-        const countSym = context.gensym();
-        const errorSym = context.gensym();
-        const subcontext = {
-          ...context,
-          error: () => [`${errorSym} = true;`],
-        };
-        const checks = _.flatMap(schema.type, (typeOrSubSchema) => {
-          return [
-            `${errorSym} = false;`,
-            ...typeOrSchema(typeOrSubSchema, symbol, subcontext),
-            `${errorSym} && ${countSym}++;`,
-          ];
-        });
-        return [
-          `var ${countSym} = 0;`,
-          `var ${errorSym};`,
-          ...checks,
-          ...util.ifs(
-            `${countSym} === 0`,
-            context.error(),
-          ),
-        ];
-      }
+      // var count = 0;
+      //
+      // if (check1(data) === null) { count++ }
+      // if (check2(data) === null) { count++ }
+      //
+      // if (count !== 1) { (error) }
+      const count = context.gensym();
+      const checks = _.flatMap(schema.type, (typeOrSubSchema) => {
+        return util.ifs(
+          `!(${predicate(typeOrSubSchema, symbol, context)})`,
+          `${count}++;`,
+        );
+      });
+      return [
+        `var ${count} = 0;`,
+        ...checks,
+        ...util.ifs(
+          `${count} === ${schema.type.length}`,
+          context.error(),
+        ),
+      ];
     } else {
       return [];
     }

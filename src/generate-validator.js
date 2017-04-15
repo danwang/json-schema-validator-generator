@@ -1,27 +1,41 @@
 // @flow
-import util from './util.js';
 import root from './checks/root.js';
 
+const gengensym = () => {
+  const cache = {};
+  return (prefix: string = 'v') => {
+    cache[prefix] = cache[prefix] || 0;
+    return `${prefix}${cache[prefix]++}`;
+  };
+};
+
 const generateValidator = (schema: Object) => {
-  const gensym = util.gengensym();
-  const argSym = gensym();
-  const errorSym = gensym();
+  const gensym = gengensym();
+
+  const cache = new WeakMap();
+  const schemas = [];
 
   const context = {
     gensym,
-    error: () => [`${errorSym}.push(true);`],
+    error: () => ['return "error";'],
+    symbolForSchema: (schm: Object): string => {
+      if (!cache.has(schm)) {
+        cache.set(schm, gensym('f'));
+        schemas.push(schm);
+      }
+      return (cache.get(schm): any);
+    },
   };
 
-  const body = [
-    `var ${errorSym} = [];`,
-    ...root(schema, argSym, context),
-    `return ${errorSym};`,
-  ];
-
+  const results = [root(schema, context)];
+  let i = 1;
+  while (i < schemas.length) {
+    results.push(root(schemas[i], context));
+    i++;
+  }
   return [
-    `function(${argSym}) {`,
-    ...body.map(util.indent),
-    '}',
+    ...results.map((l) => l.join('\n')),
+    `return ${context.symbolForSchema(schema)};`,
   ].join('\n');
 };
 

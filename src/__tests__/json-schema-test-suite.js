@@ -38,7 +38,7 @@ const WHITELIST = [
 const singleTest = (test, code, validator) => {
   const {description, data, valid} = test;
   it(description, () => {
-    expect(validator(data).length === 0).toBe(valid);
+    expect(validator(data) === null).toBe(valid);
   });
 };
 
@@ -48,7 +48,7 @@ const testGroup = (group) => {
   it('matches snapshot', () => {
     expect(code).toMatchSnapshot();
   });
-  const validator = eval(`(function(){return ${code};})()`); // eslint-disable-line no-eval
+  const validator = eval(`(function(){${code}})()`); // eslint-disable-line no-eval
   describe(description, () => {
     tests.forEach((test) => singleTest(test, code, validator));
   });

@@ -1,30 +1,24 @@
 // @flow
 import _ from 'lodash';
 import type {Context} from '../types.js';
-import root from './root.js';
 import util from '../util.js';
 
 const anyOf = (schema: Object, symbol: string, context: Context): Array<string> => {
   if (schema.anyOf) {
+    // var count = 0;
+    // check1(schema) === null && count++;
+    // check2(schema) === null && count++;
+    // if (count === 0) { (error) }
     const countSym = context.gensym();
-    const errorSym = context.gensym();
-    const subcontext = {
-      ...context,
-      error: () => [`${errorSym} = true;`],
-    };
-    const checks = _.flatMap(schema.anyOf, (subSchema) => {
-      return [
-        `${errorSym} = false;`,
-        ...root(subSchema, symbol, subcontext),
-        `${errorSym} && ${countSym}++;`,
-      ];
+    const checks = _.map(schema.anyOf, (subSchema) => {
+      const fnSym = context.symbolForSchema(subSchema);
+      return `(${fnSym}(${symbol}) === null) && ${countSym}++`;
     });
     return [
       `var ${countSym} = 0;`,
-      `var ${errorSym};`,
       ...checks,
       ...util.ifs(
-        `${countSym} === ${schema.anyOf.length}`,
+        `${countSym} === 0`,
         context.error(),
       ),
     ];
