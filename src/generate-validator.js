@@ -19,33 +19,36 @@ const generateValidator = (schema: Object): string => {
   const cache = new WeakMap();
   const schemas = [];
 
-  const context = {
-    gengensym,
-    gensym,
-    error: () => Ast.Return('"error"'),
-    symbolForSchema: (schm: Object): string => {
-      if (!cache.has(schm)) {
-        const match = _.find(schemas, (s) => _.isEqual(s, schm));
-        if (match) {
-          cache.set(schm, cache.get(match));
-        } else {
-          cache.set(schm, gensym('f'));
-          schemas.push(schm);
-        }
+  const symbolForSchema = (schm: Object): string => {
+    if (!cache.has(schm)) {
+      const match = _.find(schemas, (s) => _.isEqual(s, schm));
+      if (match) {
+        cache.set(schm, cache.get(match));
+      } else {
+        cache.set(schm, gensym('f'));
+        schemas.push(schm);
       }
-      return (cache.get(schm): any);
-    },
+    }
+    return (cache.get(schm): any);
   };
 
-  const results = [root(schema, context)];
+  const error = () => Ast.Return('"error"');
+
+  const makeContext = () => ({
+    gensym: gengensym(),
+    error,
+    symbolForSchema,
+  });
+
+  const results = [root(schema, makeContext())];
   let i = 1;
   while (i < schemas.length) {
-    results.push(root(schemas[i], context));
+    results.push(root(schemas[i], makeContext()));
     i++;
   }
   const simplified = simplify(Ast.Body(
     ...results,
-    Ast.Return(context.symbolForSchema(schema)),
+    Ast.Return(symbolForSchema(schema)),
   ));
   // console.log(JSON.stringify(simplified, null, 2));
   // console.log(render(simplified));

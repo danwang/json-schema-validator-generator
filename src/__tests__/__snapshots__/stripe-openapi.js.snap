@@ -482,260 +482,260 @@ exports[`Stripe openapi generates validators for account 1`] = `
   }
   return null;
 }
-function f1(v30) {
-  if (!(Array.isArray(v30))) {
+function f1(v0) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v31) {
-  if (!(typeof v31 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v32) {
-  if (!(typeof v32 === 'string')) {
+function f3(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v33) {
-  if (!(typeof v33 === 'boolean')) {
+function f4(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v34) {
-  if (!(typeof v34 === 'string')) {
+function f5(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v35) {
-  if (!(typeof v35 === 'boolean')) {
+function f6(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v36) {
+function f7(v0) {
   return null;
 }
-function f8(v37) {
-  if (!(typeof v37 === 'string')) {
+function f8(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f9(v38) {
-  if (!(typeof v38 === 'boolean')) {
+function f9(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v39) {
-  if (!(typeof v39 === 'string')) {
+function f10(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v40) {
-  if (!(typeof v40 === 'string')) {
+function f11(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v41) {
-  var v42, v43, v44, v45, v46;
-  if (v41 && typeof v41 === 'object' && !Array.isArray(v41)) {
-    v42 = v41.data;
-    if (v42 !== undefined) {
-      if (f30(v42) !== null) {
+function f12(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f30(v1) !== null) {
         return \\"error\\";
       }
     }
-    v43 = v41.has_more;
-    if (v43 !== undefined) {
-      if (f31(v43) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f31(v2) !== null) {
         return \\"error\\";
       }
     }
-    v44 = v41.object;
-    if (v44 !== undefined) {
-      if (f32(v44) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f32(v3) !== null) {
         return \\"error\\";
       }
     }
-    v45 = v41.total_count;
-    if (v45 !== undefined) {
-      if (f33(v45) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f33(v4) !== null) {
         return \\"error\\";
       }
     }
-    v46 = v41.url;
-    if (v46 !== undefined) {
-      if (f34(v46) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f34(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v41 && typeof v41 === 'object' && !Array.isArray(v41)) {
-    if (v41.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v41.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v41.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v41.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v41 && typeof v41 === 'object' && !Array.isArray(v41))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v47) {
-  if (!(typeof v47 === 'string')) {
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f14(v48) {
+function f14(v0) {
   return null;
 }
-function f15(v49) {
-  if (!(typeof v49 === 'boolean')) {
+function f15(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f16(v50) {
-  if (!(typeof v50 === 'string')) {
+function f16(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f17(v51) {
-  if (!(v51 && typeof v51 === 'object' && !Array.isArray(v51))) {
+function f17(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f18(v52) {
-  if (!(typeof v52 === 'string')) {
+function f18(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f19(v53) {
+function f19(v0) {
   return null;
 }
-function f20(v54) {
+function f20(v0) {
   return null;
 }
-function f21(v55) {
-  if (!(typeof v55 === 'string')) {
+function f21(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f22(v56) {
-  if (!(typeof v56 === 'boolean')) {
+function f22(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f23(v57) {
-  if (!(typeof v57 === 'string')) {
+function f23(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f24(v58) {
-  if (!(typeof v58 === 'string')) {
+function f24(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f25(v59) {
-  if (!(typeof v59 === 'string')) {
+function f25(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f26(v60) {
-  if (!(typeof v60 === 'string')) {
+function f26(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f27(v61) {
-  if (!(typeof v61 === 'string')) {
+function f27(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f28(v62) {
+function f28(v0) {
   return null;
 }
-function f29(v63) {
+function f29(v0) {
   return null;
 }
-function f30(v64) {
-  var v65, v66;
-  if (Array.isArray(v64)) {
-    v65 = 0;
-    v66 = null;
-    for (; v65 < v64.length; v65++) {
-      v66 = f35(v64[v65]);
-      if (v66 !== null) {
-        return v66;
+function f30(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f35(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v64))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f31(v67) {
-  if (!(typeof v67 === 'boolean')) {
+function f31(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f32(v68) {
-  var v69;
-  v69 = 0;
-  if (v68 === \\"list\\") {
-    v69++
+function f32(v0) {
+  var v1;
+  v1 = 0;
+  if (v0 === \\"list\\") {
+    v1++
   }
-  if (v69 === 0) {
+  if (v1 === 0) {
     return \\"error\\";
   }
-  if (!(typeof v68 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f33(v70) {
-  if (!(typeof v70 === 'number' && v70 % 1 === 0)) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f34(v71) {
-  if (!(typeof v71 === 'string')) {
+function f33(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f35(v72) {
-  if (!(v72 && typeof v72 === 'object' && !Array.isArray(v72))) {
+function f34(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f35(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
@@ -866,77 +866,77 @@ exports[`Stripe openapi generates validators for balance_transaction 1`] = `
   }
   return null;
 }
-function f1(v14) {
-  if (!(typeof v14 === 'number' && v14 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v15) {
-  if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
+function f2(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v16) {
-  if (!(typeof v16 === 'number' && v16 % 1 === 0)) {
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v17) {
-  if (!(typeof v17 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v18) {
-  if (!(typeof v18 === 'string')) {
+function f5(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v19) {
-  if (!(typeof v19 === 'number' && v19 % 1 === 0)) {
+function f6(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v20) {
+function f7(v0) {
   return null;
 }
-function f8(v21) {
-  if (!(typeof v21 === 'string')) {
+function f8(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f9(v22) {
-  if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
+function f9(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v23) {
-  if (!(typeof v23 === 'string')) {
+function f10(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v24) {
-  if (!(typeof v24 === 'string')) {
+function f11(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v25) {
-  if (!(typeof v25 === 'string')) {
+function f12(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v26) {
-  if (!(typeof v26 === 'string')) {
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -1166,182 +1166,182 @@ exports[`Stripe openapi generates validators for card 1`] = `
   }
   return null;
 }
-function f1(v32) {
-  if (!(typeof v32 === 'string')) {
+function f1(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v33) {
-  if (!(typeof v33 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v34) {
-  if (!(typeof v34 === 'string')) {
+function f3(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v35) {
-  if (!(typeof v35 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v36) {
-  if (!(typeof v36 === 'string')) {
+function f5(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v37) {
-  if (!(typeof v37 === 'string')) {
+function f6(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v38) {
-  if (!(typeof v38 === 'string')) {
+function f7(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f8(v39) {
-  if (!(typeof v39 === 'string')) {
+function f8(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f9(v40) {
-  if (!(typeof v40 === 'string')) {
+function f9(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v41) {
-  if (!(Array.isArray(v41))) {
+function f10(v0) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v42) {
-  if (!(typeof v42 === 'string')) {
+function f11(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v43) {
-  if (!(typeof v43 === 'string')) {
+function f12(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v44) {
-  if (!(typeof v44 === 'string')) {
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f14(v45) {
-  if (!(typeof v45 === 'string')) {
+function f14(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f15(v46) {
-  if (!(typeof v46 === 'string')) {
+function f15(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f16(v47) {
-  if (!(typeof v47 === 'boolean')) {
+function f16(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f17(v48) {
-  if (!(typeof v48 === 'string')) {
+function f17(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f18(v49) {
-  if (!(typeof v49 === 'string')) {
+function f18(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f19(v50) {
-  if (!(typeof v50 === 'number' && v50 % 1 === 0)) {
+function f19(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f20(v51) {
-  if (!(typeof v51 === 'number' && v51 % 1 === 0)) {
+function f20(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f21(v52) {
-  if (!(typeof v52 === 'string')) {
+function f21(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f22(v53) {
-  if (!(typeof v53 === 'string')) {
+function f22(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f23(v54) {
-  if (!(typeof v54 === 'string')) {
+function f23(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f24(v55) {
-  if (!(typeof v55 === 'string')) {
+function f24(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f25(v56) {
-  if (!(v56 && typeof v56 === 'object' && !Array.isArray(v56))) {
+function f25(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f26(v57) {
-  if (!(typeof v57 === 'string')) {
+function f26(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f27(v58) {
-  if (!(typeof v58 === 'string')) {
+function f27(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f28(v59) {
-  if (!(typeof v59 === 'string')) {
+function f28(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f29(v60) {
-  if (!(v60 && typeof v60 === 'object' && !Array.isArray(v60))) {
+function f29(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f30(v61) {
-  if (!(typeof v61 === 'string')) {
+function f30(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -1631,316 +1631,316 @@ exports[`Stripe openapi generates validators for charge 1`] = `
   }
   return null;
 }
-function f1(v39) {
-  if (!(typeof v39 === 'number' && v39 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v40) {
-  if (!(typeof v40 === 'number' && v40 % 1 === 0)) {
+function f2(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v41) {
-  if (!(typeof v41 === 'number' && v41 % 1 === 0)) {
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v42) {
-  if (!(typeof v42 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v43) {
-  if (!(typeof v43 === 'string')) {
+function f5(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v44) {
-  if (!(typeof v44 === 'string')) {
+function f6(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v45) {
-  if (!(typeof v45 === 'boolean')) {
+function f7(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f8(v46) {
+function f8(v0) {
   return null;
 }
-function f9(v47) {
-  if (!(typeof v47 === 'number' && v47 % 1 === 0)) {
+function f9(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v48) {
-  if (!(typeof v48 === 'string')) {
+function f10(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v49) {
-  if (!(typeof v49 === 'string')) {
+function f11(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v50) {
-  if (!(typeof v50 === 'string')) {
+function f12(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v51) {
-  if (!(typeof v51 === 'string')) {
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f14(v52) {
-  if (!(typeof v52 === 'string')) {
+function f14(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f15(v53) {
-  if (!(typeof v53 === 'string')) {
+function f15(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f16(v54) {
-  if (!(typeof v54 === 'string')) {
+function f16(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f17(v55) {
-  if (!(v55 && typeof v55 === 'object' && !Array.isArray(v55))) {
+function f17(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f18(v56) {
-  if (!(typeof v56 === 'string')) {
+function f18(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f19(v57) {
-  if (!(typeof v57 === 'string')) {
+function f19(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f20(v58) {
-  if (!(typeof v58 === 'boolean')) {
+function f20(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f21(v59) {
-  if (!(v59 && typeof v59 === 'object' && !Array.isArray(v59))) {
+function f21(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f22(v60) {
-  if (!(typeof v60 === 'string')) {
+function f22(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f23(v61) {
-  if (!(typeof v61 === 'string')) {
+function f23(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f24(v62) {
-  if (!(typeof v62 === 'string')) {
+function f24(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f25(v63) {
+function f25(v0) {
   return null;
 }
-function f26(v64) {
-  if (!(typeof v64 === 'boolean')) {
+function f26(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f27(v65) {
-  if (!(typeof v65 === 'string')) {
+function f27(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f28(v66) {
-  if (!(typeof v66 === 'string')) {
+function f28(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f29(v67) {
-  if (!(typeof v67 === 'boolean')) {
+function f29(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f30(v68) {
-  var v69, v70, v71, v72, v73;
-  if (v68 && typeof v68 === 'object' && !Array.isArray(v68)) {
-    v69 = v68.data;
-    if (v69 !== undefined) {
-      if (f38(v69) !== null) {
+function f30(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f38(v1) !== null) {
         return \\"error\\";
       }
     }
-    v70 = v68.has_more;
-    if (v70 !== undefined) {
-      if (f39(v70) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f39(v2) !== null) {
         return \\"error\\";
       }
     }
-    v71 = v68.object;
-    if (v71 !== undefined) {
-      if (f40(v71) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f40(v3) !== null) {
         return \\"error\\";
       }
     }
-    v72 = v68.total_count;
-    if (v72 !== undefined) {
-      if (f41(v72) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f41(v4) !== null) {
         return \\"error\\";
       }
     }
-    v73 = v68.url;
-    if (v73 !== undefined) {
-      if (f42(v73) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f42(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v68 && typeof v68 === 'object' && !Array.isArray(v68)) {
-    if (v68.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v68.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v68.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v68.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v68 && typeof v68 === 'object' && !Array.isArray(v68))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f31(v74) {
-  if (!(typeof v74 === 'string')) {
+function f31(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f32(v75) {
+function f32(v0) {
   return null;
 }
-function f33(v76) {
-  if (!(typeof v76 === 'string')) {
+function f33(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f34(v77) {
-  if (!(typeof v77 === 'string')) {
+function f34(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f35(v78) {
-  if (!(typeof v78 === 'string')) {
+function f35(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f36(v79) {
-  if (!(typeof v79 === 'string')) {
+function f36(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f37(v80) {
-  if (!(typeof v80 === 'string')) {
+function f37(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f38(v81) {
-  var v82, v83;
-  if (Array.isArray(v81)) {
-    v82 = 0;
-    v83 = null;
-    for (; v82 < v81.length; v82++) {
-      v83 = f43(v81[v82]);
-      if (v83 !== null) {
-        return v83;
+function f38(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f43(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v81))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f39(v84) {
-  if (!(typeof v84 === 'boolean')) {
+function f39(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f40(v85) {
-  var v86;
-  v86 = 0;
-  if (v85 === \\"list\\") {
-    v86++
+function f40(v0) {
+  var v1;
+  v1 = 0;
+  if (v0 === \\"list\\") {
+    v1++
   }
-  if (v86 === 0) {
+  if (v1 === 0) {
     return \\"error\\";
   }
-  if (!(typeof v85 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f41(v87) {
-  if (!(typeof v87 === 'number' && v87 % 1 === 0)) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f42(v88) {
-  if (!(typeof v88 === 'string')) {
+function f41(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f43(v89) {
+function f42(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f43(v0) {
   return null;
 }
 return f0;"
@@ -2066,86 +2066,86 @@ exports[`Stripe openapi generates validators for coupon 1`] = `
   }
   return null;
 }
-function f1(v15) {
-  if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v16) {
-  if (!(typeof v16 === 'number' && v16 % 1 === 0)) {
+function f2(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v17) {
-  if (!(typeof v17 === 'string')) {
+function f3(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v18) {
-  if (!(typeof v18 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v19) {
-  if (!(typeof v19 === 'number' && v19 % 1 === 0)) {
+function f5(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v20) {
-  if (!(typeof v20 === 'string')) {
+function f6(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v21) {
-  if (!(typeof v21 === 'boolean')) {
+function f7(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f8(v22) {
-  if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
+function f8(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f9(v23) {
-  if (!(v23 && typeof v23 === 'object' && !Array.isArray(v23))) {
+function f9(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v24) {
-  if (!(typeof v24 === 'string')) {
+function f10(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v25) {
-  if (!(typeof v25 === 'number' && v25 % 1 === 0)) {
+function f11(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v26) {
-  if (!(typeof v26 === 'number' && v26 % 1 === 0)) {
+function f12(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v27) {
-  if (!(typeof v27 === 'number' && v27 % 1 === 0)) {
+function f13(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f14(v28) {
-  if (!(typeof v28 === 'boolean')) {
+function f14(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
@@ -2318,488 +2318,488 @@ exports[`Stripe openapi generates validators for customer 1`] = `
   }
   return null;
 }
-function f1(v22) {
-  if (!(typeof v22 === 'number' && v22 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v23) {
-  var v24, v25, v26, v27, v28;
-  if (v23 && typeof v23 === 'object' && !Array.isArray(v23)) {
-    v24 = v23.data;
-    if (v24 !== undefined) {
-      if (f21(v24) !== null) {
+function f2(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f21(v1) !== null) {
         return \\"error\\";
       }
     }
-    v25 = v23.has_more;
-    if (v25 !== undefined) {
-      if (f22(v25) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f22(v2) !== null) {
         return \\"error\\";
       }
     }
-    v26 = v23.object;
-    if (v26 !== undefined) {
-      if (f23(v26) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f23(v3) !== null) {
         return \\"error\\";
       }
     }
-    v27 = v23.total_count;
-    if (v27 !== undefined) {
-      if (f24(v27) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f24(v4) !== null) {
         return \\"error\\";
       }
     }
-    v28 = v23.url;
-    if (v28 !== undefined) {
-      if (f25(v28) !== null) {
-        return \\"error\\";
-      }
-    }
-  }
-  if (v23 && typeof v23 === 'object' && !Array.isArray(v23)) {
-    if (v23.data === undefined) {
-      return \\"error\\";
-    }
-    if (v23.has_more === undefined) {
-      return \\"error\\";
-    }
-    if (v23.object === undefined) {
-      return \\"error\\";
-    }
-    if (v23.url === undefined) {
-      return \\"error\\";
-    }
-  }
-  if (!(v23 && typeof v23 === 'object' && !Array.isArray(v23))) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f3(v29) {
-  var v30, v31, v32, v33, v34;
-  if (v29 && typeof v29 === 'object' && !Array.isArray(v29)) {
-    v30 = v29.data;
-    if (v30 !== undefined) {
-      if (f26(v30) !== null) {
-        return \\"error\\";
-      }
-    }
-    v31 = v29.has_more;
-    if (v31 !== undefined) {
-      if (f22(v31) !== null) {
-        return \\"error\\";
-      }
-    }
-    v32 = v29.object;
-    if (v32 !== undefined) {
-      if (f23(v32) !== null) {
-        return \\"error\\";
-      }
-    }
-    v33 = v29.total_count;
-    if (v33 !== undefined) {
-      if (f24(v33) !== null) {
-        return \\"error\\";
-      }
-    }
-    v34 = v29.url;
-    if (v34 !== undefined) {
-      if (f25(v34) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f25(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v29 && typeof v29 === 'object' && !Array.isArray(v29)) {
-    if (v29.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v29.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v29.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v29.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v29 && typeof v29 === 'object' && !Array.isArray(v29))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v35) {
-  if (!(typeof v35 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f5(v36) {
-  var v37, v38, v39, v40, v41;
-  if (v36 && typeof v36 === 'object' && !Array.isArray(v36)) {
-    v37 = v36.data;
-    if (v37 !== undefined) {
-      if (f27(v37) !== null) {
+function f3(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f26(v1) !== null) {
         return \\"error\\";
       }
     }
-    v38 = v36.has_more;
-    if (v38 !== undefined) {
-      if (f22(v38) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f22(v2) !== null) {
         return \\"error\\";
       }
     }
-    v39 = v36.object;
-    if (v39 !== undefined) {
-      if (f23(v39) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f23(v3) !== null) {
         return \\"error\\";
       }
     }
-    v40 = v36.total_count;
-    if (v40 !== undefined) {
-      if (f24(v40) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f24(v4) !== null) {
         return \\"error\\";
       }
     }
-    v41 = v36.url;
-    if (v41 !== undefined) {
-      if (f25(v41) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f25(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v36 && typeof v36 === 'object' && !Array.isArray(v36)) {
-    if (v36.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v36.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v36.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v36.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v36 && typeof v36 === 'object' && !Array.isArray(v36))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v42) {
-  if (!(typeof v42 === 'number' && v42 % 1 === 0)) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v43) {
-  if (!(typeof v43 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f8(v44) {
-  if (!(typeof v44 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f9(v45) {
-  if (!(typeof v45 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f10(v46) {
-  if (!(typeof v46 === 'boolean')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f11(v47) {
-  if (!(typeof v47 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f12(v48) {
-  return null;
-}
-function f13(v49) {
-  if (!(typeof v49 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f14(v50) {
-  if (!(typeof v50 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f15(v51) {
-  if (!(typeof v51 === 'boolean')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f16(v52) {
-  if (!(v52 && typeof v52 === 'object' && !Array.isArray(v52))) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f17(v53) {
-  if (!(typeof v53 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f18(v54) {
-  return null;
-}
-function f19(v55) {
-  var v56, v57, v58, v59, v60;
-  if (v55 && typeof v55 === 'object' && !Array.isArray(v55)) {
-    v56 = v55.data;
-    if (v56 !== undefined) {
-      if (f28(v56) !== null) {
+function f5(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f27(v1) !== null) {
         return \\"error\\";
       }
     }
-    v57 = v55.has_more;
-    if (v57 !== undefined) {
-      if (f22(v57) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f22(v2) !== null) {
         return \\"error\\";
       }
     }
-    v58 = v55.object;
-    if (v58 !== undefined) {
-      if (f23(v58) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f23(v3) !== null) {
         return \\"error\\";
       }
     }
-    v59 = v55.total_count;
-    if (v59 !== undefined) {
-      if (f24(v59) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f24(v4) !== null) {
         return \\"error\\";
       }
     }
-    v60 = v55.url;
-    if (v60 !== undefined) {
-      if (f25(v60) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f25(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v55 && typeof v55 === 'object' && !Array.isArray(v55)) {
-    if (v55.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v55.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v55.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v55.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v55 && typeof v55 === 'object' && !Array.isArray(v55))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f20(v61) {
-  var v62, v63, v64, v65, v66;
-  if (v61 && typeof v61 === 'object' && !Array.isArray(v61)) {
-    v62 = v61.data;
-    if (v62 !== undefined) {
-      if (f29(v62) !== null) {
+function f6(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f7(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f8(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f9(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f10(v0) {
+  if (!(typeof v0 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f11(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f12(v0) {
+  return null;
+}
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f14(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f15(v0) {
+  if (!(typeof v0 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f16(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f17(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f18(v0) {
+  return null;
+}
+function f19(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f28(v1) !== null) {
         return \\"error\\";
       }
     }
-    v63 = v61.has_more;
-    if (v63 !== undefined) {
-      if (f22(v63) !== null) {
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f22(v2) !== null) {
         return \\"error\\";
       }
     }
-    v64 = v61.object;
-    if (v64 !== undefined) {
-      if (f23(v64) !== null) {
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f23(v3) !== null) {
         return \\"error\\";
       }
     }
-    v65 = v61.total_count;
-    if (v65 !== undefined) {
-      if (f24(v65) !== null) {
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f24(v4) !== null) {
         return \\"error\\";
       }
     }
-    v66 = v61.url;
-    if (v66 !== undefined) {
-      if (f25(v66) !== null) {
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f25(v5) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v61 && typeof v61 === 'object' && !Array.isArray(v61)) {
-    if (v61.data === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
       return \\"error\\";
     }
-    if (v61.has_more === undefined) {
+    if (v0.has_more === undefined) {
       return \\"error\\";
     }
-    if (v61.object === undefined) {
+    if (v0.object === undefined) {
       return \\"error\\";
     }
-    if (v61.url === undefined) {
+    if (v0.url === undefined) {
       return \\"error\\";
     }
   }
-  if (!(v61 && typeof v61 === 'object' && !Array.isArray(v61))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f21(v67) {
-  var v68, v69;
-  if (Array.isArray(v67)) {
-    v68 = 0;
-    v69 = null;
-    for (; v68 < v67.length; v68++) {
-      v69 = f30(v67[v68]);
-      if (v69 !== null) {
-        return v69;
+function f20(v0) {
+  var v1, v2, v3, v4, v5;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.data;
+    if (v1 !== undefined) {
+      if (f29(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.has_more;
+    if (v2 !== undefined) {
+      if (f22(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.object;
+    if (v3 !== undefined) {
+      if (f23(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.total_count;
+    if (v4 !== undefined) {
+      if (f24(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.url;
+    if (v5 !== undefined) {
+      if (f25(v5) !== null) {
+        return \\"error\\";
       }
     }
   }
-  if (!(Array.isArray(v67))) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.data === undefined) {
+      return \\"error\\";
+    }
+    if (v0.has_more === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.url === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f22(v70) {
-  if (!(typeof v70 === 'boolean')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f23(v71) {
-  var v72;
-  v72 = 0;
-  if (v71 === \\"list\\") {
-    v72++
-  }
-  if (v72 === 0) {
-    return \\"error\\";
-  }
-  if (!(typeof v71 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f24(v73) {
-  if (!(typeof v73 === 'number' && v73 % 1 === 0)) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f25(v74) {
-  if (!(typeof v74 === 'string')) {
-    return \\"error\\";
-  }
-  return null;
-}
-function f26(v75) {
-  var v76, v77;
-  if (Array.isArray(v75)) {
-    v76 = 0;
-    v77 = null;
-    for (; v76 < v75.length; v76++) {
-      v77 = f31(v75[v76]);
-      if (v77 !== null) {
-        return v77;
+function f21(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f30(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v75))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f27(v78) {
-  var v79, v80;
-  if (Array.isArray(v78)) {
-    v79 = 0;
-    v80 = null;
-    for (; v79 < v78.length; v79++) {
-      v80 = f32(v78[v79]);
-      if (v80 !== null) {
-        return v80;
+function f22(v0) {
+  if (!(typeof v0 === 'boolean')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f23(v0) {
+  var v1;
+  v1 = 0;
+  if (v0 === \\"list\\") {
+    v1++
+  }
+  if (v1 === 0) {
+    return \\"error\\";
+  }
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f24(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f25(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f26(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f31(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v78))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f28(v81) {
-  var v82, v83;
-  if (Array.isArray(v81)) {
-    v82 = 0;
-    v83 = null;
-    for (; v82 < v81.length; v82++) {
-      v83 = f33(v81[v82]);
-      if (v83 !== null) {
-        return v83;
+function f27(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f32(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v81))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f29(v84) {
-  var v85, v86;
-  if (Array.isArray(v84)) {
-    v85 = 0;
-    v86 = null;
-    for (; v85 < v84.length; v85++) {
-      v86 = f34(v84[v85]);
-      if (v86 !== null) {
-        return v86;
+function f28(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f33(v0[v1]);
+      if (v2 !== null) {
+        return v2;
       }
     }
   }
-  if (!(Array.isArray(v84))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f30(v87) {
-  return null;
-}
-function f31(v88) {
-  return null;
-}
-function f32(v89) {
-  return null;
-}
-function f33(v90) {
-  if (!(v90 && typeof v90 === 'object' && !Array.isArray(v90))) {
+function f29(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f34(v0[v1]);
+      if (v2 !== null) {
+        return v2;
+      }
+    }
+  }
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f34(v91) {
+function f30(v0) {
+  return null;
+}
+function f31(v0) {
+  return null;
+}
+function f32(v0) {
+  return null;
+}
+function f33(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f34(v0) {
   return null;
 }
 return f0;"
@@ -2862,35 +2862,35 @@ exports[`Stripe openapi generates validators for discount 1`] = `
   }
   return null;
 }
-function f1(v7) {
+function f1(v0) {
   return null;
 }
-function f2(v8) {
-  if (!(typeof v8 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v9) {
-  if (!(typeof v9 === 'number' && v9 % 1 === 0)) {
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v10) {
-  if (!(typeof v10 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v11) {
-  if (!(typeof v11 === 'number' && v11 % 1 === 0)) {
+function f5(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v12) {
-  if (!(typeof v12 === 'string')) {
+function f6(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -3036,83 +3036,83 @@ exports[`Stripe openapi generates validators for dispute 1`] = `
   }
   return null;
 }
-function f1(v15) {
-  if (!(typeof v15 === 'number' && v15 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v16) {
+function f2(v0) {
   return null;
 }
-function f3(v17) {
-  if (!(typeof v17 === 'string')) {
+function f3(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v18) {
-  if (!(typeof v18 === 'number' && v18 % 1 === 0)) {
+function f4(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v19) {
-  if (!(typeof v19 === 'string')) {
+function f5(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f6(v20) {
-  if (!(v20 && typeof v20 === 'object' && !Array.isArray(v20))) {
+function f6(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f7(v21) {
-  if (!(v21 && typeof v21 === 'object' && !Array.isArray(v21))) {
+function f7(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f8(v22) {
-  if (!(typeof v22 === 'string')) {
+function f8(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f9(v23) {
-  if (!(typeof v23 === 'boolean')) {
+function f9(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f10(v24) {
-  if (!(typeof v24 === 'boolean')) {
+function f10(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f11(v25) {
-  if (!(v25 && typeof v25 === 'object' && !Array.isArray(v25))) {
+function f11(v0) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f12(v26) {
-  if (!(typeof v26 === 'string')) {
+function f12(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f13(v27) {
-  if (!(typeof v27 === 'string')) {
+function f13(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f14(v28) {
-  if (!(typeof v28 === 'string')) {
+function f14(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;

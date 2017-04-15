@@ -6,14 +6,6 @@ import type {JsAst} from './jsast/ast.js';
 const INDENT = '  ';
 const indent = (line: string) => `${INDENT}${line}`;
 const indentN = (line: string, count: number) => `${_.repeat(INDENT, count)}${line}`;
-const indentLines = (lines: Array<string>, depth: number) => {
-  return lines.map((l) => `${INDENT.repeat(depth)}${l}`);
-};
-
-const gengensym = (prefix: string = 'v') => {
-  let i = 0;
-  return () => `${prefix}${i++}`;
-};
 
 export type BaseType = (
   'integer' |
@@ -45,24 +37,6 @@ const primitivePredicate = (type: BaseType, symbol: string): string => {
   }
 };
 
-const ifs = (
-  predicate: string,
-  body: string | Array<string>,
-elseBody?: string | Array<string>,
-): Array<string> => {
-  const bodyLines = (typeof body === 'string') ? [body] : body;
-  const elseLines = elseBody ? [
-    '} else {',
-    ...((typeof elseBody === 'string') ? [elseBody] : elseBody).map(indent),
-  ] : [];
-  return [
-    `if (${predicate}) {`,
-    ...bodyLines.map(indent),
-    ...elseLines,
-    '}',
-  ];
-};
-
 // Wraps lines of code in a check such that it only executes when the value of
 // `symbol` is the type
 const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
@@ -72,9 +46,6 @@ const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
 export default {
   indent,
   indentN,
-  indentLines,
-  gengensym,
   primitivePredicate,
-  ifs,
   typeCheck,
 };

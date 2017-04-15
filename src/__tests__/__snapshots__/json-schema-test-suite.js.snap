@@ -35,7 +35,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
   }
   return null;
 }
-function f1(v4) {
+function f1(v0) {
   return null;
 }
 return f0;"
@@ -71,11 +71,11 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
   }
   return null;
 }
-function f1(v4) {
+function f1(v0) {
   return null;
 }
-function f2(v5) {
-  if (!(typeof v5 === 'boolean')) {
+function f2(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
@@ -96,8 +96,8 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] =
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'boolean')) {
+function f1(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
@@ -124,7 +124,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
   }
   return null;
 }
-function f1(v3) {
+function f1(v0) {
   return null;
 }
 return f0;"
@@ -143,48 +143,48 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v3) {
-  var v4;
-  if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
-    v4 = v3.bar;
-    if (v4 !== undefined) {
-      if (f3(v4) !== null) {
+function f1(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.bar;
+    if (v1 !== undefined) {
+      if (f3(v1) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v3 && typeof v3 === 'object' && !Array.isArray(v3)) {
-    if (v3.bar === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.bar === undefined) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f2(v5) {
-  var v6;
-  if (v5 && typeof v5 === 'object' && !Array.isArray(v5)) {
-    v6 = v5.foo;
-    if (v6 !== undefined) {
-      if (f4(v6) !== null) {
+function f2(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f4(v1) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v5 && typeof v5 === 'object' && !Array.isArray(v5)) {
-    if (v5.foo === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.foo === undefined) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f3(v7) {
-  if (!(typeof v7 === 'number' && v7 % 1 === 0)) {
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v8) {
-  if (!(typeof v8 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -218,54 +218,54 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v4) {
-  var v5;
-  if (v4 && typeof v4 === 'object' && !Array.isArray(v4)) {
-    v5 = v4.foo;
-    if (v5 !== undefined) {
-      if (f4(v5) !== null) {
+function f1(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f4(v1) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v4 && typeof v4 === 'object' && !Array.isArray(v4)) {
-    if (v4.foo === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.foo === undefined) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f2(v6) {
-  var v7;
-  if (v6 && typeof v6 === 'object' && !Array.isArray(v6)) {
-    v7 = v6.baz;
-    if (v7 !== undefined) {
-      if (f5(v7) !== null) {
+function f2(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.baz;
+    if (v1 !== undefined) {
+      if (f5(v1) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (v6 && typeof v6 === 'object' && !Array.isArray(v6)) {
-    if (v6.baz === undefined) {
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.baz === undefined) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f3(v8) {
-  if (!(typeof v8 === 'number' && v8 % 1 === 0)) {
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f4(v9) {
-  if (!(typeof v9 === 'string')) {
+function f4(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
 }
-function f5(v10) {
-  if (!(v10 === null)) {
+function f5(v0) {
+  if (!(v0 === null)) {
     return \\"error\\";
   }
   return null;
@@ -286,17 +286,17 @@ exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (typeof v3 === 'number') {
-    if (v3 > 30) {
+function f1(v0) {
+  if (typeof v0 === 'number') {
+    if (v0 > 30) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f2(v4) {
-  if (typeof v4 === 'number') {
-    if (v4 < 20) {
+function f2(v0) {
+  if (typeof v0 === 'number') {
+    if (v0 < 20) {
       return \\"error\\";
     }
   }
@@ -316,15 +316,15 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v3) {
-  if (typeof v3 === 'number') {
-    if (v3 < 2) {
+function f2(v0) {
+  if (typeof v0 === 'number') {
+    if (v0 < 2) {
       return \\"error\\";
     }
   }
@@ -347,17 +347,17 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (typeof v2 === 'string') {
-    if (v2.length > 2) {
+function f1(v0) {
+  if (typeof v0 === 'string') {
+    if (v0.length > 2) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f2(v3) {
-  if (typeof v3 === 'string') {
-    if (v3.length < 4) {
+function f2(v0) {
+  if (typeof v0 === 'string') {
+    if (v0.length < 4) {
       return \\"error\\";
     }
   }
@@ -379,8 +379,8 @@ exports[`JSON Schema test suite default.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
@@ -401,13 +401,13 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (typeof v2 === 'string') {
-    if (v2.length < 4) {
+function f1(v0) {
+  if (typeof v0 === 'string') {
+    if (v0.length < 4) {
       return \\"error\\";
     }
   }
-  if (!(typeof v2 === 'string')) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -490,24 +490,24 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
   }
   return null;
 }
-function f1(v3) {
-  var v4;
-  v4 = 0;
-  if (v3 === \\"foo\\") {
-    v4++
+function f1(v0) {
+  var v1;
+  v1 = 0;
+  if (v0 === \\"foo\\") {
+    v1++
   }
-  if (v4 === 0) {
+  if (v1 === 0) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v5) {
-  var v6;
-  v6 = 0;
-  if (v5 === \\"bar\\") {
-    v6++
+function f2(v0) {
+  var v1;
+  v1 = 0;
+  if (v0 === \\"bar\\") {
+    v1++
   }
-  if (v6 === 0) {
+  if (v1 === 0) {
     return \\"error\\";
   }
   return null;
@@ -530,8 +530,8 @@ exports[`JSON Schema test suite items.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
@@ -549,14 +549,14 @@ exports[`JSON Schema test suite items.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v1) {
-  if (!(typeof v1 === 'number' && v1 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v2) {
-  if (!(typeof v2 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -693,8 +693,8 @@ exports[`JSON Schema test suite not.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
@@ -711,16 +711,16 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v2) {
-  var v3;
-  v3 = 0;
-  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
-    v3++;
+function f1(v0) {
+  var v1;
+  v1 = 0;
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    v1++;
   }
-  if (!(typeof v2 === 'boolean')) {
-    v3++;
+  if (!(typeof v0 === 'boolean')) {
+    v1++;
   }
-  if (v3 === 2) {
+  if (v1 === 2) {
     return \\"error\\";
   }
   return null;
@@ -737,23 +737,23 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
   }
   return null;
 }
-function f1(v2) {
-  var v3;
-  if (v2 && typeof v2 === 'object' && !Array.isArray(v2)) {
-    v3 = v2.foo;
-    if (v3 !== undefined) {
-      if (f2(v3) !== null) {
+function f1(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f2(v1) !== null) {
         return \\"error\\";
       }
     }
   }
-  if (!(v2 && typeof v2 === 'object' && !Array.isArray(v2))) {
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v4) {
-  if (!(typeof v4 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -774,15 +774,15 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
   }
   return null;
 }
-function f1(v2) {
-  var v3;
-  v3 = f2(v2);
-  if (v3 === null) {
+function f1(v0) {
+  var v1;
+  v1 = f2(v0);
+  if (v1 === null) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v4) {
+function f2(v0) {
   return null;
 }
 return f0;"
@@ -803,15 +803,15 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (!(typeof v2 === 'number' && v2 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v3) {
-  if (typeof v3 === 'number') {
-    if (v3 < 2) {
+function f2(v0) {
+  if (typeof v0 === 'number') {
+    if (v0 < 2) {
       return \\"error\\";
     }
   }
@@ -838,17 +838,17 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v2) {
-  if (typeof v2 === 'string') {
-    if (v2.length < 2) {
+function f1(v0) {
+  if (typeof v0 === 'string') {
+    if (v0.length < 2) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f2(v3) {
-  if (typeof v3 === 'string') {
-    if (v3.length > 4) {
+function f2(v0) {
+  if (typeof v0 === 'string') {
+    if (v0.length > 4) {
       return \\"error\\";
     }
   }
@@ -896,8 +896,8 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
@@ -925,15 +925,15 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v4) {
-  if (typeof v4 === 'number') {
-    if (v4 > 20) {
+function f2(v0) {
+  if (typeof v0 === 'number') {
+    if (v0 > 20) {
       return \\"error\\";
     }
   }
@@ -962,14 +962,14 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'boolean')) {
+function f1(v0) {
+  if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v4) {
-  if (!(typeof v4 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -996,14 +996,14 @@ exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v3) {
-  if (!(typeof v3 === 'number' && v3 % 1 === 0)) {
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v4) {
-  if (!(typeof v4 === 'string')) {
+function f2(v0) {
+  if (!(typeof v0 === 'string')) {
     return \\"error\\";
   }
   return null;
@@ -1048,33 +1048,33 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v4) {
-  if (Array.isArray(v4)) {
-    if (v4.length > 3) {
+function f1(v0) {
+  if (Array.isArray(v0)) {
+    if (v0.length > 3) {
       return \\"error\\";
     }
   }
-  if (!(Array.isArray(v4))) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f2(v5) {
-  if (!(Array.isArray(v5))) {
+function f2(v0) {
+  if (!(Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-function f3(v6) {
-  if (Array.isArray(v6)) {
-    if (v6.length < 2) {
+function f3(v0) {
+  if (Array.isArray(v0)) {
+    if (v0.length < 2) {
       return \\"error\\";
     }
   }
   return null;
 }
-function f4(v7) {
-  if (!(typeof v7 === 'number' && v7 % 1 === 0)) {
+function f4(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
@@ -1106,7 +1106,7 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
   }
   return null;
 }
-function f1(v3) {
+function f1(v0) {
   return null;
 }
 return f0;"
@@ -1125,7 +1125,7 @@ exports[`JSON Schema test suite required.json matches snapshot 2`] = `
   }
   return null;
 }
-function f1(v2) {
+function f1(v0) {
   return null;
 }
 return f0;"
