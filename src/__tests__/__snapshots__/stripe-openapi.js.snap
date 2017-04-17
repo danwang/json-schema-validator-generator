@@ -234,13 +234,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   return null;
 }
-
-
-
-
-
-
-
 function f1(v0) {
   if (!(Array.isArray(v0))) {
     return \\"error\\";
@@ -253,20 +246,12 @@ function f2(v0) {
   }
   return null;
 }
-
 function f4(v0) {
   if (!(typeof v0 === 'boolean')) {
     return \\"error\\";
   }
   return null;
 }
-
-
-
-
-
-
-
 function f12(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -320,96 +305,18 @@ function f12(v0) {
   }
   return null;
 }
-
-
-
-
 function f17(v0) {
   if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
     return \\"error\\";
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f31(v0) {
   if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f93(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -463,25 +370,6 @@ function f93(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f113(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -588,7 +476,6 @@ function f114(v0) {
   }
   return null;
 }
-
 function f116(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -642,13 +529,6 @@ function f116(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
 function f124(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -702,20 +582,6 @@ function f124(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f139(v0) {
   var v1, v2;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -762,7 +628,6 @@ function f140(v0) {
   }
   return null;
 }
-
 function f142(v0) {
   var v1;
   v1 = 0;
@@ -777,8 +642,6 @@ function f142(v0) {
   }
   return null;
 }
-
-
 function f145(v0) {
   var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -1405,67 +1268,6 @@ function f158(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f220(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -1969,7 +1771,6 @@ function f230(v0) {
   }
   return null;
 }
-
 function f232(v0) {
   var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -2453,69 +2254,12 @@ function f234(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f260(v0) {
   if (!(typeof v0 === 'number')) {
     return \\"error\\";
   }
   return null;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function f293(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -2569,14 +2313,6 @@ function f293(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
 function f302(v0) {
   var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -2828,14 +2564,6 @@ function f305(v0) {
   }
   return null;
 }
-
-
-
-
-
-
-
-
 function f314(v0) {
   var v1, v2, v3, v4, v5;
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
@@ -2892,7 +2620,6 @@ function f314(v0) {
   }
   return null;
 }
-
 return {
   account: f0,
   balance_transaction: f30,

@@ -1181,7 +1181,6 @@ exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
   }
   return null;
 }
-
 return {
   root: f0,
 };"
@@ -1212,7 +1211,6 @@ function f1(v0) {
   }
   return null;
 }
-
 return {
   root: f0,
 };"
@@ -1234,7 +1232,6 @@ function f1(v0) {
   }
   return null;
 }
-
 return {
   root: f0,
 };"
@@ -1265,9 +1262,6 @@ exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
   }
   return null;
 }
-
-
-
 function f4(v0) {
   if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
@@ -1280,10 +1274,7 @@ return {
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 5`] = `
-"
-
-
-function f3(v0) {
+"function f3(v0) {
   if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
     return \\"error\\";
   }
@@ -1307,7 +1298,6 @@ exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
   }
   return null;
 }
-
 function f2(v0) {
   if (!(Array.isArray(v0))) {
     return \\"error\\";
