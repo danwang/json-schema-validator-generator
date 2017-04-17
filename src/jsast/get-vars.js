@@ -45,6 +45,8 @@ const _getVars = (ast: JsAst): Array<string> => {
       return [];
     case 'not':
       return getVars(ast.child);
+    case 'objectliteral':
+      return [];
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

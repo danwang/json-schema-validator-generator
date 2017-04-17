@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import type {
-  JsAst, IfType, ForType, ForInType, Function1Type,
+  JsAst, IfType, ForType, ForInType, Function1Type, ObjectLiteralType,
 } from './ast.js';
 import getVars from './get-vars.js';
 
@@ -57,6 +57,19 @@ const renderFunction = (ast: Function1Type, depth: number) => {
   ].join('\n');
 };
 
+const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
+  const {object} = ast;
+  const lines = _.map(object, (value, key) => {
+    const valueString = render(value, depth + 1);
+    return indent(`${key}: ${valueString.trimLeft()},`, depth + 1);
+  });
+  return [
+    indent('{', depth),
+    ...lines,
+    indent('}', depth),
+  ].join('\n');
+};
+
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
     case 'assignment':
@@ -83,6 +96,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return indent(`${render(ast.fn)}(${render(ast.arg)})`, depth);
     case 'not':
       return indent(`!(${render(ast.child)})`, depth);
+    case 'objectliteral':
+      return renderObjectLiteral(ast, depth);
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

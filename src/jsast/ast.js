@@ -15,7 +15,8 @@ export type JsAst = (
   EmptyType |
   LiteralType |
   CallType |
-  NotType
+  NotType |
+  ObjectLiteralType
 );
 type AssignmentType = {
   type: 'assignment',
@@ -76,6 +77,10 @@ type NotType = {
   type: 'not',
   child: JsAst,
 };
+export type ObjectLiteralType = {
+  type: 'objectliteral',
+  object: {[key: string]: JsAst},
+};
 
 const Function1 = (name: string, argument: string, body: JsAst): Function1Type => {
   return {type: 'function1', name, argument, body};
@@ -134,6 +139,12 @@ const Not = (child: JsAst | string): NotType => {
     child: (typeof child === 'string') ? Literal(child) : child,
   };
 };
+const ObjectLiteral = (object: {[key: string]: JsAst}): ObjectLiteralType => {
+  return {
+    type: 'objectliteral',
+    object,
+  };
+};
 
 export default {
   Function1,
@@ -158,4 +169,5 @@ export default {
   Literal,
   Call,
   Not,
+  ObjectLiteral,
 };

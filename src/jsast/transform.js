@@ -46,6 +46,8 @@ const transform = (partial: (ast: JsAst) => JsAst) => {
         return Ast.Call(recur(ast.fn).value, recur(ast.arg).value);
       case 'not':
         return Ast.Not(recur(ast.child));
+      case 'objectliteral':
+        return Ast.ObjectLiteral(_.mapValues(ast.object, recur));
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }
