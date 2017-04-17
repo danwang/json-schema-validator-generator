@@ -29,10 +29,15 @@ const simplifyBody = (ast: BodyType): JsAst => {
       return [simplified];
     }
   });
-  if (mapped.length === 0) {
+
+  const firstReturn = _.findIndex(mapped, (node) => node.type === 'return');
+  const body = firstReturn >= 0 ? mapped.slice(0, firstReturn + 1) : mapped;
+  if (body.length === 0) {
     return Ast.Empty;
+  } else if (body.length === 1) {
+    return body[0];
   } else {
-    return Ast.Body(...mapped);
+    return Ast.Body(...body);
   }
 };
 
@@ -51,7 +56,7 @@ const simplify = (ast: JsAst): JsAst => {
     case 'empty':
       return ast;
     case 'function1':
-      return Ast.Function1(ast.argument, simplify(ast.body), ast.name);
+      return Ast.Function1(ast.name, ast.argument, simplify(ast.body));
     case 'binop':
     default:
       return ast;

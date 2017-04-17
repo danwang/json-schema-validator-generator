@@ -53,7 +53,7 @@ type EmptyType = {type: 'empty'};
 
 export type Function1Type = {
   type: 'function1',
-  name: ?string,
+  name: string,
   argument: string,
   body: JsAst,
 };
@@ -77,8 +77,8 @@ type NotType = {
   child: JsAst,
 };
 
-const Function1 = (argument: string, body: JsAst, name: ?string): Function1Type => {
-  return {type: 'function1', argument, body, name};
+const Function1 = (name: string, argument: string, body: JsAst): Function1Type => {
+  return {type: 'function1', name, argument, body};
 };
 const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
   return {

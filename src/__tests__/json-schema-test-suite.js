@@ -28,7 +28,7 @@ const WHITELIST = [
   'pattern.json',
   'patternProperties.json',
   'properties.json',
-  // 'ref.json',
+  'ref.json',
   // 'refRemote.json',
   'required.json',
   'type.json',

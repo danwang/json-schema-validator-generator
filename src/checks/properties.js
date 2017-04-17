@@ -87,7 +87,7 @@ const additionalChecks = (
 };
 
 const properties = (schema: Object, symbol: string, context: Context): JsAst => {
-  if (schema.patternProperties || schema.additionalProperties) {
+  if (schema.patternProperties || schema.additionalProperties !== undefined) {
     // Need to loop through all properties to check. We'll generate a loop:
     //   for (var key in json) {
     //     var val = json[key];

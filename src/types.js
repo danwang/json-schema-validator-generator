@@ -5,4 +5,5 @@ export type Context = {
   gensym: () => string,
   error: () => JsAst,
   symbolForSchema: (schema: Object) => string,
+  rootSchema: Object,
 };

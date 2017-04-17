@@ -8,6 +8,7 @@ import not from './not.js';
 import oneOf from './oneOf.js';
 import pattern from './pattern.js';
 import properties from './properties.js';
+import ref from './ref.js';
 import required from './required.js';
 import type from './type.js';
 
@@ -21,6 +22,8 @@ const root = (schema: Object, context: Context): Function1Type => {
   const symbol = context.gensym();
 
   const body = Ast.Body(
+    // $ref needs to be first because it ignores everything else
+    ref(schema, symbol, context),
     allOf(schema, symbol, context),
     anyOf(schema, symbol, context),
     _enum(schema, symbol, context),
@@ -35,9 +38,9 @@ const root = (schema: Object, context: Context): Function1Type => {
   );
 
   return Ast.Function1(
+    fnSym,
     symbol,
     Ast.Body(body, Ast.Return('null')),
-    fnSym,
   );
 };
 

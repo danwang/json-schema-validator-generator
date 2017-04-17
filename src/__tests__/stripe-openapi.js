@@ -14,15 +14,14 @@ const MODELS_TO_SNAPSHOT = [
   'dispute',
 ];
 describe('Stripe openapi', () => {
-  const specPath = path.join(__dirname, '../../', 'openapi/openapi/spec2.json');
   // $FlowFixMe
-  const definitions = require(specPath).definitions;
+  const spec = require(path.join(__dirname, '../../', 'openapi/openapi/spec2.json'));
+  it('generates a validator for the entire spec', () => {
+    expect(generateValidator(spec)).toMatchSnapshot();
+  });
   MODELS_TO_SNAPSHOT.forEach((model) => {
-    it(`generates validators for ${model}`, () => {
-      expect(generateValidator(definitions[model])).toMatchSnapshot();
-    });
     it(`generates flow types for ${model}`, () => {
-      expect(generateFlow(definitions[model])).toMatchSnapshot();
+      expect(generateFlow(spec.definitions[model])).toMatchSnapshot();
     });
   });
 });

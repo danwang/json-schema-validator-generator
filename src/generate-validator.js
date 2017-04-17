@@ -6,6 +6,7 @@ import simplify from './jsast/simplify.js';
 import render from './jsast/render.js';
 import uniqFuncs from './jsast/uniq-funcs.js';
 import type {Function1Type} from './jsast/ast.js';
+import type {Transform} from './jsast/transform.js';
 
 const gengensym = () => {
   const cache = {};
@@ -40,6 +41,7 @@ const generateValidator = (schema: Object): string => {
     gensym: gengensym(),
     error,
     symbolForSchema,
+    rootSchema: schema,
   });
 
   const results: Array<Function1Type> = [root(schema, makeContext())];
@@ -48,12 +50,15 @@ const generateValidator = (schema: Object): string => {
     results.push(root(schemas[i], makeContext()));
     i++;
   }
-  const simplified = simplify(Ast.Body(
-    ...uniqFuncs(results),
+
+  // TODO: Fix flow unhelpful error
+  const simplifiedResults: any = results.map(simplify);
+  const uniquer: Transform = uniqFuncs(simplifiedResults);
+  const simplified = uniquer(simplify(Ast.Body(
+    ...simplifiedResults,
     Ast.Return(symbolForSchema(schema)),
-  ));
+  )));
   // console.log(JSON.stringify(simplified, null, 2));
-  // console.log(render(simplified));
   return render(simplified);
 };
 

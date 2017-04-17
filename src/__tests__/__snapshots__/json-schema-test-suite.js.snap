@@ -1082,6 +1082,241 @@ function f4(v0) {
 return f0;"
 `;
 
+exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
+"function f0(v0) {
+  var v1, v2, v3;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    for (var v1 in v0) {
+      v2 = v0[v1];
+      v3 = false;
+      if (v1 === \\"foo\\") {
+        if (f0(v2) !== null) {
+          return \\"error\\";
+        } else {
+          v3 = true;
+        }
+      }
+      if (v3 === false) {
+        return \\"error\\";
+      }
+    }
+  }
+  return null;
+}
+
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
+"function f0(v0) {
+  var v1, v2;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.bar;
+    if (v2 !== undefined) {
+      if (f1(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  return null;
+}
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 3`] = `
+"function f0(v0) {
+  if (0 < v0.length && f1(v0[0]) !== null) {
+    return \\"error\\";
+  }
+  if (1 < v0.length && f1(v0[1]) !== null) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f1(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
+"function f0(v0) {
+  var v1, v2, v3;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.tilda;
+    if (v1 !== undefined) {
+      if (f4(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.slash;
+    if (v2 !== undefined) {
+      if (f4(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.percent;
+    if (v3 !== undefined) {
+      if (f4(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  return null;
+}
+
+
+
+function f4(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 5`] = `
+"
+
+
+function f3(v0) {
+  if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f3;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
+"function f0(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.foo;
+    if (v1 !== undefined) {
+      if (f2(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  return null;
+}
+
+function f2(v0) {
+  if (!(Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 7`] = `
+"function f0(v0) {
+  return null;
+}
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
+"function f0(v0) {
+  var v1;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.$ref;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  return null;
+}
+function f1(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+return f0;"
+`;
+
+exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
+"function f0(v0) {
+  var v1, v2;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.meta;
+    if (v1 !== undefined) {
+      if (f1(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.nodes;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.meta === undefined) {
+      return \\"error\\";
+    }
+    if (v0.nodes === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f1(v0) {
+  if (!(typeof v0 === 'string')) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f2(v0) {
+  var v1, v2;
+  if (Array.isArray(v0)) {
+    v1 = 0;
+    v2 = null;
+    for (; v1 < v0.length; v1++) {
+      v2 = f3(v0[v1]);
+      if (v2 !== null) {
+        return v2;
+      }
+    }
+  }
+  if (!(Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f3(v0) {
+  return null;
+}
+return f0;"
+`;
+
 exports[`JSON Schema test suite required.json matches snapshot 1`] = `
 "function f0(v0) {
   var v1, v2;

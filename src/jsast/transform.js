@@ -4,7 +4,8 @@ import _ from 'lodash';
 import type {JsAst} from './ast.js';
 import Ast from './ast.js';
 
-const transform = (partial: (ast: JsAst) => ?JsAst) => {
+export type Transform = (ast: JsAst) => JsAst;
+const transform = (partial: (ast: JsAst) => JsAst) => {
   const _recur = (ast: JsAst): JsAst => {
     switch (ast.type) {
       case 'assignment':
@@ -32,25 +33,24 @@ const transform = (partial: (ast: JsAst) => ?JsAst) => {
         return Ast.Empty;
       case 'function1':
         return Ast.Function1(
+          ast.name,
           ast.argument,
           recur(ast.body),
-          ast.name,
         );
       case 'binop':
         return Ast.Binop.Any(ast.comparator)(recur(ast.left), recur(ast.right));
       case 'literal':
-      case 'call':
         return ast;
+      case 'call':
+        // $FlowFixMe make literals stable
+        return Ast.Call(recur(ast.fn).value, recur(ast.arg).value);
       case 'not':
         return Ast.Not(recur(ast.child));
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }
   };
-  const recur = (ast: JsAst): JsAst => {
-    const recurred = _recur(ast);
-    return partial(recurred) || recurred;
-  };
+  const recur = (ast: JsAst): JsAst => _recur(partial(ast));
   return recur;
 };
 
