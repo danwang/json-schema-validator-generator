@@ -1,8 +1,8 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {JsAst, IfType, BodyType} from 'jsvg/jsast/ast.js';
-import Ast from 'jsvg/jsast/ast.js';
+import type {JsAst, IfType, BodyType} from 'jsvg/js/jsast/ast.js';
+import Ast from 'jsvg/js/jsast/ast.js';
 
 const simplifyIf = (ast: IfType): JsAst => {
   const body = simplify(ast.body);

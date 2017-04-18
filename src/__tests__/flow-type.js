@@ -1,6 +1,6 @@
 // @flow
-import Ast from 'jsvg/flowast/ast.js';
-import type {FlowType} from 'jsvg/flowast/ast.js';
+import Ast from 'jsvg/flow/ast/ast.js';
+import type {FlowType} from 'jsvg/flow/ast/ast.js';
 import flowType from 'jsvg/flow-type.js';
 
 const assertType = (schema: Object, ft: FlowType) => {

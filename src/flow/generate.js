@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import flowType from 'jsvg/flow-type.js';
-import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from 'jsvg/flowast/ast.js';
+import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from 'jsvg/flow/ast/ast.js';
 import util from 'jsvg/util.js';
 
 const generateExact = (value: mixed, depth: number) => JSON.stringify(value);

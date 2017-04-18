@@ -1,10 +1,10 @@
 // @flow
 import _ from 'lodash';
-import root from 'jsvg/checks/root.js';
-import Ast from 'jsvg/jsast/ast.js';
-import simplify from 'jsvg/jsast/simplify.js';
-import render from 'jsvg/jsast/render.js';
-import uniqFuncs from 'jsvg/jsast/uniq-funcs.js';
+import root from 'jsvg/js/checks/root.js';
+import Ast from 'jsvg/js/jsast/ast.js';
+import simplify from 'jsvg/js/jsast/simplify.js';
+import render from 'jsvg/js/jsast/render.js';
+import uniqFuncs from 'jsvg/js/jsast/uniq-funcs.js';
 
 const gengensym = () => {
   const cache = {};

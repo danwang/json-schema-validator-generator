@@ -1,8 +1,8 @@
 // @flow
 import _ from 'lodash';
 import type {Context} from 'jsvg/types.js';
-import Ast from 'jsvg/jsast/ast.js';
-import type {JsAst} from 'jsvg/jsast/ast.js';
+import Ast from 'jsvg/js/jsast/ast.js';
+import type {JsAst} from 'jsvg/js/jsast/ast.js';
 
 const _enum = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.enum) {

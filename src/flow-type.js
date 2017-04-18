@@ -1,11 +1,11 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import Ast from 'jsvg/flowast/ast.js';
+import Ast from 'jsvg/flow/ast/ast.js';
 import type {
   FlowType, TupleType, RecordType, UnionType, IntersectionType, MapType, ArrayType,
   OptionalType,
-} from 'jsvg/flowast/ast.js';
+} from 'jsvg/flow/ast/ast.js';
 
 const flowType = (schema: Object): FlowType => {
   if (schema.enum) {
