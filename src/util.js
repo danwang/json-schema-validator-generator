@@ -4,8 +4,7 @@ import Ast from 'jsvg/js/jsast/ast.js';
 import type {JsAst} from 'jsvg/js/jsast/ast.js';
 
 const INDENT = '  ';
-const indent = (line: string) => `${INDENT}${line}`;
-const indentN = (line: string, count: number) => `${_.repeat(INDENT, count)}${line}`;
+const indent = (line: string, depth: number) => `${_.repeat(INDENT, depth)}${line}`;
 
 export type BaseType = (
   'integer' |
@@ -45,7 +44,6 @@ const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
 
 export default {
   indent,
-  indentN,
   primitivePredicate,
   typeCheck,
 };

@@ -1,13 +1,13 @@
 // @flow
 import Ast from 'jsvg/flow/ast/ast.js';
 import type {FlowType} from 'jsvg/flow/ast/ast.js';
-import flowType from 'jsvg/flow-type.js';
+import makeAst from 'jsvg/flow/make-ast.js';
 
 const assertType = (schema: Object, ft: FlowType) => {
-  expect(flowType(schema)).toEqual(ft);
+  expect(makeAst(schema)).toEqual(ft);
 };
 
-describe('flowType', () => {
+describe('makeAst', () => {
   describe('allOf', () => {
     it('works with primitive types', () => {
       const schema = {
