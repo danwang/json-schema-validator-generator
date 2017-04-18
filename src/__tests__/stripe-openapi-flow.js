@@ -1,23 +1,22 @@
 // @flow
+import _ from 'lodash';
 import path from 'path';
 import generateFlow from 'jsvg/flow/generate.js';
 
-const MODELS_TO_SNAPSHOT = [
-  'account',
-  'balance_transaction',
-  'card',
-  'charge',
-  'coupon',
-  'customer',
-  'discount',
-  'dispute',
-];
+const MODELS = {
+  Account: 'account',
+  BalanceTransaction: 'balance_transaction',
+  Card: 'card',
+  Charge: 'charge',
+  Coupon: 'coupon',
+  Customer: 'customer',
+  Discount: 'discount',
+  Dispute: 'dispute',
+};
 describe('Stripe openapi', () => {
   // $FlowFixMe
   const spec = require(path.join(__dirname, '../../', 'openapi/openapi/spec2.json'));
-  MODELS_TO_SNAPSHOT.forEach((model) => {
-    it(`generates flow types for ${model}`, () => {
-      expect(generateFlow(spec.definitions[model])).toMatchSnapshot();
-    });
+  it('generates flow types for the entire spec', () => {
+    expect(generateFlow(spec, _.mapValues(MODELS, (key) => spec.definitions[key]))).toMatchSnapshot();
   });
 });

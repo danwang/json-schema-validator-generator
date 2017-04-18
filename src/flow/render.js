@@ -20,7 +20,7 @@ const renderTuple = (ft: TupleType, depth: number) => {
 const renderRecord = (ft: RecordType, depth: number) => {
   const contents = _.map(ft.fields, (subtype, key) => {
     const rendered = render(subtype, depth + 1);
-    return util.indent(`  ${key}: ${rendered},`, depth);
+    return util.indent(`${key}: ${rendered},`, depth + 1);
   });
   return [
     '{',
@@ -29,8 +29,12 @@ const renderRecord = (ft: RecordType, depth: number) => {
   ].join('\n');
 };
 
-const render = (ft: FlowType, depth: number): string => {
+const render = (ft: FlowType, depth: number = 0): string => {
   switch (ft.type) {
+    case 'declaration':
+      return `declare type ${ft.name} = ${render(ft.value, depth)};`;
+    case 'literal':
+      return ft.value;
     case 'exact':
       return renderExact(ft.value, depth);
     case 'mixed':

@@ -26,6 +26,8 @@ const simplifyIU = (Constructor: (c: Array<FlowType>) => FlowType, children: Arr
 
 const simplify = (ft: FlowType): FlowType => {
   switch (ft.type) {
+    case 'declaration':
+      return Ast.Declaration(ft.name, simplify(ft.value));
     case 'optional':
       return simplifyOptional(ft);
     case 'array':

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Stripe openapi generates flow types for account 1`] = `
-"{
+exports[`Stripe openapi generates flow types for the entire spec 1`] = `
+"declare type Account = {
   active_payment_methods: Array<mixed>,
   business_name: ?string,
   business_url: ?string,
@@ -37,11 +37,8 @@ exports[`Stripe openapi generates flow types for account 1`] = `
   timezone: ?string,
   tos_acceptance: mixed,
   verification: mixed,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for balance_transaction 1`] = `
-"{
+};
+declare type BalanceTransaction = {
   amount: number,
   available_on: number,
   created: number,
@@ -55,11 +52,8 @@ exports[`Stripe openapi generates flow types for balance_transaction 1`] = `
   source: ?string,
   status: string,
   type: string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for card 1`] = `
-"{
+};
+declare type Card = {
   account: ?string,
   address_city: ?string,
   address_country: ?string,
@@ -91,11 +85,8 @@ exports[`Stripe openapi generates flow types for card 1`] = `
   recipient: ?string,
   three_d_secure: ?{[key: string]: mixed},
   tokenization_method: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for charge 1`] = `
-"{
+};
+declare type Charge = {
   amount: number,
   amount_authorized: ?number,
   amount_captured: number,
@@ -104,7 +95,7 @@ exports[`Stripe openapi generates flow types for charge 1`] = `
   application_fee: ?string,
   balance_transaction: ?string,
   captured: boolean,
-  card: mixed,
+  card: ?Card,
   created: number,
   currency: string,
   customer: ?string,
@@ -140,11 +131,8 @@ exports[`Stripe openapi generates flow types for charge 1`] = `
   status: string,
   transfer: ?string,
   transfer_group: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for coupon 1`] = `
-"{
+};
+declare type Coupon = {
   amount_off: ?number,
   created: number,
   currency: ?string,
@@ -159,11 +147,8 @@ exports[`Stripe openapi generates flow types for coupon 1`] = `
   redeem_by: ?number,
   times_redeemed: number,
   valid: boolean,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for customer 1`] = `
-"{
+};
+declare type Customer = {
   account_balance: number,
   alipay_accounts: ?{
     data: Array<mixed>,
@@ -181,7 +166,7 @@ exports[`Stripe openapi generates flow types for customer 1`] = `
   },
   business_vat_id: ?string,
   cards: {
-    data: Array<mixed>,
+    data: Array<Card>,
     has_more: boolean,
     object: \\"list\\",
     total_count: ?number,
@@ -194,7 +179,7 @@ exports[`Stripe openapi generates flow types for customer 1`] = `
   default_source: ?string,
   delinquent: ?boolean,
   description: ?string,
-  discount: mixed,
+  discount: ?Discount,
   email: ?string,
   id: string,
   livemode: boolean,
@@ -215,24 +200,18 @@ exports[`Stripe openapi generates flow types for customer 1`] = `
     total_count: ?number,
     url: string,
   },
-}"
-`;
-
-exports[`Stripe openapi generates flow types for discount 1`] = `
-"{
-  coupon: mixed,
+};
+declare type Discount = {
+  coupon: Coupon,
   customer: ?string,
   end: ?number,
   object: string,
   start: number,
   subscription: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for dispute 1`] = `
-"{
+};
+declare type Dispute = {
   amount: number,
-  balance_transactions: mixed,
+  balance_transactions: BalanceTransaction,
   charge: string,
   created: number,
   currency: string,
@@ -245,5 +224,5 @@ exports[`Stripe openapi generates flow types for dispute 1`] = `
   object: string,
   reason: string,
   status: string,
-}"
+};"
 `;
