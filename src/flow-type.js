@@ -1,97 +1,30 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-
-type MixedType = {type: 'mixed'};
-type BooleanType = {type: 'boolean'};
-type NullType = {type: 'null'};
-type NumberType = {type: 'number'};
-type StringType = {type: 'string'};
-
-export type ExactType = {
-  type: 'exact',
-  value: mixed,
-};
-export type OptionalType = {
-  type: 'optional',
-  child: FlowType,
-};
-export type ArrayType = {
-  type: 'array',
-  child: FlowType,
-};
-export type TupleType = {
-  type: 'tuple',
-  children: Array<FlowType>,
-};
-export type RecordType = {
-  type: 'record',
-  fields: {
-    [key: string]: FlowType,
-  },
-};
-export type MapType = {
-  type: 'map',
-  child: FlowType,
-};
-export type UnionType = {
-  type: 'union',
-  children: Array<FlowType>,
-};
-export type IntersectionType = {
-  type: 'intersection',
-  children: Array<FlowType>,
-};
-
-export type FlowType = (
-  MixedType |
-  BooleanType |
-  NullType |
-  NumberType |
-  StringType |
-  ExactType |
-  OptionalType |
-  ArrayType |
-  TupleType |
-  RecordType |
-  MapType |
-  UnionType |
-  IntersectionType
-);
-
-export const Mixed: MixedType = {type: 'mixed'};
-export const Boolean: BooleanType = {type: 'boolean'};
-export const Null: NullType = {type: 'null'};
-export const Number: NumberType = {type: 'number'};
-export const String: StringType = {type: 'string'};
-
-export const Exact = (value: mixed): ExactType => ({type: 'exact', value});
-export const Optional = (child: FlowType): OptionalType => ({type: 'optional', child});
-export const Array = (child: FlowType): ArrayType => ({type: 'array', child});
-export const Tuple = (children: Array<FlowType>): TupleType => ({type: 'tuple', children});
-export const Record = (fields: {[key: string]: FlowType}): RecordType => ({type: 'record', fields});
-export const Map = (child: FlowType): MapType => ({type: 'map', child});
-export const Union = (children: Array<FlowType>): UnionType => ({type: 'union', children});
-export const Intersection = (children: Array<FlowType>): IntersectionType => ({type: 'intersection', children});
+import Ast from './flowast/ast.js';
+import type {
+  FlowType, TupleType, RecordType, UnionType, IntersectionType, MapType, ArrayType,
+  OptionalType,
+} from './flowast/ast.js';
 
 const flowType = (schema: Object): FlowType => {
   if (schema.enum) {
-    return Union(_.map(schema.enum, Exact));
+    return Ast.Union(_.map(schema.enum, Ast.Exact));
   } else if (schema.anyOf) {
-    return Union(_.map(schema.anyOf, flowType));
+    return Ast.Union(_.map(schema.anyOf, flowType));
   } else if (schema.allOf) {
-    return Intersection(_.map(schema.allOf, flowType));
+    return Ast.Intersection(_.map(schema.allOf, flowType));
   } else if (schema.type) {
     if (typeof schema.type === 'string') {
       switch (schema.type) {
-        case 'boolean': return Boolean;
-        case 'null': return Null;
-        case 'integer': return Number;
-        case 'number': return Number;
-        case 'string': return String;
+        case 'boolean': return Ast.Boolean;
+        case 'null': return Ast.Null;
+        case 'integer': return Ast.Number;
+        case 'number': return Ast.Number;
+        case 'string': return Ast.String;
         case 'object': return objectFlowType(schema);
         case 'array': return arrayFlowType(schema);
-        default: return Mixed;
+        default: return Ast.Mixed;
       }
     } else {
       // type can be either a string or an array of strings or schemas, so we
@@ -107,10 +40,10 @@ const flowType = (schema: Object): FlowType => {
           return stringOrSchema;
         }
       });
-      return Union(_.map(schemaArray, flowType));
+      return Ast.Union(_.map(schemaArray, flowType));
     }
   } else {
-    return Mixed;
+    return Ast.Mixed;
   }
 };
 
@@ -119,29 +52,29 @@ const objectFlowType = (schema: Object): FlowType => {
   // patternProperties because it's not expressable in flow.
   if (schema.properties) {
     const required = schema.required || [];
-    return Record(_.mapValues(schema.properties, (subSchema, key) => {
+    return Ast.Record(_.mapValues(schema.properties, (subSchema, key) => {
       const subType = flowType(subSchema);
       if (required.includes(key)) {
         return subType;
       } else {
-        return Optional(subType);
+        return Ast.Optional(subType);
       }
     }));
   } else {
     const {additionalProperties} = schema;
-    return Map(additionalProperties ? flowType(additionalProperties) : Mixed);
+    return Ast.Map(additionalProperties ? flowType(additionalProperties) : Ast.Mixed);
   }
 };
 
 const arrayFlowType = (schema: Object): FlowType => {
   if (schema.items) {
     if (_.isArray(schema.items)) {
-      return Tuple(_.map(schema.items, flowType));
+      return Ast.Tuple(_.map(schema.items, flowType));
     } else {
-      return Array(flowType(schema.items));
+      return Ast.Array(flowType(schema.items));
     }
   } else {
-    return Array(Mixed);
+    return Ast.Array(Ast.Mixed);
   }
 };
 
@@ -153,13 +86,13 @@ const simplifyOptional = (ft: OptionalType) => {
     case 'mixed':
       return simplified;
     default:
-      return Optional(simplified);
+      return Ast.Optional(simplified);
   }
 };
-const simplifyArray = (ft: ArrayType) => Array(simplify(ft.child));
-const simplifyMap = (ft: MapType) => Map(simplify(ft.child));
-const simplifyTuple = (ft: TupleType) => Tuple(_.map(ft.children, simplify));
-const simplifyRecord = (ft: RecordType) => Record(_.mapValues(ft.fields, simplify));
+const simplifyArray = (ft: ArrayType) => Ast.Array(simplify(ft.child));
+const simplifyMap = (ft: MapType) => Ast.Map(simplify(ft.child));
+const simplifyTuple = (ft: TupleType) => Ast.Tuple(_.map(ft.children, simplify));
+const simplifyRecord = (ft: RecordType) => Ast.Record(_.mapValues(ft.fields, simplify));
 const simplifyIU = <T: IntersectionType | UnionType>(Constructor: (c: Array<FlowType>) => T, ft: T) => {
   const {children} = ft;
   if (children.length === 1) {
@@ -177,8 +110,8 @@ const simplify = (ft: FlowType): FlowType => {
     case 'map': return simplifyMap(ft);
     case 'tuple': return simplifyTuple(ft);
     case 'record': return simplifyRecord(ft);
-    case 'union': return simplifyIU(Union, ft);
-    case 'intersection': return simplifyIU(Intersection, ft);
+    case 'union': return simplifyIU(Ast.Union, ft);
+    case 'intersection': return simplifyIU(Ast.Intersection, ft);
     default:
       return ft;
   }

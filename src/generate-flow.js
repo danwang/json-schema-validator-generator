@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import flowType from './flow-type.js';
-import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from './flow-type.js';
+import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from './flowast/ast.js';
 import util from './util.js';
 
 const generateExact = (value: mixed, depth: number) => JSON.stringify(value);
@@ -40,7 +40,8 @@ const generateIntersection = (ft: IntersectionType, depth: number) => {
 
 const generateFlow = (ft: FlowType, depth: number): string => {
   switch (ft.type) {
-    case 'exact': return generateExact(ft.value, depth);
+    case 'exact':
+      return generateExact(ft.value, depth);
     case 'mixed':
     case 'boolean':
     case 'null':
@@ -53,10 +54,14 @@ const generateFlow = (ft: FlowType, depth: number): string => {
       return `Array<${generateFlow(ft.child, depth)}>`;
     case 'map':
       return `{[key: string]: ${generateFlow(ft.child, depth)}}`;
-    case 'tuple': return generateTuple(ft, depth);
-    case 'record': return generateRecord(ft, depth);
-    case 'union': return generateUnion(ft, depth);
-    case 'intersection': return generateIntersection(ft, depth);
+    case 'tuple':
+      return generateTuple(ft, depth);
+    case 'record':
+      return generateRecord(ft, depth);
+    case 'union':
+      return generateUnion(ft, depth);
+    case 'intersection':
+      return generateIntersection(ft, depth);
     default:
       return '';
   }

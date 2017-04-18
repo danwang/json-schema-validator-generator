@@ -1,19 +1,7 @@
 // @flow
-import flowType, {
-  Mixed,
-  Boolean,
-  Null,
-  Exact,
-  Optional,
-  Number,
-  String,
-  Array,
-  Tuple,
-  Record,
-  Union,
-  Intersection,
-} from '../flow-type.js';
-import type {FlowType} from '../flow-type.js';
+import Ast from '../flowast/ast.js';
+import type {FlowType} from '../flowast/ast.js';
+import flowType from '../flow-type.js';
 
 const assertType = (schema: Object, ft: FlowType) => {
   expect(flowType(schema)).toEqual(ft);
@@ -29,7 +17,7 @@ describe('flowType', () => {
         ],
       };
 
-      const expected = Intersection([String, Null]);
+      const expected = Ast.Intersection([Ast.String, Ast.Null]);
       assertType(schema, expected);
     });
   });
@@ -42,7 +30,7 @@ describe('flowType', () => {
         ],
       };
 
-      const expected = Union([String, Null]);
+      const expected = Ast.Union([Ast.String, Ast.Null]);
       assertType(schema, expected);
     });
 
@@ -55,7 +43,7 @@ describe('flowType', () => {
         ],
       };
 
-      const expected = Union([String, Null]);
+      const expected = Ast.Union([Ast.String, Ast.Null]);
       assertType(schema, expected);
     });
   });
@@ -65,10 +53,10 @@ describe('flowType', () => {
         enum: [1, 'foo', {a: 1}],
       };
 
-      const expected = Union([
-        Exact(1),
-        Exact('foo'),
-        Exact({a: 1}),
+      const expected = Ast.Union([
+        Ast.Exact(1),
+        Ast.Exact('foo'),
+        Ast.Exact({a: 1}),
       ]);
       assertType(schema, expected);
     });
@@ -80,7 +68,7 @@ describe('flowType', () => {
         items: {type: 'string'},
       };
 
-      const expected = Array(String);
+      const expected = Ast.Array(Ast.String);
       assertType(schema, expected);
     });
 
@@ -93,7 +81,7 @@ describe('flowType', () => {
         ],
       };
 
-      const expected = Tuple([String, Mixed]);
+      const expected = Ast.Tuple([Ast.String, Ast.Mixed]);
       assertType(schema, expected);
     });
   });
@@ -110,9 +98,9 @@ describe('flowType', () => {
         required: ['foo'],
       };
 
-      const expected = Record({
-        foo: Number,
-        bar: Optional(Boolean),
+      const expected = Ast.Record({
+        foo: Ast.Number,
+        bar: Ast.Optional(Ast.Boolean),
       });
 
       assertType(schema, expected);
@@ -120,11 +108,11 @@ describe('flowType', () => {
   });
   describe('type', () => {
     it('works with string types', () => {
-      assertType({type: 'boolean'}, Boolean);
-      assertType({type: 'null'}, Null);
-      assertType({type: 'number'}, Number);
-      assertType({type: 'integer'}, Number);
-      assertType({type: 'string'}, String);
+      assertType({type: 'boolean'}, Ast.Boolean);
+      assertType({type: 'null'}, Ast.Null);
+      assertType({type: 'number'}, Ast.Number);
+      assertType({type: 'integer'}, Ast.Number);
+      assertType({type: 'string'}, Ast.String);
     });
 
     it('reduces an array a single string to the single type', () => {
@@ -132,7 +120,7 @@ describe('flowType', () => {
         type: ['string'],
       };
 
-      const expected = String;
+      const expected = Ast.String;
       assertType(schema, expected);
     });
 
@@ -141,7 +129,7 @@ describe('flowType', () => {
         type: ['string', 'boolean', 'boolean'],
       };
 
-      const expected = Union([String, Boolean]);
+      const expected = Ast.Union([Ast.String, Ast.Boolean]);
       assertType(schema, expected);
     });
 
@@ -159,7 +147,11 @@ describe('flowType', () => {
         ],
       };
 
-      const expected = Union([String, Boolean, Record({foo: Optional(Number)})]);
+      const expected = Ast.Union([
+        Ast.String,
+        Ast.Boolean,
+        Ast.Record({foo: Ast.Optional(Ast.Number)}),
+      ]);
       assertType(schema, expected);
     });
   });
