@@ -19,22 +19,24 @@ console.log(flow);
 // declare type root = string;
 
 console.log(js);
-//function f0(v0) {
-//  if (!(typeof v0 === 'string')) {
-//    return "error";
-//  }
-//  return null;
-//}
-//return {
-//  root: f0,
-//};
+// (function() {
+//   function f0(v0) {
+//     if (!(typeof v0 === 'string')) {
+//       return "error";
+//     }
+//     return null;
+//   }
+//   return {
+//     root: f0,
+//   };
+// })()
 ```
 
 ### Flow Output
 The generated flow string is meant for direct consumption in a project's [library definitions](https://flow.org/en/docs/libdefs/creation/).
 
 ### JS Output
-The generated JS string is meant to be placed in the body of a function. It returns an object whose values are validator functions, returning the string `'error'` if the model is invalid or `null` otherwise.
+The generated JS string is an [IFFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns the string `'error'` if the model is invalid or `null` otherwise.
 
 ```js
 type Validator = (data: mixed) => 'error' | null;
@@ -51,7 +53,7 @@ import fs from 'fs';
 
 const MODELS = 'path/to/generated-models.js';
 const {js} = generate(schema);
-fs.writeFileSync(MODELS, `export default (function(){${js}})()`);
+fs.writeFileSync(MODELS, `export default ${js};`);
 ```
 
 #### Dynamic JS Usage (not recommended)
@@ -60,6 +62,6 @@ import generate from 'json-schema-validator-generator';
 
 const validatorForSchema = (schema) => {
   const {js} = generate(schema);
-  return eval(`(function(){${js}})()`);
+  return eval(js);
 };
 ```

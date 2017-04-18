@@ -75,7 +75,7 @@ const render = (ast: JsAst, depth: number = 0) => {
     case 'if':
       return renderIf(ast, depth);
     case 'return':
-      return util.indent(`return ${render(ast.value)};`, depth);
+      return util.indent(`return ${render(ast.value, depth).trimLeft()};`, depth);
     case 'body':
       return _.map(ast.body, (s) => render(s, depth)).join('\n');
     case 'for':

@@ -48,7 +48,7 @@ const testGroup = (group) => {
   it('matches snapshot', () => {
     expect(code).toMatchSnapshot();
   });
-  const validator = eval(`(function(){${code}})()`).root; // eslint-disable-line no-eval
+  const validator = eval(code).root; // eslint-disable-line no-eval
   describe(description, () => {
     tests.forEach((test) => singleTest(test, code, validator));
   });

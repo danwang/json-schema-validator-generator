@@ -63,7 +63,12 @@ const generateValidator = (schema: Object, shape: Schemas = {root: schema}): str
     ...simplifiedResults,
     Ast.Return(Ast.ObjectLiteral(schemaObject)),
   );
-  return render(simplify(uniqFuncs(simplify(ast))));
+  const body = render(simplify(uniqFuncs(simplify(ast))), 1);
+  return [
+    '(function() {',
+    body,
+    '})()',
+  ].join('\n');
 };
 
 export default generateValidator;
