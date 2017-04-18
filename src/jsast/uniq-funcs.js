@@ -3,8 +3,9 @@ import _ from 'lodash';
 import Ast from './ast.js';
 import type {JsAst, Function1Type} from './ast.js';
 import transform from './transform.js';
-import type {Transform} from './transform.js';
 import compose from '../compose.js';
+import collect from './collect.js';
+import type {Collect} from './collect.js';
 
 // A structure representing a collection of rewrites. If a tuple a->b is in the
 // map, it means that references to a can be replaced with references to b.
@@ -40,6 +41,15 @@ const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Re
   return simplify(new Map(entries));
 };
 
+const _getFuncs = collect((ast: JsAst, recur: Collect<JsAst>) => {
+  if (ast.type === 'function1') {
+    return [ast];
+  } else {
+    return recur(ast);
+  }
+});
+const getFuncs = (ast: JsAst) => _.uniq(_getFuncs(ast));
+
 // Creates a Replacements map by checking if function bodies are equal
 const equalReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Replacements => {
   const replacements = new Map();
@@ -55,36 +65,38 @@ const equalReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Repla
   return simplify(replacements);
 };
 
-const uniqFuncs = (fns: Array<Function1Type>): Transform => {
-  const replace = (replacer: Replacer): Transform => {
-    const nameToId: NameToId = _.fromPairs(_.map(fns, (ast: Function1Type, i) => [ast.name, i]));
-    const mapping = replacer(fns, nameToId);
+const replace = (replacer: Replacer) => (base: JsAst): JsAst => {
+  const fns = getFuncs(base);
+  const nameToId: NameToId = _.fromPairs(_.map(fns, (f: Function1Type, i) => [f.name, i]));
+  const mapping = replacer(fns, nameToId);
 
-    return transform((ast: JsAst): JsAst => {
-      if (ast.type === 'literal') {
-        const id = nameToId[ast.value];
-        if (mapping.has(id)) {
-          return Ast.Literal(fns[(mapping.get(id): any)].name);
-        } else {
-          return ast;
-        }
-      } else if (ast.type === 'function1') {
-        const id = nameToId[ast.name];
-        if (mapping.has(id)) {
-          return Ast.Empty;
-        } else {
-          return ast;
-        }
+  const t = transform((ast: JsAst): JsAst => {
+    if (ast.type === 'literal') {
+      const id = nameToId[ast.value];
+      if (mapping.has(id)) {
+        const replacedId: any = mapping.get(id);
+        return Ast.Literal(fns[replacedId].name);
       } else {
         return ast;
       }
-    });
-  };
+    } else if (ast.type === 'function1') {
+      const id = nameToId[ast.name];
+      if (mapping.has(id)) {
+        return Ast.Empty;
+      } else {
+        return ast;
+      }
+    } else {
+      return ast;
+    }
+  });
 
-  return compose(
-    replace(delegateReplacements),
-    replace(equalReplacements),
-  );
+  return t(base);
 };
+
+const uniqFuncs = compose(
+  replace(delegateReplacements),
+  replace(equalReplacements),
+);
 
 export default uniqFuncs;

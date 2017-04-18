@@ -5,7 +5,6 @@ import Ast from './jsast/ast.js';
 import simplify from './jsast/simplify.js';
 import render from './jsast/render.js';
 import uniqFuncs from './jsast/uniq-funcs.js';
-import type {Transform} from './jsast/transform.js';
 
 const gengensym = () => {
   const cache = {};
@@ -47,24 +46,24 @@ const generateValidator = (schema: Object, shape: Schemas = {root: schema}): str
     rootSchema: schema,
   });
 
-  const results = _.map(shape, (subSchema) => root(subSchema, makeContext()));
+  const baseSchemas = _.map(shape, (subSchema) => root(subSchema, makeContext()));
+  const results = _.keyBy(baseSchemas, (f) => f.name);
   let i = 1;
   while (i < schemas.length) {
-    results.push(root(schemas[i], makeContext()));
+    const next = root(schemas[i], makeContext());
+    results[next.name] = next;
     i++;
   }
 
   // TODO: Fix flow unhelpful error
-  const simplifiedResults: any = results.map(simplify);
-  const uniquer: Transform = uniqFuncs(simplifiedResults);
+  const simplifiedResults: any = _.values(results).map(simplify);
 
   const schemaObject = _.mapValues(shape, (subSchema) => Ast.Literal(symbolForSchema(subSchema)));
   const ast = Ast.Body(
     ...simplifiedResults,
     Ast.Return(Ast.ObjectLiteral(schemaObject)),
   );
-  // console.log(JSON.stringify(simplified, null, 2));
-  return render(simplify(uniquer(simplify(ast))));
+  return render(simplify(uniqFuncs(simplify(ast))));
 };
 
 export default generateValidator;

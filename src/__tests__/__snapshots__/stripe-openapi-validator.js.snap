@@ -234,6 +234,1106 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   return null;
 }
+function f30(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.amount;
+    if (v1 !== undefined) {
+      if (f31(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.available_on;
+    if (v2 !== undefined) {
+      if (f31(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.created;
+    if (v3 !== undefined) {
+      if (f31(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.currency;
+    if (v4 !== undefined) {
+      if (f2(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.description;
+    if (v5 !== undefined) {
+      if (f2(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.fee;
+    if (v6 !== undefined) {
+      if (f31(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.fee_details;
+    if (v7 !== undefined) {
+      if (f150(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.id;
+    if (v8 !== undefined) {
+      if (f2(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.net;
+    if (v9 !== undefined) {
+      if (f31(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.object;
+    if (v10 !== undefined) {
+      if (f2(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.source;
+    if (v11 !== undefined) {
+      if (f2(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.status;
+    if (v12 !== undefined) {
+      if (f2(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.type;
+    if (v13 !== undefined) {
+      if (f2(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      return \\"error\\";
+    }
+    if (v0.available_on === undefined) {
+      return \\"error\\";
+    }
+    if (v0.created === undefined) {
+      return \\"error\\";
+    }
+    if (v0.currency === undefined) {
+      return \\"error\\";
+    }
+    if (v0.fee === undefined) {
+      return \\"error\\";
+    }
+    if (v0.fee_details === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.net === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.status === undefined) {
+      return \\"error\\";
+    }
+    if (v0.type === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f42(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.account;
+    if (v1 !== undefined) {
+      if (f2(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.address_city;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.address_country;
+    if (v3 !== undefined) {
+      if (f2(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.address_line1;
+    if (v4 !== undefined) {
+      if (f2(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.address_line1_check;
+    if (v5 !== undefined) {
+      if (f2(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.address_line2;
+    if (v6 !== undefined) {
+      if (f2(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.address_state;
+    if (v7 !== undefined) {
+      if (f2(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.address_zip;
+    if (v8 !== undefined) {
+      if (f2(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.address_zip_check;
+    if (v9 !== undefined) {
+      if (f2(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.available_payout_methods;
+    if (v10 !== undefined) {
+      if (f1(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.brand;
+    if (v11 !== undefined) {
+      if (f2(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.country;
+    if (v12 !== undefined) {
+      if (f2(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.currency;
+    if (v13 !== undefined) {
+      if (f2(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+    v14 = v0.customer;
+    if (v14 !== undefined) {
+      if (f2(v14) !== null) {
+        return \\"error\\";
+      }
+    }
+    v15 = v0.cvc_check;
+    if (v15 !== undefined) {
+      if (f2(v15) !== null) {
+        return \\"error\\";
+      }
+    }
+    v16 = v0.default_for_currency;
+    if (v16 !== undefined) {
+      if (f4(v16) !== null) {
+        return \\"error\\";
+      }
+    }
+    v17 = v0.dynamic_last4;
+    if (v17 !== undefined) {
+      if (f2(v17) !== null) {
+        return \\"error\\";
+      }
+    }
+    v18 = v0.estimated_availability;
+    if (v18 !== undefined) {
+      if (f2(v18) !== null) {
+        return \\"error\\";
+      }
+    }
+    v19 = v0.exp_month;
+    if (v19 !== undefined) {
+      if (f31(v19) !== null) {
+        return \\"error\\";
+      }
+    }
+    v20 = v0.exp_year;
+    if (v20 !== undefined) {
+      if (f31(v20) !== null) {
+        return \\"error\\";
+      }
+    }
+    v21 = v0.fingerprint;
+    if (v21 !== undefined) {
+      if (f2(v21) !== null) {
+        return \\"error\\";
+      }
+    }
+    v22 = v0.funding;
+    if (v22 !== undefined) {
+      if (f2(v22) !== null) {
+        return \\"error\\";
+      }
+    }
+    v23 = v0.google_reference;
+    if (v23 !== undefined) {
+      if (f2(v23) !== null) {
+        return \\"error\\";
+      }
+    }
+    v24 = v0.id;
+    if (v24 !== undefined) {
+      if (f2(v24) !== null) {
+        return \\"error\\";
+      }
+    }
+    v25 = v0.last4;
+    if (v25 !== undefined) {
+      if (f2(v25) !== null) {
+        return \\"error\\";
+      }
+    }
+    v26 = v0.metadata;
+    if (v26 !== undefined) {
+      if (f17(v26) !== null) {
+        return \\"error\\";
+      }
+    }
+    v27 = v0.name;
+    if (v27 !== undefined) {
+      if (f2(v27) !== null) {
+        return \\"error\\";
+      }
+    }
+    v28 = v0.object;
+    if (v28 !== undefined) {
+      if (f2(v28) !== null) {
+        return \\"error\\";
+      }
+    }
+    v29 = v0.recipient;
+    if (v29 !== undefined) {
+      if (f2(v29) !== null) {
+        return \\"error\\";
+      }
+    }
+    v30 = v0.three_d_secure;
+    if (v30 !== undefined) {
+      if (f17(v30) !== null) {
+        return \\"error\\";
+      }
+    }
+    v31 = v0.tokenization_method;
+    if (v31 !== undefined) {
+      if (f2(v31) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.brand === undefined) {
+      return \\"error\\";
+    }
+    if (v0.exp_month === undefined) {
+      return \\"error\\";
+    }
+    if (v0.exp_year === undefined) {
+      return \\"error\\";
+    }
+    if (v0.funding === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.last4 === undefined) {
+      return \\"error\\";
+    }
+    if (v0.metadata === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f69(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.amount;
+    if (v1 !== undefined) {
+      if (f31(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.amount_authorized;
+    if (v2 !== undefined) {
+      if (f31(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.amount_captured;
+    if (v3 !== undefined) {
+      if (f31(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.amount_refunded;
+    if (v4 !== undefined) {
+      if (f31(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.application;
+    if (v5 !== undefined) {
+      if (f2(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.application_fee;
+    if (v6 !== undefined) {
+      if (f2(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.balance_transaction;
+    if (v7 !== undefined) {
+      if (f2(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.captured;
+    if (v8 !== undefined) {
+      if (f4(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.card;
+    if (v9 !== undefined) {
+      if (f42(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.created;
+    if (v10 !== undefined) {
+      if (f31(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.currency;
+    if (v11 !== undefined) {
+      if (f2(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.customer;
+    if (v12 !== undefined) {
+      if (f2(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.description;
+    if (v13 !== undefined) {
+      if (f2(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+    v14 = v0.destination;
+    if (v14 !== undefined) {
+      if (f2(v14) !== null) {
+        return \\"error\\";
+      }
+    }
+    v15 = v0.dispute;
+    if (v15 !== undefined) {
+      if (f2(v15) !== null) {
+        return \\"error\\";
+      }
+    }
+    v16 = v0.failure_code;
+    if (v16 !== undefined) {
+      if (f2(v16) !== null) {
+        return \\"error\\";
+      }
+    }
+    v17 = v0.failure_message;
+    if (v17 !== undefined) {
+      if (f2(v17) !== null) {
+        return \\"error\\";
+      }
+    }
+    v18 = v0.fraud_details;
+    if (v18 !== undefined) {
+      if (f17(v18) !== null) {
+        return \\"error\\";
+      }
+    }
+    v19 = v0.id;
+    if (v19 !== undefined) {
+      if (f2(v19) !== null) {
+        return \\"error\\";
+      }
+    }
+    v20 = v0.invoice;
+    if (v20 !== undefined) {
+      if (f2(v20) !== null) {
+        return \\"error\\";
+      }
+    }
+    v21 = v0.livemode;
+    if (v21 !== undefined) {
+      if (f4(v21) !== null) {
+        return \\"error\\";
+      }
+    }
+    v22 = v0.metadata;
+    if (v22 !== undefined) {
+      if (f17(v22) !== null) {
+        return \\"error\\";
+      }
+    }
+    v23 = v0.object;
+    if (v23 !== undefined) {
+      if (f2(v23) !== null) {
+        return \\"error\\";
+      }
+    }
+    v24 = v0.on_behalf_of;
+    if (v24 !== undefined) {
+      if (f2(v24) !== null) {
+        return \\"error\\";
+      }
+    }
+    v25 = v0.order;
+    if (v25 !== undefined) {
+      if (f2(v25) !== null) {
+        return \\"error\\";
+      }
+    }
+    v26 = v0.outcome;
+    if (v26 !== undefined) {
+      if (f151(v26) !== null) {
+        return \\"error\\";
+      }
+    }
+    v27 = v0.paid;
+    if (v27 !== undefined) {
+      if (f4(v27) !== null) {
+        return \\"error\\";
+      }
+    }
+    v28 = v0.receipt_email;
+    if (v28 !== undefined) {
+      if (f2(v28) !== null) {
+        return \\"error\\";
+      }
+    }
+    v29 = v0.receipt_number;
+    if (v29 !== undefined) {
+      if (f2(v29) !== null) {
+        return \\"error\\";
+      }
+    }
+    v30 = v0.refunded;
+    if (v30 !== undefined) {
+      if (f4(v30) !== null) {
+        return \\"error\\";
+      }
+    }
+    v31 = v0.refunds;
+    if (v31 !== undefined) {
+      if (f93(v31) !== null) {
+        return \\"error\\";
+      }
+    }
+    v32 = v0.review;
+    if (v32 !== undefined) {
+      if (f2(v32) !== null) {
+        return \\"error\\";
+      }
+    }
+    v33 = v0.shipping;
+    if (v33 !== undefined) {
+      if (f153(v33) !== null) {
+        return \\"error\\";
+      }
+    }
+    v34 = v0.source_transfer;
+    if (v34 !== undefined) {
+      if (f2(v34) !== null) {
+        return \\"error\\";
+      }
+    }
+    v35 = v0.statement_descriptor;
+    if (v35 !== undefined) {
+      if (f2(v35) !== null) {
+        return \\"error\\";
+      }
+    }
+    v36 = v0.status;
+    if (v36 !== undefined) {
+      if (f2(v36) !== null) {
+        return \\"error\\";
+      }
+    }
+    v37 = v0.transfer;
+    if (v37 !== undefined) {
+      if (f2(v37) !== null) {
+        return \\"error\\";
+      }
+    }
+    v38 = v0.transfer_group;
+    if (v38 !== undefined) {
+      if (f2(v38) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      return \\"error\\";
+    }
+    if (v0.amount_captured === undefined) {
+      return \\"error\\";
+    }
+    if (v0.amount_refunded === undefined) {
+      return \\"error\\";
+    }
+    if (v0.captured === undefined) {
+      return \\"error\\";
+    }
+    if (v0.created === undefined) {
+      return \\"error\\";
+    }
+    if (v0.currency === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.livemode === undefined) {
+      return \\"error\\";
+    }
+    if (v0.metadata === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.paid === undefined) {
+      return \\"error\\";
+    }
+    if (v0.refunded === undefined) {
+      return \\"error\\";
+    }
+    if (v0.refunds === undefined) {
+      return \\"error\\";
+    }
+    if (v0.status === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f101(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.amount_off;
+    if (v1 !== undefined) {
+      if (f31(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.created;
+    if (v2 !== undefined) {
+      if (f31(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.currency;
+    if (v3 !== undefined) {
+      if (f2(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.duration;
+    if (v4 !== undefined) {
+      if (f2(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.duration_in_months;
+    if (v5 !== undefined) {
+      if (f31(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.id;
+    if (v6 !== undefined) {
+      if (f2(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.livemode;
+    if (v7 !== undefined) {
+      if (f4(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.max_redemptions;
+    if (v8 !== undefined) {
+      if (f31(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.metadata;
+    if (v9 !== undefined) {
+      if (f17(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.object;
+    if (v10 !== undefined) {
+      if (f2(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.percent_off;
+    if (v11 !== undefined) {
+      if (f31(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.redeem_by;
+    if (v12 !== undefined) {
+      if (f31(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.times_redeemed;
+    if (v13 !== undefined) {
+      if (f31(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+    v14 = v0.valid;
+    if (v14 !== undefined) {
+      if (f4(v14) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.created === undefined) {
+      return \\"error\\";
+    }
+    if (v0.duration === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.livemode === undefined) {
+      return \\"error\\";
+    }
+    if (v0.metadata === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.times_redeemed === undefined) {
+      return \\"error\\";
+    }
+    if (v0.valid === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f111(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.account_balance;
+    if (v1 !== undefined) {
+      if (f31(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.alipay_accounts;
+    if (v2 !== undefined) {
+      if (f113(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.bank_accounts;
+    if (v3 !== undefined) {
+      if (f114(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.business_vat_id;
+    if (v4 !== undefined) {
+      if (f2(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.cards;
+    if (v5 !== undefined) {
+      if (f116(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.created;
+    if (v6 !== undefined) {
+      if (f31(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.currency;
+    if (v7 !== undefined) {
+      if (f2(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.default_bank_account;
+    if (v8 !== undefined) {
+      if (f2(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.default_card;
+    if (v9 !== undefined) {
+      if (f2(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.default_source;
+    if (v10 !== undefined) {
+      if (f2(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.delinquent;
+    if (v11 !== undefined) {
+      if (f4(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.description;
+    if (v12 !== undefined) {
+      if (f2(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.discount;
+    if (v13 !== undefined) {
+      if (f125(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+    v14 = v0.email;
+    if (v14 !== undefined) {
+      if (f2(v14) !== null) {
+        return \\"error\\";
+      }
+    }
+    v15 = v0.id;
+    if (v15 !== undefined) {
+      if (f2(v15) !== null) {
+        return \\"error\\";
+      }
+    }
+    v16 = v0.livemode;
+    if (v16 !== undefined) {
+      if (f4(v16) !== null) {
+        return \\"error\\";
+      }
+    }
+    v17 = v0.metadata;
+    if (v17 !== undefined) {
+      if (f17(v17) !== null) {
+        return \\"error\\";
+      }
+    }
+    v18 = v0.object;
+    if (v18 !== undefined) {
+      if (f2(v18) !== null) {
+        return \\"error\\";
+      }
+    }
+    v19 = v0.shipping;
+    if (v19 !== undefined) {
+      if (f157(v19) !== null) {
+        return \\"error\\";
+      }
+    }
+    v20 = v0.sources;
+    if (v20 !== undefined) {
+      if (f12(v20) !== null) {
+        return \\"error\\";
+      }
+    }
+    v21 = v0.subscriptions;
+    if (v21 !== undefined) {
+      if (f124(v21) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.account_balance === undefined) {
+      return \\"error\\";
+    }
+    if (v0.cards === undefined) {
+      return \\"error\\";
+    }
+    if (v0.created === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.livemode === undefined) {
+      return \\"error\\";
+    }
+    if (v0.metadata === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.sources === undefined) {
+      return \\"error\\";
+    }
+    if (v0.subscriptions === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f125(v0) {
+  var v1, v2, v3, v4, v5, v6;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.coupon;
+    if (v1 !== undefined) {
+      if (f101(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.customer;
+    if (v2 !== undefined) {
+      if (f2(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.end;
+    if (v3 !== undefined) {
+      if (f31(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.object;
+    if (v4 !== undefined) {
+      if (f2(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.start;
+    if (v5 !== undefined) {
+      if (f31(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.subscription;
+    if (v6 !== undefined) {
+      if (f2(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.coupon === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.start === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
+function f130(v0) {
+  var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    v1 = v0.amount;
+    if (v1 !== undefined) {
+      if (f31(v1) !== null) {
+        return \\"error\\";
+      }
+    }
+    v2 = v0.balance_transactions;
+    if (v2 !== undefined) {
+      if (f30(v2) !== null) {
+        return \\"error\\";
+      }
+    }
+    v3 = v0.charge;
+    if (v3 !== undefined) {
+      if (f2(v3) !== null) {
+        return \\"error\\";
+      }
+    }
+    v4 = v0.created;
+    if (v4 !== undefined) {
+      if (f31(v4) !== null) {
+        return \\"error\\";
+      }
+    }
+    v5 = v0.currency;
+    if (v5 !== undefined) {
+      if (f2(v5) !== null) {
+        return \\"error\\";
+      }
+    }
+    v6 = v0.evidence;
+    if (v6 !== undefined) {
+      if (f17(v6) !== null) {
+        return \\"error\\";
+      }
+    }
+    v7 = v0.evidence_details;
+    if (v7 !== undefined) {
+      if (f17(v7) !== null) {
+        return \\"error\\";
+      }
+    }
+    v8 = v0.id;
+    if (v8 !== undefined) {
+      if (f2(v8) !== null) {
+        return \\"error\\";
+      }
+    }
+    v9 = v0.is_charge_refundable;
+    if (v9 !== undefined) {
+      if (f4(v9) !== null) {
+        return \\"error\\";
+      }
+    }
+    v10 = v0.livemode;
+    if (v10 !== undefined) {
+      if (f4(v10) !== null) {
+        return \\"error\\";
+      }
+    }
+    v11 = v0.metadata;
+    if (v11 !== undefined) {
+      if (f17(v11) !== null) {
+        return \\"error\\";
+      }
+    }
+    v12 = v0.object;
+    if (v12 !== undefined) {
+      if (f2(v12) !== null) {
+        return \\"error\\";
+      }
+    }
+    v13 = v0.reason;
+    if (v13 !== undefined) {
+      if (f2(v13) !== null) {
+        return \\"error\\";
+      }
+    }
+    v14 = v0.status;
+    if (v14 !== undefined) {
+      if (f2(v14) !== null) {
+        return \\"error\\";
+      }
+    }
+  }
+  if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0.amount === undefined) {
+      return \\"error\\";
+    }
+    if (v0.balance_transactions === undefined) {
+      return \\"error\\";
+    }
+    if (v0.charge === undefined) {
+      return \\"error\\";
+    }
+    if (v0.created === undefined) {
+      return \\"error\\";
+    }
+    if (v0.currency === undefined) {
+      return \\"error\\";
+    }
+    if (v0.evidence === undefined) {
+      return \\"error\\";
+    }
+    if (v0.evidence_details === undefined) {
+      return \\"error\\";
+    }
+    if (v0.id === undefined) {
+      return \\"error\\";
+    }
+    if (v0.is_charge_refundable === undefined) {
+      return \\"error\\";
+    }
+    if (v0.livemode === undefined) {
+      return \\"error\\";
+    }
+    if (v0.metadata === undefined) {
+      return \\"error\\";
+    }
+    if (v0.object === undefined) {
+      return \\"error\\";
+    }
+    if (v0.reason === undefined) {
+      return \\"error\\";
+    }
+    if (v0.status === undefined) {
+      return \\"error\\";
+    }
+  }
+  if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    return \\"error\\";
+  }
+  return null;
+}
 function f1(v0) {
   if (!(Array.isArray(v0))) {
     return \\"error\\";
@@ -1123,7 +2223,7 @@ function f153(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     v1 = v0.address;
     if (v1 !== undefined) {
-      if (f231(v1) !== null) {
+      if (f221(v1) !== null) {
         return \\"error\\";
       }
     }
@@ -1221,7 +2321,7 @@ function f157(v0) {
   if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
     v1 = v0.address;
     if (v1 !== undefined) {
-      if (f231(v1) !== null) {
+      if (f221(v1) !== null) {
         return \\"error\\";
       }
     }
@@ -1581,7 +2681,7 @@ function f228(v0) {
     }
     v5 = v0.from_address;
     if (v5 !== undefined) {
-      if (f231(v5) !== null) {
+      if (f221(v5) !== null) {
         return \\"error\\";
       }
     }
@@ -2630,252 +3730,4 @@ return {
   discount: f125,
   dispute: f130,
 };"
-`;
-
-exports[`Stripe openapi generates flow types for account 1`] = `
-"{
-  active_payment_methods: Array<mixed>,
-  business_name: ?string,
-  business_url: ?string,
-  charges_enabled: boolean,
-  country: string,
-  debit_negative_balances: boolean,
-  decline_charge_on: mixed,
-  default_currency: string,
-  details_submitted: boolean,
-  display_name: ?string,
-  email: ?string,
-  external_accounts: {
-    data: Array<{[key: string]: mixed}>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  id: string,
-  legal_entity: mixed,
-  managed: boolean,
-  mcc: ?string,
-  metadata: ?{[key: string]: mixed},
-  object: string,
-  orders: mixed,
-  payout_schedule: mixed,
-  payout_statement_descriptor: ?string,
-  payouts_enabled: boolean,
-  product_description: ?string,
-  statement_descriptor: ?string,
-  support_email: ?string,
-  support_phone: ?string,
-  timezone: ?string,
-  tos_acceptance: mixed,
-  verification: mixed,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for balance_transaction 1`] = `
-"{
-  amount: number,
-  available_on: number,
-  created: number,
-  currency: string,
-  description: ?string,
-  fee: number,
-  fee_details: mixed,
-  id: string,
-  net: number,
-  object: string,
-  source: ?string,
-  status: string,
-  type: string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for card 1`] = `
-"{
-  account: ?string,
-  address_city: ?string,
-  address_country: ?string,
-  address_line1: ?string,
-  address_line1_check: ?string,
-  address_line2: ?string,
-  address_state: ?string,
-  address_zip: ?string,
-  address_zip_check: ?string,
-  available_payout_methods: ?Array<mixed>,
-  brand: string,
-  country: ?string,
-  currency: ?string,
-  customer: ?string,
-  cvc_check: ?string,
-  default_for_currency: ?boolean,
-  dynamic_last4: ?string,
-  estimated_availability: ?string,
-  exp_month: number,
-  exp_year: number,
-  fingerprint: ?string,
-  funding: string,
-  google_reference: ?string,
-  id: string,
-  last4: string,
-  metadata: {[key: string]: mixed},
-  name: ?string,
-  object: string,
-  recipient: ?string,
-  three_d_secure: ?{[key: string]: mixed},
-  tokenization_method: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for charge 1`] = `
-"{
-  amount: number,
-  amount_authorized: ?number,
-  amount_captured: number,
-  amount_refunded: number,
-  application: ?string,
-  application_fee: ?string,
-  balance_transaction: ?string,
-  captured: boolean,
-  card: mixed,
-  created: number,
-  currency: string,
-  customer: ?string,
-  description: ?string,
-  destination: ?string,
-  dispute: ?string,
-  failure_code: ?string,
-  failure_message: ?string,
-  fraud_details: ?{[key: string]: mixed},
-  id: string,
-  invoice: ?string,
-  livemode: boolean,
-  metadata: {[key: string]: mixed},
-  object: string,
-  on_behalf_of: ?string,
-  order: ?string,
-  outcome: mixed,
-  paid: boolean,
-  receipt_email: ?string,
-  receipt_number: ?string,
-  refunded: boolean,
-  refunds: {
-    data: Array<mixed>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  review: ?string,
-  shipping: mixed,
-  source_transfer: ?string,
-  statement_descriptor: ?string,
-  status: string,
-  transfer: ?string,
-  transfer_group: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for coupon 1`] = `
-"{
-  amount_off: ?number,
-  created: number,
-  currency: ?string,
-  duration: string,
-  duration_in_months: ?number,
-  id: string,
-  livemode: boolean,
-  max_redemptions: ?number,
-  metadata: {[key: string]: mixed},
-  object: string,
-  percent_off: ?number,
-  redeem_by: ?number,
-  times_redeemed: number,
-  valid: boolean,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for customer 1`] = `
-"{
-  account_balance: number,
-  alipay_accounts: ?{
-    data: Array<mixed>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  bank_accounts: ?{
-    data: Array<mixed>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  business_vat_id: ?string,
-  cards: {
-    data: Array<mixed>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  created: number,
-  currency: ?string,
-  default_bank_account: ?string,
-  default_card: ?string,
-  default_source: ?string,
-  delinquent: ?boolean,
-  description: ?string,
-  discount: mixed,
-  email: ?string,
-  id: string,
-  livemode: boolean,
-  metadata: {[key: string]: mixed},
-  object: string,
-  shipping: mixed,
-  sources: {
-    data: Array<{[key: string]: mixed}>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-  subscriptions: {
-    data: Array<mixed>,
-    has_more: boolean,
-    object: \\"list\\",
-    total_count: ?number,
-    url: string,
-  },
-}"
-`;
-
-exports[`Stripe openapi generates flow types for discount 1`] = `
-"{
-  coupon: mixed,
-  customer: ?string,
-  end: ?number,
-  object: string,
-  start: number,
-  subscription: ?string,
-}"
-`;
-
-exports[`Stripe openapi generates flow types for dispute 1`] = `
-"{
-  amount: number,
-  balance_transactions: mixed,
-  charge: string,
-  created: number,
-  currency: string,
-  evidence: {[key: string]: mixed},
-  evidence_details: {[key: string]: mixed},
-  id: string,
-  is_charge_refundable: boolean,
-  livemode: boolean,
-  metadata: {[key: string]: mixed},
-  object: string,
-  reason: string,
-  status: string,
-}"
 `;
