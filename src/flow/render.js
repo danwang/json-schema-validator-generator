@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from 'jsvg/flow/ast/ast.js';
+import type {FlowType, TupleType, RecordType} from 'jsvg/flow/ast/ast.js';
 import util from 'jsvg/util.js';
 
 const renderExact = (value: mixed, depth: number) => JSON.stringify(value);
@@ -29,14 +29,6 @@ const renderRecord = (ft: RecordType, depth: number) => {
   ].join('\n');
 };
 
-const renderUnion = (ft: UnionType, depth: number) => {
-  return _.map(ft.children, (child) => render(child, depth)).join(' | ');
-};
-
-const renderIntersection = (ft: IntersectionType, depth: number) => {
-  return _.map(ft.children, (child) => render(child, depth)).join(' & ');
-};
-
 const render = (ft: FlowType, depth: number): string => {
   switch (ft.type) {
     case 'exact':
@@ -58,9 +50,9 @@ const render = (ft: FlowType, depth: number): string => {
     case 'record':
       return renderRecord(ft, depth);
     case 'union':
-      return renderUnion(ft, depth);
+      return _.map(ft.children, (child) => render(child, depth)).join(' | ');
     case 'intersection':
-      return renderIntersection(ft, depth);
+      return _.map(ft.children, (child) => render(child, depth)).join(' & ');
     default:
       return '';
   }

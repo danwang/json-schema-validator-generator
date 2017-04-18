@@ -6,7 +6,7 @@ type NullType = {type: 'null'};
 type NumberType = {type: 'number'};
 type StringType = {type: 'string'};
 
-export type ExactType = {
+type ExactType = {
   type: 'exact',
   value: mixed,
 };
@@ -14,7 +14,7 @@ export type OptionalType = {
   type: 'optional',
   child: FlowType,
 };
-export type ArrayType = {
+type ArrayType = {
   type: 'array',
   child: FlowType,
 };
@@ -28,15 +28,15 @@ export type RecordType = {
     [key: string]: FlowType,
   },
 };
-export type MapType = {
+type MapType = {
   type: 'map',
   child: FlowType,
 };
-export type UnionType = {
+type UnionType = {
   type: 'union',
   children: Array<FlowType>,
 };
-export type IntersectionType = {
+type IntersectionType = {
   type: 'intersection',
   children: Array<FlowType>,
 };

@@ -2,9 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import Ast from 'jsvg/flow/ast/ast.js';
-import type {
-  FlowType, UnionType, IntersectionType, OptionalType,
-} from 'jsvg/flow/ast/ast.js';
+import type {FlowType, OptionalType} from 'jsvg/flow/ast/ast.js';
 
 const simplifyOptional = (ft: OptionalType) => {
   const {child} = ft;
@@ -17,13 +15,12 @@ const simplifyOptional = (ft: OptionalType) => {
       return Ast.Optional(simplified);
   }
 };
-const simplifyIU = <T: IntersectionType | UnionType>(Constructor: (c: Array<FlowType>) => T, ft: T) => {
-  const {children} = ft;
-  if (children.length === 1) {
-    return simplify(children[0]);
+const simplifyIU = (Constructor: (c: Array<FlowType>) => FlowType, children: Array<FlowType>) => {
+  const unique = _.uniqWith(_.map(children, simplify), _.isEqual);
+  if (unique.length === 1) {
+    return unique[0];
   } else {
-    const mappedChildren = _.map(_.uniqWith(children, _.isEqual), simplify);
-    return Constructor(mappedChildren);
+    return Constructor(unique);
   }
 };
 
@@ -40,9 +37,9 @@ const simplify = (ft: FlowType): FlowType => {
     case 'record':
       return Ast.Record(_.mapValues(ft.fields, simplify));
     case 'union':
-      return simplifyIU(Ast.Union, ft);
+      return simplifyIU(Ast.Union, ft.children);
     case 'intersection':
-      return simplifyIU(Ast.Intersection, ft);
+      return simplifyIU(Ast.Intersection, ft.children);
     default:
       return ft;
   }
