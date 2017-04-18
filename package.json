@@ -1,11 +1,12 @@
 {
   "name": "json-schema-validator-generator",
-  "version": "1.0.0",
-  "main": "src/index.js",
+  "version": "1.0.1",
+  "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
     "lint": "eslint src",
-    "jest": "jest --config jestconfig.json"
+    "jest": "jest --config jestconfig.json",
+    "build": "babel ./src --out-dir ./dist/"
   },
   "license": "MIT",
   "dependencies": {
