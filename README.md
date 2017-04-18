@@ -1,14 +1,14 @@
 # json-schema-validator-generator
 
+A [Flow](https://flow.org/) type and JS validator code generator for [JSON Schema](http://json-schema.org/).
+
 ## Install
 ```
 yarn add json-schema-validator-generator
-yarn
 ```
 
 ## Usage
-### Simple Schemas
-For simple schemas (i.e., no definitions/refs):
+### Basic
 
 ```js
 import generate from 'json-schema-validator-generator';
