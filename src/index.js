@@ -1,5 +1,5 @@
 // @flow
-import generateValidator from './generate-validator.js';
+import generateValidator from 'jsvg/generate-validator.js';
 
 export default {
   generateValidator,

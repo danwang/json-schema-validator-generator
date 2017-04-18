@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
-import Ast from './jsast/ast.js';
-import type {JsAst} from './jsast/ast.js';
+import Ast from 'jsvg/jsast/ast.js';
+import type {JsAst} from 'jsvg/jsast/ast.js';
 
 const INDENT = '  ';
 const indent = (line: string) => `${INDENT}${line}`;

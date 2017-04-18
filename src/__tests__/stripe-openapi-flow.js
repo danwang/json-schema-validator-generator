@@ -1,6 +1,6 @@
 // @flow
 import path from 'path';
-import generateFlow from '../generate-flow.js';
+import generateFlow from 'jsvg/generate-flow.js';
 
 const MODELS_TO_SNAPSHOT = [
   'account',

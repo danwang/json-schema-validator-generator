@@ -1,8 +1,8 @@
 // @flow
 import _ from 'lodash';
-import type {Context} from '../types.js';
-import Ast from '../jsast/ast.js';
-import type {JsAst} from '../jsast/ast.js';
+import type {Context} from 'jsvg/types.js';
+import Ast from 'jsvg/jsast/ast.js';
+import type {JsAst} from 'jsvg/jsast/ast.js';
 
 const allOf = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.allOf) {

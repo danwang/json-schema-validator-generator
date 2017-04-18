@@ -1,9 +1,9 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import flowType from './flow-type.js';
-import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from './flowast/ast.js';
-import util from './util.js';
+import flowType from 'jsvg/flow-type.js';
+import type {FlowType, TupleType, RecordType, UnionType, IntersectionType} from 'jsvg/flowast/ast.js';
+import util from 'jsvg/util.js';
 
 const generateExact = (value: mixed, depth: number) => JSON.stringify(value);
 const generateTuple = (ft: TupleType, depth: number) => {

@@ -1,7 +1,7 @@
 // @flow
-import Ast from '../flowast/ast.js';
-import type {FlowType} from '../flowast/ast.js';
-import flowType from '../flow-type.js';
+import Ast from 'jsvg/flowast/ast.js';
+import type {FlowType} from 'jsvg/flowast/ast.js';
+import flowType from 'jsvg/flow-type.js';
 
 const assertType = (schema: Object, ft: FlowType) => {
   expect(flowType(schema)).toEqual(ft);

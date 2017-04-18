@@ -3,8 +3,8 @@
 import _ from 'lodash';
 import type {
   JsAst, IfType, ForType, ForInType, Function1Type, ObjectLiteralType,
-} from './ast.js';
-import getVars from './get-vars.js';
+} from 'jsvg/jsast/ast.js';
+import getVars from 'jsvg/jsast/get-vars.js';
 
 const indent = (line: string, depth: number) => `${_.repeat('  ', depth)}${line}`;
 

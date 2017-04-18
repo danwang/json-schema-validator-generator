@@ -1,6 +1,6 @@
 // @flow
-import uniqFuncs from '../uniq-funcs.js';
-import Ast from '../ast.js';
+import uniqFuncs from 'jsvg/jsast/uniq-funcs.js';
+import Ast from 'jsvg/jsast/ast.js';
 
 describe('uniqFuncs', () => {
   it('handles functions with trivial bodies', () => {

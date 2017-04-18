@@ -1,21 +1,21 @@
 // @flow
-import allOf from './allOf.js';
-import anyOf from './anyOf.js';
-import _enum from './enum.js';
-import items from './items.js';
-import comparisons from './comparisons.js';
-import not from './not.js';
-import oneOf from './oneOf.js';
-import pattern from './pattern.js';
-import properties from './properties.js';
-import ref from './ref.js';
-import required from './required.js';
-import type from './type.js';
+import allOf from 'jsvg/checks/allOf.js';
+import anyOf from 'jsvg/checks/anyOf.js';
+import _enum from 'jsvg/checks/enum.js';
+import items from 'jsvg/checks/items.js';
+import comparisons from 'jsvg/checks/comparisons.js';
+import not from 'jsvg/checks/not.js';
+import oneOf from 'jsvg/checks/oneOf.js';
+import pattern from 'jsvg/checks/pattern.js';
+import properties from 'jsvg/checks/properties.js';
+import ref from 'jsvg/checks/ref.js';
+import required from 'jsvg/checks/required.js';
+import type from 'jsvg/checks/type.js';
 
-import type {Context} from '../types.js';
+import type {Context} from 'jsvg/types.js';
 
-import Ast from '../jsast/ast.js';
-import type {Function1Type} from '../jsast/ast.js';
+import Ast from 'jsvg/jsast/ast.js';
+import type {Function1Type} from 'jsvg/jsast/ast.js';
 
 const root = (schema: Object, context: Context): Function1Type => {
   const fnSym = context.symbolForSchema(schema);

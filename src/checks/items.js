@@ -1,9 +1,9 @@
 // @flow
 import _ from 'lodash';
-import util from '../util.js';
-import type {Context} from '../types.js';
-import Ast from '../jsast/ast.js';
-import type {JsAst} from '../jsast/ast.js';
+import util from 'jsvg/util.js';
+import type {Context} from 'jsvg/types.js';
+import Ast from 'jsvg/jsast/ast.js';
+import type {JsAst} from 'jsvg/jsast/ast.js';
 
 const items = (schema: Object, symbol: string, context: Context): JsAst => {
   if (Array.isArray(schema.items)) {

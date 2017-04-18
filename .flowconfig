@@ -1,3 +1,5 @@
 [options]
 module.file_ext=.js
 module.file_ext=.json
+
+module.name_mapper='^jsvg\/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'

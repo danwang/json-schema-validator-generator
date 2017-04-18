@@ -3,5 +3,8 @@
   "moduleFileExtensions": ["js", "json"],
   "transform": {
     "\\.jsx?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "jsvg/(.*)": "<rootDir>/src/$1"
   }
 }
