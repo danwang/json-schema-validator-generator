@@ -1,10 +1,10 @@
 // @flow
 import _ from 'lodash';
-import util from 'jsvg/util.js';
-import type {Context} from 'jsvg/types.js';
+import util from 'util.js';
+import type {Context} from 'types.js';
 
-import Ast from 'jsvg/js/jsast/ast.js';
-import type {JsAst} from 'jsvg/js/jsast/ast.js';
+import Ast from 'js/jsast/ast.js';
+import type {JsAst} from 'js/jsast/ast.js';
 
 const additionalChecks = (
   properties: ?Object,

@@ -1,9 +1,9 @@
 // @flow
 import _ from 'lodash';
-import makeAst from 'jsvg/flow/make-ast.js';
-import render from 'jsvg/flow/render.js';
+import makeAst from 'flow/make-ast.js';
+import render from 'flow/render.js';
 import jsonpointer from 'json-pointer';
-import Ast from 'jsvg/flow/ast/ast.js';
+import Ast from 'flow/ast/ast.js';
 
 type Schemas = {[key: string]: Object};
 // Accepts the same arguments as js/generate

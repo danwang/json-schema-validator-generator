@@ -1,12 +1,12 @@
 // @flow
 import _ from 'lodash';
-import Ast from 'jsvg/js/jsast/ast.js';
-import type {JsAst, Function1Type} from 'jsvg/js/jsast/ast.js';
-import transform from 'jsvg/js/jsast/transform.js';
-import compose from 'jsvg/compose.js';
-import collect from 'jsvg/js/jsast/collect.js';
-import type {Collect} from 'jsvg/js/jsast/collect.js';
-import type {Transform} from 'jsvg/js/jsast/transform.js';
+import Ast from 'js/jsast/ast.js';
+import type {JsAst, Function1Type} from 'js/jsast/ast.js';
+import transform from 'js/jsast/transform.js';
+import compose from 'compose.js';
+import collect from 'js/jsast/collect.js';
+import type {Collect} from 'js/jsast/collect.js';
+import type {Transform} from 'js/jsast/transform.js';
 
 // A structure representing a collection of rewrites. If a tuple a->b is in the
 // map, it means that references to a can be replaced with references to b.

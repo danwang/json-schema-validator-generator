@@ -3,9 +3,9 @@
 import _ from 'lodash';
 import type {
   JsAst, IfType, ForType, ForInType, Function1Type, ObjectLiteralType,
-} from 'jsvg/js/jsast/ast.js';
-import getVars from 'jsvg/js/jsast/get-vars.js';
-import util from 'jsvg/util.js';
+} from 'js/jsast/ast.js';
+import getVars from 'js/jsast/get-vars.js';
+import util from 'util.js';
 
 const renderIf = (ast: IfType, depth: number) => {
   const {predicate, body, elseBody} = ast;

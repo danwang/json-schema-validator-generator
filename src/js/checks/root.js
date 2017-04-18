@@ -1,21 +1,21 @@
 // @flow
-import allOf from 'jsvg/js/checks/allOf.js';
-import anyOf from 'jsvg/js/checks/anyOf.js';
-import _enum from 'jsvg/js/checks/enum.js';
-import items from 'jsvg/js/checks/items.js';
-import comparisons from 'jsvg/js/checks/comparisons.js';
-import not from 'jsvg/js/checks/not.js';
-import oneOf from 'jsvg/js/checks/oneOf.js';
-import pattern from 'jsvg/js/checks/pattern.js';
-import properties from 'jsvg/js/checks/properties.js';
-import ref from 'jsvg/js/checks/ref.js';
-import required from 'jsvg/js/checks/required.js';
-import type from 'jsvg/js/checks/type.js';
+import allOf from 'js/checks/allOf.js';
+import anyOf from 'js/checks/anyOf.js';
+import _enum from 'js/checks/enum.js';
+import items from 'js/checks/items.js';
+import comparisons from 'js/checks/comparisons.js';
+import not from 'js/checks/not.js';
+import oneOf from 'js/checks/oneOf.js';
+import pattern from 'js/checks/pattern.js';
+import properties from 'js/checks/properties.js';
+import ref from 'js/checks/ref.js';
+import required from 'js/checks/required.js';
+import type from 'js/checks/type.js';
 
-import type {Context} from 'jsvg/types.js';
+import type {Context} from 'types.js';
 
-import Ast from 'jsvg/js/jsast/ast.js';
-import type {Function1Type} from 'jsvg/js/jsast/ast.js';
+import Ast from 'js/jsast/ast.js';
+import type {Function1Type} from 'js/jsast/ast.js';
 
 const root = (schema: Object, context: Context): Function1Type => {
   const fnSym = context.symbolForSchema(schema);

@@ -1,8 +1,8 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {FlowType, TupleType, RecordType} from 'jsvg/flow/ast/ast.js';
-import util from 'jsvg/util.js';
+import type {FlowType, TupleType, RecordType} from 'flow/ast/ast.js';
+import util from 'util.js';
 
 const renderExact = (value: mixed, depth: number) => JSON.stringify(value);
 const renderTuple = (ft: TupleType, depth: number) => {

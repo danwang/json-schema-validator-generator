@@ -1,9 +1,9 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import Ast from 'jsvg/flow/ast/ast.js';
-import type {FlowType} from 'jsvg/flow/ast/ast.js';
-import simplify from 'jsvg/flow/simplify.js';
+import Ast from 'flow/ast/ast.js';
+import type {FlowType} from 'flow/ast/ast.js';
+import simplify from 'flow/simplify.js';
 
 const defaultResolver = () => null;
 

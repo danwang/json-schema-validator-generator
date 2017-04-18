@@ -1,6 +1,6 @@
 // @flow
-import generateFlow from 'jsvg/flow/generate.js';
-import generateValidator from 'jsvg/js/generate.js';
+import generateFlow from 'flow/generate.js';
+import generateValidator from 'js/generate.js';
 
 type Schemas = {[key: string]: Object};
 type Generated = {

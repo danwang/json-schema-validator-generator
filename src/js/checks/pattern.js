@@ -1,8 +1,8 @@
 // @flow
-import util from 'jsvg/util.js';
-import type {Context} from 'jsvg/types.js';
-import Ast from 'jsvg/js/jsast/ast.js';
-import type {JsAst} from 'jsvg/js/jsast/ast.js';
+import util from 'util.js';
+import type {Context} from 'types.js';
+import Ast from 'js/jsast/ast.js';
+import type {JsAst} from 'js/jsast/ast.js';
 
 const pattern = (schema: Object, symbol: string, context: Context): JsAst => {
   if (schema.pattern) {

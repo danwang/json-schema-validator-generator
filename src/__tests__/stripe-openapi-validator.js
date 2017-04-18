@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
 import path from 'path';
-import generateValidator from 'jsvg/js/generate.js';
+import generateValidator from 'js/generate.js';
 
 const MODELS_TO_SNAPSHOT = [
   'account',

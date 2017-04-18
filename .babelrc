@@ -4,5 +4,8 @@
     "transform-flow-strip-types",
     "transform-object-rest-spread",
     "syntax-trailing-function-commas",
-  ],
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ]
 }

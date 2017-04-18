@@ -1,7 +1,7 @@
 // @flow
 import path from 'path';
 import fs from 'fs';
-import generateValidator from 'jsvg/js/generate.js';
+import generateValidator from 'js/generate.js';
 
 const WHITELIST = [
   // 'additionalItems.json',

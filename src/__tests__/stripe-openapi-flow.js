@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
 import path from 'path';
-import generateFlow from 'jsvg/flow/generate.js';
+import generateFlow from 'flow/generate.js';
 
 const MODELS = {
   Account: 'account',
