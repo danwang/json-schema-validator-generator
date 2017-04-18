@@ -34,7 +34,11 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
       case 'empty':
         return [];
       case 'function1':
-        return recur(ast.body);
+        return [
+          ...recur(ast.name),
+          ...recur(ast.argument),
+          ...recur(ast.body),
+        ];
       case 'binop':
         return [
           ...recur(ast.left),

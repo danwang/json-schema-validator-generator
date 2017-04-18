@@ -36,21 +36,20 @@ const renderFor = (ast: ForType, depth: number) => {
 const renderForIn = (ast: ForInType, depth: number) => {
   const {variable, iterator, body} = ast;
   return [
-    indent(`for (var ${variable} in ${render(iterator)}) {`, depth),
+    indent(`for (var ${render(variable)} in ${render(iterator)}) {`, depth),
     render(body, depth + 1),
     indent('}', depth),
   ].join('\n');
 };
 
 const renderFunction = (ast: Function1Type, depth: number) => {
-  const {argument, body} = ast;
+  const {name, argument, body} = ast;
   const vars = getVars(body);
   const varLines = vars.length === 0 ? [] : [
     indent(`var ${vars.join(', ')};`, depth + 1),
   ];
-  const prefix = ast.name ? `function ${ast.name}` : 'function';
   return [
-    indent(`${prefix}(${argument}) {`, depth),
+    indent(`function ${render(name)}(${render(argument)}) {`, depth),
     ...varLines,
     render(body, depth + 1),
     indent('}', depth),
@@ -73,7 +72,7 @@ const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
     case 'assignment':
-      return indent(`${ast.variable} = ${render(ast.value)};`, depth);
+      return indent(`${render(ast.variable)} = ${render(ast.value)};`, depth);
     case 'if':
       return renderIf(ast, depth);
     case 'return':

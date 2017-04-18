@@ -24,8 +24,8 @@ const items = (schema: Object, symbol: string, context: Context): JsAst => {
     const counter = context.gensym();
     const result = context.gensym();
     const check = Ast.Body(
-      Ast.Assignment(counter, '0'),
-      Ast.Assignment(result, 'null'),
+      Ast.Assignment(counter, Ast.Literal('0')),
+      Ast.Assignment(result, Ast.Literal('null')),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(counter, `${symbol}.length`),

@@ -20,7 +20,7 @@ export type JsAst = (
 );
 type AssignmentType = {
   type: 'assignment',
-  variable: string,
+  variable: LiteralType,
   value: JsAst,
 };
 export type IfType = {
@@ -46,7 +46,7 @@ export type ForType = {
 };
 export type ForInType = {
   type: 'forin',
-  variable: string,
+  variable: LiteralType,
   iterator: JsAst,
   body: JsAst,
 };
@@ -54,8 +54,8 @@ type EmptyType = {type: 'empty'};
 
 export type Function1Type = {
   type: 'function1',
-  name: string,
-  argument: string,
+  name: LiteralType,
+  argument: LiteralType,
   body: JsAst,
 };
 type BinopType = {
@@ -64,7 +64,7 @@ type BinopType = {
   comparator: string,
   right: JsAst,
 };
-type LiteralType = {
+export type LiteralType = {
   type: 'literal',
   value: string,
 };
@@ -82,9 +82,16 @@ export type ObjectLiteralType = {
   object: {[key: string]: JsAst},
 };
 
-const Function1 = (name: string, argument: string, body: JsAst): Function1Type => {
-  return {type: 'function1', name, argument, body};
-};
+const Function1 = (
+  name: LiteralType | string,
+  argument: LiteralType | string,
+  body: JsAst,
+): Function1Type => ({
+  type: 'function1',
+  name: Literal(name),
+  argument: Literal(argument),
+  body,
+});
 const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
   return {
     type: 'binop',
@@ -93,11 +100,11 @@ const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | str
     right: (typeof right === 'string') ? Literal(right) : right,
   };
 };
-const Assignment = (variable: string, value: JsAst | string): AssignmentType => {
+const Assignment = (variable: LiteralType | string, value: JsAst): AssignmentType => {
   return {
     type: 'assignment',
-    variable,
-    value: (typeof value === 'string') ? Literal(value) : value,
+    variable: Literal(variable),
+    value,
   };
 };
 const If = (predicate: JsAst | string, body: JsAst | string, elseBody: JsAst | string = Empty): IfType => {
@@ -121,11 +128,24 @@ const For = (
   loop: JsAst,
   body: JsAst,
 ): ForType => ({type: 'for', init, condition, loop, body});
-const ForIn = (variable: string, iterator: JsAst, body: JsAst): ForInType => {
-  return {type: 'forin', variable, iterator, body};
-};
+const ForIn = (
+  variable: LiteralType | string,
+  iterator: JsAst,
+  body: JsAst,
+): ForInType => ({
+  type: 'forin',
+  variable: Literal(variable),
+  iterator,
+  body,
+});
 const Empty = {type: 'empty'};
-const Literal = (value: string): LiteralType => ({type: 'literal', value});
+const Literal = (value: LiteralType | string): LiteralType => {
+  if (typeof value === 'string') {
+    return {type: 'literal', value};
+  } else {
+    return value;
+  }
+};
 const Call = (fn: string, arg: string) => {
   return {
     type: 'call',

@@ -18,7 +18,7 @@ const oneOf = (schema: Object, symbol: string, context: Context): JsAst => {
       return Ast.If(Ast.Binop.Eq(Ast.Call(fnSym, symbol), 'null'), `${count}++`);
     });
     return Ast.Body(
-      Ast.Assignment(count, '0'),
+      Ast.Assignment(count, Ast.Literal('0')),
       Ast.Body(...checks),
       Ast.If(Ast.Binop.Neq(count, '1'), context.error()),
     );

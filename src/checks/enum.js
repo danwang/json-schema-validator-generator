@@ -20,7 +20,7 @@ const _enum = (schema: Object, symbol: string, context: Context): JsAst => {
       }
     });
     return Ast.Body(
-      Ast.Assignment(match, '0'),
+      Ast.Assignment(match, Ast.Literal('0')),
       Ast.Body(...checks),
       Ast.If(Ast.Binop.Eq(match, '0'), context.error()),
     );

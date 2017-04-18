@@ -67,7 +67,7 @@ const additionalChecks = (
         Ast.If(
           Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
           context.error(),
-          Ast.Assignment(hitSym, 'true'),
+          Ast.Assignment(hitSym, Ast.Literal('true')),
         ),
       );
     });
@@ -79,7 +79,7 @@ const additionalChecks = (
       ),
     );
     return Ast.Body(
-      Ast.Assignment(hitSym, 'false'),
+      Ast.Assignment(hitSym, Ast.Literal('false')),
       ...checks,
       additionalCheck,
     );
@@ -102,7 +102,7 @@ const properties = (schema: Object, symbol: string, context: Context): JsAst => 
     const valSym = context.gensym();
 
     const loop = Ast.ForIn(keySym, Ast.Literal(symbol), Ast.Body(
-      Ast.Assignment(valSym, `${symbol}[${keySym}]`),
+      Ast.Assignment(valSym, Ast.Literal(`${symbol}[${keySym}]`)),
       additionalChecks(
         schema.properties,
         schema.patternProperties,
@@ -119,7 +119,7 @@ const properties = (schema: Object, symbol: string, context: Context): JsAst => 
       const fnSym = context.symbolForSchema(subSchema);
       const sym = context.gensym();
       return Ast.Body(
-        Ast.Assignment(sym, `${symbol}.${key}`),
+        Ast.Assignment(sym, Ast.Literal(`${symbol}.${key}`)),
         Ast.If(
           Ast.Binop.Neq(sym, 'undefined'),
           Ast.If(

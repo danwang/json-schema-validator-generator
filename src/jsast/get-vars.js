@@ -7,9 +7,9 @@ import type {Collect} from './collect.js';
 
 const _getVars = collect((ast: JsAst, recur: Collect<string>) => {
   if (ast.type === 'assignment') {
-    return [ast.variable];
+    return [ast.variable.value];
   } else if (ast.type === 'forin') {
-    return [ast.variable, ...recur(ast.body)];
+    return [ast.variable.value, ...recur(ast.body)];
   } else if (ast.type === 'function1') {
     return [];
   } else {

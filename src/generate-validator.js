@@ -47,11 +47,11 @@ const generateValidator = (schema: Object, shape: Schemas = {root: schema}): str
   });
 
   const baseSchemas = _.map(shape, (subSchema) => root(subSchema, makeContext()));
-  const results = _.keyBy(baseSchemas, (f) => f.name);
+  const results = _.keyBy(baseSchemas, (f) => f.name.value);
   let i = 1;
   while (i < schemas.length) {
     const next = root(schemas[i], makeContext());
-    results[next.name] = next;
+    results[next.name.value] = next;
     i++;
   }
 

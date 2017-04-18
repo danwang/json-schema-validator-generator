@@ -5,11 +5,12 @@ import type {JsAst} from './ast.js';
 import Ast from './ast.js';
 
 export type Transform = (ast: JsAst) => JsAst;
-const transform = (partial: (ast: JsAst) => JsAst) => {
-  const _recur = (ast: JsAst): JsAst => {
+const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
+  const _recur: Transform = (ast) => {
     switch (ast.type) {
       case 'assignment':
-        return Ast.Assignment(ast.variable, recur(ast.value));
+        // $FlowFixMe
+        return Ast.Assignment(recur(ast.variable), recur(ast.value));
       case 'if':
         return Ast.If(recur(ast.predicate), recur(ast.body), recur(ast.elseBody));
       case 'return':
@@ -25,7 +26,8 @@ const transform = (partial: (ast: JsAst) => JsAst) => {
         );
       case 'forin':
         return Ast.ForIn(
-          ast.variable,
+          // $FlowFixMe
+          recur(ast.variable),
           recur(ast.iterator),
           recur(ast.body),
         );
@@ -33,8 +35,10 @@ const transform = (partial: (ast: JsAst) => JsAst) => {
         return Ast.Empty;
       case 'function1':
         return Ast.Function1(
-          ast.name,
-          ast.argument,
+          // $FlowFixMe
+          recur(ast.name),
+          // $FlowFixMe
+          recur(ast.argument),
           recur(ast.body),
         );
       case 'binop':
@@ -42,8 +46,8 @@ const transform = (partial: (ast: JsAst) => JsAst) => {
       case 'literal':
         return ast;
       case 'call':
-        // $FlowFixMe make literals stable
-        return Ast.Call(recur(ast.fn).value, recur(ast.arg).value);
+        // $FlowFixMe
+        return Ast.Call(recur(ast.fn), recur(ast.arg));
       case 'not':
         return Ast.Not(recur(ast.child));
       case 'objectliteral':
@@ -52,7 +56,7 @@ const transform = (partial: (ast: JsAst) => JsAst) => {
         throw new Error(`Unexpected AST: ${ast}`);
     }
   };
-  const recur = (ast: JsAst): JsAst => _recur(partial(ast));
+  const recur: Transform = (ast) => partial(ast, _recur);
   return recur;
 };
 

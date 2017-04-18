@@ -20,7 +20,7 @@ const anyOf = (schema: Object, symbol: string, context: Context): JsAst => {
       );
     });
     return Ast.Body(
-      Ast.Assignment(count, '0'),
+      Ast.Assignment(count, Ast.Literal('0')),
       Ast.Body(...checks),
       Ast.If(Ast.Binop.Eq(count, '0'), context.error()),
     );

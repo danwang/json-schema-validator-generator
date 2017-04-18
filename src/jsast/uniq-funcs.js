@@ -6,6 +6,7 @@ import transform from './transform.js';
 import compose from '../compose.js';
 import collect from './collect.js';
 import type {Collect} from './collect.js';
+import type {Transform} from './transform.js';
 
 // A structure representing a collection of rewrites. If a tuple a->b is in the
 // map, it means that references to a can be replaced with references to b.
@@ -31,8 +32,8 @@ const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Re
     if (body.type === 'return') {
       if (body.value.type === 'call') {
         const {fn, arg} = body.value;
-        if (arg.value === argument) {
-          return [[nameToId[name], nameToId[fn.value]]];
+        if (arg.value === argument.value) {
+          return [[nameToId[name.value], nameToId[fn.value]]];
         }
       }
     }
@@ -67,27 +68,31 @@ const equalReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Repla
 
 const replace = (replacer: Replacer) => (base: JsAst): JsAst => {
   const fns = getFuncs(base);
-  const nameToId: NameToId = _.fromPairs(_.map(fns, (f: Function1Type, i) => [f.name, i]));
+  const nameToId: NameToId = _.fromPairs(_.map(fns, (f: Function1Type, i) => [f.name.value, i]));
   const mapping = replacer(fns, nameToId);
 
-  const t = transform((ast: JsAst): JsAst => {
+  const t = transform((ast: JsAst, recur: Transform): JsAst => {
     if (ast.type === 'literal') {
       const id = nameToId[ast.value];
       if (mapping.has(id)) {
         const replacedId: any = mapping.get(id);
         return Ast.Literal(fns[replacedId].name);
       } else {
-        return ast;
+        return recur(ast);
       }
     } else if (ast.type === 'function1') {
-      const id = nameToId[ast.name];
+      const id = nameToId[ast.name.value];
       if (mapping.has(id)) {
         return Ast.Empty;
       } else {
-        return ast;
+        return Ast.Function1(
+          ast.name,
+          ast.argument,
+          recur(ast.body),
+        );
       }
     } else {
-      return ast;
+      return recur(ast);
     }
   });
 
