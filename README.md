@@ -65,3 +65,39 @@ const validatorForSchema = (schema) => {
   return eval(js);
 };
 ```
+
+### Advanced
+Sometimes we may be using JSON Schema to define a collection of types. In this case, the generator needs some information about the subschema to be generated.
+
+For example, consider the definition of a binary tree of numbers:
+
+```js
+import generate from 'json-schema-validator-generator';
+const sschema = {
+  definitions: {
+    node: {
+      type: 'object',
+      properties: {
+        left: {$ref: '#/definitions/nodeOrValue'},
+        right: {$ref: '#/definitions/nodeOrValue'},
+      },
+      required: ['left', 'right'],
+    },
+    nodeOrValue: {
+      oneOf: [
+        {$ref: '#/definitions/node'},
+        {type: 'number'},
+      ],
+    },
+  },
+};
+const {flow, js} = generate(schema, {node: schema.definitions.node});
+const nodeValidator = eval(js).node;
+
+console.log(nodeValidator({left: 1, right: 2})); // null
+console.log(nodeValidator({left: 1, right: {left: 2, right: 3}})); // null
+
+console.log(nodeValidator(1)); // 'error'
+console.log(nodeValidator({left: 1})); // 'error'
+console.log(nodeValidator({left: 1, right: '2'})); // 'error'
+```
