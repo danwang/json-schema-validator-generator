@@ -47,7 +47,6 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
       case 'literal':
         return ast;
       case 'call':
-        // $FlowFixMe
         return Ast.Call(recur(ast.fn), recur(ast.arg));
       case 'unop':
         return Ast.Unop.Any(ast.op, ast.style)(recur(ast.child));

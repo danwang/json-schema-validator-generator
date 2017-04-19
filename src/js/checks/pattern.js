@@ -4,10 +4,14 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const pattern = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
-  if (schema.pattern) {
+const _pattern = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+  const {pattern} = schema;
+  if (pattern) {
     const check = Ast.If(
-      `!${symbol}.match(/${schema.pattern}/)`,
+      Ast.Unop.Not(Ast.Call(
+        Ast.PropertyAccess(symbol, 'match'),
+        Ast.Literal(`/${pattern}/`),
+      )),
       context.error(),
     );
     return util.typeCheck('string', symbol, check);
@@ -16,4 +20,4 @@ const pattern = (schema: JsonSchema, symbol: string, context: Context): JsAst =>
   }
 };
 
-export default pattern;
+export default _pattern;

@@ -14,7 +14,7 @@ const uniqueItems = (schema: JsonSchema, symbol: string, context: Context): JsAs
       Ast.Assignment(i, Ast.Literal('0')),
       Ast.For(
         Ast.Empty,
-        Ast.Binop.Lt(i, `${symbol}.length`),
+        Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(i),
         Ast.Body(
           Ast.Assignment(
@@ -28,7 +28,10 @@ const uniqueItems = (schema: JsonSchema, symbol: string, context: Context): JsAs
         ),
       ),
       Ast.If(
-        Ast.Binop.Neq(`Object.keys(${obj}).length`, Ast.PropertyAccess(symbol, 'length')),
+        Ast.Binop.Neq(
+          Ast.PropertyAccess(Ast.Call('Object.keys', obj), 'length'),
+          Ast.PropertyAccess(symbol, 'length'),
+        ),
         context.error(),
       ),
     ));

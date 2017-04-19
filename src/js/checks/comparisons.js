@@ -11,7 +11,7 @@ import type {JsAst} from 'js/jsast/ast.js';
 //   - minItems/maxItems (array)
 //   - minProperties/maxProperties (object)
 const comparison = (
-  symbol: string,
+  symbol: JsAst | string,
   comparator: string,
   base: any,
   error: JsAst,
@@ -28,22 +28,24 @@ const comparison = (
 
 const comparisons = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   const error = context.error();
+  const symbolLength = Ast.PropertyAccess(symbol, 'length');
+  const keysLength = Ast.PropertyAccess(Ast.Call('Object.keys', symbol), 'length');
   return Ast.Body(
     util.typeCheck('number', symbol, Ast.Body(
       comparison(symbol, schema.exclusiveMinimum ? '<=' : '<', schema.minimum, error),
       comparison(symbol, schema.exclusiveMaximum ? '>=' : '>', schema.maximum, error),
     )),
     util.typeCheck('string', symbol, Ast.Body(
-      comparison(`${symbol}.length`, '<', schema.minLength, error),
-      comparison(`${symbol}.length`, '>', schema.maxLength, error),
+      comparison(symbolLength, '<', schema.minLength, error),
+      comparison(symbolLength, '>', schema.maxLength, error),
     )),
     util.typeCheck('array', symbol, Ast.Body(
-      comparison(`${symbol}.length`, '<', schema.minItems, error),
-      comparison(`${symbol}.length`, '>', schema.maxItems, error),
+      comparison(symbolLength, '<', schema.minItems, error),
+      comparison(symbolLength, '>', schema.maxItems, error),
     )),
     util.typeCheck('object', symbol, Ast.Body(
-      comparison(`Object.keys(${symbol}).length`, '<', schema.minProperties, error),
-      comparison(`Object.keys(${symbol}).length`, '>', schema.maxProperties, error),
+      comparison(keysLength, '<', schema.minProperties, error),
+      comparison(keysLength, '>', schema.maxProperties, error),
     )),
   );
 };

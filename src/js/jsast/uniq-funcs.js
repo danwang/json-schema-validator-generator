@@ -34,8 +34,10 @@ const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Re
       if (line.type === 'return') {
         if (line.value.type === 'call') {
           const {fn, arg} = line.value;
-          if (arg.value === argument.value) {
-            return [[nameToId[name.value], nameToId[fn.value]]];
+          if (fn.type === 'var' || fn.type === 'literal') {
+            if (arg.value === argument.value) {
+              return [[nameToId[name.value], nameToId[fn.value]]];
+            }
           }
         }
       }

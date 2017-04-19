@@ -19,7 +19,7 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
     const fnSym = context.symbolForSchema(additionalItems);
     const i = context.gensym();
     return Ast.Body(
-      Ast.Assignment(i, Ast.Literal(`${items.length}`)),
+      Ast.Assignment(i, Ast.Literal(items.length)),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),

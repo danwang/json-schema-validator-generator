@@ -21,11 +21,14 @@ const additionalChecks = (
   //   if (key.match(/pattern4/) && error(check4(data))) { (error) }
   //   if (!hit && error(additionalCheck(data))) { (error) }
   const propertyChecks = _.map(properties, (subSchema, key) => ({
-    predicate: `${keySym} === "${key}"`,
+    predicate: Ast.Binop.Eq(keySym, Ast.Literal(`"${key}"`)),
     subSchema,
   }));
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
-    predicate: `${keySym}.match(/${pattern}/)`,
+    predicate: Ast.Call(
+      Ast.PropertyAccess(keySym, 'match'),
+      Ast.Literal(`/${pattern}/`),
+    ),
     subSchema,
   }));
   const allChecks = [...propertyChecks, ...patternChecks];
@@ -74,7 +77,10 @@ const additionalChecks = (
     const additionalCheck = Ast.If(
       Ast.Binop.Eq(hitSym, Ast.False),
       additionalProperties === false ? context.error() : Ast.If(
-        `${context.symbolForSchema(additionalProperties)}(${valSym}) !== null`,
+        Ast.Binop.Neq(
+          Ast.Call(context.symbolForSchema(additionalProperties), valSym),
+          Ast.Null,
+        ),
         context.error(),
       ),
     );

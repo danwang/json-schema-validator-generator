@@ -1234,7 +1234,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 === 'string') {
-      if (!v0.match(/^a*$/)) {
+      if (!(v0.match(/^a*$/))) {
         return \\"error\\";
       }
     }
@@ -1250,7 +1250,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 === 'string') {
-      if (!v0.match(/a+/)) {
+      if (!(v0.match(/a+/))) {
         return \\"error\\";
       }
     }

@@ -77,7 +77,7 @@ export type LiteralType = {
 };
 type CallType = {
   type: 'call',
-  fn: VarType,
+  fn: JsAst,
   arg: JsAst,
 };
 export type UnopType = {
@@ -180,10 +180,10 @@ const Literal = (value: LiteralType | string | number): LiteralType => {
     return value;
   }
 };
-const Call = (fn: string, arg: JsAst | string) => {
+const Call = (fn: JsAst | string, arg: JsAst | string) => {
   return {
     type: 'call',
-    fn: Var(fn),
+    fn: (typeof fn === 'string') ? Literal(fn) : fn,
     arg: (typeof arg === 'string') ? Literal(arg) : arg,
   };
 };
