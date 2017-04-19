@@ -121,9 +121,9 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
     return util.typeCheck('object', symbol, loop);
   } else if (schema.properties) {
     // Static list of properties to check
+    const sym = context.gensym();
     const checks = Ast.Body(..._.flatMap(schema.properties, (subSchema, key) => {
       const fnSym = context.symbolForSchema(subSchema);
-      const sym = context.gensym();
       return Ast.Body(
         Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
         Ast.If(

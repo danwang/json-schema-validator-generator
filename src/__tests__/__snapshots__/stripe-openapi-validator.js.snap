@@ -3,7 +3,7 @@
 exports[`Stripe openapi generates a validator for the entire spec 1`] = `
 "(function() {
   function f0(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.active_payment_methods;
       if (v1 !== undefined) {
@@ -11,171 +11,171 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.business_name;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.business_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.business_url;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.business_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.charges_enabled;
-      if (v4 !== undefined) {
-        if (f4(v4) !== null) {
+      v1 = v0.charges_enabled;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.country;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.debit_negative_balances;
-      if (v6 !== undefined) {
-        if (f4(v6) !== null) {
+      v1 = v0.debit_negative_balances;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.decline_charge_on;
-      if (v7 !== undefined) {
-        if (f139(v7) !== null) {
+      v1 = v0.decline_charge_on;
+      if (v1 !== undefined) {
+        if (f139(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.default_currency;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.default_currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.details_submitted;
-      if (v9 !== undefined) {
-        if (f4(v9) !== null) {
+      v1 = v0.details_submitted;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.display_name;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.display_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.email;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.email;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.external_accounts;
-      if (v12 !== undefined) {
-        if (f12(v12) !== null) {
+      v1 = v0.external_accounts;
+      if (v1 !== undefined) {
+        if (f12(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.id;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.legal_entity;
-      if (v14 !== undefined) {
-        if (f145(v14) !== null) {
+      v1 = v0.legal_entity;
+      if (v1 !== undefined) {
+        if (f145(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.managed;
-      if (v15 !== undefined) {
-        if (f4(v15) !== null) {
+      v1 = v0.managed;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.mcc;
-      if (v16 !== undefined) {
-        if (f2(v16) !== null) {
+      v1 = v0.mcc;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.metadata;
-      if (v17 !== undefined) {
-        if (f17(v17) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.object;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.orders;
-      if (v19 !== undefined) {
-        if (f146(v19) !== null) {
+      v1 = v0.orders;
+      if (v1 !== undefined) {
+        if (f146(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.payout_schedule;
-      if (v20 !== undefined) {
-        if (f147(v20) !== null) {
+      v1 = v0.payout_schedule;
+      if (v1 !== undefined) {
+        if (f147(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.payout_statement_descriptor;
-      if (v21 !== undefined) {
-        if (f2(v21) !== null) {
+      v1 = v0.payout_statement_descriptor;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.payouts_enabled;
-      if (v22 !== undefined) {
-        if (f4(v22) !== null) {
+      v1 = v0.payouts_enabled;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.product_description;
-      if (v23 !== undefined) {
-        if (f2(v23) !== null) {
+      v1 = v0.product_description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.statement_descriptor;
-      if (v24 !== undefined) {
-        if (f2(v24) !== null) {
+      v1 = v0.statement_descriptor;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v25 = v0.support_email;
-      if (v25 !== undefined) {
-        if (f2(v25) !== null) {
+      v1 = v0.support_email;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v26 = v0.support_phone;
-      if (v26 !== undefined) {
-        if (f2(v26) !== null) {
+      v1 = v0.support_phone;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v27 = v0.timezone;
-      if (v27 !== undefined) {
-        if (f2(v27) !== null) {
+      v1 = v0.timezone;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v28 = v0.tos_acceptance;
-      if (v28 !== undefined) {
-        if (f148(v28) !== null) {
+      v1 = v0.tos_acceptance;
+      if (v1 !== undefined) {
+        if (f148(v1) !== null) {
           return \\"error\\";
         }
       }
-      v29 = v0.verification;
-      if (v29 !== undefined) {
-        if (f149(v29) !== null) {
+      v1 = v0.verification;
+      if (v1 !== undefined) {
+        if (f149(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -236,7 +236,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f30(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -244,75 +244,75 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.available_on;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.available_on;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.created;
-      if (v3 !== undefined) {
-        if (f31(v3) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.currency;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.description;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.fee;
-      if (v6 !== undefined) {
-        if (f31(v6) !== null) {
+      v1 = v0.fee;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.fee_details;
-      if (v7 !== undefined) {
-        if (f150(v7) !== null) {
+      v1 = v0.fee_details;
+      if (v1 !== undefined) {
+        if (f150(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.id;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.net;
-      if (v9 !== undefined) {
-        if (f31(v9) !== null) {
+      v1 = v0.net;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.object;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.source;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.source;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.status;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.type;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -358,7 +358,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f42(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account;
       if (v1 !== undefined) {
@@ -366,183 +366,183 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.address_city;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.address_city;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.address_country;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.address_country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.address_line1;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.address_line1;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.address_line1_check;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.address_line1_check;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.address_line2;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.address_line2;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.address_state;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.address_state;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.address_zip;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.address_zip;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.address_zip_check;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.address_zip_check;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.available_payout_methods;
-      if (v10 !== undefined) {
-        if (f1(v10) !== null) {
+      v1 = v0.available_payout_methods;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.brand;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.brand;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.country;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.currency;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.customer;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.cvc_check;
-      if (v15 !== undefined) {
-        if (f2(v15) !== null) {
+      v1 = v0.cvc_check;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.default_for_currency;
-      if (v16 !== undefined) {
-        if (f4(v16) !== null) {
+      v1 = v0.default_for_currency;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.dynamic_last4;
-      if (v17 !== undefined) {
-        if (f2(v17) !== null) {
+      v1 = v0.dynamic_last4;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.estimated_availability;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.estimated_availability;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.exp_month;
-      if (v19 !== undefined) {
-        if (f31(v19) !== null) {
+      v1 = v0.exp_month;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.exp_year;
-      if (v20 !== undefined) {
-        if (f31(v20) !== null) {
+      v1 = v0.exp_year;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.fingerprint;
-      if (v21 !== undefined) {
-        if (f2(v21) !== null) {
+      v1 = v0.fingerprint;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.funding;
-      if (v22 !== undefined) {
-        if (f2(v22) !== null) {
+      v1 = v0.funding;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.google_reference;
-      if (v23 !== undefined) {
-        if (f2(v23) !== null) {
+      v1 = v0.google_reference;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.id;
-      if (v24 !== undefined) {
-        if (f2(v24) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v25 = v0.last4;
-      if (v25 !== undefined) {
-        if (f2(v25) !== null) {
+      v1 = v0.last4;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v26 = v0.metadata;
-      if (v26 !== undefined) {
-        if (f17(v26) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v27 = v0.name;
-      if (v27 !== undefined) {
-        if (f2(v27) !== null) {
+      v1 = v0.name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v28 = v0.object;
-      if (v28 !== undefined) {
-        if (f2(v28) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v29 = v0.recipient;
-      if (v29 !== undefined) {
-        if (f2(v29) !== null) {
+      v1 = v0.recipient;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v30 = v0.three_d_secure;
-      if (v30 !== undefined) {
-        if (f17(v30) !== null) {
+      v1 = v0.three_d_secure;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v31 = v0.tokenization_method;
-      if (v31 !== undefined) {
-        if (f2(v31) !== null) {
+      v1 = v0.tokenization_method;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -579,7 +579,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f69(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32, v33, v34, v35, v36, v37, v38;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -587,225 +587,225 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.amount_authorized;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.amount_authorized;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.amount_captured;
-      if (v3 !== undefined) {
-        if (f31(v3) !== null) {
+      v1 = v0.amount_captured;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.amount_refunded;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.amount_refunded;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.application;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.application;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.application_fee;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.application_fee;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.balance_transaction;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.balance_transaction;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.captured;
-      if (v8 !== undefined) {
-        if (f4(v8) !== null) {
+      v1 = v0.captured;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.card;
-      if (v9 !== undefined) {
-        if (f42(v9) !== null) {
+      v1 = v0.card;
+      if (v1 !== undefined) {
+        if (f42(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.created;
-      if (v10 !== undefined) {
-        if (f31(v10) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.currency;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.customer;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.description;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.destination;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.destination;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.dispute;
-      if (v15 !== undefined) {
-        if (f2(v15) !== null) {
+      v1 = v0.dispute;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.failure_code;
-      if (v16 !== undefined) {
-        if (f2(v16) !== null) {
+      v1 = v0.failure_code;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.failure_message;
-      if (v17 !== undefined) {
-        if (f2(v17) !== null) {
+      v1 = v0.failure_message;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.fraud_details;
-      if (v18 !== undefined) {
-        if (f17(v18) !== null) {
+      v1 = v0.fraud_details;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.id;
-      if (v19 !== undefined) {
-        if (f2(v19) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.invoice;
-      if (v20 !== undefined) {
-        if (f2(v20) !== null) {
+      v1 = v0.invoice;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.livemode;
-      if (v21 !== undefined) {
-        if (f4(v21) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.metadata;
-      if (v22 !== undefined) {
-        if (f17(v22) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.object;
-      if (v23 !== undefined) {
-        if (f2(v23) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.on_behalf_of;
-      if (v24 !== undefined) {
-        if (f2(v24) !== null) {
+      v1 = v0.on_behalf_of;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v25 = v0.order;
-      if (v25 !== undefined) {
-        if (f2(v25) !== null) {
+      v1 = v0.order;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v26 = v0.outcome;
-      if (v26 !== undefined) {
-        if (f151(v26) !== null) {
+      v1 = v0.outcome;
+      if (v1 !== undefined) {
+        if (f151(v1) !== null) {
           return \\"error\\";
         }
       }
-      v27 = v0.paid;
-      if (v27 !== undefined) {
-        if (f4(v27) !== null) {
+      v1 = v0.paid;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v28 = v0.receipt_email;
-      if (v28 !== undefined) {
-        if (f2(v28) !== null) {
+      v1 = v0.receipt_email;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v29 = v0.receipt_number;
-      if (v29 !== undefined) {
-        if (f2(v29) !== null) {
+      v1 = v0.receipt_number;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v30 = v0.refunded;
-      if (v30 !== undefined) {
-        if (f4(v30) !== null) {
+      v1 = v0.refunded;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v31 = v0.refunds;
-      if (v31 !== undefined) {
-        if (f93(v31) !== null) {
+      v1 = v0.refunds;
+      if (v1 !== undefined) {
+        if (f93(v1) !== null) {
           return \\"error\\";
         }
       }
-      v32 = v0.review;
-      if (v32 !== undefined) {
-        if (f2(v32) !== null) {
+      v1 = v0.review;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v33 = v0.shipping;
-      if (v33 !== undefined) {
-        if (f153(v33) !== null) {
+      v1 = v0.shipping;
+      if (v1 !== undefined) {
+        if (f153(v1) !== null) {
           return \\"error\\";
         }
       }
-      v34 = v0.source_transfer;
-      if (v34 !== undefined) {
-        if (f2(v34) !== null) {
+      v1 = v0.source_transfer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v35 = v0.statement_descriptor;
-      if (v35 !== undefined) {
-        if (f2(v35) !== null) {
+      v1 = v0.statement_descriptor;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v36 = v0.status;
-      if (v36 !== undefined) {
-        if (f2(v36) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v37 = v0.transfer;
-      if (v37 !== undefined) {
-        if (f2(v37) !== null) {
+      v1 = v0.transfer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v38 = v0.transfer_group;
-      if (v38 !== undefined) {
-        if (f2(v38) !== null) {
+      v1 = v0.transfer_group;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -860,7 +860,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f101(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount_off;
       if (v1 !== undefined) {
@@ -868,81 +868,81 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.created;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.currency;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.duration;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.duration;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.duration_in_months;
-      if (v5 !== undefined) {
-        if (f31(v5) !== null) {
+      v1 = v0.duration_in_months;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.id;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.livemode;
-      if (v7 !== undefined) {
-        if (f4(v7) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.max_redemptions;
-      if (v8 !== undefined) {
-        if (f31(v8) !== null) {
+      v1 = v0.max_redemptions;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.metadata;
-      if (v9 !== undefined) {
-        if (f17(v9) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.object;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.percent_off;
-      if (v11 !== undefined) {
-        if (f31(v11) !== null) {
+      v1 = v0.percent_off;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.redeem_by;
-      if (v12 !== undefined) {
-        if (f31(v12) !== null) {
+      v1 = v0.redeem_by;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.times_redeemed;
-      if (v13 !== undefined) {
-        if (f31(v13) !== null) {
+      v1 = v0.times_redeemed;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.valid;
-      if (v14 !== undefined) {
-        if (f4(v14) !== null) {
+      v1 = v0.valid;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -979,7 +979,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f111(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account_balance;
       if (v1 !== undefined) {
@@ -987,123 +987,123 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.alipay_accounts;
-      if (v2 !== undefined) {
-        if (f113(v2) !== null) {
+      v1 = v0.alipay_accounts;
+      if (v1 !== undefined) {
+        if (f113(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.bank_accounts;
-      if (v3 !== undefined) {
-        if (f114(v3) !== null) {
+      v1 = v0.bank_accounts;
+      if (v1 !== undefined) {
+        if (f114(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.business_vat_id;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.business_vat_id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.cards;
-      if (v5 !== undefined) {
-        if (f116(v5) !== null) {
+      v1 = v0.cards;
+      if (v1 !== undefined) {
+        if (f116(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.created;
-      if (v6 !== undefined) {
-        if (f31(v6) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.currency;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.default_bank_account;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.default_bank_account;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.default_card;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.default_card;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.default_source;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.default_source;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.delinquent;
-      if (v11 !== undefined) {
-        if (f4(v11) !== null) {
+      v1 = v0.delinquent;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.description;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.discount;
-      if (v13 !== undefined) {
-        if (f125(v13) !== null) {
+      v1 = v0.discount;
+      if (v1 !== undefined) {
+        if (f125(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.email;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.email;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.id;
-      if (v15 !== undefined) {
-        if (f2(v15) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.livemode;
-      if (v16 !== undefined) {
-        if (f4(v16) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.metadata;
-      if (v17 !== undefined) {
-        if (f17(v17) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.object;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.shipping;
-      if (v19 !== undefined) {
-        if (f157(v19) !== null) {
+      v1 = v0.shipping;
+      if (v1 !== undefined) {
+        if (f157(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.sources;
-      if (v20 !== undefined) {
-        if (f12(v20) !== null) {
+      v1 = v0.sources;
+      if (v1 !== undefined) {
+        if (f12(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.subscriptions;
-      if (v21 !== undefined) {
-        if (f124(v21) !== null) {
+      v1 = v0.subscriptions;
+      if (v1 !== undefined) {
+        if (f124(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1143,7 +1143,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f125(v0) {
-    var v1, v2, v3, v4, v5, v6;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.coupon;
       if (v1 !== undefined) {
@@ -1151,33 +1151,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.customer;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.end;
-      if (v3 !== undefined) {
-        if (f31(v3) !== null) {
+      v1 = v0.end;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.object;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.start;
-      if (v5 !== undefined) {
-        if (f31(v5) !== null) {
+      v1 = v0.start;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.subscription;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.subscription;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1199,7 +1199,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f130(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -1207,81 +1207,81 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.balance_transactions;
-      if (v2 !== undefined) {
-        if (f30(v2) !== null) {
+      v1 = v0.balance_transactions;
+      if (v1 !== undefined) {
+        if (f30(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.charge;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.charge;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.created;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.currency;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.evidence;
-      if (v6 !== undefined) {
-        if (f17(v6) !== null) {
+      v1 = v0.evidence;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.evidence_details;
-      if (v7 !== undefined) {
-        if (f17(v7) !== null) {
+      v1 = v0.evidence_details;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.id;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.is_charge_refundable;
-      if (v9 !== undefined) {
-        if (f4(v9) !== null) {
+      v1 = v0.is_charge_refundable;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.livemode;
-      if (v10 !== undefined) {
-        if (f4(v10) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.metadata;
-      if (v11 !== undefined) {
-        if (f17(v11) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.object;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.reason;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.reason;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.status;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1354,7 +1354,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f12(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1362,27 +1362,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1419,7 +1419,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f93(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1427,27 +1427,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1472,7 +1472,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f113(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1480,27 +1480,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1525,7 +1525,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f114(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1533,27 +1533,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1578,7 +1578,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f116(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1586,27 +1586,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1631,7 +1631,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f124(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -1639,27 +1639,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1684,7 +1684,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f139(v0) {
-    var v1, v2;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.avs_failure;
       if (v1 !== undefined) {
@@ -1692,9 +1692,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.cvc_failure;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.cvc_failure;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1744,7 +1744,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f145(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.additional_owners;
       if (v1 !== undefined) {
@@ -1752,153 +1752,153 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.address;
-      if (v2 !== undefined) {
-        if (f221(v2) !== null) {
+      v1 = v0.address;
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.address_kana;
-      if (v3 !== undefined) {
-        if (f222(v3) !== null) {
+      v1 = v0.address_kana;
+      if (v1 !== undefined) {
+        if (f222(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.address_kanji;
-      if (v4 !== undefined) {
-        if (f222(v4) !== null) {
+      v1 = v0.address_kanji;
+      if (v1 !== undefined) {
+        if (f222(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.business_name;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.business_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.business_name_kana;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.business_name_kana;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.business_name_kanji;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.business_name_kanji;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.business_tax_id_provided;
-      if (v8 !== undefined) {
-        if (f4(v8) !== null) {
+      v1 = v0.business_tax_id_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.business_vat_id_provided;
-      if (v9 !== undefined) {
-        if (f4(v9) !== null) {
+      v1 = v0.business_vat_id_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.dob;
-      if (v10 !== undefined) {
-        if (f223(v10) !== null) {
+      v1 = v0.dob;
+      if (v1 !== undefined) {
+        if (f223(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.first_name;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.first_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.first_name_kana;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.first_name_kana;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.first_name_kanji;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.first_name_kanji;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.gender;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.gender;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.last_name;
-      if (v15 !== undefined) {
-        if (f2(v15) !== null) {
+      v1 = v0.last_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.last_name_kana;
-      if (v16 !== undefined) {
-        if (f2(v16) !== null) {
+      v1 = v0.last_name_kana;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.last_name_kanji;
-      if (v17 !== undefined) {
-        if (f2(v17) !== null) {
+      v1 = v0.last_name_kanji;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.maiden_name;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.maiden_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.personal_address;
-      if (v19 !== undefined) {
-        if (f221(v19) !== null) {
+      v1 = v0.personal_address;
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.personal_address_kana;
-      if (v20 !== undefined) {
-        if (f222(v20) !== null) {
+      v1 = v0.personal_address_kana;
+      if (v1 !== undefined) {
+        if (f222(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.personal_address_kanji;
-      if (v21 !== undefined) {
-        if (f222(v21) !== null) {
+      v1 = v0.personal_address_kanji;
+      if (v1 !== undefined) {
+        if (f222(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.personal_id_number_provided;
-      if (v22 !== undefined) {
-        if (f4(v22) !== null) {
+      v1 = v0.personal_id_number_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.phone_number;
-      if (v23 !== undefined) {
-        if (f2(v23) !== null) {
+      v1 = v0.phone_number;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.ssn_last_4_provided;
-      if (v24 !== undefined) {
-        if (f4(v24) !== null) {
+      v1 = v0.ssn_last_4_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v25 = v0.type;
-      if (v25 !== undefined) {
-        if (f2(v25) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v26 = v0.verification;
-      if (v26 !== undefined) {
-        if (f224(v26) !== null) {
+      v1 = v0.verification;
+      if (v1 !== undefined) {
+        if (f224(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -1935,7 +1935,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f146(v0) {
-    var v1, v2, v3, v4, v5, v6, v7;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.authorization;
       if (v1 !== undefined) {
@@ -1943,39 +1943,39 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.channels;
-      if (v2 !== undefined) {
-        if (f226(v2) !== null) {
+      v1 = v0.channels;
+      if (v1 !== undefined) {
+        if (f226(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.create_order_hook_url;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.create_order_hook_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.order_management;
-      if (v4 !== undefined) {
-        if (f227(v4) !== null) {
+      v1 = v0.order_management;
+      if (v1 !== undefined) {
+        if (f227(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.pay_order_hook_url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.pay_order_hook_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.shipping;
-      if (v6 !== undefined) {
-        if (f228(v6) !== null) {
+      v1 = v0.shipping;
+      if (v1 !== undefined) {
+        if (f228(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.taxes;
-      if (v7 !== undefined) {
-        if (f229(v7) !== null) {
+      v1 = v0.taxes;
+      if (v1 !== undefined) {
+        if (f229(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2003,7 +2003,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f147(v0) {
-    var v1, v2, v3, v4;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.delay_days;
       if (v1 !== undefined) {
@@ -2011,21 +2011,21 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.interval;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.interval;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.monthly_anchor;
-      if (v3 !== undefined) {
-        if (f31(v3) !== null) {
+      v1 = v0.monthly_anchor;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.weekly_anchor;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.weekly_anchor;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2044,7 +2044,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f148(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.date;
       if (v1 !== undefined) {
@@ -2052,15 +2052,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.ip;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.ip;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.user_agent;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.user_agent;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2071,7 +2071,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f149(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.disabled_reason;
       if (v1 !== undefined) {
@@ -2079,15 +2079,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.due_by;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.due_by;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.fields_needed;
-      if (v3 !== undefined) {
-        if (f1(v3) !== null) {
+      v1 = v0.fields_needed;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2103,7 +2103,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f150(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -2111,27 +2111,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.application;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.application;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.currency;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.description;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.type;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2153,7 +2153,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f151(v0) {
-    var v1, v2, v3, v4, v5, v6;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.network_status;
       if (v1 !== undefined) {
@@ -2161,33 +2161,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.reason;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.reason;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.risk_level;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.risk_level;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.rule;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.rule;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.seller_message;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.seller_message;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.type;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2220,7 +2220,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f153(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
@@ -2228,27 +2228,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.carrier;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.carrier;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.name;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.phone;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.phone;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.tracking_number;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.tracking_number;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2318,7 +2318,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f157(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
@@ -2326,15 +2326,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.name;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.phone;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.phone;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2370,7 +2370,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f220(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
@@ -2378,27 +2378,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.dob;
-      if (v2 !== undefined) {
-        if (f223(v2) !== null) {
+      v1 = v0.dob;
+      if (v1 !== undefined) {
+        if (f223(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.first_name;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.first_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.last_name;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.last_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.verification;
-      if (v5 !== undefined) {
-        if (f224(v5) !== null) {
+      v1 = v0.verification;
+      if (v1 !== undefined) {
+        if (f224(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2420,7 +2420,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f221(v0) {
-    var v1, v2, v3, v4, v5, v6;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.city;
       if (v1 !== undefined) {
@@ -2428,33 +2428,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.country;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.line1;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.line1;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.line2;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.line2;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.postal_code;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.postal_code;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.state;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.state;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2465,7 +2465,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f222(v0) {
-    var v1, v2, v3, v4, v5, v6, v7;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.city;
       if (v1 !== undefined) {
@@ -2473,39 +2473,39 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.country;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.line1;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.line1;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.line2;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.line2;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.postal_code;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.postal_code;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.state;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.state;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.town;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.town;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2516,7 +2516,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f223(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.day;
       if (v1 !== undefined) {
@@ -2524,15 +2524,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.month;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.month;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.year;
-      if (v3 !== undefined) {
-        if (f31(v3) !== null) {
+      v1 = v0.year;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2543,7 +2543,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f224(v0) {
-    var v1, v2, v3, v4;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.details;
       if (v1 !== undefined) {
@@ -2551,21 +2551,21 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.details_code;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.details_code;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.document;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.document;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.status;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2581,7 +2581,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f225(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.issuer;
       if (v1 !== undefined) {
@@ -2589,15 +2589,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.provider;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.provider;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.type;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2628,7 +2628,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f227(v0) {
-    var v1, v2;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.provider;
       if (v1 !== undefined) {
@@ -2636,9 +2636,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.type;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2654,7 +2654,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f228(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -2662,57 +2662,57 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.currency;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.description;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.free_above;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.free_above;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.from_address;
-      if (v5 !== undefined) {
-        if (f221(v5) !== null) {
+      v1 = v0.from_address;
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.from_name;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.from_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.provider;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.provider;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.provider_url;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.provider_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.rates;
-      if (v9 !== undefined) {
-        if (f303(v9) !== null) {
+      v1 = v0.rates;
+      if (v1 !== undefined) {
+        if (f303(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.type;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2728,7 +2728,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f229(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.description;
       if (v1 !== undefined) {
@@ -2736,27 +2736,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.provider;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.provider;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.provider_url;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.provider_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.rate;
-      if (v4 !== undefined) {
-        if (f260(v4) !== null) {
+      v1 = v0.rate;
+      if (v1 !== undefined) {
+        if (f260(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.type;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2772,7 +2772,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f230(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -2780,69 +2780,69 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.balance_transaction;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.balance_transaction;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.charge;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.charge;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.created;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.currency;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.description;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.id;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.metadata;
-      if (v8 !== undefined) {
-        if (f17(v8) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.object;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.reason;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.reason;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.receipt_number;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.receipt_number;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.status;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2873,7 +2873,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f232(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
       if (v1 !== undefined) {
@@ -2881,69 +2881,69 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.customer;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.fingerprint;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.fingerprint;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.id;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.livemode;
-      if (v5 !== undefined) {
-        if (f4(v5) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.metadata;
-      if (v6 !== undefined) {
-        if (f17(v6) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.object;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.payment_amount;
-      if (v8 !== undefined) {
-        if (f31(v8) !== null) {
+      v1 = v0.payment_amount;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.payment_currency;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.payment_currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.reusable;
-      if (v10 !== undefined) {
-        if (f4(v10) !== null) {
+      v1 = v0.reusable;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.used;
-      if (v11 !== undefined) {
-        if (f4(v11) !== null) {
+      v1 = v0.used;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.username;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.username;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -2983,7 +2983,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f233(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account;
       if (v1 !== undefined) {
@@ -2991,141 +2991,141 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.account_holder_name;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.account_holder_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.account_holder_type;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.account_holder_type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.address_city;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.address_city;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.address_line1;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.address_line1;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.address_line2;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.address_line2;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.address_state;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.address_state;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.address_zip;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.address_zip;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.allows_debits;
-      if (v9 !== undefined) {
-        if (f4(v9) !== null) {
+      v1 = v0.allows_debits;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.bank_name;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.bank_name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.country;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.country;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.currency;
-      if (v12 !== undefined) {
-        if (f2(v12) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.customer;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.customer_reference;
-      if (v14 !== undefined) {
-        if (f2(v14) !== null) {
+      v1 = v0.customer_reference;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.default_for_currency;
-      if (v15 !== undefined) {
-        if (f4(v15) !== null) {
+      v1 = v0.default_for_currency;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.fingerprint;
-      if (v16 !== undefined) {
-        if (f2(v16) !== null) {
+      v1 = v0.fingerprint;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.id;
-      if (v17 !== undefined) {
-        if (f2(v17) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.last4;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.last4;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.metadata;
-      if (v19 !== undefined) {
-        if (f17(v19) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.object;
-      if (v20 !== undefined) {
-        if (f2(v20) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.reusable;
-      if (v21 !== undefined) {
-        if (f4(v21) !== null) {
+      v1 = v0.reusable;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.routing_number;
-      if (v22 !== undefined) {
-        if (f2(v22) !== null) {
+      v1 = v0.routing_number;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.status;
-      if (v23 !== undefined) {
-        if (f2(v23) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.used;
-      if (v24 !== undefined) {
-        if (f4(v24) !== null) {
+      v1 = v0.used;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3156,7 +3156,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f234(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account_balance;
       if (v1 !== undefined) {
@@ -3164,159 +3164,159 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.application_fee_percent;
-      if (v2 !== undefined) {
-        if (f260(v2) !== null) {
+      v1 = v0.application_fee_percent;
+      if (v1 !== undefined) {
+        if (f260(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.billing;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.billing;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.cancel_at_period_end;
-      if (v4 !== undefined) {
-        if (f4(v4) !== null) {
+      v1 = v0.cancel_at_period_end;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.canceled_at;
-      if (v5 !== undefined) {
-        if (f31(v5) !== null) {
+      v1 = v0.canceled_at;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.created;
-      if (v6 !== undefined) {
-        if (f31(v6) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.current_period_end;
-      if (v7 !== undefined) {
-        if (f31(v7) !== null) {
+      v1 = v0.current_period_end;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.current_period_start;
-      if (v8 !== undefined) {
-        if (f31(v8) !== null) {
+      v1 = v0.current_period_start;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.customer;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.customer;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.days_until_due;
-      if (v10 !== undefined) {
-        if (f31(v10) !== null) {
+      v1 = v0.days_until_due;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.discount;
-      if (v11 !== undefined) {
-        if (f125(v11) !== null) {
+      v1 = v0.discount;
+      if (v1 !== undefined) {
+        if (f125(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.ended_at;
-      if (v12 !== undefined) {
-        if (f31(v12) !== null) {
+      v1 = v0.ended_at;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v13 = v0.id;
-      if (v13 !== undefined) {
-        if (f2(v13) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v14 = v0.items;
-      if (v14 !== undefined) {
-        if (f293(v14) !== null) {
+      v1 = v0.items;
+      if (v1 !== undefined) {
+        if (f293(v1) !== null) {
           return \\"error\\";
         }
       }
-      v15 = v0.livemode;
-      if (v15 !== undefined) {
-        if (f4(v15) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v16 = v0.max_occurrences;
-      if (v16 !== undefined) {
-        if (f31(v16) !== null) {
+      v1 = v0.max_occurrences;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v17 = v0.metadata;
-      if (v17 !== undefined) {
-        if (f17(v17) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v18 = v0.object;
-      if (v18 !== undefined) {
-        if (f2(v18) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v19 = v0.on_behalf_of;
-      if (v19 !== undefined) {
-        if (f2(v19) !== null) {
+      v1 = v0.on_behalf_of;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v20 = v0.plan;
-      if (v20 !== undefined) {
-        if (f305(v20) !== null) {
+      v1 = v0.plan;
+      if (v1 !== undefined) {
+        if (f305(v1) !== null) {
           return \\"error\\";
         }
       }
-      v21 = v0.quantity;
-      if (v21 !== undefined) {
-        if (f31(v21) !== null) {
+      v1 = v0.quantity;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v22 = v0.retains_own_balance;
-      if (v22 !== undefined) {
-        if (f4(v22) !== null) {
+      v1 = v0.retains_own_balance;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v23 = v0.start;
-      if (v23 !== undefined) {
-        if (f31(v23) !== null) {
+      v1 = v0.start;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v24 = v0.status;
-      if (v24 !== undefined) {
-        if (f2(v24) !== null) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v25 = v0.tax_percent;
-      if (v25 !== undefined) {
-        if (f260(v25) !== null) {
+      v1 = v0.tax_percent;
+      if (v1 !== undefined) {
+        if (f260(v1) !== null) {
           return \\"error\\";
         }
       }
-      v26 = v0.trial_end;
-      if (v26 !== undefined) {
-        if (f31(v26) !== null) {
+      v1 = v0.trial_end;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v27 = v0.trial_start;
-      if (v27 !== undefined) {
-        if (f31(v27) !== null) {
+      v1 = v0.trial_start;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3362,7 +3362,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f293(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
@@ -3370,27 +3370,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.has_more;
-      if (v2 !== undefined) {
-        if (f4(v2) !== null) {
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f142(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.total_count;
-      if (v4 !== undefined) {
-        if (f31(v4) !== null) {
+      v1 = v0.total_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.url;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3415,7 +3415,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f302(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.enabled;
       if (v1 !== undefined) {
@@ -3423,57 +3423,57 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.marketplace_id;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.marketplace_id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.merchant_id;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.merchant_id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.oauth_token_provided;
-      if (v4 !== undefined) {
-        if (f4(v4) !== null) {
+      v1 = v0.oauth_token_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.oauth_token_secret_provided;
-      if (v5 !== undefined) {
-        if (f4(v5) !== null) {
+      v1 = v0.oauth_token_secret_provided;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.privacy_url;
-      if (v6 !== undefined) {
-        if (f2(v6) !== null) {
+      v1 = v0.privacy_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.sales_terms;
-      if (v7 !== undefined) {
-        if (f2(v7) !== null) {
+      v1 = v0.sales_terms;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.shipping_policy;
-      if (v8 !== undefined) {
-        if (f2(v8) !== null) {
+      v1 = v0.shipping_policy;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.terms_url;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.terms_url;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.username;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.username;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3498,7 +3498,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f303(v0) {
-    var v1, v2, v3;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -3506,15 +3506,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.currency;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.description;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3553,7 +3553,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f305(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
@@ -3561,69 +3561,69 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.created;
-      if (v2 !== undefined) {
-        if (f31(v2) !== null) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.currency;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.id;
-      if (v4 !== undefined) {
-        if (f2(v4) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.interval;
-      if (v5 !== undefined) {
-        if (f2(v5) !== null) {
+      v1 = v0.interval;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v6 = v0.interval_count;
-      if (v6 !== undefined) {
-        if (f31(v6) !== null) {
+      v1 = v0.interval_count;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
-      v7 = v0.livemode;
-      if (v7 !== undefined) {
-        if (f4(v7) !== null) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return \\"error\\";
         }
       }
-      v8 = v0.metadata;
-      if (v8 !== undefined) {
-        if (f17(v8) !== null) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
           return \\"error\\";
         }
       }
-      v9 = v0.name;
-      if (v9 !== undefined) {
-        if (f2(v9) !== null) {
+      v1 = v0.name;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v10 = v0.object;
-      if (v10 !== undefined) {
-        if (f2(v10) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v11 = v0.statement_descriptor;
-      if (v11 !== undefined) {
-        if (f2(v11) !== null) {
+      v1 = v0.statement_descriptor;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v12 = v0.trial_period_days;
-      if (v12 !== undefined) {
-        if (f31(v12) !== null) {
+      v1 = v0.trial_period_days;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }
@@ -3666,7 +3666,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f314(v0) {
-    var v1, v2, v3, v4, v5;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
       if (v1 !== undefined) {
@@ -3674,27 +3674,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
           return \\"error\\";
         }
       }
-      v2 = v0.id;
-      if (v2 !== undefined) {
-        if (f2(v2) !== null) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v3 = v0.object;
-      if (v3 !== undefined) {
-        if (f2(v3) !== null) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
           return \\"error\\";
         }
       }
-      v4 = v0.plan;
-      if (v4 !== undefined) {
-        if (f305(v4) !== null) {
+      v1 = v0.plan;
+      if (v1 !== undefined) {
+        if (f305(v1) !== null) {
           return \\"error\\";
         }
       }
-      v5 = v0.quantity;
-      if (v5 !== undefined) {
-        if (f31(v5) !== null) {
+      v1 = v0.quantity;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
           return \\"error\\";
         }
       }

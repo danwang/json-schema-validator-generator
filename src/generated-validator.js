@@ -2,7 +2,7 @@
 /* eslint-disable */
 export default (function() {
   function f0(v0) {
-    var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32;
+    var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.exclusiveMaximum !== undefined) {
         if (v0.maximum === undefined) {
@@ -22,189 +22,189 @@ export default (function() {
           return "error";
         }
       }
-      v2 = v0.$schema;
-      if (v2 !== undefined) {
-        if (f1(v2) !== null) {
+      v1 = v0.$schema;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return "error";
         }
       }
-      v3 = v0.title;
-      if (v3 !== undefined) {
-        if (f1(v3) !== null) {
+      v1 = v0.title;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return "error";
         }
       }
-      v4 = v0.description;
-      if (v4 !== undefined) {
-        if (f1(v4) !== null) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return "error";
         }
       }
-      v5 = v0.default;
-      if (v5 !== undefined) {
-        if (f3(v5) !== null) {
+      v1 = v0.default;
+      if (v1 !== undefined) {
+        if (f3(v1) !== null) {
           return "error";
         }
       }
-      v6 = v0.multipleOf;
-      if (v6 !== undefined) {
-        if (f4(v6) !== null) {
+      v1 = v0.multipleOf;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
           return "error";
         }
       }
-      v7 = v0.maximum;
-      if (v7 !== undefined) {
-        if (f5(v7) !== null) {
+      v1 = v0.maximum;
+      if (v1 !== undefined) {
+        if (f5(v1) !== null) {
           return "error";
         }
       }
-      v8 = v0.exclusiveMaximum;
-      if (v8 !== undefined) {
-        if (f6(v8) !== null) {
+      v1 = v0.exclusiveMaximum;
+      if (v1 !== undefined) {
+        if (f6(v1) !== null) {
           return "error";
         }
       }
-      v9 = v0.minimum;
-      if (v9 !== undefined) {
-        if (f5(v9) !== null) {
+      v1 = v0.minimum;
+      if (v1 !== undefined) {
+        if (f5(v1) !== null) {
           return "error";
         }
       }
-      v10 = v0.exclusiveMinimum;
-      if (v10 !== undefined) {
-        if (f6(v10) !== null) {
+      v1 = v0.exclusiveMinimum;
+      if (v1 !== undefined) {
+        if (f6(v1) !== null) {
           return "error";
         }
       }
-      v11 = v0.maxLength;
-      if (v11 !== undefined) {
-        if (f19(v11) !== null) {
+      v1 = v0.maxLength;
+      if (v1 !== undefined) {
+        if (f19(v1) !== null) {
           return "error";
         }
       }
-      v12 = v0.minLength;
-      if (v12 !== undefined) {
-        if (f20(v12) !== null) {
+      v1 = v0.minLength;
+      if (v1 !== undefined) {
+        if (f20(v1) !== null) {
           return "error";
         }
       }
-      v13 = v0.pattern;
-      if (v13 !== undefined) {
-        if (f1(v13) !== null) {
+      v1 = v0.pattern;
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
           return "error";
         }
       }
-      v14 = v0.additionalItems;
-      if (v14 !== undefined) {
-        if (f10(v14) !== null) {
+      v1 = v0.additionalItems;
+      if (v1 !== undefined) {
+        if (f10(v1) !== null) {
           return "error";
         }
       }
-      v15 = v0.items;
-      if (v15 !== undefined) {
-        if (f11(v15) !== null) {
+      v1 = v0.items;
+      if (v1 !== undefined) {
+        if (f11(v1) !== null) {
           return "error";
         }
       }
-      v16 = v0.maxItems;
-      if (v16 !== undefined) {
-        if (f19(v16) !== null) {
+      v1 = v0.maxItems;
+      if (v1 !== undefined) {
+        if (f19(v1) !== null) {
           return "error";
         }
       }
-      v17 = v0.minItems;
-      if (v17 !== undefined) {
-        if (f20(v17) !== null) {
+      v1 = v0.minItems;
+      if (v1 !== undefined) {
+        if (f20(v1) !== null) {
           return "error";
         }
       }
-      v18 = v0.uniqueItems;
-      if (v18 !== undefined) {
-        if (f6(v18) !== null) {
+      v1 = v0.uniqueItems;
+      if (v1 !== undefined) {
+        if (f6(v1) !== null) {
           return "error";
         }
       }
-      v19 = v0.maxProperties;
-      if (v19 !== undefined) {
-        if (f19(v19) !== null) {
+      v1 = v0.maxProperties;
+      if (v1 !== undefined) {
+        if (f19(v1) !== null) {
           return "error";
         }
       }
-      v20 = v0.minProperties;
-      if (v20 !== undefined) {
-        if (f20(v20) !== null) {
+      v1 = v0.minProperties;
+      if (v1 !== undefined) {
+        if (f20(v1) !== null) {
           return "error";
         }
       }
-      v21 = v0.required;
-      if (v21 !== undefined) {
-        if (f22(v21) !== null) {
+      v1 = v0.required;
+      if (v1 !== undefined) {
+        if (f22(v1) !== null) {
           return "error";
         }
       }
-      v22 = v0.additionalProperties;
-      if (v22 !== undefined) {
-        if (f10(v22) !== null) {
+      v1 = v0.additionalProperties;
+      if (v1 !== undefined) {
+        if (f10(v1) !== null) {
           return "error";
         }
       }
-      v23 = v0.definitions;
-      if (v23 !== undefined) {
-        if (f13(v23) !== null) {
+      v1 = v0.definitions;
+      if (v1 !== undefined) {
+        if (f13(v1) !== null) {
           return "error";
         }
       }
-      v24 = v0.properties;
-      if (v24 !== undefined) {
-        if (f13(v24) !== null) {
+      v1 = v0.properties;
+      if (v1 !== undefined) {
+        if (f13(v1) !== null) {
           return "error";
         }
       }
-      v25 = v0.patternProperties;
-      if (v25 !== undefined) {
-        if (f13(v25) !== null) {
+      v1 = v0.patternProperties;
+      if (v1 !== undefined) {
+        if (f13(v1) !== null) {
           return "error";
         }
       }
-      v26 = v0.dependencies;
-      if (v26 !== undefined) {
-        if (f14(v26) !== null) {
+      v1 = v0.dependencies;
+      if (v1 !== undefined) {
+        if (f14(v1) !== null) {
           return "error";
         }
       }
-      v27 = v0.enum;
-      if (v27 !== undefined) {
-        if (f15(v27) !== null) {
+      v1 = v0.enum;
+      if (v1 !== undefined) {
+        if (f15(v1) !== null) {
           return "error";
         }
       }
-      v28 = v0.type;
-      if (v28 !== undefined) {
-        if (f16(v28) !== null) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f16(v1) !== null) {
           return "error";
         }
       }
-      v29 = v0.allOf;
-      if (v29 !== undefined) {
-        if (f26(v29) !== null) {
+      v1 = v0.allOf;
+      if (v1 !== undefined) {
+        if (f26(v1) !== null) {
           return "error";
         }
       }
-      v30 = v0.anyOf;
-      if (v30 !== undefined) {
-        if (f26(v30) !== null) {
+      v1 = v0.anyOf;
+      if (v1 !== undefined) {
+        if (f26(v1) !== null) {
           return "error";
         }
       }
-      v31 = v0.oneOf;
-      if (v31 !== undefined) {
-        if (f26(v31) !== null) {
+      v1 = v0.oneOf;
+      if (v1 !== undefined) {
+        if (f26(v1) !== null) {
           return "error";
         }
       }
-      v32 = v0.not;
-      if (v32 !== undefined) {
-        if (f0(v32) !== null) {
+      v1 = v0.not;
+      if (v1 !== undefined) {
+        if (f0(v1) !== null) {
           return "error";
         }
       }
