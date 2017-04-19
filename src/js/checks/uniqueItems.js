@@ -1,10 +1,10 @@
 // @flow
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 import util from 'util.js';
 
-const uniqueItems = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.uniqueItems) {
     const obj = context.gensym();
     const i = context.gensym();

@@ -4,14 +4,14 @@ import util from 'util.js';
 import type {Context} from 'types.js';
 
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
 const additionalChecks = (
   properties: $PropertyType<JsonSchema, 'properties'>,
   patternProperties: $PropertyType<JsonSchema, 'patternProperties'>,
   additionalProperties: $PropertyType<JsonSchema, 'additionalProperties'>,
-  keySym: string,
-  valSym: string,
+  keySym: VarType,
+  valSym: VarType,
   context: Context,
 ): JsAst => {
   // This generates a block of code like
@@ -92,7 +92,7 @@ const additionalChecks = (
   }
 };
 
-const properties = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.patternProperties || schema.additionalProperties !== undefined) {
     // Need to loop through all properties to check. We'll generate a loop:
     //   for (var key in json) {

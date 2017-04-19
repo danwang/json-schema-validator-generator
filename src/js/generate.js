@@ -7,6 +7,11 @@ import render from 'js/jsast/render.js';
 import uniqFuncs from 'js/jsast/uniq-funcs.js';
 import util from 'util.js';
 
+const gengensym = () => {
+  const g = util.gengensym();
+  return (...args) => Ast.Var(g(...args));
+};
+
 type Schemas = {[key: string]: JsonSchema};
 // Given a root schema and a shape (map of schemas), returns a string which, if
 // run in the body of a function, returns an object of the same shape whose
@@ -14,7 +19,7 @@ type Schemas = {[key: string]: JsonSchema};
 //
 // If no shape is passed, {root} is used.
 const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}): string => {
-  const gensym = util.gengensym();
+  const gensym = gengensym();
 
   const cache = new WeakMap();
   const schemas = [];
@@ -33,7 +38,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
   };
 
   const makeContext = () => ({
-    gensym: util.gengensym(),
+    gensym: gengensym(),
     error: () => Ast.Return('"error"'),
     symbolForSchema,
     rootSchema: schema,

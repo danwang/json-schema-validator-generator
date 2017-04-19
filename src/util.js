@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
 const INDENT = '  ';
 const indent = (line: string, depth: number) => `${_.repeat(INDENT, depth)}${line}`;
@@ -24,7 +24,7 @@ export type BaseType = (
   'boolean' |
   'null'
 );
-const primitivePredicate = (type: BaseType, symbol: string): JsAst => {
+const primitivePredicate = (type: BaseType, symbol: VarType): JsAst => {
   switch (type) {
     case 'integer':
       return Ast.Binop.And(
@@ -56,7 +56,7 @@ const primitivePredicate = (type: BaseType, symbol: string): JsAst => {
 
 // Wraps lines of code in a check such that it only executes when the value of
 // `symbol` is the type
-const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
+const typeCheck = (type: BaseType, symbol: VarType, body: JsAst): JsAst => {
   return Ast.If(primitivePredicate(type, symbol), body);
 };
 

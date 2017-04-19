@@ -1,8 +1,8 @@
 // @flow
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
 export type Context = {
-  gensym: () => string,
+  gensym: () => VarType,
   error: () => JsAst,
   symbolForSchema: (schema: JsonSchema) => string,
   rootSchema: JsonSchema,

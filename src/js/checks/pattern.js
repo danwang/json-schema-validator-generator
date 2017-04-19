@@ -2,9 +2,9 @@
 import util from 'util.js';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
-const _pattern = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const _pattern = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const {pattern} = schema;
   if (pattern) {
     const check = Ast.If(

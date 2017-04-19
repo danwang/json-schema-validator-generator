@@ -3,9 +3,9 @@ import _ from 'lodash';
 import util from 'util.js';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
-const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: string, context: Context): JsAst => {
+const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: VarType, context: Context): JsAst => {
   const {additionalItems} = schema;
   if (additionalItems === false) {
     return Ast.If(
@@ -37,7 +37,7 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
   }
 };
 
-const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (Array.isArray(schema.items)) {
     // Tuple. Handle each item individually.
     const additionalCheck = _additionalItems(schema, schema.items, symbol, context);

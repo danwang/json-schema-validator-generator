@@ -3,9 +3,9 @@ import _ from 'lodash';
 import util from 'util.js';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
-const predicate = (type: string | JsonSchema, symbol: string, context: Context) => {
+const predicate = (type: string | JsonSchema, symbol: VarType, context: Context) => {
   if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
     return util.primitivePredicate(type, symbol);
@@ -15,7 +15,7 @@ const predicate = (type: string | JsonSchema, symbol: string, context: Context) 
   }
 };
 
-const _type = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const {type} = schema;
   if (typeof type === 'string') {
     return Ast.If(

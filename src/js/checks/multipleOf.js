@@ -2,9 +2,9 @@
 import util from 'util.js';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
-const _multipleOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const _multipleOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const {multipleOf} = schema;
   if (multipleOf) {
     const divided = context.gensym();

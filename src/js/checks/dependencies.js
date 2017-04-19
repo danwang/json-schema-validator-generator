@@ -2,10 +2,10 @@
 import _ from 'lodash';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 import util from 'util.js';
 
-const dependencies = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.dependencies) {
     const checks = _.map(schema.dependencies, (check, key) => {
       if (typeof check === 'string') {

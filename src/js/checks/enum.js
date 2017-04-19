@@ -2,9 +2,9 @@
 import _ from 'lodash';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
-import type {JsAst} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
-const _enum = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+const _enum = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.enum) {
     const match = context.gensym();
     const checks: Array<JsAst> = _.map(schema.enum, (value) => {
