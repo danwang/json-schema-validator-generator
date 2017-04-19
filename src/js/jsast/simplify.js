@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {JsAst, IfType, BodyType} from 'js/jsast/ast.js';
+import type {JsAst, IfType, BodyType, UnopType} from 'js/jsast/ast.js';
 import Ast from 'js/jsast/ast.js';
 
 const simplifyIf = (ast: IfType): JsAst => {
@@ -39,6 +39,48 @@ const simplifyBody = (ast: BodyType): JsAst => {
   }
 };
 
+const simplifyUnop = (ast: UnopType): JsAst => {
+  const {child} = ast;
+  if (ast.op === '!') {
+    if (child.type === 'binop') {
+      const left = simplify(child.left);
+      const right = simplify(child.right);
+      switch (child.comparator) {
+        case '===':
+          return Ast.Binop.Neq(left, right);
+        case '!==':
+          return Ast.Binop.Eq(left, right);
+        case '&&':
+          return Ast.Binop.Or(
+            simplify(Ast.Unop.Not(left)),
+            simplify(Ast.Unop.Not(right)),
+          );
+        case '||':
+          return Ast.Binop.And(
+            simplify(Ast.Unop.Not(left)),
+            simplify(Ast.Unop.Not(right)),
+          );
+        case '<':
+          return Ast.Binop.Gte(left, right);
+        case '>':
+          return Ast.Binop.Lte(left, right);
+        case '<=':
+          return Ast.Binop.Gt(left, right);
+        case '>=':
+          return Ast.Binop.Lt(left, right);
+        default:
+          return ast;
+      }
+    } else if (child.type === 'unop' && child.op === '!') {
+      return child.child;
+    } else {
+      return ast;
+    }
+  } else {
+    return ast;
+  }
+};
+
 const simplify = (ast: JsAst): JsAst => {
   switch (ast.type) {
     case 'assignment':
@@ -66,7 +108,8 @@ const simplify = (ast: JsAst): JsAst => {
       return ast;
     case 'function1':
       return Ast.Function1(ast.name, ast.argument, simplify(ast.body));
-    case 'binop':
+    case 'unop':
+      return simplifyUnop(ast);
     default:
       return ast;
   }
