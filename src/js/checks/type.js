@@ -11,7 +11,7 @@ const predicate = (type: string | JsonSchema, symbol: string, context: Context) 
     return util.primitivePredicate(type, symbol);
   } else {
     const fnSym = context.symbolForSchema(type);
-    return Ast.Binop.Eq(Ast.Call(fnSym, symbol), 'null');
+    return Ast.Binop.Eq(Ast.Call(fnSym, symbol), Ast.Null);
   }
 };
 

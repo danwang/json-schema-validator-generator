@@ -18,11 +18,11 @@ describe('uniqFuncs', () => {
 
   it('removes and renames duplicate functions', () => {
     const ast = Ast.Body(
-      Ast.Function1('f0', 'v', Ast.Body(Ast.Return('null'))),
-      Ast.Function1('f1', 'v', Ast.Body(Ast.Return('null'))),
+      Ast.Function1('f0', 'v', Ast.Body(Ast.Return(Ast.Null))),
+      Ast.Function1('f1', 'v', Ast.Body(Ast.Return(Ast.Null))),
     );
     expect(uniqFuncs(ast)).toEqual(Ast.Body(
-      Ast.Function1('f0', 'v', Ast.Body(Ast.Return('null'))),
+      Ast.Function1('f0', 'v', Ast.Body(Ast.Return(Ast.Null))),
       Ast.Empty,
     ));
   });

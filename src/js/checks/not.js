@@ -10,7 +10,7 @@ const not = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
 
     return Ast.Body(
       Ast.Assignment(result, Ast.Call(fnSym, symbol)),
-      Ast.If(Ast.Binop.Eq(result, 'null'), context.error()),
+      Ast.If(Ast.Binop.Eq(result, Ast.Null), context.error()),
     );
   } else {
     return Ast.Empty;

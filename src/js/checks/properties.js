@@ -38,7 +38,7 @@ const additionalChecks = (
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
           context.error(),
         ),
       );
@@ -51,7 +51,7 @@ const additionalChecks = (
     } else {
       const fnSym = context.symbolForSchema(additionalProperties);
       return Ast.If(
-        Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
+        Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
         context.error(),
       );
     }
@@ -65,7 +65,7 @@ const additionalChecks = (
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(Ast.Call(fnSym, valSym), 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
           context.error(),
           Ast.Assignment(hitSym, Ast.Literal('true')),
         ),
@@ -121,9 +121,9 @@ const properties = (schema: JsonSchema, symbol: string, context: Context): JsAst
       return Ast.Body(
         Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
         Ast.If(
-          Ast.Binop.Neq(sym, 'undefined'),
+          Ast.Binop.Neq(sym, Ast.Undefined),
           Ast.If(
-            Ast.Binop.Neq(Ast.Call(fnSym, sym), 'null'),
+            Ast.Binop.Neq(Ast.Call(fnSym, sym), Ast.Null),
             context.error(),
           ),
         ),

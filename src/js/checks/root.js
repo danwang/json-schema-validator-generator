@@ -46,7 +46,7 @@ const root = (schema: JsonSchema, context: Context): Function1Type => {
   return Ast.Function1(
     fnSym,
     symbol,
-    Ast.Body(body, Ast.Return('null')),
+    Ast.Body(body, Ast.Return(Ast.Null)),
   );
 };
 
