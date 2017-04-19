@@ -67,19 +67,19 @@ const additionalChecks = (
         Ast.If(
           Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
           context.error(),
-          Ast.Assignment(hitSym, Ast.Literal('true')),
+          Ast.Assignment(hitSym, Ast.True),
         ),
       );
     });
     const additionalCheck = Ast.If(
-      Ast.Binop.Eq(hitSym, 'false'),
+      Ast.Binop.Eq(hitSym, Ast.False),
       additionalProperties === false ? context.error() : Ast.If(
         `${context.symbolForSchema(additionalProperties)}(${valSym}) !== null`,
         context.error(),
       ),
     );
     return Ast.Body(
-      Ast.Assignment(hitSym, Ast.Literal('false')),
+      Ast.Assignment(hitSym, Ast.False),
       ...checks,
       additionalCheck,
     );
@@ -101,7 +101,7 @@ const properties = (schema: JsonSchema, symbol: string, context: Context): JsAst
     const keySym = context.gensym();
     const valSym = context.gensym();
 
-    const loop = Ast.ForIn(keySym, Ast.Literal(symbol), Ast.Body(
+    const loop = Ast.ForIn(keySym, Ast.Var(symbol), Ast.Body(
       Ast.Assignment(valSym, Ast.Literal(`${symbol}[${keySym}]`)),
       additionalChecks(
         schema.properties,

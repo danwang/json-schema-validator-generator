@@ -43,6 +43,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         );
       case 'binop':
         return Ast.Binop.Any(ast.comparator)(recur(ast.left), recur(ast.right));
+      case 'var':
+        return ast;
       case 'literal':
         return ast;
       case 'call':

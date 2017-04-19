@@ -75,7 +75,7 @@ const replace = (replacer: Replacer) => (base: JsAst): JsAst => {
   const mapping = replacer(fns, nameToId);
 
   const t = transform((ast: JsAst, recur: Transform): JsAst => {
-    if (ast.type === 'literal') {
+    if (ast.type === 'literal' || ast.type === 'var') {
       const id = nameToId[ast.value];
       if (mapping.has(id)) {
         const replacedId: any = mapping.get(id);

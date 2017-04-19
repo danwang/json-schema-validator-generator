@@ -13,6 +13,7 @@ export type JsAst = (
   Function1Type |
   BinopType |
   EmptyType |
+  VarType |
   LiteralType |
   CallType |
   UnopType |
@@ -21,7 +22,7 @@ export type JsAst = (
 );
 type AssignmentType = {
   type: 'assignment',
-  variable: LiteralType,
+  variable: VarType,
   value: JsAst,
 };
 export type IfType = {
@@ -47,7 +48,7 @@ export type ForType = {
 };
 export type ForInType = {
   type: 'forin',
-  variable: LiteralType,
+  variable: VarType,
   iterator: JsAst,
   body: JsAst,
 };
@@ -55,8 +56,8 @@ type EmptyType = {type: 'empty'};
 
 export type Function1Type = {
   type: 'function1',
-  name: LiteralType,
-  argument: LiteralType,
+  name: VarType,
+  argument: VarType,
   body: JsAst,
 };
 type BinopType = {
@@ -65,14 +66,18 @@ type BinopType = {
   comparator: string,
   right: JsAst,
 };
+export type VarType = {
+  type: 'var',
+  value: string,
+};
 export type LiteralType = {
   type: 'literal',
   value: string,
 };
 type CallType = {
   type: 'call',
-  fn: LiteralType,
-  arg: LiteralType,
+  fn: VarType,
+  arg: VarType,
 };
 export type UnopType = {
   type: 'unop',
@@ -91,13 +96,13 @@ export type PropertyAccessType = {
 };
 
 const Function1 = (
-  name: LiteralType | string,
-  argument: LiteralType | string,
+  name: VarType | string,
+  argument: VarType | string,
   body: JsAst,
 ): Function1Type => ({
   type: 'function1',
-  name: Literal(name),
-  argument: Literal(argument),
+  name: Var(name),
+  argument: Var(argument),
   body: Body(body),
 });
 const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
@@ -108,10 +113,10 @@ const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | str
     right: (typeof right === 'string') ? Literal(right) : right,
   };
 };
-const Assignment = (variable: LiteralType | string, value: JsAst): AssignmentType => {
+const Assignment = (variable: VarType | string, value: JsAst): AssignmentType => {
   return {
     type: 'assignment',
-    variable: Literal(variable),
+    variable: Var(variable),
     value,
   };
 };
@@ -143,16 +148,23 @@ const For = (
   body: JsAst,
 ): ForType => ({type: 'for', init, condition, loop, body});
 const ForIn = (
-  variable: LiteralType | string,
+  variable: VarType | string,
   iterator: JsAst,
   body: JsAst,
 ): ForInType => ({
   type: 'forin',
-  variable: Literal(variable),
+  variable: Var(variable),
   iterator,
   body: Body(body),
 });
 const Empty = {type: 'empty'};
+const Var = (value: VarType | string): VarType => {
+  if (typeof value === 'string') {
+    return {type: 'var', value};
+  } else {
+    return value;
+  }
+};
 const Literal = (value: LiteralType | string): LiteralType => {
   if (typeof value === 'string') {
     return {type: 'literal', value};
@@ -163,8 +175,8 @@ const Literal = (value: LiteralType | string): LiteralType => {
 const Call = (fn: string, arg: string) => {
   return {
     type: 'call',
-    fn: Literal(fn),
-    arg: Literal(arg),
+    fn: Var(fn),
+    arg: Var(arg),
   };
 };
 const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst | string): UnopType => {
@@ -200,6 +212,7 @@ export default {
     Gt: _Binop('>'),
     Lte: _Binop('<='),
     Gte: _Binop('>='),
+    Div: _Binop('/'),
     Any: _Binop,
   },
   Assignment,
@@ -209,6 +222,7 @@ export default {
   For,
   ForIn,
   Empty,
+  Var,
   Literal,
   Call,
   Unop: {
@@ -220,4 +234,6 @@ export default {
   PropertyAccess,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
+  True: Literal('true'),
+  False: Literal('false'),
 };

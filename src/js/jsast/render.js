@@ -97,6 +97,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return renderFunction(ast, depth);
     case 'binop':
       return `${render(ast.left, depth)} ${ast.comparator} ${render(ast.right, depth)}`;
+    case 'var':
+      return ast.value;
     case 'literal':
       return ast.value;
     case 'call':
