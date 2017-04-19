@@ -1,6 +1,7 @@
 // @flow
 import allOf from 'js/checks/allOf.js';
 import anyOf from 'js/checks/anyOf.js';
+import dependencies from 'js/checks/dependencies.js';
 import _enum from 'js/checks/enum.js';
 import items from 'js/checks/items.js';
 import comparisons from 'js/checks/comparisons.js';
@@ -27,6 +28,7 @@ const root = (schema: Object, context: Context): Function1Type => {
     ref(schema, symbol, context),
     allOf(schema, symbol, context),
     anyOf(schema, symbol, context),
+    dependencies(schema, symbol, context),
     _enum(schema, symbol, context),
     items(schema, symbol, context),
     comparisons(schema, symbol, context),

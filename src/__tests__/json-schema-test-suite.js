@@ -10,7 +10,7 @@ const WHITELIST = [
   'anyOf.json',
   'default.json',
   // 'definitions.json',
-  // 'dependencies.json',
+  'dependencies.json',
   'enum.json',
   'items.json',
   'maxItems.json',

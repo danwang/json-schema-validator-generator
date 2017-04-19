@@ -571,6 +571,85 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
 })()"
 `;
 
+exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
+"(function() {
+  function f0(v0) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+      if (v0.bar !== undefined) {
+        if (v0.foo === undefined) {
+          return \\"error\\";
+        }
+      }
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
+"(function() {
+  function f0(v0) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+      if (v0.quux !== undefined) {
+        if (v0.foo === undefined) {
+          return \\"error\\";
+        }
+        if (v0.bar === undefined) {
+          return \\"error\\";
+        }
+      }
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
+"(function() {
+  function f0(v0) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+      if (v0.bar !== undefined && f1(v0) !== null) {
+        return \\"error\\";
+      }
+    }
+    return null;
+  }
+  function f1(v0) {
+    var v1, v2;
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+      v1 = v0.foo;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          return \\"error\\";
+        }
+      }
+      v2 = v0.bar;
+      if (v2 !== undefined) {
+        if (f2(v2) !== null) {
+          return \\"error\\";
+        }
+      }
+    }
+    return null;
+  }
+  function f2(v0) {
+    if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
 exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
