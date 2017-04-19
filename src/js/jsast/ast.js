@@ -18,11 +18,12 @@ export type JsAst = (
   CallType |
   UnopType |
   ObjectLiteralType |
-  PropertyAccessType
+  PropertyAccessType |
+  BracketAccessType
 );
 type AssignmentType = {
   type: 'assignment',
-  variable: VarType,
+  variable: JsAst,
   value: JsAst,
 };
 export type IfType = {
@@ -77,7 +78,7 @@ export type LiteralType = {
 type CallType = {
   type: 'call',
   fn: VarType,
-  arg: VarType,
+  arg: JsAst,
 };
 export type UnopType = {
   type: 'unop',
@@ -93,6 +94,11 @@ export type PropertyAccessType = {
   type: 'propertyaccess',
   obj: JsAst,
   property: string,
+};
+export type BracketAccessType = {
+  type: 'bracketaccess',
+  obj: JsAst,
+  property: JsAst,
 };
 
 const Function1 = (
@@ -113,10 +119,10 @@ const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | str
     right: (typeof right === 'string') ? Literal(right) : right,
   };
 };
-const Assignment = (variable: VarType | string, value: JsAst): AssignmentType => {
+const Assignment = (variable: JsAst | string, value: JsAst): AssignmentType => {
   return {
     type: 'assignment',
-    variable: Var(variable),
+    variable: (typeof variable === 'string') ? Literal(variable) : variable,
     value,
   };
 };
@@ -165,18 +171,20 @@ const Var = (value: VarType | string): VarType => {
     return value;
   }
 };
-const Literal = (value: LiteralType | string): LiteralType => {
-  if (typeof value === 'string') {
+const Literal = (value: LiteralType | string | number): LiteralType => {
+  if (typeof value === 'number') {
+    return {type: 'literal', value: `${value}`};
+  } else if (typeof value === 'string') {
     return {type: 'literal', value};
   } else {
     return value;
   }
 };
-const Call = (fn: string, arg: string) => {
+const Call = (fn: string, arg: JsAst | string) => {
   return {
     type: 'call',
     fn: Var(fn),
-    arg: Var(arg),
+    arg: (typeof arg === 'string') ? Literal(arg) : arg,
   };
 };
 const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst | string): UnopType => {
@@ -198,6 +206,13 @@ const PropertyAccess = (obj: JsAst | string, property: string): PropertyAccessTy
     type: 'propertyaccess',
     obj: (typeof obj === 'string') ? Literal(obj) : obj,
     property,
+  };
+};
+const BracketAccess = (obj: JsAst | string, property: JsAst | string): BracketAccessType => {
+  return {
+    type: 'bracketaccess',
+    obj: (typeof obj === 'string') ? Literal(obj) : obj,
+    property: (typeof property === 'string') ? Literal(property) : property,
   };
 };
 
@@ -232,6 +247,7 @@ export default {
   },
   ObjectLiteral,
   PropertyAccess,
+  BracketAccess,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
   True: Literal('true'),

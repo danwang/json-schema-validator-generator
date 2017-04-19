@@ -17,13 +17,18 @@ const uniqueItems = (schema: JsonSchema, symbol: string, context: Context): JsAs
         Ast.Binop.Lt(i, `${symbol}.length`),
         Ast.Unop.Incr(i),
         Ast.Body(
-          Ast.Assignment(stringified, Ast.Call('JSON.stringify', `${symbol}[${i}]`)),
-          // TODO: Fix this because it's broken
-          Ast.Literal(`${obj}[${stringified}] = true;`),
+          Ast.Assignment(
+            stringified,
+            Ast.Call('JSON.stringify', Ast.BracketAccess(symbol, i)),
+          ),
+          Ast.Assignment(
+            Ast.BracketAccess(obj, stringified),
+            Ast.True,
+          ),
         ),
       ),
       Ast.If(
-        Ast.Binop.Neq(`Object.keys(${obj}).length`, `${symbol}.length`),
+        Ast.Binop.Neq(`Object.keys(${obj}).length`, Ast.PropertyAccess(symbol, 'length')),
         context.error(),
       ),
     ));

@@ -9,7 +9,10 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
   const {additionalItems} = schema;
   if (additionalItems === false) {
     return Ast.If(
-      Ast.Binop.Gt(`${symbol}.length`, `${items.length}`),
+      Ast.Binop.Gt(
+        Ast.PropertyAccess(symbol, 'length'),
+        Ast.Literal(items.length),
+      ),
       context.error(),
     );
   } else if (additionalItems && typeof additionalItems === 'object') {
@@ -19,11 +22,11 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
       Ast.Assignment(i, Ast.Literal(`${items.length}`)),
       Ast.For(
         Ast.Empty,
-        Ast.Binop.Lt(i, `${symbol}.length`),
+        Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(i),
         Ast.Body(
           Ast.If(
-            Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), Ast.Null),
+            Ast.Binop.Neq(Ast.Call(fnSym, Ast.BracketAccess(symbol, i)), Ast.Null),
             context.error(),
           ),
         ),
@@ -42,8 +45,11 @@ const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         Ast.Binop.And(
-          Ast.Binop.Lt(`${i}`, `${symbol}.length`),
-          Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), Ast.Null),
+          Ast.Binop.Lt(Ast.Literal(i), Ast.PropertyAccess(symbol, 'length')),
+          Ast.Binop.Neq(
+            Ast.Call(fnSym, Ast.BracketAccess(symbol, Ast.Literal(i))),
+            Ast.Null,
+          ),
         ),
         context.error(),
       );
@@ -54,14 +60,14 @@ const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
     const counter = context.gensym();
     const result = context.gensym();
     const check = Ast.Body(
-      Ast.Assignment(counter, Ast.Literal('0')),
+      Ast.Assignment(counter, Ast.Literal(0)),
       Ast.Assignment(result, Ast.Null),
       Ast.For(
         Ast.Empty,
-        Ast.Binop.Lt(counter, `${symbol}.length`),
+        Ast.Binop.Lt(counter, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(counter),
         Ast.Body(
-          Ast.Assignment(result, Ast.Call(fnSym, `${symbol}[${counter}]`)),
+          Ast.Assignment(result, Ast.Call(fnSym, Ast.BracketAccess(symbol, counter))),
           Ast.If(Ast.Binop.Neq(result, Ast.Null), Ast.Return(result)),
         ),
       ),

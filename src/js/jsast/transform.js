@@ -9,7 +9,6 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
   const _recur: Transform = (ast) => {
     switch (ast.type) {
       case 'assignment':
-        // $FlowFixMe
         return Ast.Assignment(recur(ast.variable), recur(ast.value));
       case 'if':
         return Ast.If(recur(ast.predicate), recur(ast.body), recur(ast.elseBody));
@@ -56,6 +55,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return Ast.ObjectLiteral(_.mapValues(ast.object, recur));
       case 'propertyaccess':
         return Ast.PropertyAccess(recur(ast.obj), ast.property);
+      case 'bracketaccess':
+        return Ast.BracketAccess(recur(ast.obj), recur(ast.property));
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }
