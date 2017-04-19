@@ -16,7 +16,7 @@ const renderIf = (ast: IfType, depth: number) => {
     elseString,
   ] : [];
   return [
-    util.indent(`if (${render(predicate)}) {`, depth),
+    `if (${render(predicate)}) {`,
     render(body, depth + 1),
     ...elseLines,
     util.indent('}', depth),
@@ -26,7 +26,7 @@ const renderIf = (ast: IfType, depth: number) => {
 const renderFor = (ast: ForType, depth: number) => {
   const {init, condition, loop, body} = ast;
   return [
-    util.indent(`for (${render(init)}; ${render(condition)}; ${render(loop)}) {`, depth),
+    `for (${render(init)}; ${render(condition)}; ${render(loop)}) {`,
     render(body, depth + 1),
     util.indent('}', depth),
   ].join('\n');
@@ -35,7 +35,7 @@ const renderFor = (ast: ForType, depth: number) => {
 const renderForIn = (ast: ForInType, depth: number) => {
   const {variable, iterator, body} = ast;
   return [
-    util.indent(`for (var ${render(variable)} in ${render(iterator)}) {`, depth),
+    `for (var ${render(variable)} in ${render(iterator)}) {`,
     render(body, depth + 1),
     util.indent('}', depth),
   ].join('\n');
@@ -48,7 +48,7 @@ const renderFunction = (ast: Function1Type, depth: number) => {
     util.indent(`var ${vars.join(', ')};`, depth + 1),
   ];
   return [
-    util.indent(`function ${render(name)}(${render(argument)}) {`, depth),
+    `function ${render(name)}(${render(argument)}) {`,
     ...varLines,
     render(body, depth + 1),
     util.indent('}', depth),
@@ -58,9 +58,9 @@ const renderFunction = (ast: Function1Type, depth: number) => {
 const renderUnop = (ast: UnopType, depth: number) => {
   const child = `(${render(ast.child)})`;
   if (ast.style === 'prefix') {
-    return util.indent(`${ast.op}${child}`, depth);
+    return `${ast.op}${child}`;
   } else {
-    return util.indent(`${child}${ast.op}`, depth);
+    return `${child}${ast.op}`;
   }
 };
 
@@ -80,13 +80,13 @@ const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
     case 'assignment':
-      return util.indent(`${render(ast.variable)} = ${render(ast.value)};`, depth);
+      return `${render(ast.variable)} = ${render(ast.value)};`;
     case 'if':
       return renderIf(ast, depth);
     case 'return':
-      return util.indent(`return ${render(ast.value, depth).trimLeft()};`, depth);
+      return `return ${render(ast.value, depth).trimLeft()};`;
     case 'body':
-      return _.map(ast.body, (s) => render(s, depth)).join('\n');
+      return _.map(ast.body, (s) => util.indent(render(s, depth), depth)).join('\n');
     case 'for':
       return renderFor(ast, depth);
     case 'forin':
@@ -98,9 +98,9 @@ const render = (ast: JsAst, depth: number = 0) => {
     case 'binop':
       return `${render(ast.left, depth)} ${ast.comparator} ${render(ast.right, depth)}`;
     case 'literal':
-      return util.indent(ast.value, depth);
+      return ast.value;
     case 'call':
-      return util.indent(`${render(ast.fn)}(${render(ast.arg)})`, depth);
+      return `${render(ast.fn)}(${render(ast.arg)})`;
     case 'unop':
       return renderUnop(ast, depth);
     case 'objectliteral':

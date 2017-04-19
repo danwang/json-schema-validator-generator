@@ -34,8 +34,6 @@ const simplifyBody = (ast: BodyType): JsAst => {
   const body = firstReturn >= 0 ? mapped.slice(0, firstReturn + 1) : mapped;
   if (body.length === 0) {
     return Ast.Empty;
-  } else if (body.length === 1) {
-    return body[0];
   } else {
     return Ast.Body(...body);
   }
@@ -52,7 +50,18 @@ const simplify = (ast: JsAst): JsAst => {
     case 'body':
       return simplifyBody(ast);
     case 'for':
+      return Ast.For(
+        simplify(ast.init),
+        simplify(ast.condition),
+        simplify(ast.loop),
+        simplify(ast.body),
+      );
     case 'forin':
+      return Ast.ForIn(
+        ast.variable,
+        simplify(ast.iterator),
+        simplify(ast.body),
+      );
     case 'empty':
       return ast;
     case 'function1':

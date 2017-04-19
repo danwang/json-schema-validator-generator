@@ -92,7 +92,7 @@ const Function1 = (
   type: 'function1',
   name: Literal(name),
   argument: Literal(argument),
-  body,
+  body: Body(body),
 });
 const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
   return {
@@ -113,8 +113,8 @@ const If = (predicate: JsAst | string, body: JsAst | string, elseBody: JsAst | s
   return {
     type: 'if',
     predicate: (typeof predicate === 'string') ? Literal(predicate) : predicate,
-    body: (typeof body === 'string') ? Literal(body) : body,
-    elseBody: (typeof elseBody === 'string') ? Literal(elseBody) : elseBody,
+    body: Body((typeof body === 'string') ? Literal(body) : body),
+    elseBody: Body((typeof elseBody === 'string') ? Literal(elseBody) : elseBody),
   };
 };
 const Return = (value: JsAst | string): ReturnType => {
@@ -123,7 +123,13 @@ const Return = (value: JsAst | string): ReturnType => {
     value: (typeof value === 'string') ? Literal(value) : value,
   };
 };
-const Body = (...body: Array<JsAst>): BodyType => ({type: 'body', body});
+const Body = (...body: Array<JsAst>): BodyType | EmptyType => {
+  if (body.length === 1 && (body[0].type === 'body' || body[0].type === 'empty')) {
+    return body[0];
+  } else {
+    return {type: 'body', body};
+  }
+};
 const For = (
   init: JsAst,
   condition: JsAst,
@@ -138,7 +144,7 @@ const ForIn = (
   type: 'forin',
   variable: Literal(variable),
   iterator,
-  body,
+  body: Body(body),
 });
 const Empty = {type: 'empty'};
 const Literal = (value: LiteralType | string): LiteralType => {

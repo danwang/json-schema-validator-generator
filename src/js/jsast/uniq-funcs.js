@@ -29,11 +29,14 @@ const simplify = (replacements: Replacements): Replacements => {
 const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Replacements => {
   const entries = _.flatMap(fns, (ast: Function1Type) => {
     const {name, argument, body} = ast;
-    if (body.type === 'return') {
-      if (body.value.type === 'call') {
-        const {fn, arg} = body.value;
-        if (arg.value === argument.value) {
-          return [[nameToId[name.value], nameToId[fn.value]]];
+    if (body.type === 'body' && body.body.length === 1) {
+      const line = body.body[0];
+      if (line.type === 'return') {
+        if (line.value.type === 'call') {
+          const {fn, arg} = line.value;
+          if (arg.value === argument.value) {
+            return [[nameToId[name.value], nameToId[fn.value]]];
+          }
         }
       }
     }
