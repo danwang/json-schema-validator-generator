@@ -9,7 +9,7 @@ const _multipleOf = (schema: JsonSchema, symbol: VarType, context: Context): JsA
   if (multipleOf) {
     const divided = context.gensym();
     return util.typeCheck('number', symbol, Ast.Body(
-      Ast.Assignment(divided, Ast.Binop.Div(symbol, Ast.Literal(multipleOf))),
+      Ast.Assignment(divided, Ast.Binop.Div(symbol, Ast.NumLiteral(multipleOf))),
       Ast.If(
         Ast.Unop.Not(util.primitivePredicate('integer', divided)),
         context.error(),

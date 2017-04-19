@@ -169,18 +169,8 @@ const ForIn = (
   body: Body(body),
 });
 const Empty = {type: 'empty'};
-const Var = (value: string): VarType => {
-  return {type: 'var', value};
-};
-const Literal = (value: LiteralType | string | number): LiteralType => {
-  if (typeof value === 'number') {
-    return {type: 'literal', value: `${value}`};
-  } else if (typeof value === 'string') {
-    return {type: 'literal', value};
-  } else {
-    return value;
-  }
-};
+const Var = (value: string): VarType => ({type: 'var', value});
+const Literal = (value: string): LiteralType => ({type: 'literal', value});
 const Call = (fn: JsAst | string, arg: JsAst) => {
   return {
     type: 'call',
@@ -261,4 +251,6 @@ export default {
   Undefined: Literal('undefined'),
   True: Literal('true'),
   False: Literal('false'),
+  NumLiteral: (n: number) => Literal(`${n}`),
+  StringLiteral: (s: string) => Literal(`'${s}'`),
 };

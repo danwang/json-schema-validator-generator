@@ -11,7 +11,7 @@ const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsA
     const stringified = context.gensym();
     return util.typeCheck('array', symbol, Ast.Body(
       Ast.Assignment(obj, Ast.Literal('{}')),
-      Ast.Assignment(i, Ast.Literal('0')),
+      Ast.Assignment(i, Ast.NumLiteral(0)),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),

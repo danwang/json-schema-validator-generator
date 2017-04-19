@@ -21,7 +21,7 @@ const additionalChecks = (
   //   if (key.match(/pattern4/) && error(check4(data))) { (error) }
   //   if (!hit && error(additionalCheck(data))) { (error) }
   const propertyChecks = _.map(properties, (subSchema, key) => ({
-    predicate: Ast.Binop.Eq(keySym, Ast.Literal(`"${key}"`)),
+    predicate: Ast.Binop.Eq(keySym, Ast.StringLiteral(key)),
     subSchema,
   }));
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({

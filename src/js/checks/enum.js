@@ -4,28 +4,39 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst, VarType} from 'js/jsast/ast.js';
 
+const baseLiteral = (base: number | boolean | string): JsAst => {
+  if (typeof base === 'number') {
+    return Ast.NumLiteral(base);
+  } else if (typeof base === 'boolean') {
+    return base ? Ast.True : Ast.False;
+  } else {
+    return Ast.StringLiteral(base);
+  }
+};
+
 const _enum = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.enum) {
     const match = context.gensym();
     const checks: Array<JsAst> = _.map(schema.enum, (value) => {
-      if (typeof value === 'number' || typeof value === 'boolean') {
-        return Ast.If(Ast.Binop.Eq(symbol, Ast.Literal(_.toString(value))), Ast.Unop.Incr(match));
-      } else if (typeof value === 'string') {
-        return Ast.If(Ast.Binop.Eq(symbol, Ast.Literal(`"${value}"`)), Ast.Unop.Incr(match));
+      if (typeof value !== 'object') {
+        return Ast.If(
+          Ast.Binop.Eq(symbol, baseLiteral(value)),
+          Ast.Unop.Incr(match),
+        );
       } else {
         return Ast.If(
           Ast.Binop.Eq(
             Ast.Call('JSON.stringify', symbol),
-            Ast.Literal(`'${JSON.stringify(value)}'`),
+            Ast.StringLiteral(JSON.stringify(value)),
           ),
           Ast.Unop.Incr(match),
         );
       }
     });
     return Ast.Body(
-      Ast.Assignment(match, Ast.Literal('0')),
+      Ast.Assignment(match, Ast.NumLiteral(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Eq(match, Ast.Literal(0)), context.error()),
+      Ast.If(Ast.Binop.Eq(match, Ast.NumLiteral(0)), context.error()),
     );
   } else {
     return Ast.Empty;

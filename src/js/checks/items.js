@@ -11,7 +11,7 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
     return Ast.If(
       Ast.Binop.Gt(
         Ast.PropertyAccess(symbol, 'length'),
-        Ast.Literal(items.length),
+        Ast.NumLiteral(items.length),
       ),
       context.error(),
     );
@@ -19,7 +19,7 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
     const fnSym = context.symbolForSchema(additionalItems);
     const i = context.gensym();
     return Ast.Body(
-      Ast.Assignment(i, Ast.Literal(items.length)),
+      Ast.Assignment(i, Ast.NumLiteral(items.length)),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),
@@ -45,9 +45,9 @@ const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         Ast.Binop.And(
-          Ast.Binop.Lt(Ast.Literal(i), Ast.PropertyAccess(symbol, 'length')),
+          Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
           Ast.Binop.Neq(
-            Ast.Call(fnSym, Ast.BracketAccess(symbol, Ast.Literal(i))),
+            Ast.Call(fnSym, Ast.BracketAccess(symbol, Ast.NumLiteral(i))),
             Ast.Null,
           ),
         ),
@@ -60,7 +60,7 @@ const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     const counter = context.gensym();
     const result = context.gensym();
     const check = Ast.Body(
-      Ast.Assignment(counter, Ast.Literal(0)),
+      Ast.Assignment(counter, Ast.NumLiteral(0)),
       Ast.Assignment(result, Ast.Null),
       Ast.For(
         Ast.Empty,

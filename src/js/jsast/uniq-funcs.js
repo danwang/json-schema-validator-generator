@@ -34,7 +34,7 @@ const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Re
       if (line.type === 'return') {
         if (line.value.type === 'call') {
           const {fn, arg} = line.value;
-          if (fn.type === 'var' || fn.type === 'literal') {
+          if (fn.type === 'var') {
             if (arg.value === argument.value) {
               return [[nameToId[name.value], nameToId[fn.value]]];
             }
@@ -77,11 +77,11 @@ const replace = (replacer: Replacer) => (base: JsAst): JsAst => {
   const mapping = replacer(fns, nameToId);
 
   const t = transform((ast: JsAst, recur: Transform): JsAst => {
-    if (ast.type === 'literal' || ast.type === 'var') {
+    if (ast.type === 'var') {
       const id = nameToId[ast.value];
       if (mapping.has(id)) {
         const replacedId: any = mapping.get(id);
-        return Ast.Literal(fns[replacedId].name);
+        return fns[replacedId].name;
       } else {
         return recur(ast);
       }

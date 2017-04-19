@@ -7,7 +7,7 @@ import type {Collect} from 'js/jsast/collect.js';
 
 const _getVars = collect((ast: JsAst, recur: Collect<string>) => {
   if (ast.type === 'assignment') {
-    if (ast.variable.type === 'var' || ast.variable.type === 'literal') {
+    if (ast.variable.type === 'var') {
       return [ast.variable.value];
     } else {
       return [];

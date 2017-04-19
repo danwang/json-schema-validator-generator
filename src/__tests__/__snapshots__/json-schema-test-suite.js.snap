@@ -120,14 +120,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
-        if (v1 === \\"foo\\") {
+        if (v1 === 'foo') {
           if (f1(v2) !== null) {
             return \\"error\\";
           } else {
             v3 = true;
           }
         }
-        if (v1 === \\"bar\\") {
+        if (v1 === 'bar') {
           if (f1(v2) !== null) {
             return \\"error\\";
           } else {
@@ -165,14 +165,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
-        if (v1 === \\"foo\\") {
+        if (v1 === 'foo') {
           if (f1(v2) !== null) {
             return \\"error\\";
           } else {
             v3 = true;
           }
         }
-        if (v1 === \\"bar\\") {
+        if (v1 === 'bar') {
           if (f1(v2) !== null) {
             return \\"error\\";
           } else {
@@ -683,7 +683,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
     if (v0 === 6) {
       (v1)++
     }
-    if (v0 === \\"foo\\") {
+    if (v0 === 'foo') {
       (v1)++
     }
     if (JSON.stringify(v0) === '[]') {
@@ -737,7 +737,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
   function f1(v0) {
     var v1;
     v1 = 0;
-    if (v0 === \\"foo\\") {
+    if (v0 === 'foo') {
       (v1)++
     }
     if (v1 === 0) {
@@ -748,7 +748,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
   function f2(v0) {
     var v1;
     v1 = 0;
-    if (v0 === \\"bar\\") {
+    if (v0 === 'bar') {
       (v1)++
     }
     if (v1 === 0) {
@@ -1416,14 +1416,14 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
-        if (v1 === \\"foo\\") {
+        if (v1 === 'foo') {
           if (f1(v2) !== null) {
             return \\"error\\";
           } else {
             v3 = true;
           }
         }
-        if (v1 === \\"bar\\") {
+        if (v1 === 'bar') {
           if (f2(v2) !== null) {
             return \\"error\\";
           } else {
@@ -1491,7 +1491,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
-        if (v1 === \\"foo\\") {
+        if (v1 === 'foo') {
           if (f0(v2) !== null) {
             return \\"error\\";
           } else {

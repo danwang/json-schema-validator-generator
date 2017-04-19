@@ -28,25 +28,25 @@ const primitivePredicate = (type: BaseType, symbol: VarType): JsAst => {
   switch (type) {
     case 'integer':
       return Ast.Binop.And(
-        Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.Literal('\'number\'')),
-        Ast.Binop.Eq(Ast.Binop.Mod(symbol, Ast.Literal(1)), Ast.Literal(0)),
+        Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('number')),
+        Ast.Binop.Eq(Ast.Binop.Mod(symbol, Ast.NumLiteral(1)), Ast.NumLiteral(0)),
       );
     case 'number':
-      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.Literal('\'number\''));
+      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('number'));
     case 'string':
-      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.Literal('\'string\''));
+      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('string'));
     case 'object':
       return Ast.Binop.And(
         symbol,
         Ast.Binop.And(
-          Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.Literal('\'object\'')),
+          Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('object')),
           Ast.Unop.Not(Ast.Call('Array.isArray', symbol)),
         ),
       );
     case 'array':
       return Ast.Call('Array.isArray', symbol);
     case 'boolean':
-      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.Literal('\'boolean\''));
+      return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('boolean'));
     case 'null':
       return Ast.Binop.Eq(symbol, Ast.Null);
     default:

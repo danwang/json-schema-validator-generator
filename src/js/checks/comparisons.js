@@ -1,5 +1,4 @@
 // @flow
-import _ from 'lodash';
 import util from 'util.js';
 import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
@@ -13,12 +12,12 @@ import type {JsAst, VarType} from 'js/jsast/ast.js';
 const comparison = (
   symbol: JsAst,
   comparator: string,
-  base: any,
+  base: ?number,
   error: JsAst,
 ): JsAst => {
-  if (base !== undefined) {
+  if (typeof base === 'number') {
     return Ast.If(
-      Ast.Binop.Any(comparator)(symbol, Ast.Literal(_.toString(base))),
+      Ast.Binop.Any(comparator)(symbol, Ast.NumLiteral(base)),
       error,
     );
   } else {

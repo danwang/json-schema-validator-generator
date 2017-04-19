@@ -43,9 +43,9 @@ const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
         );
       });
       return Ast.Body(
-        Ast.Assignment(count, Ast.Literal('0')),
+        Ast.Assignment(count, Ast.NumLiteral(0)),
         Ast.Body(...checks),
-        Ast.If(Ast.Binop.Eq(count, Ast.Literal(type.length)), context.error()),
+        Ast.If(Ast.Binop.Eq(count, Ast.NumLiteral(type.length)), context.error()),
       );
     } else {
       return Ast.Empty;
