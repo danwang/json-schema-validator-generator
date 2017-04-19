@@ -5,14 +5,7 @@ import Ast from 'js/jsast/ast.js';
 import simplify from 'js/jsast/simplify.js';
 import render from 'js/jsast/render.js';
 import uniqFuncs from 'js/jsast/uniq-funcs.js';
-
-const gengensym = () => {
-  const cache = {};
-  return (prefix: string = 'v') => {
-    cache[prefix] = cache[prefix] || 0;
-    return `${prefix}${cache[prefix]++}`;
-  };
-};
+import util from 'util.js';
 
 type Schemas = {[key: string]: Object};
 // Given a root schema and a shape (map of schemas), returns a string which, if
@@ -21,7 +14,7 @@ type Schemas = {[key: string]: Object};
 //
 // If no shape is passed, {root} is used.
 const generateValidator = (schema: Object, shape: Schemas = {root: schema}): string => {
-  const gensym = gengensym();
+  const gensym = util.gengensym();
 
   const cache = new WeakMap();
   const schemas = [];
@@ -40,7 +33,7 @@ const generateValidator = (schema: Object, shape: Schemas = {root: schema}): str
   };
 
   const makeContext = () => ({
-    gensym: gengensym(),
+    gensym: util.gengensym(),
     error: () => Ast.Return('"error"'),
     symbolForSchema,
     rootSchema: schema,

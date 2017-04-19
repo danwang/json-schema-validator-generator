@@ -6,6 +6,15 @@ import type {JsAst} from 'js/jsast/ast.js';
 const INDENT = '  ';
 const indent = (line: string, depth: number) => `${_.repeat(INDENT, depth)}${line}`;
 
+const gengensym = () => {
+  const cache = {};
+  return (prefix: string = 'v') => {
+    cache[prefix] = cache[prefix] || 0;
+    return `${prefix}${cache[prefix]++}`;
+  };
+};
+
+
 export type BaseType = (
   'integer' |
   'number' |
@@ -44,6 +53,7 @@ const typeCheck = (type: BaseType, symbol: string, body: JsAst): JsAst => {
 
 export default {
   indent,
+  gengensym,
   primitivePredicate,
   typeCheck,
 };

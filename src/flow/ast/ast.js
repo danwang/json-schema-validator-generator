@@ -11,6 +11,11 @@ type DeclarationType = {
   name: string,
   value: FlowType,
 };
+type TypeType = {
+  type: 'type',
+  name: string,
+  value: FlowType,
+};
 type LiteralType = {
   type: 'literal',
   value: string,
@@ -57,6 +62,7 @@ export type FlowType = (
   NumberType |
   StringType |
   DeclarationType |
+  TypeType |
   LiteralType |
   ExactType |
   OptionalType |
@@ -75,6 +81,7 @@ const Number: NumberType = {type: 'number'};
 const String: StringType = {type: 'string'};
 
 const Declaration = (name: string, value: FlowType): DeclarationType => ({type: 'declaration', name, value});
+const Type = (name: string, value: FlowType): TypeType => ({type: 'type', name, value});
 const Literal = (value: string): LiteralType => ({type: 'literal', value});
 const Exact = (value: mixed): ExactType => ({type: 'exact', value});
 const Optional = (child: FlowType): OptionalType => ({type: 'optional', child});
@@ -92,6 +99,7 @@ export default {
   Number,
   String,
   Declaration,
+  Type,
   Literal,
   Exact,
   Optional,

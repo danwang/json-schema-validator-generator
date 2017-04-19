@@ -33,6 +33,8 @@ const render = (ft: FlowType, depth: number = 0): string => {
   switch (ft.type) {
     case 'declaration':
       return `declare type ${ft.name} = ${render(ft.value, depth)};`;
+    case 'type':
+      return `type ${ft.name} = ${render(ft.value, depth)};`;
     case 'literal':
       return ft.value;
     case 'exact':
