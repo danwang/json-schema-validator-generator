@@ -66,7 +66,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
   return [
     '(function() {',
     body,
-    '})()',
+    '}())',
   ].join('\n');
 };
 

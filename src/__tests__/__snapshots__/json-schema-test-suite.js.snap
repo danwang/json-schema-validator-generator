@@ -27,7 +27,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalItems.json matches snapshot 2`] = `
@@ -52,7 +52,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalItems.json matches snapshot 3`] = `
@@ -78,7 +78,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalItems.json matches snapshot 4`] = `
@@ -89,7 +89,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 4`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalItems.json matches snapshot 5`] = `
@@ -109,7 +109,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 5`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] = `
@@ -154,7 +154,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] = `
@@ -200,7 +200,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] = `
@@ -226,7 +226,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] =
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] = `
@@ -255,7 +255,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
@@ -321,7 +321,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
@@ -406,7 +406,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
@@ -442,7 +442,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
@@ -450,8 +450,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) === null && (v1)++
-    f2(v0) === null && (v1)++
+    f1(v0) === null && (v1)++;
+    f2(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -474,7 +474,7 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
@@ -482,8 +482,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) === null && (v1)++
-    f2(v0) === null && (v1)++
+    f1(v0) === null && (v1)++;
+    f2(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -511,7 +511,7 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite default.json matches snapshot 1`] = `
@@ -537,7 +537,7 @@ exports[`JSON Schema test suite default.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite default.json matches snapshot 2`] = `
@@ -568,7 +568,7 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
@@ -586,7 +586,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
@@ -607,7 +607,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
@@ -647,7 +647,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
@@ -656,13 +656,13 @@ exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
     var v1;
     v1 = 0;
     if (v0 === 1) {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 2) {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 3) {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 0) {
       return 'error';
@@ -672,7 +672,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
@@ -681,19 +681,19 @@ exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
     var v1;
     v1 = 0;
     if (v0 === 6) {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'foo') {
-      (v1)++
+      (v1)++;
     }
     if (JSON.stringify(v0) === '[]') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === true) {
-      (v1)++
+      (v1)++;
     }
     if (JSON.stringify(v0) === '{\\"foo\\":12}') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 0) {
       return 'error';
@@ -703,7 +703,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
@@ -738,7 +738,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
     var v1;
     v1 = 0;
     if (v0 === 'foo') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 0) {
       return 'error';
@@ -749,7 +749,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
     var v1;
     v1 = 0;
     if (v0 === 'bar') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 0) {
       return 'error';
@@ -759,7 +759,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite items.json matches snapshot 1`] = `
@@ -787,7 +787,7 @@ exports[`JSON Schema test suite items.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite items.json matches snapshot 2`] = `
@@ -816,7 +816,7 @@ exports[`JSON Schema test suite items.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite maxItems.json matches snapshot 1`] = `
@@ -832,7 +832,7 @@ exports[`JSON Schema test suite maxItems.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
@@ -848,7 +848,7 @@ exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
@@ -864,7 +864,7 @@ exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite maximum.json matches snapshot 1`] = `
@@ -880,7 +880,7 @@ exports[`JSON Schema test suite maximum.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite maximum.json matches snapshot 2`] = `
@@ -896,7 +896,7 @@ exports[`JSON Schema test suite maximum.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite minItems.json matches snapshot 1`] = `
@@ -912,7 +912,7 @@ exports[`JSON Schema test suite minItems.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
@@ -928,7 +928,7 @@ exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
@@ -944,7 +944,7 @@ exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite minimum.json matches snapshot 1`] = `
@@ -960,7 +960,7 @@ exports[`JSON Schema test suite minimum.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
@@ -976,7 +976,7 @@ exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite multipleOf.json matches snapshot 1`] = `
@@ -994,7 +994,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite multipleOf.json matches snapshot 2`] = `
@@ -1012,7 +1012,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite multipleOf.json matches snapshot 3`] = `
@@ -1030,7 +1030,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 1`] = `
@@ -1052,7 +1052,7 @@ exports[`JSON Schema test suite not.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 2`] = `
@@ -1069,10 +1069,10 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
     var v1;
     v1 = 0;
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
-      (v1)++
+      (v1)++;
     }
     if (typeof v0 !== 'boolean') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 2) {
       return 'error';
@@ -1082,7 +1082,7 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 3`] = `
@@ -1119,7 +1119,7 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite not.json matches snapshot 4`] = `
@@ -1150,7 +1150,7 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
@@ -1159,10 +1159,10 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
     var v1;
     v1 = 0;
     if (f1(v0) === null) {
-      (v1)++
+      (v1)++;
     }
     if (f2(v0) === null) {
-      (v1)++
+      (v1)++;
     }
     if (v1 !== 1) {
       return 'error';
@@ -1186,7 +1186,7 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
@@ -1195,10 +1195,10 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
     var v1;
     v1 = 0;
     if (f1(v0) === null) {
-      (v1)++
+      (v1)++;
     }
     if (f2(v0) === null) {
-      (v1)++
+      (v1)++;
     }
     if (v1 !== 1) {
       return 'error';
@@ -1227,7 +1227,7 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
@@ -1243,7 +1243,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
@@ -1259,7 +1259,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
@@ -1287,7 +1287,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
@@ -1328,7 +1328,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
@@ -1367,7 +1367,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
@@ -1405,7 +1405,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
@@ -1480,7 +1480,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
@@ -1508,7 +1508,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
@@ -1540,7 +1540,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 3`] = `
@@ -1563,7 +1563,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
@@ -1601,7 +1601,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 5`] = `
@@ -1615,7 +1615,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 5`] = `
   return {
     root: f3,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
@@ -1641,7 +1641,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 7`] = `
@@ -1652,7 +1652,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 7`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
@@ -1678,7 +1678,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
@@ -1741,7 +1741,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite required.json matches snapshot 1`] = `
@@ -1775,7 +1775,7 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite required.json matches snapshot 2`] = `
@@ -1798,7 +1798,7 @@ exports[`JSON Schema test suite required.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 1`] = `
@@ -1812,7 +1812,7 @@ exports[`JSON Schema test suite type.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 2`] = `
@@ -1826,7 +1826,7 @@ exports[`JSON Schema test suite type.json matches snapshot 2`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 3`] = `
@@ -1840,7 +1840,7 @@ exports[`JSON Schema test suite type.json matches snapshot 3`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 4`] = `
@@ -1854,7 +1854,7 @@ exports[`JSON Schema test suite type.json matches snapshot 4`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 5`] = `
@@ -1868,7 +1868,7 @@ exports[`JSON Schema test suite type.json matches snapshot 5`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 6`] = `
@@ -1882,7 +1882,7 @@ exports[`JSON Schema test suite type.json matches snapshot 6`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 7`] = `
@@ -1896,7 +1896,7 @@ exports[`JSON Schema test suite type.json matches snapshot 7`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite type.json matches snapshot 8`] = `
@@ -1905,10 +1905,10 @@ exports[`JSON Schema test suite type.json matches snapshot 8`] = `
     var v1;
     v1 = 0;
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
-      (v1)++
+      (v1)++;
     }
     if (typeof v0 !== 'string') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 2) {
       return 'error';
@@ -1918,7 +1918,7 @@ exports[`JSON Schema test suite type.json matches snapshot 8`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;
 
 exports[`JSON Schema test suite uniqueItems.json matches snapshot 1`] = `
@@ -1941,5 +1941,5 @@ exports[`JSON Schema test suite uniqueItems.json matches snapshot 1`] = `
   return {
     root: f0,
   };
-})()"
+}())"
 `;

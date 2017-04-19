@@ -77,16 +77,22 @@ const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
   ].join('\n');
 };
 
+const STATEMENTS_WITH_SEMIS = ['assignment', 'return', 'binop', 'call', 'unop'];
+
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
     case 'assignment':
-      return `${render(ast.variable)} = ${render(ast.value)};`;
+      return `${render(ast.variable)} = ${render(ast.value)}`;
     case 'if':
       return renderIf(ast, depth);
     case 'return':
-      return `return ${render(ast.value, depth).trimLeft()};`;
+      return `return ${render(ast.value, depth).trimLeft()}`;
     case 'body':
-      return _.map(ast.body, (s) => util.indent(render(s, depth), depth)).join('\n');
+      return _.map(ast.body, (s) => {
+        const suffix = _.includes(STATEMENTS_WITH_SEMIS, s.type) ? ';' : '';
+        const line = util.indent(render(s, depth), depth);
+        return `${line}${suffix}`;
+      }).join('\n');
     case 'for':
       return renderFor(ast, depth);
     case 'forin':

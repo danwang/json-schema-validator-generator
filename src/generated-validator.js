@@ -249,8 +249,8 @@ export default (function() {
   function f10(v0) {
     var v1;
     v1 = 0;
-    f6(v0) === null && (v1)++
-    f0(v0) === null && (v1)++
+    f6(v0) === null && (v1)++;
+    f0(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -259,8 +259,8 @@ export default (function() {
   function f11(v0) {
     var v1;
     v1 = 0;
-    f0(v0) === null && (v1)++
-    f26(v0) === null && (v1)++
+    f0(v0) === null && (v1)++;
+    f26(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -322,8 +322,8 @@ export default (function() {
   function f16(v0) {
     var v1;
     v1 = 0;
-    f28(v0) === null && (v1)++
-    f25(v0) === null && (v1)++
+    f28(v0) === null && (v1)++;
+    f25(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -388,8 +388,8 @@ export default (function() {
   function f23(v0) {
     var v1;
     v1 = 0;
-    f0(v0) === null && (v1)++
-    f22(v0) === null && (v1)++
+    f0(v0) === null && (v1)++;
+    f22(v0) === null && (v1)++;
     if (v1 === 0) {
       return 'error';
     }
@@ -454,25 +454,25 @@ export default (function() {
     var v1;
     v1 = 0;
     if (v0 === 'array') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'boolean') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'integer') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'null') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'number') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'object') {
-      (v1)++
+      (v1)++;
     }
     if (v0 === 'string') {
-      (v1)++
+      (v1)++;
     }
     if (v1 === 0) {
       return 'error';
@@ -482,4 +482,4 @@ export default (function() {
   return {
     JsonSchema: f0,
   };
-})();
+}());

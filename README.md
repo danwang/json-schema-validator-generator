@@ -36,7 +36,7 @@ console.log(js);
 The generated flow string is meant for direct consumption in a project's [library definitions](https://flow.org/en/docs/libdefs/creation/). See [scripts/generate.js](https://github.com/danwang/json-schema-validator-generator/blob/master/scripts/generate.js) for an example script which writes flow types to [src/decls/json-schema.js](https://github.com/danwang/json-schema-validator-generator/blob/master/src/decls/json-schema.js).
 
 ### JS Output
-The generated JS string is an [IFFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns the string `'error'` if the model is invalid or `null` otherwise.
+The generated JS string is an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns the string `'error'` if the model is invalid or `null` otherwise.
 
 ```js
 type Validator = (data: mixed) => 'error' | null;
