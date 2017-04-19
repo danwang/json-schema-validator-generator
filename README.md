@@ -33,7 +33,7 @@ console.log(js);
 ```
 
 ### Flow Output
-The generated flow string is meant for direct consumption in a project's [library definitions](https://flow.org/en/docs/libdefs/creation/).
+The generated flow string is meant for direct consumption in a project's [library definitions](https://flow.org/en/docs/libdefs/creation/). See [examples/generate.js](https://github.com/danwang/json-schema-validator-generator/blob/master/examples/generate.js) for an example script, which writes flow types to [examples/flow-types.js](https://github.com/danwang/json-schema-validator-generator/blob/master/examples/flow-types.js).
 
 ### JS Output
 The generated JS string is an [IFFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns the string `'error'` if the model is invalid or `null` otherwise.
@@ -45,16 +45,7 @@ type Validator = (data: mixed) => 'error' | null;
 It's recommended to write the generated JS to the filesystem, but it's possible to use the generated code at runtime.
 
 #### Static JS Usage
-```js
-// generate-validators.js
-import generate from 'json-schema-validator-generator';
-import schema from 'path/to/schema.json';
-import fs from 'fs';
-
-const MODELS = 'path/to/generated-models.js';
-const {js} = generate(schema);
-fs.writeFileSync(MODELS, `export default ${js};`);
-```
+See [examples/generate.js](https://github.com/danwang/json-schema-validator-generator/blob/master/examples/generate.js) for an example script, which writes validators to [examples/validators.js](https://github.com/danwang/json-schema-validator-generator/blob/master/examples/validators.js).
 
 #### Dynamic JS Usage (not recommended)
 ```js
@@ -73,7 +64,7 @@ For example, consider the definition of a binary tree of numbers:
 
 ```js
 import generate from 'json-schema-validator-generator';
-const sschema = {
+const schema = {
   definitions: {
     node: {
       type: 'object',
