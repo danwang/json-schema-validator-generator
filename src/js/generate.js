@@ -40,7 +40,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
 
   const makeContext = () => ({
     gensym: gengensym(),
-    error: () => Ast.Return(Ast.Literal('"error"')),
+    error: () => Ast.Return(Ast.StringLiteral('error')),
     symbolForSchema,
     rootSchema: schema,
   });
