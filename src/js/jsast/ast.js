@@ -107,13 +107,13 @@ export type TypeOfType = {
 };
 
 const Function1 = (
-  name: VarType | string,
-  argument: VarType | string,
+  name: VarType,
+  argument: VarType,
   body: JsAst,
 ): Function1Type => ({
   type: 'function1',
-  name: Var(name),
-  argument: Var(argument),
+  name,
+  argument,
   body: Body(body),
 });
 const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {

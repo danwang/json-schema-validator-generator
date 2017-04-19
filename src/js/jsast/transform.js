@@ -34,10 +34,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return Ast.Empty;
       case 'function1':
         return Ast.Function1(
-          // $FlowFixMe
-          recur(ast.name),
-          // $FlowFixMe
-          recur(ast.argument),
+          (recur(ast.name): any),
+          (recur(ast.argument): any),
           recur(ast.body),
         );
       case 'binop':

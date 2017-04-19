@@ -6,6 +6,7 @@ import simplify from 'js/jsast/simplify.js';
 import render from 'js/jsast/render.js';
 import uniqFuncs from 'js/jsast/uniq-funcs.js';
 import util from 'util.js';
+import type {VarType} from 'js/jsast/ast.js';
 
 const gengensym = () => {
   const g = util.gengensym();
@@ -24,7 +25,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
   const cache = new WeakMap();
   const schemas = [];
 
-  const symbolForSchema = (schm: JsonSchema): string => {
+  const symbolForSchema = (schm: JsonSchema): VarType => {
     if (!cache.has(schm)) {
       const match = _.find(schemas, (s) => _.isEqual(s, schm));
       if (match) {
@@ -56,7 +57,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
   // TODO: Fix flow unhelpful error
   const simplifiedResults: any = _.values(results).map(simplify);
 
-  const schemaObject = _.mapValues(shape, (subSchema) => Ast.Literal(symbolForSchema(subSchema)));
+  const schemaObject = _.mapValues(shape, (subSchema) => symbolForSchema(subSchema));
   const ast = Ast.Body(
     ...simplifiedResults,
     Ast.Return(Ast.ObjectLiteral(schemaObject)),
