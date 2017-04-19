@@ -59,7 +59,7 @@ const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(counter, `${symbol}.length`),
-        Ast.Literal(`${counter}++`),
+        Ast.Unop.Incr(counter),
         Ast.Body(
           Ast.Assignment(result, Ast.Call(fnSym, `${symbol}[${counter}]`)),
           Ast.If(Ast.Binop.Neq(result, Ast.Null), Ast.Return(result)),

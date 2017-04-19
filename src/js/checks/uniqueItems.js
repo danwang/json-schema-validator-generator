@@ -15,7 +15,7 @@ const uniqueItems = (schema: JsonSchema, symbol: string, context: Context): JsAs
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, `${symbol}.length`),
-        Ast.Literal(`${i}++`),
+        Ast.Unop.Incr(i),
         Ast.Body(
           Ast.Assignment(stringified, Ast.Call('JSON.stringify', `${symbol}[${i}]`)),
           // TODO: Fix this because it's broken

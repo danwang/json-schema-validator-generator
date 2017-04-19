@@ -1717,7 +1717,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f17(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -2207,7 +2207,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f230(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -2271,7 +2271,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f232(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -2288,7 +2288,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f233(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -2305,7 +2305,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f42(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -2357,7 +2357,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f234(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -3540,7 +3540,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f314(v0[v1]);
         if (v2 !== null) {
           return v2;

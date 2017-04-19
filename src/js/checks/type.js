@@ -39,7 +39,7 @@ const _type = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       const checks = _.map(type, (typeOrSubSchema) => {
         return Ast.If(
           Ast.Unop.Not(predicate(typeOrSubSchema, symbol, context)),
-          `${count}++;`,
+          Ast.Unop.Incr(count),
         );
       });
       return Ast.Body(
