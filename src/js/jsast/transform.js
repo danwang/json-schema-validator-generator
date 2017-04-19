@@ -25,8 +25,7 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         );
       case 'forin':
         return Ast.ForIn(
-          // $FlowFixMe
-          recur(ast.variable),
+          (recur(ast.variable): any),
           recur(ast.iterator),
           recur(ast.body),
         );

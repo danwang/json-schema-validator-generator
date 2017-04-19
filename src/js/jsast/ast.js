@@ -159,22 +159,18 @@ const For = (
   body: JsAst,
 ): ForType => ({type: 'for', init, condition, loop, body});
 const ForIn = (
-  variable: VarType | string,
+  variable: VarType,
   iterator: JsAst,
   body: JsAst,
 ): ForInType => ({
   type: 'forin',
-  variable: Var(variable),
+  variable,
   iterator,
   body: Body(body),
 });
 const Empty = {type: 'empty'};
-const Var = (value: VarType | string): VarType => {
-  if (typeof value === 'string') {
-    return {type: 'var', value};
-  } else {
-    return value;
-  }
+const Var = (value: string): VarType => {
+  return {type: 'var', value};
 };
 const Literal = (value: LiteralType | string | number): LiteralType => {
   if (typeof value === 'number') {

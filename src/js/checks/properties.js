@@ -107,7 +107,7 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
     const keySym = context.gensym();
     const valSym = context.gensym();
 
-    const loop = Ast.ForIn(keySym, Ast.Var(symbol), Ast.Body(
+    const loop = Ast.ForIn(keySym, symbol, Ast.Body(
       Ast.Assignment(valSym, Ast.BracketAccess(symbol, keySym)),
       additionalChecks(
         schema.properties,
