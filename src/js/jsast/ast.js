@@ -19,7 +19,8 @@ export type JsAst = (
   UnopType |
   ObjectLiteralType |
   PropertyAccessType |
-  BracketAccessType
+  BracketAccessType |
+  TypeOfType
 );
 type AssignmentType = {
   type: 'assignment',
@@ -99,6 +100,10 @@ export type BracketAccessType = {
   type: 'bracketaccess',
   obj: JsAst,
   property: JsAst,
+};
+export type TypeOfType = {
+  type: 'typeof',
+  child: JsAst,
 };
 
 const Function1 = (
@@ -215,6 +220,12 @@ const BracketAccess = (obj: JsAst | string, property: JsAst | string): BracketAc
     property: (typeof property === 'string') ? Literal(property) : property,
   };
 };
+const TypeOf = (child: JsAst | string): TypeOfType => {
+  return {
+    type: 'typeof',
+    child: (typeof child === 'string') ? Literal(child) : child,
+  };
+};
 
 export default {
   Function1,
@@ -228,6 +239,7 @@ export default {
     Lte: _Binop('<='),
     Gte: _Binop('>='),
     Div: _Binop('/'),
+    Mod: _Binop('%'),
     Any: _Binop,
   },
   Assignment,
@@ -248,6 +260,7 @@ export default {
   ObjectLiteral,
   PropertyAccess,
   BracketAccess,
+  TypeOf,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
   True: Literal('true'),

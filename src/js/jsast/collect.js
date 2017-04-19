@@ -64,6 +64,8 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
           ...recur(ast.obj),
           ...recur(ast.property),
         ];
+      case 'typeof':
+        return recur(ast.child);
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }

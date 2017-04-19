@@ -111,6 +111,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return `${render(ast.obj, depth)}.${ast.property}`;
     case 'bracketaccess':
       return `${render(ast.obj, depth)}[${render(ast.property, depth)}]`;
+    case 'typeof':
+      return `typeof ${render(ast.child, depth)}`;
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

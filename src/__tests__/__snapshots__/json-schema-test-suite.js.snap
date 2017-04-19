@@ -116,7 +116,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
 "(function() {
   function f0(v0) {
     var v1, v2, v3;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
@@ -161,7 +161,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
 "(function() {
   function f0(v0) {
     var v1, v2, v3;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
@@ -207,7 +207,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] =
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (f1(v2) !== null) {
@@ -233,7 +233,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -274,7 +274,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
   }
   function f1(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f3(v1) !== null) {
@@ -282,7 +282,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
         return \\"error\\";
       }
@@ -291,7 +291,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
   }
   function f2(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
@@ -299,7 +299,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
         return \\"error\\";
       }
@@ -336,7 +336,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
     if (v2 !== null) {
       return \\"error\\";
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v3 = v0.bar;
       if (v3 !== undefined) {
         if (f3(v3) !== null) {
@@ -344,7 +344,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
         return \\"error\\";
       }
@@ -353,7 +353,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
   }
   function f1(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
@@ -361,7 +361,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
         return \\"error\\";
       }
@@ -370,7 +370,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
   }
   function f2(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.baz;
       if (v1 !== undefined) {
         if (f5(v1) !== null) {
@@ -378,7 +378,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.baz === undefined) {
         return \\"error\\";
       }
@@ -518,7 +518,7 @@ exports[`JSON Schema test suite default.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -544,7 +544,7 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -574,7 +574,7 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
 exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar !== undefined) {
         if (v0.foo === undefined) {
           return \\"error\\";
@@ -592,7 +592,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
 exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.quux !== undefined) {
         if (v0.foo === undefined) {
           return \\"error\\";
@@ -613,7 +613,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
 exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar !== undefined && f1(v0) !== null) {
         return \\"error\\";
       }
@@ -622,7 +622,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
   }
   function f1(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
@@ -710,7 +710,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -724,12 +724,12 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
         return \\"error\\";
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0 && typeof v0 === 'object' && !(Array.isArray(v0)))) {
       return \\"error\\";
     }
     return null;
@@ -854,7 +854,7 @@ exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
 exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (Object.keys(v0).length > 2) {
         return \\"error\\";
       }
@@ -934,7 +934,7 @@ exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
 exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (Object.keys(v0).length < 1) {
         return \\"error\\";
       }
@@ -1097,7 +1097,7 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
   }
   function f1(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
@@ -1105,7 +1105,7 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
         }
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0 && typeof v0 === 'object' && !(Array.isArray(v0)))) {
       return \\"error\\";
     }
     return null;
@@ -1126,7 +1126,7 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1266,7 +1266,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (v1.match(/f.*o/)) {
@@ -1294,7 +1294,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (v1.match(/a*/)) {
@@ -1335,7 +1335,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (v1.match(/[0-9]{2,}/)) {
@@ -1374,7 +1374,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1412,7 +1412,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     var v1, v2, v3;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
@@ -1487,7 +1487,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     var v1, v2, v3;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v3 = false;
@@ -1515,7 +1515,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1570,7 +1570,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
 "(function() {
   function f0(v0) {
     var v1, v2, v3;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.tilda;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
@@ -1622,7 +1622,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
@@ -1659,7 +1659,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.$ref;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1685,7 +1685,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.meta;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1699,7 +1699,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.meta === undefined) {
         return \\"error\\";
       }
@@ -1707,7 +1707,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
         return \\"error\\";
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0 && typeof v0 === 'object' && !(Array.isArray(v0)))) {
       return \\"error\\";
     }
     return null;
@@ -1748,7 +1748,7 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1762,7 +1762,7 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
         return \\"error\\";
       }
@@ -1782,7 +1782,7 @@ exports[`JSON Schema test suite required.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     var v1;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -1846,7 +1846,7 @@ exports[`JSON Schema test suite type.json matches snapshot 3`] = `
 exports[`JSON Schema test suite type.json matches snapshot 4`] = `
 "(function() {
   function f0(v0) {
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0 && typeof v0 === 'object' && !(Array.isArray(v0)))) {
       return \\"error\\";
     }
     return null;
