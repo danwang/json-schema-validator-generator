@@ -15,7 +15,7 @@ export type JsAst = (
   EmptyType |
   LiteralType |
   CallType |
-  NotType |
+  UnopType |
   ObjectLiteralType
 );
 type AssignmentType = {
@@ -73,9 +73,11 @@ type CallType = {
   fn: LiteralType,
   arg: LiteralType,
 };
-type NotType = {
-  type: 'not',
+export type UnopType = {
+  type: 'unop',
+  op: string,
   child: JsAst,
+  style: 'prefix' | 'suffix',
 };
 export type ObjectLiteralType = {
   type: 'objectliteral',
@@ -153,10 +155,12 @@ const Call = (fn: string, arg: string) => {
     arg: Literal(arg),
   };
 };
-const Not = (child: JsAst | string): NotType => {
+const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst | string): UnopType => {
   return {
-    type: 'not',
+    type: 'unop',
     child: (typeof child === 'string') ? Literal(child) : child,
+    op,
+    style,
   };
 };
 const ObjectLiteral = (object: {[key: string]: JsAst}): ObjectLiteralType => {
@@ -188,6 +192,12 @@ export default {
   Empty,
   Literal,
   Call,
-  Not,
+  Unop: {
+    Not: _Unop('!', 'prefix'),
+    Incr: _Unop('++', 'suffix'),
+    Any: _Unop,
+  },
   ObjectLiteral,
+  Null: Literal('null'),
+  Undefined: Literal('undefined'),
 };

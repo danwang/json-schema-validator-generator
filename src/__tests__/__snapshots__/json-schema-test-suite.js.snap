@@ -5,7 +5,7 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 1`] = `
   function f0(v0) {
     var v1;
     v1 = 1;
-    for (; v1 < v0.length; v1++) {
+    for (; v1 < v0.length; (v1)++) {
       if (f1(v0[v1]) !== null) {
         return \\"error\\";
       }
@@ -450,8 +450,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) ===     null &&     v1++
-    f2(v0) ===     null &&     v1++
+    f1(v0) ===     null &&     (v1)++
+    f2(v0) ===     null &&     (v1)++
     if (v1 === 0) {
       return \\"error\\";
     }
@@ -482,8 +482,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) ===     null &&     v1++
-    f2(v0) ===     null &&     v1++
+    f1(v0) ===     null &&     (v1)++
+    f2(v0) ===     null &&     (v1)++
     if (v1 === 0) {
       return \\"error\\";
     }
@@ -656,13 +656,13 @@ exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
     var v1;
     v1 = 0;
     if (v0 === 1) {
-      v1++
+      (v1)++
     }
     if (v0 === 2) {
-      v1++
+      (v1)++
     }
     if (v0 === 3) {
-      v1++
+      (v1)++
     }
     if (v1 === 0) {
       return \\"error\\";
@@ -681,19 +681,19 @@ exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
     var v1;
     v1 = 0;
     if (v0 === 6) {
-      v1++
+      (v1)++
     }
     if (v0 === \\"foo\\") {
-      v1++
+      (v1)++
     }
     if (JSON.stringify(v0) === '[]') {
-      v1++
+      (v1)++
     }
     if (v0 === true) {
-      v1++
+      (v1)++
     }
     if (JSON.stringify(v0) === '{\\"foo\\":12}') {
-      v1++
+      (v1)++
     }
     if (v1 === 0) {
       return \\"error\\";
@@ -738,7 +738,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
     var v1;
     v1 = 0;
     if (v0 === \\"foo\\") {
-      v1++
+      (v1)++
     }
     if (v1 === 0) {
       return \\"error\\";
@@ -749,7 +749,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
     var v1;
     v1 = 0;
     if (v0 === \\"bar\\") {
-      v1++
+      (v1)++
     }
     if (v1 === 0) {
       return \\"error\\";

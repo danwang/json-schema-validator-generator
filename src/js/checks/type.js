@@ -19,13 +19,13 @@ const _type = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   const {type} = schema;
   if (typeof type === 'string') {
     return Ast.If(
-      Ast.Not(util.primitivePredicate(type, symbol)),
+      Ast.Unop.Not(util.primitivePredicate(type, symbol)),
       context.error(),
     );
   } else if (Array.isArray(type)) {
     if (type.length === 1) {
       return Ast.If(
-        Ast.Not(predicate(type[0], symbol, context)),
+        Ast.Unop.Not(predicate(type[0], symbol, context)),
         context.error(),
       );
     } else if (type.length > 1) {
@@ -38,7 +38,7 @@ const _type = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       const count = context.gensym();
       const checks = _.map(type, (typeOrSubSchema) => {
         return Ast.If(
-          Ast.Not(predicate(typeOrSubSchema, symbol, context)),
+          Ast.Unop.Not(predicate(typeOrSubSchema, symbol, context)),
           `${count}++;`,
         );
       });

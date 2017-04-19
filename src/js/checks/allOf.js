@@ -12,7 +12,7 @@ const allOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       return Ast.Body(
         Ast.Assignment(result, Ast.Call(fnSym, symbol)),
         Ast.If(
-          Ast.Binop.Neq(result, 'null'),
+          Ast.Binop.Neq(result, Ast.Null),
           context.error(),
         ),
       );

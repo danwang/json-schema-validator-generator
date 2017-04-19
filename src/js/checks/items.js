@@ -20,10 +20,10 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, `${symbol}.length`),
-        Ast.Literal(`${i}++`),
+        Ast.Unop.Incr(i),
         Ast.Body(
           Ast.If(
-            Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), 'null'),
+            Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), Ast.Null),
             context.error(),
           ),
         ),
@@ -43,7 +43,7 @@ const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
       return Ast.If(
         Ast.Binop.And(
           Ast.Binop.Lt(`${i}`, `${symbol}.length`),
-          Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), 'null'),
+          Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), Ast.Null),
         ),
         context.error(),
       );
@@ -55,14 +55,14 @@ const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
     const result = context.gensym();
     const check = Ast.Body(
       Ast.Assignment(counter, Ast.Literal('0')),
-      Ast.Assignment(result, Ast.Literal('null')),
+      Ast.Assignment(result, Ast.Null),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(counter, `${symbol}.length`),
         Ast.Literal(`${counter}++`),
         Ast.Body(
           Ast.Assignment(result, Ast.Call(fnSym, `${symbol}[${counter}]`)),
-          Ast.If(Ast.Binop.Neq(result, 'null'), Ast.Return(result)),
+          Ast.If(Ast.Binop.Neq(result, Ast.Null), Ast.Return(result)),
         ),
       ),
     );

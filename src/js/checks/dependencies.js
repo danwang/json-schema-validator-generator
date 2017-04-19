@@ -11,26 +11,26 @@ const dependencies = (schema: JsonSchema, symbol: string, context: Context): JsA
       if (typeof check === 'string') {
         return Ast.If(
           Ast.Binop.And(
-            Ast.Binop.Neq(`${symbol}.${key}`, 'undefined'),
-            Ast.Binop.Eq(`${symbol}.${check}`, 'undefined'),
+            Ast.Binop.Neq(`${symbol}.${key}`, Ast.Undefined),
+            Ast.Binop.Eq(`${symbol}.${check}`, Ast.Undefined),
           ),
           context.error(),
         );
       } else if (Array.isArray(check)) {
         const ifs = check.map((k) => Ast.If(
-          Ast.Binop.Eq(`${symbol}.${k}`, 'undefined'),
+          Ast.Binop.Eq(`${symbol}.${k}`, Ast.Undefined),
           context.error(),
         ));
         return Ast.If(
-          Ast.Binop.Neq(`${symbol}.${key}`, 'undefined'),
+          Ast.Binop.Neq(`${symbol}.${key}`, Ast.Undefined),
           Ast.Body(...ifs),
         );
       } else {
         const fnSym = context.symbolForSchema(check);
         return Ast.If(
           Ast.Binop.And(
-            Ast.Binop.Neq(`${symbol}.${key}`, 'undefined'),
-            Ast.Binop.Neq(Ast.Call(fnSym, symbol), 'null'),
+            Ast.Binop.Neq(`${symbol}.${key}`, Ast.Undefined),
+            Ast.Binop.Neq(Ast.Call(fnSym, symbol), Ast.Null),
           ),
           context.error(),
         );

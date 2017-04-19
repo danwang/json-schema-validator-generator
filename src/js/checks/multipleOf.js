@@ -11,7 +11,7 @@ const _multipleOf = (schema: JsonSchema, symbol: string, context: Context): JsAs
     return util.typeCheck('number', symbol, Ast.Body(
       Ast.Assignment(divided, Ast.Literal(`${symbol} / ${multipleOf}`)),
       Ast.If(
-        Ast.Not(util.primitivePredicate('integer', divided)),
+        Ast.Unop.Not(util.primitivePredicate('integer', divided)),
         context.error(),
       ),
     ));

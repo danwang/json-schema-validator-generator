@@ -1733,7 +1733,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     v1 = 0;
     if (v0 === \\"list\\") {
-      v1++
+      (v1)++
     }
     if (v1 === 0) {
       return \\"error\\";

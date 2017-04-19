@@ -51,7 +51,7 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
           ...recur(ast.fn),
           ...recur(ast.arg),
         ];
-      case 'not':
+      case 'unop':
         return recur(ast.child);
       case 'objectliteral':
         return _.flatMap(ast.object, recur);

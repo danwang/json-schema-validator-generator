@@ -15,8 +15,8 @@ const anyOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
     const checks: Array<JsAst> = _.map(schema.anyOf, (subSchema) => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.Binop.And(
-        Ast.Binop.Eq(Ast.Call(fnSym, symbol), 'null'),
-        `${count}++`,
+        Ast.Binop.Eq(Ast.Call(fnSym, symbol), Ast.Null),
+        Ast.Unop.Incr(count),
       );
     });
     return Ast.Body(

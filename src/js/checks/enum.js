@@ -9,13 +9,13 @@ const _enum = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
     const match = context.gensym();
     const checks: Array<JsAst> = _.map(schema.enum, (value) => {
       if (typeof value === 'number' || typeof value === 'boolean') {
-        return Ast.If(Ast.Binop.Eq(symbol, _.toString(value)), `${match}++`);
+        return Ast.If(Ast.Binop.Eq(symbol, _.toString(value)), Ast.Unop.Incr(match));
       } else if (typeof value === 'string') {
-        return Ast.If(Ast.Binop.Eq(symbol, `"${value}"`), `${match}++`);
+        return Ast.If(Ast.Binop.Eq(symbol, `"${value}"`), Ast.Unop.Incr(match));
       } else {
         return Ast.If(
           Ast.Binop.Eq(`JSON.stringify(${symbol})`, `'${JSON.stringify(value)}'`),
-          `${match}++`,
+          Ast.Unop.Incr(match),
         );
       }
     });

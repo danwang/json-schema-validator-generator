@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import type {
-  JsAst, IfType, ForType, ForInType, Function1Type, ObjectLiteralType,
+  JsAst, IfType, ForType, ForInType, Function1Type, UnopType, ObjectLiteralType,
 } from 'js/jsast/ast.js';
 import getVars from 'js/jsast/get-vars.js';
 import util from 'util.js';
@@ -55,6 +55,15 @@ const renderFunction = (ast: Function1Type, depth: number) => {
   ].join('\n');
 };
 
+const renderUnop = (ast: UnopType, depth: number) => {
+  const child = `(${render(ast.child)})`;
+  if (ast.style === 'prefix') {
+    return util.indent(`${ast.op}${child}`, depth);
+  } else {
+    return util.indent(`${child}${ast.op}`, depth);
+  }
+};
+
 const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
   const {object} = ast;
   const lines = _.map(object, (value, key) => {
@@ -92,8 +101,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return util.indent(ast.value, depth);
     case 'call':
       return util.indent(`${render(ast.fn)}(${render(ast.arg)})`, depth);
-    case 'not':
-      return util.indent(`!(${render(ast.child)})`, depth);
+    case 'unop':
+      return renderUnop(ast, depth);
     case 'objectliteral':
       return renderObjectLiteral(ast, depth);
     default:
