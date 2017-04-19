@@ -52,6 +52,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return Ast.Unop.Any(ast.op, ast.style)(recur(ast.child));
       case 'objectliteral':
         return Ast.ObjectLiteral(_.mapValues(ast.object, recur));
+      case 'propertyaccess':
+        return Ast.PropertyAccess(recur(ast.obj), ast.property);
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }

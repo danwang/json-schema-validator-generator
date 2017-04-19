@@ -450,8 +450,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) ===     null &&     (v1)++
-    f2(v0) ===     null &&     (v1)++
+    f1(v0) === null && (v1)++
+    f2(v0) === null && (v1)++
     if (v1 === 0) {
       return \\"error\\";
     }
@@ -482,8 +482,8 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   function f0(v0) {
     var v1;
     v1 = 0;
-    f1(v0) ===     null &&     (v1)++
-    f2(v0) ===     null &&     (v1)++
+    f1(v0) === null && (v1)++
+    f2(v0) === null && (v1)++
     if (v1 === 0) {
       return \\"error\\";
     }

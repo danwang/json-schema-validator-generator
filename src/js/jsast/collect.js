@@ -55,6 +55,8 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
         return recur(ast.child);
       case 'objectliteral':
         return _.flatMap(ast.object, recur);
+      case 'propertyaccess':
+        return recur(ast.obj);
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }

@@ -105,6 +105,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return renderUnop(ast, depth);
     case 'objectliteral':
       return renderObjectLiteral(ast, depth);
+    case 'propertyaccess':
+      return `${render(ast.obj, depth)}.${ast.property}`;
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

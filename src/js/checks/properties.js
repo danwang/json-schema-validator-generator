@@ -119,7 +119,7 @@ const properties = (schema: JsonSchema, symbol: string, context: Context): JsAst
       const fnSym = context.symbolForSchema(subSchema);
       const sym = context.gensym();
       return Ast.Body(
-        Ast.Assignment(sym, Ast.Literal(`${symbol}.${key}`)),
+        Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
         Ast.If(
           Ast.Binop.Neq(sym, 'undefined'),
           Ast.If(

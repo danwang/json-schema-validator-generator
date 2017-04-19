@@ -16,7 +16,8 @@ export type JsAst = (
   LiteralType |
   CallType |
   UnopType |
-  ObjectLiteralType
+  ObjectLiteralType |
+  PropertyAccessType
 );
 type AssignmentType = {
   type: 'assignment',
@@ -82,6 +83,11 @@ export type UnopType = {
 export type ObjectLiteralType = {
   type: 'objectliteral',
   object: {[key: string]: JsAst},
+};
+export type PropertyAccessType = {
+  type: 'propertyaccess',
+  obj: JsAst,
+  property: string,
 };
 
 const Function1 = (
@@ -175,6 +181,13 @@ const ObjectLiteral = (object: {[key: string]: JsAst}): ObjectLiteralType => {
     object,
   };
 };
+const PropertyAccess = (obj: JsAst | string, property: string): PropertyAccessType => {
+  return {
+    type: 'propertyaccess',
+    obj: (typeof obj === 'string') ? Literal(obj) : obj,
+    property,
+  };
+};
 
 export default {
   Function1,
@@ -204,6 +217,7 @@ export default {
     Any: _Unop,
   },
   ObjectLiteral,
+  PropertyAccess,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
 };
