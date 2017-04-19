@@ -4,7 +4,7 @@ import fs from 'fs';
 import generateValidator from 'js/generate.js';
 
 const WHITELIST = [
-  // 'additionalItems.json',
+  'additionalItems.json',
   'additionalProperties.json',
   'allOf.json',
   'anyOf.json',
@@ -32,7 +32,7 @@ const WHITELIST = [
   // 'refRemote.json',
   'required.json',
   'type.json',
-  // 'uniqueItems.json',
+  'uniqueItems.json',
 ];
 
 const singleTest = (test, code, validator) => {

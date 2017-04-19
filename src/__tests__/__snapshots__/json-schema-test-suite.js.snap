@@ -1,5 +1,117 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`JSON Schema test suite additionalItems.json matches snapshot 1`] = `
+"(function() {
+  function f0(v0) {
+    var v1;
+    v1 = 1;
+    for (; v1 < v0.length; v1++) {
+      if (f1(v0[v1]) !== null) {
+        return \\"error\\";
+      }
+    }
+    if (0 < v0.length && f2(v0[0]) !== null) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  function f1(v0) {
+    if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  function f2(v0) {
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite additionalItems.json matches snapshot 2`] = `
+"(function() {
+  function f0(v0) {
+    var v1, v2;
+    if (Array.isArray(v0)) {
+      v1 = 0;
+      v2 = null;
+      for (; v1 < v0.length; v1++) {
+        v2 = f1(v0[v1]);
+        if (v2 !== null) {
+          return v2;
+        }
+      }
+    }
+    return null;
+  }
+  function f1(v0) {
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite additionalItems.json matches snapshot 3`] = `
+"(function() {
+  function f0(v0) {
+    if (v0.length > 3) {
+      return \\"error\\";
+    }
+    if (0 < v0.length && f1(v0[0]) !== null) {
+      return \\"error\\";
+    }
+    if (1 < v0.length && f1(v0[1]) !== null) {
+      return \\"error\\";
+    }
+    if (2 < v0.length && f1(v0[2]) !== null) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  function f1(v0) {
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite additionalItems.json matches snapshot 4`] = `
+"(function() {
+  function f0(v0) {
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite additionalItems.json matches snapshot 5`] = `
+"(function() {
+  function f0(v0) {
+    if (0 < v0.length && f1(v0[0]) !== null) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  function f1(v0) {
+    if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+      return \\"error\\";
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
 exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
@@ -1667,6 +1779,29 @@ exports[`JSON Schema test suite type.json matches snapshot 8`] = `
     }
     if (v1 === 2) {
       return \\"error\\";
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite uniqueItems.json matches snapshot 1`] = `
+"(function() {
+  function f0(v0) {
+    var v1, v2, v3;
+    if (Array.isArray(v0)) {
+      v1 = {};
+      v2 = 0;
+      for (; v2 < v0.length; v2++) {
+        v3 = JSON.stringify(v0[v2]);
+        v1[v3] = true;
+      }
+      if (Object.keys(v1).length !== v0.length) {
+        return \\"error\\";
+      }
     }
     return null;
   }

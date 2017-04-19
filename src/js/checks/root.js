@@ -11,6 +11,7 @@ import properties from 'js/checks/properties.js';
 import ref from 'js/checks/ref.js';
 import required from 'js/checks/required.js';
 import type from 'js/checks/type.js';
+import uniqueItems from 'js/checks/uniqueItems.js';
 
 import type {Context} from 'types.js';
 
@@ -35,6 +36,7 @@ const root = (schema: Object, context: Context): Function1Type => {
     properties(schema, symbol, context),
     required(schema, symbol, context),
     type(schema, symbol, context),
+    uniqueItems(schema, symbol, context),
   );
 
   return Ast.Function1(

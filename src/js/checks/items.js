@@ -5,9 +5,38 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
+const additionalItems = (schema: Object, symbol: string, context: Context): JsAst => {
+  if (schema.additionalItems === false) {
+    return Ast.If(
+      Ast.Binop.Gt(`${symbol}.length`, `${schema.items.length}`),
+      context.error(),
+    );
+  } else if (schema.additionalItems !== undefined) {
+    const fnSym = context.symbolForSchema(schema.additionalItems);
+    const i = context.gensym();
+    return Ast.Body(
+      Ast.Assignment(i, Ast.Literal(`${schema.items.length}`)),
+      Ast.For(
+        Ast.Empty,
+        Ast.Binop.Lt(i, `${symbol}.length`),
+        Ast.Literal(`${i}++`),
+        Ast.Body(
+          Ast.If(
+            Ast.Binop.Neq(Ast.Call(fnSym, `${symbol}[${i}]`), 'null'),
+            context.error(),
+          ),
+        ),
+      ),
+    );
+  } else {
+    return Ast.Empty;
+  }
+};
+
 const items = (schema: Object, symbol: string, context: Context): JsAst => {
   if (Array.isArray(schema.items)) {
     // Tuple. Handle each item individually.
+    const additionalCheck = additionalItems(schema, symbol, context);
     const checks = _.map(schema.items, (subSchema, i) => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
@@ -18,7 +47,7 @@ const items = (schema: Object, symbol: string, context: Context): JsAst => {
         context.error(),
       );
     });
-    return Ast.Body(...checks);
+    return Ast.Body(additionalCheck, ...checks);
   } else if (schema.items) {
     const fnSym = context.symbolForSchema(schema.items);
     const counter = context.gensym();
