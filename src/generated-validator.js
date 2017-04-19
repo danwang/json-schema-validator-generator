@@ -3,7 +3,7 @@
 export default (function() {
   function f0(v0) {
     var v1, v2, v3, v4, v5, v6, v7, v8, v9, v10, v11, v12, v13, v14, v15, v16, v17, v18, v19, v20, v21, v22, v23, v24, v25, v26, v27, v28, v29, v30, v31, v32;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.exclusiveMaximum !== undefined) {
         if (v0.maximum === undefined) {
           return "error";
@@ -15,7 +15,7 @@ export default (function() {
         }
       }
     }
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
@@ -209,13 +209,13 @@ export default (function() {
         }
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       return "error";
     }
     return null;
   }
   function f1(v0) {
-    if (!(typeof v0 === 'string')) {
+    if (typeof v0 !== 'string') {
       return "error";
     }
     return null;
@@ -229,19 +229,19 @@ export default (function() {
         return "error";
       }
     }
-    if (!(typeof v0 === 'number')) {
+    if (typeof v0 !== 'number') {
       return "error";
     }
     return null;
   }
   function f5(v0) {
-    if (!(typeof v0 === 'number')) {
+    if (typeof v0 !== 'number') {
       return "error";
     }
     return null;
   }
   function f6(v0) {
-    if (!(typeof v0 === 'boolean')) {
+    if (typeof v0 !== 'boolean') {
       return "error";
     }
     return null;
@@ -249,8 +249,8 @@ export default (function() {
   function f10(v0) {
     var v1;
     v1 = 0;
-    f6(v0) ===     null &&     v1++
-    f0(v0) ===     null &&     v1++
+    f6(v0) === null && (v1)++
+    f0(v0) === null && (v1)++
     if (v1 === 0) {
       return "error";
     }
@@ -259,8 +259,8 @@ export default (function() {
   function f11(v0) {
     var v1;
     v1 = 0;
-    f0(v0) ===     null &&     v1++
-    f26(v0) ===     null &&     v1++
+    f0(v0) === null && (v1)++
+    f26(v0) === null && (v1)++
     if (v1 === 0) {
       return "error";
     }
@@ -268,7 +268,7 @@ export default (function() {
   }
   function f13(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (f0(v2) !== null) {
@@ -276,14 +276,14 @@ export default (function() {
         }
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       return "error";
     }
     return null;
   }
   function f14(v0) {
     var v1, v2;
-    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       for (var v1 in v0) {
         v2 = v0[v1];
         if (f23(v2) !== null) {
@@ -291,7 +291,7 @@ export default (function() {
         }
       }
     }
-    if (!(v0 && typeof v0 === 'object' && !Array.isArray(v0))) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       return "error";
     }
     return null;
@@ -309,7 +309,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v1 = {};
       v2 = 0;
-      for (; v2 < v0.length; v2++) {
+      for (; v2 < v0.length; (v2)++) {
         v3 = JSON.stringify(v0[v2]);
         v1[v3] = true;
       }
@@ -322,8 +322,8 @@ export default (function() {
   function f16(v0) {
     var v1;
     v1 = 0;
-    f28(v0) ===     null &&     v1++
-    f25(v0) ===     null &&     v1++
+    f28(v0) === null && (v1)++
+    f25(v0) === null && (v1)++
     if (v1 === 0) {
       return "error";
     }
@@ -335,7 +335,7 @@ export default (function() {
         return "error";
       }
     }
-    if (!(typeof v0 === 'number' && v0 % 1 === 0)) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
       return "error";
     }
     return null;
@@ -357,7 +357,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f1(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -375,7 +375,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v3 = {};
       v4 = 0;
-      for (; v4 < v0.length; v4++) {
+      for (; v4 < v0.length; (v4)++) {
         v5 = JSON.stringify(v0[v4]);
         v3[v5] = true;
       }
@@ -388,8 +388,8 @@ export default (function() {
   function f23(v0) {
     var v1;
     v1 = 0;
-    f0(v0) ===     null &&     v1++
-    f22(v0) ===     null &&     v1++
+    f0(v0) === null && (v1)++
+    f22(v0) === null && (v1)++
     if (v1 === 0) {
       return "error";
     }
@@ -400,7 +400,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f28(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -418,7 +418,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v3 = {};
       v4 = 0;
-      for (; v4 < v0.length; v4++) {
+      for (; v4 < v0.length; (v4)++) {
         v5 = JSON.stringify(v0[v4]);
         v3[v5] = true;
       }
@@ -433,7 +433,7 @@ export default (function() {
     if (Array.isArray(v0)) {
       v1 = 0;
       v2 = null;
-      for (; v1 < v0.length; v1++) {
+      for (; v1 < v0.length; (v1)++) {
         v2 = f0(v0[v1]);
         if (v2 !== null) {
           return v2;
@@ -453,26 +453,26 @@ export default (function() {
   function f28(v0) {
     var v1;
     v1 = 0;
-    if (v0 === "array") {
-      v1++
+    if (v0 === 'array') {
+      (v1)++
     }
-    if (v0 === "boolean") {
-      v1++
+    if (v0 === 'boolean') {
+      (v1)++
     }
-    if (v0 === "integer") {
-      v1++
+    if (v0 === 'integer') {
+      (v1)++
     }
-    if (v0 === "null") {
-      v1++
+    if (v0 === 'null') {
+      (v1)++
     }
-    if (v0 === "number") {
-      v1++
+    if (v0 === 'number') {
+      (v1)++
     }
-    if (v0 === "object") {
-      v1++
+    if (v0 === 'object') {
+      (v1)++
     }
-    if (v0 === "string") {
-      v1++
+    if (v0 === 'string') {
+      (v1)++
     }
     if (v1 === 0) {
       return "error";
