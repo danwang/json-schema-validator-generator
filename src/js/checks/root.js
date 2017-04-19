@@ -20,7 +20,7 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {Function1Type} from 'js/jsast/ast.js';
 
-const root = (schema: Object, context: Context): Function1Type => {
+const root = (schema: JsonSchema, context: Context): Function1Type => {
   const fnSym = context.symbolForSchema(schema);
   const symbol = context.gensym();
 

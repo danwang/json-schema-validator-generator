@@ -6,15 +6,15 @@ import jsonpointer from 'json-pointer';
 import Ast from 'flow/ast/ast.js';
 import util from 'util.js';
 
-type Schemas = {[key: string]: Object};
+type Schemas = {[key: string]: JsonSchema};
 // Accepts the same arguments as js/generate
-const generate = (schema: Object, shape: Schemas = {root: schema}): string => {
+const generate = (schema: JsonSchema, shape: Schemas = {root: schema}): string => {
   const gensym = util.gengensym();
 
   const cache = new WeakMap(_.map(shape, (subSchema, name) => [subSchema, name]));
   const schemas = _.values(shape);
 
-  const symbolForSchema = (schm: Object): string => {
+  const symbolForSchema = (schm: JsonSchema): string => {
     if (!cache.has(schm)) {
       cache.set(schm, gensym('T'));
       schemas.push(schm);

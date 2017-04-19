@@ -4,7 +4,7 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const pattern = (schema: Object, symbol: string, context: Context): JsAst => {
+const pattern = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (schema.pattern) {
     const check = Ast.If(
       `!${symbol}.match(/${schema.pattern}/)`,

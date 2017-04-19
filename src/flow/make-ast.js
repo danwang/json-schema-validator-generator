@@ -8,8 +8,9 @@ import simplify from 'flow/simplify.js';
 const defaultResolver = () => null;
 
 type RefResolver = (ref: string) => ?string;
-const makeAst = (schema: Object, refResolver: RefResolver): FlowType => {
+const makeAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
   if (schema.$ref) {
+    // $FlowFixMe
     const resolved = refResolver(schema.$ref);
     if (resolved) {
       return Ast.Literal(resolved);
@@ -55,7 +56,7 @@ const makeAst = (schema: Object, refResolver: RefResolver): FlowType => {
   }
 };
 
-const makeObjectAst = (schema: Object, refResolver: RefResolver): FlowType => {
+const makeObjectAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
   // If properties, use emit a record. Otherwise, emit a map. We don't use
   // patternProperties because it's not expressable in flow.
   if (schema.properties) {
@@ -70,13 +71,17 @@ const makeObjectAst = (schema: Object, refResolver: RefResolver): FlowType => {
     }));
   } else {
     const {additionalProperties} = schema;
-    return Ast.Map(additionalProperties ? makeAst(additionalProperties, refResolver) : Ast.Mixed);
+    if (additionalProperties && typeof additionalProperties === 'object') {
+      return Ast.Map(makeAst(additionalProperties, refResolver));
+    } else {
+      return Ast.Map(Ast.Mixed);
+    }
   }
 };
 
-const makeArrayAst = (schema: Object, refResolver: RefResolver): FlowType => {
+const makeArrayAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
   if (schema.items) {
-    if (_.isArray(schema.items)) {
+    if (Array.isArray(schema.items)) {
       return Ast.Tuple(_.map(schema.items, (t) => makeAst(t, refResolver)));
     } else {
       return Ast.Array(makeAst(schema.items, refResolver));
@@ -86,6 +91,6 @@ const makeArrayAst = (schema: Object, refResolver: RefResolver): FlowType => {
   }
 };
 
-export default (schema: Object, refResolver: RefResolver = defaultResolver) => {
+export default (schema: JsonSchema, refResolver: RefResolver = defaultResolver) => {
   return simplify(makeAst(schema, refResolver));
 };

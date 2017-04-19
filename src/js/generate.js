@@ -7,19 +7,19 @@ import render from 'js/jsast/render.js';
 import uniqFuncs from 'js/jsast/uniq-funcs.js';
 import util from 'util.js';
 
-type Schemas = {[key: string]: Object};
+type Schemas = {[key: string]: JsonSchema};
 // Given a root schema and a shape (map of schemas), returns a string which, if
 // run in the body of a function, returns an object of the same shape whose
 // values are validators for the schemas.
 //
 // If no shape is passed, {root} is used.
-const generateValidator = (schema: Object, shape: Schemas = {root: schema}): string => {
+const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}): string => {
   const gensym = util.gengensym();
 
   const cache = new WeakMap();
   const schemas = [];
 
-  const symbolForSchema = (schm: Object): string => {
+  const symbolForSchema = (schm: JsonSchema): string => {
     if (!cache.has(schm)) {
       const match = _.find(schemas, (s) => _.isEqual(s, schm));
       if (match) {

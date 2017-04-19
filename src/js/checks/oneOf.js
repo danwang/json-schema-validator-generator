@@ -4,7 +4,7 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const oneOf = (schema: Object, symbol: string, context: Context): JsAst => {
+const oneOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (schema.oneOf) {
     // var count = 0;
     //

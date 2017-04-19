@@ -1,7 +1,7 @@
 // @flow
 import _ from 'lodash';
 import path from 'path';
-import generateValidator from 'js/generate.js';
+import generate from 'index.js';
 
 const MODELS_TO_SNAPSHOT = [
   'account',
@@ -18,10 +18,10 @@ describe('Stripe openapi', () => {
   const spec = require(path.join(__dirname, '../../', 'openapi/openapi/spec2.json'));
   it('generates a validator for the entire spec', () => {
     const definitions = _.pick(spec.definitions, MODELS_TO_SNAPSHOT);
-    const code = generateValidator(spec, definitions);
+    const code = generate(spec, definitions).js;
     expect(code).toMatchSnapshot();
 
-    const validators = eval(`(function(){${code}})()`); // eslint-disable-line no-eval
+    const validators = eval(code); // eslint-disable-line no-eval
     MODELS_TO_SNAPSHOT.forEach((property) => {
       expect(validators).toHaveProperty(property);
     });

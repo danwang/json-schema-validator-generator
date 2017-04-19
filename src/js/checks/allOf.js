@@ -4,7 +4,7 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const allOf = (schema: Object, symbol: string, context: Context): JsAst => {
+const allOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (schema.allOf) {
     const nodes = _.flatMap(schema.allOf, (subSchema) => {
       const fnSym = context.symbolForSchema(subSchema);

@@ -7,9 +7,9 @@ import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
 const additionalChecks = (
-  properties: ?Object,
-  patternProperties: ?Object,
-  additionalProperties: void | Object | false,
+  properties: $PropertyType<JsonSchema, 'properties'>,
+  patternProperties: $PropertyType<JsonSchema, 'patternProperties'>,
+  additionalProperties: $PropertyType<JsonSchema, 'additionalProperties'>,
   keySym: string,
   valSym: string,
   context: Context,
@@ -30,7 +30,7 @@ const additionalChecks = (
   }));
   const allChecks = [...propertyChecks, ...patternChecks];
 
-  if (additionalProperties === undefined) {
+  if (additionalProperties === undefined || additionalProperties === null || additionalProperties === true) {
     // There are properties/patternProperties, but no additionalProperties. In
     // this case, we don't need to mark non-matches
     return Ast.Body(..._.map(allChecks, ({predicate, subSchema}) => {
@@ -86,7 +86,7 @@ const additionalChecks = (
   }
 };
 
-const properties = (schema: Object, symbol: string, context: Context): JsAst => {
+const properties = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (schema.patternProperties || schema.additionalProperties !== undefined) {
     // Need to loop through all properties to check. We'll generate a loop:
     //   for (var key in json) {

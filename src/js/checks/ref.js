@@ -4,7 +4,8 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const ref = (schema: Object, symbol: string, context: Context): JsAst => {
+const ref = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+  // $FlowFixMe No ref in json schema json schema...
   const {$ref} = schema;
   if ($ref && typeof $ref === 'string' && $ref.startsWith('#')) {
     const subSchema = jsonpointer.get(context.rootSchema, decodeURIComponent($ref.substring(1)));

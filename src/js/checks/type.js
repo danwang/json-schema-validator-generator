@@ -5,7 +5,7 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const predicate = (type: string | Object, symbol: string, context: Context) => {
+const predicate = (type: string | JsonSchema, symbol: string, context: Context) => {
   if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
     return util.primitivePredicate(type, symbol);
@@ -15,19 +15,20 @@ const predicate = (type: string | Object, symbol: string, context: Context) => {
   }
 };
 
-const type = (schema: Object, symbol: string, context: Context): JsAst => {
-  if (typeof schema.type === 'string') {
+const _type = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+  const {type} = schema;
+  if (typeof type === 'string') {
     return Ast.If(
-      Ast.Not(util.primitivePredicate(schema.type, symbol)),
+      Ast.Not(util.primitivePredicate(type, symbol)),
       context.error(),
     );
-  } else if (Array.isArray(schema.type)) {
-    if (schema.type.length === 1) {
+  } else if (Array.isArray(type)) {
+    if (type.length === 1) {
       return Ast.If(
-        Ast.Not(predicate(schema.type[0], symbol, context)),
+        Ast.Not(predicate(type[0], symbol, context)),
         context.error(),
       );
-    } else if (schema.type.length > 1) {
+    } else if (type.length > 1) {
       // var count = 0;
       //
       // if (check1(data) === null) { count++ }
@@ -35,7 +36,7 @@ const type = (schema: Object, symbol: string, context: Context): JsAst => {
       //
       // if (count !== 1) { (error) }
       const count = context.gensym();
-      const checks = _.map(schema.type, (typeOrSubSchema) => {
+      const checks = _.map(type, (typeOrSubSchema) => {
         return Ast.If(
           Ast.Not(predicate(typeOrSubSchema, symbol, context)),
           `${count}++;`,
@@ -44,7 +45,7 @@ const type = (schema: Object, symbol: string, context: Context): JsAst => {
       return Ast.Body(
         Ast.Assignment(count, Ast.Literal('0')),
         Ast.Body(...checks),
-        Ast.If(Ast.Binop.Eq(count, `${schema.type.length}`), context.error()),
+        Ast.If(Ast.Binop.Eq(count, `${type.length}`), context.error()),
       );
     } else {
       return Ast.Empty;
@@ -54,4 +55,4 @@ const type = (schema: Object, symbol: string, context: Context): JsAst => {
   }
 };
 
-export default type;
+export default _type;

@@ -4,11 +4,12 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const multipleOf = (schema: Object, symbol: string, context: Context): JsAst => {
-  if (schema.multipleOf) {
+const _multipleOf = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
+  const {multipleOf} = schema;
+  if (multipleOf) {
     const divided = context.gensym();
     return util.typeCheck('number', symbol, Ast.Body(
-      Ast.Assignment(divided, Ast.Literal(`${symbol} / ${schema.multipleOf}`)),
+      Ast.Assignment(divided, Ast.Literal(`${symbol} / ${multipleOf}`)),
       Ast.If(
         Ast.Not(util.primitivePredicate('integer', divided)),
         context.error(),
@@ -19,4 +20,4 @@ const multipleOf = (schema: Object, symbol: string, context: Context): JsAst => 
   }
 };
 
-export default multipleOf;
+export default _multipleOf;

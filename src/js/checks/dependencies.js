@@ -5,7 +5,7 @@ import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 import util from 'util.js';
 
-const dependencies = (schema: Object, symbol: string, context: Context): JsAst => {
+const dependencies = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (schema.dependencies) {
     const checks = _.map(schema.dependencies, (check, key) => {
       if (typeof check === 'string') {

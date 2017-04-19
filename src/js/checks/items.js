@@ -5,17 +5,18 @@ import type {Context} from 'types.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst} from 'js/jsast/ast.js';
 
-const additionalItems = (schema: Object, symbol: string, context: Context): JsAst => {
-  if (schema.additionalItems === false) {
+const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: string, context: Context): JsAst => {
+  const {additionalItems} = schema;
+  if (additionalItems === false) {
     return Ast.If(
-      Ast.Binop.Gt(`${symbol}.length`, `${schema.items.length}`),
+      Ast.Binop.Gt(`${symbol}.length`, `${items.length}`),
       context.error(),
     );
-  } else if (schema.additionalItems !== undefined) {
-    const fnSym = context.symbolForSchema(schema.additionalItems);
+  } else if (additionalItems && typeof additionalItems === 'object') {
+    const fnSym = context.symbolForSchema(additionalItems);
     const i = context.gensym();
     return Ast.Body(
-      Ast.Assignment(i, Ast.Literal(`${schema.items.length}`)),
+      Ast.Assignment(i, Ast.Literal(`${items.length}`)),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(i, `${symbol}.length`),
@@ -33,10 +34,10 @@ const additionalItems = (schema: Object, symbol: string, context: Context): JsAs
   }
 };
 
-const items = (schema: Object, symbol: string, context: Context): JsAst => {
+const items = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   if (Array.isArray(schema.items)) {
     // Tuple. Handle each item individually.
-    const additionalCheck = additionalItems(schema, symbol, context);
+    const additionalCheck = _additionalItems(schema, schema.items, symbol, context);
     const checks = _.map(schema.items, (subSchema, i) => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(

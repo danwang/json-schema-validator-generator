@@ -26,7 +26,7 @@ const comparison = (
   }
 };
 
-const comparisons = (schema: Object, symbol: string, context: Context): JsAst => {
+const comparisons = (schema: JsonSchema, symbol: string, context: Context): JsAst => {
   const error = context.error();
   return Ast.Body(
     util.typeCheck('number', symbol, Ast.Body(

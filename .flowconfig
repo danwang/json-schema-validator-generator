@@ -1,3 +1,6 @@
+[libs]
+src/decls/
+
 [options]
 module.file_ext=.js
 module.file_ext=.json
