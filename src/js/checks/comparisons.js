@@ -11,14 +11,14 @@ import type {JsAst, VarType} from 'js/jsast/ast.js';
 //   - minItems/maxItems (array)
 //   - minProperties/maxProperties (object)
 const comparison = (
-  symbol: JsAst | string,
+  symbol: JsAst,
   comparator: string,
   base: any,
   error: JsAst,
 ): JsAst => {
   if (base !== undefined) {
     return Ast.If(
-      Ast.Binop.Any(comparator)(symbol, _.toString(base)),
+      Ast.Binop.Any(comparator)(symbol, Ast.Literal(_.toString(base))),
       error,
     );
   } else {

@@ -20,9 +20,9 @@ const anyOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       );
     });
     return Ast.Body(
-      Ast.Assignment(count, Ast.Literal('0')),
+      Ast.Assignment(count, Ast.Literal(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Eq(count, '0'), context.error()),
+      Ast.If(Ast.Binop.Eq(count, Ast.Literal(0)), context.error()),
     );
   } else {
     return Ast.Empty;

@@ -116,12 +116,12 @@ const Function1 = (
   argument,
   body: Body(body),
 });
-const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | string): BinopType => {
+const _Binop = (comparator: string) => (left: JsAst, right: JsAst): BinopType => {
   return {
     type: 'binop',
     comparator,
-    left: (typeof left === 'string') ? Literal(left) : left,
-    right: (typeof right === 'string') ? Literal(right) : right,
+    left,
+    right,
   };
 };
 const Assignment = (variable: JsAst, value: JsAst): AssignmentType => {

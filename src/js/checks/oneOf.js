@@ -18,9 +18,9 @@ const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       return Ast.If(Ast.Binop.Eq(Ast.Call(fnSym, symbol), Ast.Null), Ast.Unop.Incr(count));
     });
     return Ast.Body(
-      Ast.Assignment(count, Ast.Literal('0')),
+      Ast.Assignment(count, Ast.Literal(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Neq(count, '1'), context.error()),
+      Ast.If(Ast.Binop.Neq(count, Ast.Literal(1)), context.error()),
     );
   } else {
     return Ast.Empty;
