@@ -124,25 +124,25 @@ const _Binop = (comparator: string) => (left: JsAst | string, right: JsAst | str
     right: (typeof right === 'string') ? Literal(right) : right,
   };
 };
-const Assignment = (variable: JsAst | string, value: JsAst): AssignmentType => {
+const Assignment = (variable: JsAst, value: JsAst): AssignmentType => {
   return {
     type: 'assignment',
-    variable: (typeof variable === 'string') ? Literal(variable) : variable,
+    variable,
     value,
   };
 };
-const If = (predicate: JsAst | string, body: JsAst | string, elseBody: JsAst | string = Empty): IfType => {
+const If = (predicate: JsAst, body: JsAst, elseBody: JsAst = Empty): IfType => {
   return {
     type: 'if',
-    predicate: (typeof predicate === 'string') ? Literal(predicate) : predicate,
-    body: Body((typeof body === 'string') ? Literal(body) : body),
-    elseBody: Body((typeof elseBody === 'string') ? Literal(elseBody) : elseBody),
+    predicate,
+    body: Body(body),
+    elseBody: Body(elseBody),
   };
 };
-const Return = (value: JsAst | string): ReturnType => {
+const Return = (value: JsAst): ReturnType => {
   return {
     type: 'return',
-    value: (typeof value === 'string') ? Literal(value) : value,
+    value,
   };
 };
 const Body = (...body: Array<JsAst>): BodyType | EmptyType => {
@@ -185,17 +185,17 @@ const Literal = (value: LiteralType | string | number): LiteralType => {
     return value;
   }
 };
-const Call = (fn: JsAst | string, arg: JsAst | string) => {
+const Call = (fn: JsAst | string, arg: JsAst) => {
   return {
     type: 'call',
     fn: (typeof fn === 'string') ? Literal(fn) : fn,
-    arg: (typeof arg === 'string') ? Literal(arg) : arg,
+    arg,
   };
 };
-const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst | string): UnopType => {
+const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst): UnopType => {
   return {
     type: 'unop',
-    child: (typeof child === 'string') ? Literal(child) : child,
+    child,
     op,
     style,
   };
@@ -206,24 +206,24 @@ const ObjectLiteral = (object: {[key: string]: JsAst}): ObjectLiteralType => {
     object,
   };
 };
-const PropertyAccess = (obj: JsAst | string, property: string): PropertyAccessType => {
+const PropertyAccess = (obj: JsAst, property: string): PropertyAccessType => {
   return {
     type: 'propertyaccess',
-    obj: (typeof obj === 'string') ? Literal(obj) : obj,
+    obj,
     property,
   };
 };
-const BracketAccess = (obj: JsAst | string, property: JsAst | string): BracketAccessType => {
+const BracketAccess = (obj: JsAst, property: JsAst): BracketAccessType => {
   return {
     type: 'bracketaccess',
-    obj: (typeof obj === 'string') ? Literal(obj) : obj,
-    property: (typeof property === 'string') ? Literal(property) : property,
+    obj,
+    property,
   };
 };
-const TypeOf = (child: JsAst | string): TypeOfType => {
+const TypeOf = (child: JsAst): TypeOfType => {
   return {
     type: 'typeof',
-    child: (typeof child === 'string') ? Literal(child) : child,
+    child,
   };
 };
 

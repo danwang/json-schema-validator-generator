@@ -7,7 +7,7 @@ describe('uniqFuncs', () => {
     const ast = Ast.Body(
       Ast.Function1('f0', 'v', Ast.Empty),
       Ast.Function1('f1', 'v', Ast.Body(Ast.Return(
-        Ast.Call('f0', 'v'),
+        Ast.Call('f0', Ast.Var('v')),
       ))),
     );
     expect(uniqFuncs(ast)).toEqual(Ast.Body(
