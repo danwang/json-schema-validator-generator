@@ -21,7 +21,7 @@ console.log(flow);
 console.log(js);
 // (function() {
 //   function f0(v0) {
-//     if (!(typeof v0 === 'string')) {
+//     if (typeof v0 !== 'string') {
 //       return "error";
 //     }
 //     return null;
