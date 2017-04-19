@@ -5,6 +5,7 @@ import dependencies from 'js/checks/dependencies.js';
 import _enum from 'js/checks/enum.js';
 import items from 'js/checks/items.js';
 import comparisons from 'js/checks/comparisons.js';
+import multipleOf from 'js/checks/multipleOf.js';
 import not from 'js/checks/not.js';
 import oneOf from 'js/checks/oneOf.js';
 import pattern from 'js/checks/pattern.js';
@@ -32,6 +33,7 @@ const root = (schema: Object, context: Context): Function1Type => {
     _enum(schema, symbol, context),
     items(schema, symbol, context),
     comparisons(schema, symbol, context),
+    multipleOf(schema, symbol, context),
     not(schema, symbol, context),
     oneOf(schema, symbol, context),
     pattern(schema, symbol, context),

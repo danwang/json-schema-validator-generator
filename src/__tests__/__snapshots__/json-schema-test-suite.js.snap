@@ -979,6 +979,60 @@ exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
 })()"
 `;
 
+exports[`JSON Schema test suite multipleOf.json matches snapshot 1`] = `
+"(function() {
+  function f0(v0) {
+    var v1;
+    if (typeof v0 === 'number') {
+      v1 = v0 / 2;
+      if (!(typeof v1 === 'number' && v1 % 1 === 0)) {
+        return \\"error\\";
+      }
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite multipleOf.json matches snapshot 2`] = `
+"(function() {
+  function f0(v0) {
+    var v1;
+    if (typeof v0 === 'number') {
+      v1 = v0 / 1.5;
+      if (!(typeof v1 === 'number' && v1 % 1 === 0)) {
+        return \\"error\\";
+      }
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
+exports[`JSON Schema test suite multipleOf.json matches snapshot 3`] = `
+"(function() {
+  function f0(v0) {
+    var v1;
+    if (typeof v0 === 'number') {
+      v1 = v0 / 0.0001;
+      if (!(typeof v1 === 'number' && v1 % 1 === 0)) {
+        return \\"error\\";
+      }
+    }
+    return null;
+  }
+  return {
+    root: f0,
+  };
+})()"
+`;
+
 exports[`JSON Schema test suite not.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {

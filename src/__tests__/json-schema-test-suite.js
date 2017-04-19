@@ -21,7 +21,7 @@ const WHITELIST = [
   'minLength.json',
   'minProperties.json',
   'minimum.json',
-  // 'multipleOf.json',
+  'multipleOf.json',
   'not.json',
   'oneOf.json',
   'optional',
