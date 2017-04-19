@@ -19,8 +19,13 @@ const renderTuple = (ft: TupleType, depth: number) => {
 
 const renderRecord = (ft: RecordType, depth: number) => {
   const contents = _.map(ft.fields, (subtype, key) => {
-    const rendered = render(subtype, depth + 1);
-    return util.indent(`${key}: ${rendered},`, depth + 1);
+    if (subtype.type === 'optional') {
+      const rendered = render(subtype.child, depth + 1);
+      return util.indent(`${key}?: ${rendered},`, depth + 1);
+    } else {
+      const rendered = render(subtype, depth + 1);
+      return util.indent(`${key}: ${rendered},`, depth + 1);
+    }
   });
   return [
     '{',

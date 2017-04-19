@@ -9,7 +9,6 @@ const simplifyOptional = (ft: OptionalType) => {
   const simplified = simplify(child);
   switch (child.type) {
     case 'optional':
-    case 'mixed':
       return simplified;
     default:
       return Ast.Optional(simplified);

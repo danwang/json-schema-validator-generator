@@ -3,7 +3,7 @@ import Ast from 'flow/ast/ast.js';
 import type {FlowType} from 'flow/ast/ast.js';
 import makeAst from 'flow/make-ast.js';
 
-const assertType = (schema: Object, ft: FlowType) => {
+const assertType = (schema: JsonSchema, ft: FlowType) => {
   expect(makeAst(schema)).toEqual(ft);
 };
 
@@ -137,7 +137,9 @@ describe('makeAst', () => {
       const schema = {
         type: [
           'string',
+          // $FlowFixMe Not expressed correctly in schema
           {type: 'boolean'},
+          // $FlowFixMe Not expressed correctly in schema
           {
             type: 'object',
             properties: {
