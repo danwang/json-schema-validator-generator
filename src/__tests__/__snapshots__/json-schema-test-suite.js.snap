@@ -1037,9 +1037,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 3`] = `
 exports[`JSON Schema test suite not.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
-    var v1;
-    v1 = f1(v0);
-    if (v1 === null) {
+    if (f1(v0) === null) {
       /* not */
       return 'error';
     }
@@ -1061,9 +1059,7 @@ exports[`JSON Schema test suite not.json matches snapshot 1`] = `
 exports[`JSON Schema test suite not.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
-    var v1;
-    v1 = f1(v0);
-    if (v1 === null) {
+    if (f1(v0) === null) {
       /* not */
       return 'error';
     }
@@ -1093,9 +1089,7 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
 exports[`JSON Schema test suite not.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
-    var v1;
-    v1 = f1(v0);
-    if (v1 === null) {
+    if (f1(v0) === null) {
       /* not */
       return 'error';
     }
@@ -1143,9 +1137,7 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
     return null;
   }
   function f1(v0) {
-    var v1;
-    v1 = f2(v0);
-    if (v1 === null) {
+    if (f2(v0) === null) {
       /* not */
       return 'error';
     }

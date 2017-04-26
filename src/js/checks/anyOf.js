@@ -15,7 +15,7 @@ const anyOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
 
     const checks: Array<JsAst> = _.map(schema.anyOf, (subSchema) => {
       return Ast.Binop.And(
-        Ast.Unop.Not(M.FailedCheck(subSchema, symbol, context)),
+        M.PassedCheck(subSchema, symbol, context),
         Ast.Unop.Incr(count),
       );
     });

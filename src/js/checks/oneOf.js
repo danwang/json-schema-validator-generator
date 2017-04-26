@@ -3,6 +3,7 @@ import _ from 'lodash';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.oneOf) {
@@ -14,8 +15,10 @@ const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     // if (count !== 1) { (error) }
     const count = context.gensym();
     const checks = _.map(schema.oneOf, (subSchema) => {
-      const fnSym = context.symbolForSchema(subSchema);
-      return Ast.If(Ast.Binop.Eq(Ast.Call(fnSym, symbol), Ast.Null), Ast.Unop.Incr(count));
+      return Ast.If(
+        M.PassedCheck(subSchema, symbol, context),
+        Ast.Unop.Incr(count),
+      );
     });
     return Ast.Body(
       Ast.Assignment(count, Ast.NumLiteral(0)),

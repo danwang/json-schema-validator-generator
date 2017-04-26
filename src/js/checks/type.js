@@ -4,14 +4,14 @@ import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 const predicate = (type: string | JsonSchema, symbol: VarType, context: Context) => {
   if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
-    return util.primitivePredicate(type, symbol);
+    return Ast.Unop.Not(util.primitivePredicate(type, symbol));
   } else {
-    const fnSym = context.symbolForSchema(type);
-    return Ast.Binop.Eq(Ast.Call(fnSym, symbol), Ast.Null);
+    return M.FailedCheck(type, symbol, context);
   }
 };
 
@@ -20,13 +20,13 @@ const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
   const error = context.error(schema, 'type');
   if (typeof type === 'string') {
     return Ast.If(
-      Ast.Unop.Not(util.primitivePredicate(type, symbol)),
+      predicate(type, symbol, context),
       error,
     );
   } else if (Array.isArray(type)) {
     if (type.length === 1) {
       return Ast.If(
-        Ast.Unop.Not(predicate(type[0], symbol, context)),
+        predicate(type[0], symbol, context),
         error,
       );
     } else if (type.length > 1) {
@@ -39,7 +39,7 @@ const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       const count = context.gensym();
       const checks = _.map(type, (typeOrSubSchema) => {
         return Ast.If(
-          Ast.Unop.Not(predicate(typeOrSubSchema, symbol, context)),
+          predicate(typeOrSubSchema, symbol, context),
           Ast.Unop.Incr(count),
         );
       });

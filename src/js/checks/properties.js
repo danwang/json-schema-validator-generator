@@ -4,6 +4,7 @@ import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 const additionalChecks = (
   schema: JsonSchema,
@@ -39,11 +40,10 @@ const additionalChecks = (
     // There are properties/patternProperties, but no additionalProperties. In
     // this case, we don't need to mark non-matches
     return Ast.Body(..._.map(allChecks, ({predicate, subSchema, error}) => {
-      const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
+          M.FailedCheck(subSchema, valSym, context),
           error,
         ),
       );
@@ -55,9 +55,8 @@ const additionalChecks = (
     if (additionalProperties === false) {
       return error;
     } else {
-      const fnSym = context.symbolForSchema(additionalProperties);
       return Ast.If(
-        Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
+        M.FailedCheck(additionalProperties, valSym, context),
         error,
       );
     }
@@ -67,11 +66,10 @@ const additionalChecks = (
     // decide whether or not to check additionalProperties.
     const hitSym = context.gensym();
     const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
-      const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         predicate,
         Ast.If(
-          Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
+          M.FailedCheck(subSchema, valSym, context),
           error,
           Ast.Assignment(hitSym, Ast.True),
         ),
@@ -81,10 +79,7 @@ const additionalChecks = (
     const additionalCheck = Ast.If(
       Ast.Binop.Eq(hitSym, Ast.False),
       additionalProperties === false ? additionalError : Ast.If(
-        Ast.Binop.Neq(
-          Ast.Call(context.symbolForSchema(additionalProperties), valSym),
-          Ast.Null,
-        ),
+        M.FailedCheck(additionalProperties, valSym, context),
         additionalError,
       ),
     );
@@ -128,13 +123,12 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
     // Static list of properties to check
     const sym = context.gensym();
     const checks = Ast.Body(..._.flatMap(schema.properties, (subSchema, key) => {
-      const fnSym = context.symbolForSchema(subSchema);
       return Ast.Body(
         Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
         Ast.If(
           Ast.Binop.Neq(sym, Ast.Undefined),
           Ast.If(
-            Ast.Binop.Neq(Ast.Call(fnSym, sym), Ast.Null),
+            M.FailedCheck(subSchema, sym, context),
             context.error(schema, `properties[${key}]`),
           ),
         ),
