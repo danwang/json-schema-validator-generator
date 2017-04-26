@@ -162,7 +162,13 @@ const For = (
   condition: JsAst,
   loop: JsAst,
   body: JsAst,
-): ForType => ({type: 'for', init, condition, loop, body});
+): ForType => ({
+  type: 'for',
+  init,
+  condition,
+  loop,
+  body: Body(body),
+});
 const ForIn = (
   variable: VarType,
   iterator: JsAst,

@@ -4,6 +4,7 @@ import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
 import util from 'util.js';
+import M from 'js/ast/macros';
 
 const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.dependencies) {
@@ -27,13 +28,9 @@ const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): Js
           Ast.Body(...ifs),
         );
       } else {
-        const fnSym = context.symbolForSchema(check);
         return Ast.If(
-          Ast.Binop.And(
-            Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
-            Ast.Binop.Neq(Ast.Call(fnSym, symbol), Ast.Null),
-          ),
-          error,
+          Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
+          M.Delegate(check, symbol, context, error),
         );
       }
     });

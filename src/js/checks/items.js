@@ -4,6 +4,7 @@ import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: VarType, context: Context): JsAst => {
   const {additionalItems} = schema;
@@ -17,7 +18,6 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
       error,
     );
   } else if (additionalItems && typeof additionalItems === 'object') {
-    const fnSym = context.symbolForSchema(additionalItems);
     const i = context.gensym();
     return Ast.Body(
       Ast.Assignment(i, Ast.NumLiteral(items.length)),
@@ -25,11 +25,11 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
         Ast.Empty,
         Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(i),
-        Ast.Body(
-          Ast.If(
-            Ast.Binop.Neq(Ast.Call(fnSym, Ast.BracketAccess(symbol, i)), Ast.Null),
-            error,
-          ),
+        M.Delegate(
+          additionalItems,
+          Ast.BracketAccess(symbol, i),
+          context,
+          error,
         ),
       ),
     );
@@ -38,26 +38,24 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
   }
 };
 
-const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
-  if (Array.isArray(schema.items)) {
+const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+  const {items} = schema;
+  if (Array.isArray(items)) {
     // Tuple. Handle each item individually.
-    const additionalCheck = _additionalItems(schema, schema.items, symbol, context);
-    const checks = _.map(schema.items, (subSchema, i) => {
-      const fnSym = context.symbolForSchema(subSchema);
+    const additionalCheck = _additionalItems(schema, items, symbol, context);
+    const checks = _.map(items, (subSchema, i) => {
       return Ast.If(
-        Ast.Binop.And(
-          Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
-          Ast.Binop.Neq(
-            Ast.Call(fnSym, Ast.BracketAccess(symbol, Ast.NumLiteral(i))),
-            Ast.Null,
-          ),
+        Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
+        M.Delegate(
+          subSchema,
+          Ast.BracketAccess(symbol, Ast.NumLiteral(i)),
+          context,
+          context.error(schema, `items[${i}]`),
         ),
-        context.error(schema, `items[${i}]`),
       );
     });
     return Ast.Body(additionalCheck, ...checks);
-  } else if (schema.items) {
-    const fnSym = context.symbolForSchema(schema.items);
+  } else if (items) {
     const counter = context.gensym();
     const result = context.gensym();
     const check = Ast.Body(
@@ -67,9 +65,11 @@ const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
         Ast.Empty,
         Ast.Binop.Lt(counter, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(counter),
-        Ast.Body(
-          Ast.Assignment(result, Ast.Call(fnSym, Ast.BracketAccess(symbol, counter))),
-          Ast.If(Ast.Binop.Neq(result, Ast.Null), Ast.Return(result)),
+        M.Delegate(
+          items,
+          Ast.BracketAccess(symbol, counter),
+          context,
+          context.error(schema, 'items'),
         ),
       ),
     );
@@ -79,4 +79,4 @@ const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
   }
 };
 
-export default items;
+export default _items;

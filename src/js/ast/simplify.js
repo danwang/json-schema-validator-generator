@@ -5,16 +5,28 @@ import type {JsAst, IfType, BodyType, UnopType} from 'js/ast/ast.js';
 import Ast from 'js/ast/ast.js';
 
 const simplifyIf = (ast: IfType): JsAst => {
+  const predicate = simplify(ast.predicate);
   const body = simplify(ast.body);
   const elseBody = simplify(ast.elseBody);
-  if (body.type === 'empty' && elseBody.type === 'empty') {
-    return Ast.Empty;
+  if (elseBody.type === 'empty') {
+    if (body.type === 'empty') {
+      return Ast.Empty;
+    } else if (body.type === 'body') {
+      const [first, ...rest] = body.body;
+      if (rest.length === 0 && first.type === 'if' && first.elseBody.type === 'empty') {
+        return simplify(Ast.If(
+          Ast.Binop.And(predicate, first.predicate),
+          first.body,
+          Ast.Empty,
+        ));
+      } else {
+        return Ast.If(predicate, body, elseBody);
+      }
+    } else {
+      return Ast.If(predicate, body, elseBody);
+    }
   } else {
-    return Ast.If(
-      simplify(ast.predicate),
-      body,
-      elseBody,
-    );
+    return Ast.If(predicate, body, elseBody);
   }
 };
 
