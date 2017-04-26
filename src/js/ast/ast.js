@@ -20,7 +20,8 @@ export type JsAst = (
   ObjectLiteralType |
   PropertyAccessType |
   BracketAccessType |
-  TypeOfType
+  TypeOfType |
+  CommentType
 );
 type AssignmentType = {
   type: 'assignment',
@@ -104,6 +105,10 @@ export type BracketAccessType = {
 export type TypeOfType = {
   type: 'typeof',
   child: JsAst,
+};
+export type CommentType = {
+  type: 'comment',
+  comment: string,
 };
 
 const Function1 = (
@@ -212,6 +217,7 @@ const TypeOf = (child: JsAst): TypeOfType => {
     child,
   };
 };
+const Comment = (comment: string): CommentType => ({type: 'comment', comment});
 
 export default {
   Function1,
@@ -247,6 +253,7 @@ export default {
   PropertyAccess,
   BracketAccess,
   TypeOf,
+  Comment,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
   True: Literal('true'),

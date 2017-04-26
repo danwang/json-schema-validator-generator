@@ -55,6 +55,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return Ast.BracketAccess(recur(ast.obj), recur(ast.property));
       case 'typeof':
         return Ast.TypeOf(recur(ast.child));
+      case 'comment':
+        return ast;
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }
