@@ -1,8 +1,8 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {JsAst} from 'js/jsast/ast.js';
-import Ast from 'js/jsast/ast.js';
+import type {JsAst} from 'js/ast/ast.js';
+import Ast from 'js/ast/ast.js';
 
 export type Transform = (ast: JsAst) => JsAst;
 const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {

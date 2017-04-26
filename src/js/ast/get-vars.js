@@ -1,9 +1,9 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {JsAst} from 'js/jsast/ast.js';
-import collect from 'js/jsast/collect.js';
-import type {Collect} from 'js/jsast/collect.js';
+import type {JsAst} from 'js/ast/ast.js';
+import collect from 'js/ast/collect.js';
+import type {Collect} from 'js/ast/collect.js';
 
 const _getVars = collect((ast: JsAst, recur: Collect<string>) => {
   if (ast.type === 'assignment') {

@@ -3,8 +3,8 @@
 import _ from 'lodash';
 import type {
   JsAst, IfType, ForType, ForInType, Function1Type, UnopType, ObjectLiteralType,
-} from 'js/jsast/ast.js';
-import getVars from 'js/jsast/get-vars.js';
+} from 'js/ast/ast.js';
+import getVars from 'js/ast/get-vars.js';
 import util from 'util.js';
 
 const renderIf = (ast: IfType, depth: number) => {

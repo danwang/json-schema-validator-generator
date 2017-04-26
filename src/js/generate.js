@@ -1,12 +1,12 @@
 // @flow
 import _ from 'lodash';
 import root from 'js/checks/root.js';
-import Ast from 'js/jsast/ast.js';
-import simplify from 'js/jsast/simplify.js';
-import render from 'js/jsast/render.js';
-import uniqFuncs from 'js/jsast/uniq-funcs.js';
+import Ast from 'js/ast/ast.js';
+import simplify from 'js/ast/simplify.js';
+import render from 'js/ast/render.js';
+import uniqFuncs from 'js/ast/uniq-funcs.js';
 import util from 'util.js';
-import type {JsAst, VarType} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/ast/ast.js';
 
 const gengensym = () => {
   const g = util.gengensym();

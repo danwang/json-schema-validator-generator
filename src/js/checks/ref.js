@@ -1,8 +1,8 @@
 // @flow
 import jsonpointer from 'json-pointer';
 import type {Context} from 'js/generate.js';
-import Ast from 'js/jsast/ast.js';
-import type {JsAst, VarType} from 'js/jsast/ast.js';
+import Ast from 'js/ast/ast.js';
+import type {JsAst, VarType} from 'js/ast/ast.js';
 
 const ref = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   // $FlowFixMe No ref in json schema json schema...

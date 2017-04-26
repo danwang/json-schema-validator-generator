@@ -3,8 +3,8 @@ import _ from 'lodash';
 import util from 'util.js';
 import type {Context} from 'js/generate.js';
 
-import Ast from 'js/jsast/ast.js';
-import type {JsAst, VarType} from 'js/jsast/ast.js';
+import Ast from 'js/ast/ast.js';
+import type {JsAst, VarType} from 'js/ast/ast.js';
 
 const additionalChecks = (
   properties: $PropertyType<JsonSchema, 'properties'>,

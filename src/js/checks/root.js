@@ -17,8 +17,8 @@ import uniqueItems from 'js/checks/uniqueItems.js';
 
 import type {Context} from 'js/generate.js';
 
-import Ast from 'js/jsast/ast.js';
-import type {Function1Type} from 'js/jsast/ast.js';
+import Ast from 'js/ast/ast.js';
+import type {Function1Type} from 'js/ast/ast.js';
 
 const root = (schema: JsonSchema, context: Context): Function1Type => {
   const fnSym = context.symbolForSchema(schema);
