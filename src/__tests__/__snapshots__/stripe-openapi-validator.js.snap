@@ -6,8 +6,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.active_payment_methods;
-      if (v1 !== undefined && f1(v1) !== null) {
-        /* properties[active_payment_methods] */
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
+          /* properties[active_payment_methods] */
+          return 'error';
+        }
+      } else {
+        /* required[active_payment_methods] */
         return 'error';
       }
       v1 = v0.business_name;
@@ -21,33 +26,63 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.charges_enabled;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[charges_enabled] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[charges_enabled] */
+          return 'error';
+        }
+      } else {
+        /* required[charges_enabled] */
         return 'error';
       }
       v1 = v0.country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[country] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[country] */
+          return 'error';
+        }
+      } else {
+        /* required[country] */
         return 'error';
       }
       v1 = v0.debit_negative_balances;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[debit_negative_balances] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[debit_negative_balances] */
+          return 'error';
+        }
+      } else {
+        /* required[debit_negative_balances] */
         return 'error';
       }
       v1 = v0.decline_charge_on;
-      if (v1 !== undefined && f139(v1) !== null) {
-        /* properties[decline_charge_on] */
+      if (v1 !== undefined) {
+        if (f139(v1) !== null) {
+          /* properties[decline_charge_on] */
+          return 'error';
+        }
+      } else {
+        /* required[decline_charge_on] */
         return 'error';
       }
       v1 = v0.default_currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[default_currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[default_currency] */
+          return 'error';
+        }
+      } else {
+        /* required[default_currency] */
         return 'error';
       }
       v1 = v0.details_submitted;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[details_submitted] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[details_submitted] */
+          return 'error';
+        }
+      } else {
+        /* required[details_submitted] */
         return 'error';
       }
       v1 = v0.display_name;
@@ -61,23 +96,43 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.external_accounts;
-      if (v1 !== undefined && f12(v1) !== null) {
-        /* properties[external_accounts] */
+      if (v1 !== undefined) {
+        if (f12(v1) !== null) {
+          /* properties[external_accounts] */
+          return 'error';
+        }
+      } else {
+        /* required[external_accounts] */
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.legal_entity;
-      if (v1 !== undefined && f145(v1) !== null) {
-        /* properties[legal_entity] */
+      if (v1 !== undefined) {
+        if (f145(v1) !== null) {
+          /* properties[legal_entity] */
+          return 'error';
+        }
+      } else {
+        /* required[legal_entity] */
         return 'error';
       }
       v1 = v0.managed;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[managed] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[managed] */
+          return 'error';
+        }
+      } else {
+        /* required[managed] */
         return 'error';
       }
       v1 = v0.mcc;
@@ -91,8 +146,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.orders;
@@ -101,8 +161,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.payout_schedule;
-      if (v1 !== undefined && f147(v1) !== null) {
-        /* properties[payout_schedule] */
+      if (v1 !== undefined) {
+        if (f147(v1) !== null) {
+          /* properties[payout_schedule] */
+          return 'error';
+        }
+      } else {
+        /* required[payout_schedule] */
         return 'error';
       }
       v1 = v0.payout_statement_descriptor;
@@ -111,8 +176,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.payouts_enabled;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[payouts_enabled] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[payouts_enabled] */
+          return 'error';
+        }
+      } else {
+        /* required[payouts_enabled] */
         return 'error';
       }
       v1 = v0.product_description;
@@ -141,78 +211,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.tos_acceptance;
-      if (v1 !== undefined && f148(v1) !== null) {
-        /* properties[tos_acceptance] */
-        return 'error';
-      }
-      v1 = v0.verification;
-      if (v1 !== undefined && f149(v1) !== null) {
-        /* properties[verification] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.active_payment_methods === undefined) {
-        /* required[active_payment_methods] */
-        return 'error';
-      }
-      if (v0.charges_enabled === undefined) {
-        /* required[charges_enabled] */
-        return 'error';
-      }
-      if (v0.country === undefined) {
-        /* required[country] */
-        return 'error';
-      }
-      if (v0.debit_negative_balances === undefined) {
-        /* required[debit_negative_balances] */
-        return 'error';
-      }
-      if (v0.decline_charge_on === undefined) {
-        /* required[decline_charge_on] */
-        return 'error';
-      }
-      if (v0.default_currency === undefined) {
-        /* required[default_currency] */
-        return 'error';
-      }
-      if (v0.details_submitted === undefined) {
-        /* required[details_submitted] */
-        return 'error';
-      }
-      if (v0.external_accounts === undefined) {
-        /* required[external_accounts] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.legal_entity === undefined) {
-        /* required[legal_entity] */
-        return 'error';
-      }
-      if (v0.managed === undefined) {
-        /* required[managed] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.payout_schedule === undefined) {
-        /* required[payout_schedule] */
-        return 'error';
-      }
-      if (v0.payouts_enabled === undefined) {
-        /* required[payouts_enabled] */
-        return 'error';
-      }
-      if (v0.tos_acceptance === undefined) {
+      if (v1 !== undefined) {
+        if (f148(v1) !== null) {
+          /* properties[tos_acceptance] */
+          return 'error';
+        }
+      } else {
         /* required[tos_acceptance] */
         return 'error';
       }
-      if (v0.verification === undefined) {
+      v1 = v0.verification;
+      if (v1 !== undefined) {
+        if (f149(v1) !== null) {
+          /* properties[verification] */
+          return 'error';
+        }
+      } else {
         /* required[verification] */
         return 'error';
       }
@@ -227,23 +241,43 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
+        /* required[amount] */
         return 'error';
       }
       v1 = v0.available_on;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[available_on] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[available_on] */
+          return 'error';
+        }
+      } else {
+        /* required[available_on] */
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.description;
@@ -252,28 +286,53 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.fee;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[fee] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[fee] */
+          return 'error';
+        }
+      } else {
+        /* required[fee] */
         return 'error';
       }
       v1 = v0.fee_details;
-      if (v1 !== undefined && f150(v1) !== null) {
-        /* properties[fee_details] */
+      if (v1 !== undefined) {
+        if (f150(v1) !== null) {
+          /* properties[fee_details] */
+          return 'error';
+        }
+      } else {
+        /* required[fee_details] */
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.net;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[net] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[net] */
+          return 'error';
+        }
+      } else {
+        /* required[net] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.source;
@@ -282,58 +341,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
-        return 'error';
-      }
-      v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
-        /* required[amount] */
-        return 'error';
-      }
-      if (v0.available_on === undefined) {
-        /* required[available_on] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.fee === undefined) {
-        /* required[fee] */
-        return 'error';
-      }
-      if (v0.fee_details === undefined) {
-        /* required[fee_details] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.net === undefined) {
-        /* required[net] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.status === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
         /* required[status] */
         return 'error';
       }
-      if (v0.type === undefined) {
+      v1 = v0.type;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
         /* required[type] */
         return 'error';
       }
@@ -398,8 +421,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.brand;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[brand] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[brand] */
+          return 'error';
+        }
+      } else {
+        /* required[brand] */
         return 'error';
       }
       v1 = v0.country;
@@ -438,13 +466,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.exp_month;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[exp_month] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[exp_month] */
+          return 'error';
+        }
+      } else {
+        /* required[exp_month] */
         return 'error';
       }
       v1 = v0.exp_year;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[exp_year] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[exp_year] */
+          return 'error';
+        }
+      } else {
+        /* required[exp_year] */
         return 'error';
       }
       v1 = v0.fingerprint;
@@ -453,8 +491,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.funding;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[funding] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[funding] */
+          return 'error';
+        }
+      } else {
+        /* required[funding] */
         return 'error';
       }
       v1 = v0.google_reference;
@@ -463,18 +506,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.last4;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[last4] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[last4] */
+          return 'error';
+        }
+      } else {
+        /* required[last4] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.name;
@@ -483,8 +541,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.recipient;
@@ -503,40 +566,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
     }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.brand === undefined) {
-        /* required[brand] */
-        return 'error';
-      }
-      if (v0.exp_month === undefined) {
-        /* required[exp_month] */
-        return 'error';
-      }
-      if (v0.exp_year === undefined) {
-        /* required[exp_year] */
-        return 'error';
-      }
-      if (v0.funding === undefined) {
-        /* required[funding] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.last4 === undefined) {
-        /* required[last4] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-    }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
       return 'error';
@@ -547,8 +576,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
+        /* required[amount] */
         return 'error';
       }
       v1 = v0.amount_authorized;
@@ -557,13 +591,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.amount_captured;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount_captured] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount_captured] */
+          return 'error';
+        }
+      } else {
+        /* required[amount_captured] */
         return 'error';
       }
       v1 = v0.amount_refunded;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount_refunded] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount_refunded] */
+          return 'error';
+        }
+      } else {
+        /* required[amount_refunded] */
         return 'error';
       }
       v1 = v0.application;
@@ -582,8 +626,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.captured;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[captured] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[captured] */
+          return 'error';
+        }
+      } else {
+        /* required[captured] */
         return 'error';
       }
       v1 = v0.card;
@@ -592,13 +641,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.customer;
@@ -637,8 +696,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.invoice;
@@ -647,18 +711,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.on_behalf_of;
@@ -677,8 +756,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.paid;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[paid] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[paid] */
+          return 'error';
+        }
+      } else {
+        /* required[paid] */
         return 'error';
       }
       v1 = v0.receipt_email;
@@ -692,13 +776,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.refunded;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[refunded] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[refunded] */
+          return 'error';
+        }
+      } else {
+        /* required[refunded] */
         return 'error';
       }
       v1 = v0.refunds;
-      if (v1 !== undefined && f93(v1) !== null) {
-        /* properties[refunds] */
+      if (v1 !== undefined) {
+        if (f93(v1) !== null) {
+          /* properties[refunds] */
+          return 'error';
+        }
+      } else {
+        /* required[refunds] */
         return 'error';
       }
       v1 = v0.review;
@@ -722,8 +816,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
+        /* required[status] */
         return 'error';
       }
       v1 = v0.transfer;
@@ -734,64 +833,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.transfer_group;
       if (v1 !== undefined && f2(v1) !== null) {
         /* properties[transfer_group] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
-        /* required[amount] */
-        return 'error';
-      }
-      if (v0.amount_captured === undefined) {
-        /* required[amount_captured] */
-        return 'error';
-      }
-      if (v0.amount_refunded === undefined) {
-        /* required[amount_refunded] */
-        return 'error';
-      }
-      if (v0.captured === undefined) {
-        /* required[captured] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.paid === undefined) {
-        /* required[paid] */
-        return 'error';
-      }
-      if (v0.refunded === undefined) {
-        /* required[refunded] */
-        return 'error';
-      }
-      if (v0.refunds === undefined) {
-        /* required[refunds] */
-        return 'error';
-      }
-      if (v0.status === undefined) {
-        /* required[status] */
         return 'error';
       }
     }
@@ -810,8 +851,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
@@ -820,8 +866,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.duration;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[duration] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[duration] */
+          return 'error';
+        }
+      } else {
+        /* required[duration] */
         return 'error';
       }
       v1 = v0.duration_in_months;
@@ -830,13 +881,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.max_redemptions;
@@ -845,13 +906,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.percent_off;
@@ -865,46 +936,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.times_redeemed;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[times_redeemed] */
-        return 'error';
-      }
-      v1 = v0.valid;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[valid] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.duration === undefined) {
-        /* required[duration] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.times_redeemed === undefined) {
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[times_redeemed] */
+          return 'error';
+        }
+      } else {
         /* required[times_redeemed] */
         return 'error';
       }
-      if (v0.valid === undefined) {
+      v1 = v0.valid;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[valid] */
+          return 'error';
+        }
+      } else {
         /* required[valid] */
         return 'error';
       }
@@ -919,8 +966,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account_balance;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[account_balance] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[account_balance] */
+          return 'error';
+        }
+      } else {
+        /* required[account_balance] */
         return 'error';
       }
       v1 = v0.alipay_accounts;
@@ -939,13 +991,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.cards;
-      if (v1 !== undefined && f116(v1) !== null) {
-        /* properties[cards] */
+      if (v1 !== undefined) {
+        if (f116(v1) !== null) {
+          /* properties[cards] */
+          return 'error';
+        }
+      } else {
+        /* required[cards] */
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
@@ -989,23 +1051,43 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.shipping;
@@ -1014,50 +1096,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.sources;
-      if (v1 !== undefined && f12(v1) !== null) {
-        /* properties[sources] */
-        return 'error';
-      }
-      v1 = v0.subscriptions;
-      if (v1 !== undefined && f124(v1) !== null) {
-        /* properties[subscriptions] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.account_balance === undefined) {
-        /* required[account_balance] */
-        return 'error';
-      }
-      if (v0.cards === undefined) {
-        /* required[cards] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.sources === undefined) {
+      if (v1 !== undefined) {
+        if (f12(v1) !== null) {
+          /* properties[sources] */
+          return 'error';
+        }
+      } else {
         /* required[sources] */
         return 'error';
       }
-      if (v0.subscriptions === undefined) {
+      v1 = v0.subscriptions;
+      if (v1 !== undefined) {
+        if (f124(v1) !== null) {
+          /* properties[subscriptions] */
+          return 'error';
+        }
+      } else {
         /* required[subscriptions] */
         return 'error';
       }
@@ -1072,8 +1126,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.coupon;
-      if (v1 !== undefined && f101(v1) !== null) {
-        /* properties[coupon] */
+      if (v1 !== undefined) {
+        if (f101(v1) !== null) {
+          /* properties[coupon] */
+          return 'error';
+        }
+      } else {
+        /* required[coupon] */
         return 'error';
       }
       v1 = v0.customer;
@@ -1087,32 +1146,28 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.start;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[start] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[start] */
+          return 'error';
+        }
+      } else {
+        /* required[start] */
         return 'error';
       }
       v1 = v0.subscription;
       if (v1 !== undefined && f2(v1) !== null) {
         /* properties[subscription] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.coupon === undefined) {
-        /* required[coupon] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.start === undefined) {
-        /* required[start] */
         return 'error';
       }
     }
@@ -1126,130 +1181,142 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
-        return 'error';
-      }
-      v1 = v0.balance_transactions;
-      if (v1 !== undefined && f30(v1) !== null) {
-        /* properties[balance_transactions] */
-        return 'error';
-      }
-      v1 = v0.charge;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[charge] */
-        return 'error';
-      }
-      v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
-        return 'error';
-      }
-      v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
-        return 'error';
-      }
-      v1 = v0.evidence;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[evidence] */
-        return 'error';
-      }
-      v1 = v0.evidence_details;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[evidence_details] */
-        return 'error';
-      }
-      v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
-        return 'error';
-      }
-      v1 = v0.is_charge_refundable;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[is_charge_refundable] */
-        return 'error';
-      }
-      v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
-        return 'error';
-      }
-      v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
-        return 'error';
-      }
-      v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
-        return 'error';
-      }
-      v1 = v0.reason;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[reason] */
-        return 'error';
-      }
-      v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
         /* required[amount] */
         return 'error';
       }
-      if (v0.balance_transactions === undefined) {
+      v1 = v0.balance_transactions;
+      if (v1 !== undefined) {
+        if (f30(v1) !== null) {
+          /* properties[balance_transactions] */
+          return 'error';
+        }
+      } else {
         /* required[balance_transactions] */
         return 'error';
       }
-      if (v0.charge === undefined) {
+      v1 = v0.charge;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[charge] */
+          return 'error';
+        }
+      } else {
         /* required[charge] */
         return 'error';
       }
-      if (v0.created === undefined) {
+      v1 = v0.created;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
         /* required[created] */
         return 'error';
       }
-      if (v0.currency === undefined) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
         /* required[currency] */
         return 'error';
       }
-      if (v0.evidence === undefined) {
+      v1 = v0.evidence;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[evidence] */
+          return 'error';
+        }
+      } else {
         /* required[evidence] */
         return 'error';
       }
-      if (v0.evidence_details === undefined) {
+      v1 = v0.evidence_details;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[evidence_details] */
+          return 'error';
+        }
+      } else {
         /* required[evidence_details] */
         return 'error';
       }
-      if (v0.id === undefined) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
         /* required[id] */
         return 'error';
       }
-      if (v0.is_charge_refundable === undefined) {
+      v1 = v0.is_charge_refundable;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[is_charge_refundable] */
+          return 'error';
+        }
+      } else {
         /* required[is_charge_refundable] */
         return 'error';
       }
-      if (v0.livemode === undefined) {
+      v1 = v0.livemode;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
         /* required[livemode] */
         return 'error';
       }
-      if (v0.metadata === undefined) {
+      v1 = v0.metadata;
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
         /* required[metadata] */
         return 'error';
       }
-      if (v0.object === undefined) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
         /* required[object] */
         return 'error';
       }
-      if (v0.reason === undefined) {
+      v1 = v0.reason;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[reason] */
+          return 'error';
+        }
+      } else {
         /* required[reason] */
         return 'error';
       }
-      if (v0.status === undefined) {
+      v1 = v0.status;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
         /* required[status] */
         return 'error';
       }
@@ -1285,18 +1352,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f140(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f140(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1305,25 +1387,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1352,18 +1421,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f152(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f152(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1372,25 +1456,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1405,18 +1476,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f154(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f154(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1425,25 +1511,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1458,18 +1531,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f155(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f155(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1478,25 +1566,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1511,18 +1586,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f156(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f156(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1531,25 +1621,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1564,18 +1641,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f158(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f158(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -1584,25 +1676,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -1617,22 +1696,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.avs_failure;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[avs_failure] */
-        return 'error';
-      }
-      v1 = v0.cvc_failure;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[cvc_failure] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.avs_failure === undefined) {
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[avs_failure] */
+          return 'error';
+        }
+      } else {
         /* required[avs_failure] */
         return 'error';
       }
-      if (v0.cvc_failure === undefined) {
+      v1 = v0.cvc_failure;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[cvc_failure] */
+          return 'error';
+        }
+      } else {
         /* required[cvc_failure] */
         return 'error';
       }
@@ -1686,8 +1765,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        /* properties[address] */
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
+          /* properties[address] */
+          return 'error';
+        }
+      } else {
+        /* required[address] */
         return 'error';
       }
       v1 = v0.address_kana;
@@ -1716,18 +1800,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.business_tax_id_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[business_tax_id_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[business_tax_id_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[business_tax_id_provided] */
         return 'error';
       }
       v1 = v0.business_vat_id_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[business_vat_id_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[business_vat_id_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[business_vat_id_provided] */
         return 'error';
       }
       v1 = v0.dob;
-      if (v1 !== undefined && f223(v1) !== null) {
-        /* properties[dob] */
+      if (v1 !== undefined) {
+        if (f223(v1) !== null) {
+          /* properties[dob] */
+          return 'error';
+        }
+      } else {
+        /* required[dob] */
         return 'error';
       }
       v1 = v0.first_name;
@@ -1771,8 +1870,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.personal_address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        /* properties[personal_address] */
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
+          /* properties[personal_address] */
+          return 'error';
+        }
+      } else {
+        /* required[personal_address] */
         return 'error';
       }
       v1 = v0.personal_address_kana;
@@ -1786,8 +1890,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.personal_id_number_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[personal_id_number_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[personal_id_number_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[personal_id_number_provided] */
         return 'error';
       }
       v1 = v0.phone_number;
@@ -1796,8 +1905,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.ssn_last_4_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[ssn_last_4_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[ssn_last_4_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[ssn_last_4_provided] */
         return 'error';
       }
       v1 = v0.type;
@@ -1806,41 +1920,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.verification;
-      if (v1 !== undefined && f224(v1) !== null) {
-        /* properties[verification] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.address === undefined) {
-        /* required[address] */
-        return 'error';
-      }
-      if (v0.business_tax_id_provided === undefined) {
-        /* required[business_tax_id_provided] */
-        return 'error';
-      }
-      if (v0.business_vat_id_provided === undefined) {
-        /* required[business_vat_id_provided] */
-        return 'error';
-      }
-      if (v0.dob === undefined) {
-        /* required[dob] */
-        return 'error';
-      }
-      if (v0.personal_address === undefined) {
-        /* required[personal_address] */
-        return 'error';
-      }
-      if (v0.personal_id_number_provided === undefined) {
-        /* required[personal_id_number_provided] */
-        return 'error';
-      }
-      if (v0.ssn_last_4_provided === undefined) {
-        /* required[ssn_last_4_provided] */
-        return 'error';
-      }
-      if (v0.verification === undefined) {
+      if (v1 !== undefined) {
+        if (f224(v1) !== null) {
+          /* properties[verification] */
+          return 'error';
+        }
+      } else {
         /* required[verification] */
         return 'error';
       }
@@ -1855,13 +1940,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.authorization;
-      if (v1 !== undefined && f225(v1) !== null) {
-        /* properties[authorization] */
+      if (v1 !== undefined) {
+        if (f225(v1) !== null) {
+          /* properties[authorization] */
+          return 'error';
+        }
+      } else {
+        /* required[authorization] */
         return 'error';
       }
       v1 = v0.channels;
-      if (v1 !== undefined && f226(v1) !== null) {
-        /* properties[channels] */
+      if (v1 !== undefined) {
+        if (f226(v1) !== null) {
+          /* properties[channels] */
+          return 'error';
+        }
+      } else {
+        /* required[channels] */
         return 'error';
       }
       v1 = v0.create_order_hook_url;
@@ -1870,8 +1965,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.order_management;
-      if (v1 !== undefined && f227(v1) !== null) {
-        /* properties[order_management] */
+      if (v1 !== undefined) {
+        if (f227(v1) !== null) {
+          /* properties[order_management] */
+          return 'error';
+        }
+      } else {
+        /* required[order_management] */
         return 'error';
       }
       v1 = v0.pay_order_hook_url;
@@ -1880,34 +1980,22 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.shipping;
-      if (v1 !== undefined && f228(v1) !== null) {
-        /* properties[shipping] */
-        return 'error';
-      }
-      v1 = v0.taxes;
-      if (v1 !== undefined && f229(v1) !== null) {
-        /* properties[taxes] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.authorization === undefined) {
-        /* required[authorization] */
-        return 'error';
-      }
-      if (v0.channels === undefined) {
-        /* required[channels] */
-        return 'error';
-      }
-      if (v0.order_management === undefined) {
-        /* required[order_management] */
-        return 'error';
-      }
-      if (v0.shipping === undefined) {
+      if (v1 !== undefined) {
+        if (f228(v1) !== null) {
+          /* properties[shipping] */
+          return 'error';
+        }
+      } else {
         /* required[shipping] */
         return 'error';
       }
-      if (v0.taxes === undefined) {
+      v1 = v0.taxes;
+      if (v1 !== undefined) {
+        if (f229(v1) !== null) {
+          /* properties[taxes] */
+          return 'error';
+        }
+      } else {
         /* required[taxes] */
         return 'error';
       }
@@ -1922,13 +2010,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.delay_days;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[delay_days] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[delay_days] */
+          return 'error';
+        }
+      } else {
+        /* required[delay_days] */
         return 'error';
       }
       v1 = v0.interval;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[interval] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[interval] */
+          return 'error';
+        }
+      } else {
+        /* required[interval] */
         return 'error';
       }
       v1 = v0.monthly_anchor;
@@ -1939,16 +2037,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.weekly_anchor;
       if (v1 !== undefined && f2(v1) !== null) {
         /* properties[weekly_anchor] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.delay_days === undefined) {
-        /* required[delay_days] */
-        return 'error';
-      }
-      if (v0.interval === undefined) {
-        /* required[interval] */
         return 'error';
       }
     }
@@ -1997,14 +2085,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.fields_needed;
-      if (v1 !== undefined && f1(v1) !== null) {
-        /* properties[fields_needed] */
+      if (v1 !== undefined) {
+        if (f1(v1) !== null) {
+          /* properties[fields_needed] */
+          return 'error';
+        }
+      } else {
+        /* required[fields_needed] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.fields_needed === undefined) {
-      /* required[fields_needed] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2016,8 +2105,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
+        /* required[amount] */
         return 'error';
       }
       v1 = v0.application;
@@ -2026,8 +2120,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.description;
@@ -2036,21 +2135,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
-        /* required[amount] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.type === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
         /* required[type] */
         return 'error';
       }
@@ -2090,14 +2180,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
+        /* required[type] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.type === undefined) {
-      /* required[type] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2127,8 +2218,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        /* properties[address] */
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
+          /* properties[address] */
+          return 'error';
+        }
+      } else {
+        /* required[address] */
         return 'error';
       }
       v1 = v0.carrier;
@@ -2137,8 +2233,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[name] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[name] */
+          return 'error';
+        }
+      } else {
+        /* required[name] */
         return 'error';
       }
       v1 = v0.phone;
@@ -2149,16 +2250,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.tracking_number;
       if (v1 !== undefined && f2(v1) !== null) {
         /* properties[tracking_number] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.address === undefined) {
-        /* required[address] */
-        return 'error';
-      }
-      if (v0.name === undefined) {
-        /* required[name] */
         return 'error';
       }
     }
@@ -2226,28 +2317,28 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        /* properties[address] */
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
+          /* properties[address] */
+          return 'error';
+        }
+      } else {
+        /* required[address] */
         return 'error';
       }
       v1 = v0.name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[name] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[name] */
+          return 'error';
+        }
+      } else {
+        /* required[name] */
         return 'error';
       }
       v1 = v0.phone;
       if (v1 !== undefined && f2(v1) !== null) {
         /* properties[phone] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.address === undefined) {
-        /* required[address] */
-        return 'error';
-      }
-      if (v0.name === undefined) {
-        /* required[name] */
         return 'error';
       }
     }
@@ -2279,13 +2370,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        /* properties[address] */
+      if (v1 !== undefined) {
+        if (f221(v1) !== null) {
+          /* properties[address] */
+          return 'error';
+        }
+      } else {
+        /* required[address] */
         return 'error';
       }
       v1 = v0.dob;
-      if (v1 !== undefined && f223(v1) !== null) {
-        /* properties[dob] */
+      if (v1 !== undefined) {
+        if (f223(v1) !== null) {
+          /* properties[dob] */
+          return 'error';
+        }
+      } else {
+        /* required[dob] */
         return 'error';
       }
       v1 = v0.first_name;
@@ -2299,21 +2400,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.verification;
-      if (v1 !== undefined && f224(v1) !== null) {
-        /* properties[verification] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.address === undefined) {
-        /* required[address] */
-        return 'error';
-      }
-      if (v0.dob === undefined) {
-        /* required[dob] */
-        return 'error';
-      }
-      if (v0.verification === undefined) {
+      if (v1 !== undefined) {
+        if (f224(v1) !== null) {
+          /* properties[verification] */
+          return 'error';
+        }
+      } else {
         /* required[verification] */
         return 'error';
       }
@@ -2453,14 +2545,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
+        /* required[status] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.status === undefined) {
-      /* required[status] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2482,14 +2575,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
+        /* required[type] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.type === undefined) {
-      /* required[type] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2521,14 +2615,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
+        /* required[type] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.type === undefined) {
-      /* required[type] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2585,14 +2680,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
+        /* required[type] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.type === undefined) {
-      /* required[type] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2624,14 +2720,15 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[type] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[type] */
+          return 'error';
+        }
+      } else {
+        /* required[type] */
         return 'error';
       }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0)) && v0.type === undefined) {
-      /* required[type] */
-      return 'error';
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
@@ -2643,8 +2740,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
+        /* required[amount] */
         return 'error';
       }
       v1 = v0.balance_transaction;
@@ -2658,13 +2760,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.description;
@@ -2673,18 +2785,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.reason;
@@ -2703,32 +2830,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
     }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
-        /* required[amount] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-    }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
       return 'error';
@@ -2739,8 +2840,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.customer;
@@ -2749,28 +2855,53 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.fingerprint;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[fingerprint] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[fingerprint] */
+          return 'error';
+        }
+      } else {
+        /* required[fingerprint] */
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.payment_amount;
@@ -2784,55 +2915,32 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.reusable;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[reusable] */
-        return 'error';
-      }
-      v1 = v0.used;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[used] */
-        return 'error';
-      }
-      v1 = v0.username;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[username] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.fingerprint === undefined) {
-        /* required[fingerprint] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.reusable === undefined) {
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[reusable] */
+          return 'error';
+        }
+      } else {
         /* required[reusable] */
         return 'error';
       }
-      if (v0.used === undefined) {
+      v1 = v0.used;
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[used] */
+          return 'error';
+        }
+      } else {
         /* required[used] */
         return 'error';
       }
-      if (v0.username === undefined) {
+      v1 = v0.username;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[username] */
+          return 'error';
+        }
+      } else {
         /* required[username] */
         return 'error';
       }
@@ -2897,13 +3005,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[country] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[country] */
+          return 'error';
+        }
+      } else {
+        /* required[country] */
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.customer;
@@ -2927,13 +3045,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.last4;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[last4] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[last4] */
+          return 'error';
+        }
+      } else {
+        /* required[last4] */
         return 'error';
       }
       v1 = v0.metadata;
@@ -2942,8 +3070,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.reusable;
@@ -2957,39 +3090,18 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
+        /* required[status] */
         return 'error';
       }
       v1 = v0.used;
       if (v1 !== undefined && f4(v1) !== null) {
         /* properties[used] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.country === undefined) {
-        /* required[country] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.last4 === undefined) {
-        /* required[last4] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.status === undefined) {
-        /* required[status] */
         return 'error';
       }
     }
@@ -3018,8 +3130,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.cancel_at_period_end;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[cancel_at_period_end] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[cancel_at_period_end] */
+          return 'error';
+        }
+      } else {
+        /* required[cancel_at_period_end] */
         return 'error';
       }
       v1 = v0.canceled_at;
@@ -3028,8 +3145,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.current_period_end;
@@ -3043,8 +3165,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[customer] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[customer] */
+          return 'error';
+        }
+      } else {
+        /* required[customer] */
         return 'error';
       }
       v1 = v0.days_until_due;
@@ -3063,8 +3190,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.items;
@@ -3073,8 +3205,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.max_occurrences;
@@ -3083,13 +3220,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.on_behalf_of;
@@ -3113,13 +3260,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.start;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[start] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[start] */
+          return 'error';
+        }
+      } else {
+        /* required[start] */
         return 'error';
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[status] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[status] */
+          return 'error';
+        }
+      } else {
+        /* required[status] */
         return 'error';
       }
       v1 = v0.tax_percent;
@@ -3135,44 +3292,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.trial_start;
       if (v1 !== undefined && f31(v1) !== null) {
         /* properties[trial_start] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.cancel_at_period_end === undefined) {
-        /* required[cancel_at_period_end] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.customer === undefined) {
-        /* required[customer] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.start === undefined) {
-        /* required[start] */
-        return 'error';
-      }
-      if (v0.status === undefined) {
-        /* required[status] */
         return 'error';
       }
     }
@@ -3193,18 +3312,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
-      if (v1 !== undefined && f304(v1) !== null) {
-        /* properties[data] */
+      if (v1 !== undefined) {
+        if (f304(v1) !== null) {
+          /* properties[data] */
+          return 'error';
+        }
+      } else {
+        /* required[data] */
         return 'error';
       }
       v1 = v0.has_more;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[has_more] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[has_more] */
+          return 'error';
+        }
+      } else {
+        /* required[has_more] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f142(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f142(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.total_count;
@@ -3213,25 +3347,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[url] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.data === undefined) {
-        /* required[data] */
-        return 'error';
-      }
-      if (v0.has_more === undefined) {
-        /* required[has_more] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-      if (v0.url === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[url] */
+          return 'error';
+        }
+      } else {
         /* required[url] */
         return 'error';
       }
@@ -3246,8 +3367,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.enabled;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[enabled] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[enabled] */
+          return 'error';
+        }
+      } else {
+        /* required[enabled] */
         return 'error';
       }
       v1 = v0.marketplace_id;
@@ -3261,13 +3387,23 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.oauth_token_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[oauth_token_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[oauth_token_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[oauth_token_provided] */
         return 'error';
       }
       v1 = v0.oauth_token_secret_provided;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[oauth_token_secret_provided] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[oauth_token_secret_provided] */
+          return 'error';
+        }
+      } else {
+        /* required[oauth_token_secret_provided] */
         return 'error';
       }
       v1 = v0.privacy_url;
@@ -3291,25 +3427,12 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
       v1 = v0.username;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[username] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.enabled === undefined) {
-        /* required[enabled] */
-        return 'error';
-      }
-      if (v0.oauth_token_provided === undefined) {
-        /* required[oauth_token_provided] */
-        return 'error';
-      }
-      if (v0.oauth_token_secret_provided === undefined) {
-        /* required[oauth_token_secret_provided] */
-        return 'error';
-      }
-      if (v0.username === undefined) {
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[username] */
+          return 'error';
+        }
+      } else {
         /* required[username] */
         return 'error';
       }
@@ -3324,31 +3447,32 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
-        return 'error';
-      }
-      v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
-        return 'error';
-      }
-      v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[description] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
         /* required[amount] */
         return 'error';
       }
-      if (v0.currency === undefined) {
+      v1 = v0.currency;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
         /* required[currency] */
         return 'error';
       }
-      if (v0.description === undefined) {
+      v1 = v0.description;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[description] */
+          return 'error';
+        }
+      } else {
         /* required[description] */
         return 'error';
       }
@@ -3381,53 +3505,103 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[amount] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[amount] */
+          return 'error';
+        }
+      } else {
+        /* required[amount] */
         return 'error';
       }
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
+        /* required[created] */
         return 'error';
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[currency] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[currency] */
+          return 'error';
+        }
+      } else {
+        /* required[currency] */
         return 'error';
       }
       v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
+        /* required[id] */
         return 'error';
       }
       v1 = v0.interval;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[interval] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[interval] */
+          return 'error';
+        }
+      } else {
+        /* required[interval] */
         return 'error';
       }
       v1 = v0.interval_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[interval_count] */
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[interval_count] */
+          return 'error';
+        }
+      } else {
+        /* required[interval_count] */
         return 'error';
       }
       v1 = v0.livemode;
-      if (v1 !== undefined && f4(v1) !== null) {
-        /* properties[livemode] */
+      if (v1 !== undefined) {
+        if (f4(v1) !== null) {
+          /* properties[livemode] */
+          return 'error';
+        }
+      } else {
+        /* required[livemode] */
         return 'error';
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        /* properties[metadata] */
+      if (v1 !== undefined) {
+        if (f17(v1) !== null) {
+          /* properties[metadata] */
+          return 'error';
+        }
+      } else {
+        /* required[metadata] */
         return 'error';
       }
       v1 = v0.name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[name] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[name] */
+          return 'error';
+        }
+      } else {
+        /* required[name] */
         return 'error';
       }
       v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
+        /* required[object] */
         return 'error';
       }
       v1 = v0.statement_descriptor;
@@ -3441,48 +3615,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return 'error';
       }
     }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.amount === undefined) {
-        /* required[amount] */
-        return 'error';
-      }
-      if (v0.created === undefined) {
-        /* required[created] */
-        return 'error';
-      }
-      if (v0.currency === undefined) {
-        /* required[currency] */
-        return 'error';
-      }
-      if (v0.id === undefined) {
-        /* required[id] */
-        return 'error';
-      }
-      if (v0.interval === undefined) {
-        /* required[interval] */
-        return 'error';
-      }
-      if (v0.interval_count === undefined) {
-        /* required[interval_count] */
-        return 'error';
-      }
-      if (v0.livemode === undefined) {
-        /* required[livemode] */
-        return 'error';
-      }
-      if (v0.metadata === undefined) {
-        /* required[metadata] */
-        return 'error';
-      }
-      if (v0.name === undefined) {
-        /* required[name] */
-        return 'error';
-      }
-      if (v0.object === undefined) {
-        /* required[object] */
-        return 'error';
-      }
-    }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* type */
       return 'error';
@@ -3493,49 +3625,52 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[created] */
-        return 'error';
-      }
-      v1 = v0.id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[id] */
-        return 'error';
-      }
-      v1 = v0.object;
-      if (v1 !== undefined && f2(v1) !== null) {
-        /* properties[object] */
-        return 'error';
-      }
-      v1 = v0.plan;
-      if (v1 !== undefined && f305(v1) !== null) {
-        /* properties[plan] */
-        return 'error';
-      }
-      v1 = v0.quantity;
-      if (v1 !== undefined && f31(v1) !== null) {
-        /* properties[quantity] */
-        return 'error';
-      }
-    }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
-      if (v0.created === undefined) {
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[created] */
+          return 'error';
+        }
+      } else {
         /* required[created] */
         return 'error';
       }
-      if (v0.id === undefined) {
+      v1 = v0.id;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[id] */
+          return 'error';
+        }
+      } else {
         /* required[id] */
         return 'error';
       }
-      if (v0.object === undefined) {
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f2(v1) !== null) {
+          /* properties[object] */
+          return 'error';
+        }
+      } else {
         /* required[object] */
         return 'error';
       }
-      if (v0.plan === undefined) {
+      v1 = v0.plan;
+      if (v1 !== undefined) {
+        if (f305(v1) !== null) {
+          /* properties[plan] */
+          return 'error';
+        }
+      } else {
         /* required[plan] */
         return 'error';
       }
-      if (v0.quantity === undefined) {
+      v1 = v0.quantity;
+      if (v1 !== undefined) {
+        if (f31(v1) !== null) {
+          /* properties[quantity] */
+          return 'error';
+        }
+      } else {
         /* required[quantity] */
         return 'error';
       }

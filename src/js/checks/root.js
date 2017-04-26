@@ -11,7 +11,6 @@ import oneOf from 'js/checks/oneOf.js';
 import pattern from 'js/checks/pattern.js';
 import properties from 'js/checks/properties.js';
 import ref from 'js/checks/ref.js';
-import required from 'js/checks/required.js';
 import type from 'js/checks/type.js';
 import uniqueItems from 'js/checks/uniqueItems.js';
 
@@ -38,7 +37,6 @@ const root = (schema: JsonSchema, context: Context): Function1Type => {
     oneOf(schema, symbol, context),
     pattern(schema, symbol, context),
     properties(schema, symbol, context),
-    required(schema, symbol, context),
     type(schema, symbol, context),
     uniqueItems(schema, symbol, context),
   );

@@ -5,6 +5,24 @@ import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
 import M from 'js/ast/macros';
 
+const additionalPropertiesCheck = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context,
+): JsAst => {
+  const {additionalProperties} = schema;
+  if (additionalProperties === false) {
+    return context.error(schema, 'additionalProperties');
+  } else if (additionalProperties && typeof additionalProperties === 'object') {
+    return Ast.If(
+      M.FailedCheck(additionalProperties, symbol, context),
+      context.error(schema, 'additionalProperties'),
+    );
+  } else {
+    return Ast.Empty;
+  }
+};
+
 const additionalChecks = (
   schema: JsonSchema,
   properties: $PropertyType<JsonSchema, 'properties'>,
@@ -34,11 +52,11 @@ const additionalChecks = (
     error: context.error(schema, `properties[${pattern}]`),
   }));
   const allChecks = [...propertyChecks, ...patternChecks];
-
-  if (additionalProperties === undefined || additionalProperties === null || additionalProperties === true) {
-    // There are properties/patternProperties, but no additionalProperties. In
-    // this case, we don't need to mark non-matches
-    return Ast.Body(..._.map(allChecks, ({predicate, subSchema, error}) => {
+  // Two cases where we don't need a hit counter:
+  //   - There are no additionalProperties or patternProperties
+  //   - There are no properties
+  if (allChecks.length === 0 || (additionalProperties === undefined || additionalProperties === true)) {
+    const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
       return Ast.If(
         predicate,
         Ast.If(
@@ -46,23 +64,12 @@ const additionalChecks = (
           error,
         ),
       );
-    }));
-  } else if (allChecks.length === 0) {
-    const error = context.error(schema, 'additionalProperties');
-    // There are no properties nor patternProperties, but additionalProperties.
-    // In this case, we can always run additionalProperties checks.
-    if (additionalProperties === false) {
-      return error;
-    } else {
-      return Ast.If(
-        M.FailedCheck(additionalProperties, valSym, context),
-        error,
-      );
-    }
+    });
+    return Ast.Body(
+      ...checks,
+      additionalPropertiesCheck(schema, valSym, context),
+    );
   } else {
-    // There are both properties/patternProperties and additionalProperties. In
-    // this case, we need to check if we've hit a property/patternProperty to
-    // decide whether or not to check additionalProperties.
     const hitSym = context.gensym();
     const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
       return Ast.If(
@@ -74,24 +81,38 @@ const additionalChecks = (
         ),
       );
     });
-    const additionalError = context.error(schema, 'additionalProperties');
-    const additionalCheck = Ast.If(
-      Ast.Binop.Eq(hitSym, Ast.False),
-      additionalProperties === false ? additionalError : Ast.If(
-        M.FailedCheck(additionalProperties, valSym, context),
-        additionalError,
-      ),
-    );
     return Ast.Body(
       Ast.Assignment(hitSym, Ast.False),
       ...checks,
-      additionalCheck,
+      Ast.If(
+        Ast.Binop.Eq(hitSym, Ast.False),
+        additionalPropertiesCheck(schema, valSym, context),
+      ),
     );
   }
 };
 
-const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
-  if (schema.patternProperties || schema.additionalProperties !== undefined) {
+const _properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+  const {properties, required, patternProperties, additionalProperties} = schema;
+  if (!patternProperties && (additionalProperties === undefined || additionalProperties === true)) {
+    // Static list of properties to check
+    const sym = context.gensym();
+    const checks = Ast.Body(..._.flatMap(properties, (subSchema, key) => {
+      const isRequired = _.includes(required, key);
+      return Ast.Body(
+        Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
+        Ast.If(
+          Ast.Binop.Neq(sym, Ast.Undefined),
+          Ast.If(
+            M.FailedCheck(subSchema, sym, context),
+            context.error(schema, `properties[${key}]`),
+          ),
+          isRequired ? context.error(schema, `required[${key}]`) : Ast.Empty,
+        ),
+      );
+    }));
+    return M.TypeCheck('object', symbol, checks);
+  } else {
     // Need to loop through all properties to check. We'll generate a loop:
     //   for (var key in json) {
     //     var val = json[key];
@@ -109,34 +130,22 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
       Ast.Assignment(valSym, Ast.BracketAccess(symbol, keySym)),
       additionalChecks(
         schema,
-        schema.properties,
-        schema.patternProperties,
-        schema.additionalProperties,
+        properties,
+        patternProperties,
+        additionalProperties,
         keySym,
         valSym,
         context,
       ),
     ));
-    return M.TypeCheck('object', symbol, loop);
-  } else if (schema.properties) {
-    // Static list of properties to check
-    const sym = context.gensym();
-    const checks = Ast.Body(..._.flatMap(schema.properties, (subSchema, key) => {
-      return Ast.Body(
-        Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
-        Ast.If(
-          Ast.Binop.Neq(sym, Ast.Undefined),
-          Ast.If(
-            M.FailedCheck(subSchema, sym, context),
-            context.error(schema, `properties[${key}]`),
-          ),
-        ),
+    const requiredChecks = _.map(required, (property) => {
+      return Ast.If(
+        Ast.Binop.Eq(Ast.PropertyAccess(symbol, property), Ast.Undefined),
+        context.error(schema, `required[${property}]`),
       );
-    }));
-    return M.TypeCheck('object', symbol, checks);
-  } else {
-    return Ast.Empty;
+    });
+    return M.TypeCheck('object', symbol, Ast.Body(loop, ...requiredChecks));
   }
 };
 
-export default properties;
+export default _properties;
