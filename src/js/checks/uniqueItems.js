@@ -32,7 +32,7 @@ const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsA
           Ast.PropertyAccess(Ast.Call('Object.keys', obj), 'length'),
           Ast.PropertyAccess(symbol, 'length'),
         ),
-        context.error(),
+        context.error(schema, 'uniqueItems'),
       ),
     ));
   } else {

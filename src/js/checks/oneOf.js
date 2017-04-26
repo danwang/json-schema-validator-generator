@@ -20,7 +20,7 @@ const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     return Ast.Body(
       Ast.Assignment(count, Ast.NumLiteral(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Neq(count, Ast.NumLiteral(1)), context.error()),
+      Ast.If(Ast.Binop.Neq(count, Ast.NumLiteral(1)), context.error(schema, 'oneOf')),
     );
   } else {
     return Ast.Empty;

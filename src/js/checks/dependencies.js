@@ -8,18 +8,19 @@ import util from 'util.js';
 const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.dependencies) {
     const checks = _.map(schema.dependencies, (check, key) => {
+      const error = context.error(schema, `dependencies[${key}]`);
       if (typeof check === 'string') {
         return Ast.If(
           Ast.Binop.And(
             Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
             Ast.Binop.Eq(Ast.PropertyAccess(symbol, check), Ast.Undefined),
           ),
-          context.error(),
+          error,
         );
       } else if (Array.isArray(check)) {
         const ifs = check.map((k) => Ast.If(
           Ast.Binop.Eq(Ast.PropertyAccess(symbol, k), Ast.Undefined),
-          context.error(),
+          error,
         ));
         return Ast.If(
           Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
@@ -32,7 +33,7 @@ const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): Js
             Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
             Ast.Binop.Neq(Ast.Call(fnSym, symbol), Ast.Null),
           ),
-          context.error(),
+          error,
         );
       }
     });

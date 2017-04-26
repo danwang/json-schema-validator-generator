@@ -36,7 +36,7 @@ const _enum = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     return Ast.Body(
       Ast.Assignment(match, Ast.NumLiteral(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Eq(match, Ast.NumLiteral(0)), context.error()),
+      Ast.If(Ast.Binop.Eq(match, Ast.NumLiteral(0)), context.error(schema, 'enum')),
     );
   } else {
     return Ast.Empty;

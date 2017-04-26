@@ -7,16 +7,19 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 1`] = `
     v1 = 1;
     for (; v1 < v0.length; (v1)++) {
       if (f1(v0[v1]) !== null) {
+        /* additionalItems */
         return 'error';
       }
     }
     if (0 < v0.length && f2(v0[0]) !== null) {
+      /* items[0] */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -59,15 +62,19 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
     if (v0.length > 3) {
+      /* additionalItems */
       return 'error';
     }
     if (0 < v0.length && f1(v0[0]) !== null) {
+      /* items[0] */
       return 'error';
     }
     if (1 < v0.length && f1(v0[1]) !== null) {
+      /* items[1] */
       return 'error';
     }
     if (2 < v0.length && f1(v0[2]) !== null) {
+      /* items[2] */
       return 'error';
     }
     return null;
@@ -96,12 +103,14 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 5`] = `
 "(function() {
   function f0(v0) {
     if (0 < v0.length && f1(v0[0]) !== null) {
+      /* items[0] */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -122,6 +131,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
         v3 = false;
         if (v1 === 'foo') {
           if (f1(v2) !== null) {
+            /* properties[foo] */
             return 'error';
           } else {
             v3 = true;
@@ -129,6 +139,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
         }
         if (v1 === 'bar') {
           if (f1(v2) !== null) {
+            /* properties[bar] */
             return 'error';
           } else {
             v3 = true;
@@ -136,12 +147,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 1`] =
         }
         if (v1.match(/^v/)) {
           if (f1(v2) !== null) {
+            /* properties[^v] */
             return 'error';
           } else {
             v3 = true;
           }
         }
         if (v3 === false) {
+          /* additionalProperties */
           return 'error';
         }
       }
@@ -167,6 +180,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
         v3 = false;
         if (v1 === 'foo') {
           if (f1(v2) !== null) {
+            /* properties[foo] */
             return 'error';
           } else {
             v3 = true;
@@ -174,6 +188,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
         }
         if (v1 === 'bar') {
           if (f1(v2) !== null) {
+            /* properties[bar] */
             return 'error';
           } else {
             v3 = true;
@@ -181,6 +196,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
         }
         if (v3 === false) {
           if (f2(v2) !== null) {
+            /* additionalProperties */
             return 'error';
           }
         }
@@ -193,6 +209,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 2`] =
   }
   function f2(v0) {
     if (typeof v0 !== 'boolean') {
+      /* type */
       return 'error';
     }
     return null;
@@ -211,6 +228,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] =
       for (var v1 in v0) {
         v2 = v0[v1];
         if (f1(v2) !== null) {
+          /* additionalProperties */
           return 'error';
         }
       }
@@ -219,6 +237,7 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 3`] =
   }
   function f1(v0) {
     if (typeof v0 !== 'boolean') {
+      /* type */
       return 'error';
     }
     return null;
@@ -237,12 +256,14 @@ exports[`JSON Schema test suite additionalProperties.json matches snapshot 4`] =
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
@@ -264,10 +285,12 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
     var v1, v2;
     v1 = f1(v0);
     if (v1 !== null) {
+      /* allOf */
       return 'error';
     }
     v2 = f2(v0);
     if (v2 !== null) {
+      /* allOf */
       return 'error';
     }
     return null;
@@ -278,12 +301,14 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f3(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
+        /* required[bar] */
         return 'error';
       }
     }
@@ -295,12 +320,14 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
+        /* required[foo] */
         return 'error';
       }
     }
@@ -308,12 +335,14 @@ exports[`JSON Schema test suite allOf.json matches snapshot 1`] = `
   }
   function f3(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f4(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -330,22 +359,26 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
     var v1, v2, v3;
     v1 = f1(v0);
     if (v1 !== null) {
+      /* allOf */
       return 'error';
     }
     v2 = f2(v0);
     if (v2 !== null) {
+      /* allOf */
       return 'error';
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v3 = v0.bar;
       if (v3 !== undefined) {
         if (f3(v3) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
+        /* required[bar] */
         return 'error';
       }
     }
@@ -357,12 +390,14 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
+        /* required[foo] */
         return 'error';
       }
     }
@@ -374,12 +409,14 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
       v1 = v0.baz;
       if (v1 !== undefined) {
         if (f5(v1) !== null) {
+          /* properties[baz] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.baz === undefined) {
+        /* required[baz] */
         return 'error';
       }
     }
@@ -387,18 +424,21 @@ exports[`JSON Schema test suite allOf.json matches snapshot 2`] = `
   }
   function f3(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f4(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f5(v0) {
     if (v0 !== null) {
+      /* type */
       return 'error';
     }
     return null;
@@ -415,10 +455,12 @@ exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
     var v1, v2;
     v1 = f1(v0);
     if (v1 !== null) {
+      /* allOf */
       return 'error';
     }
     v2 = f2(v0);
     if (v2 !== null) {
+      /* allOf */
       return 'error';
     }
     return null;
@@ -426,6 +468,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
   function f1(v0) {
     if (typeof v0 === 'number') {
       if (v0 > 30) {
+        /* maximum */
         return 'error';
       }
     }
@@ -434,6 +477,7 @@ exports[`JSON Schema test suite allOf.json matches snapshot 3`] = `
   function f2(v0) {
     if (typeof v0 === 'number') {
       if (v0 < 20) {
+        /* minimum */
         return 'error';
       }
     }
@@ -453,12 +497,14 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
     f1(v0) === null && (v1)++;
     f2(v0) === null && (v1)++;
     if (v1 === 0) {
+      /* anyOf */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -466,6 +512,7 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 1`] = `
   function f2(v0) {
     if (typeof v0 === 'number') {
       if (v0 < 2) {
+        /* minimum */
         return 'error';
       }
     }
@@ -485,9 +532,11 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
     f1(v0) === null && (v1)++;
     f2(v0) === null && (v1)++;
     if (v1 === 0) {
+      /* anyOf */
       return 'error';
     }
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -495,6 +544,7 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   function f1(v0) {
     if (typeof v0 === 'string') {
       if (v0.length > 2) {
+        /* maxLength */
         return 'error';
       }
     }
@@ -503,6 +553,7 @@ exports[`JSON Schema test suite anyOf.json matches snapshot 2`] = `
   function f2(v0) {
     if (typeof v0 === 'string') {
       if (v0.length < 4) {
+        /* minLength */
         return 'error';
       }
     }
@@ -522,6 +573,7 @@ exports[`JSON Schema test suite default.json matches snapshot 1`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
@@ -530,6 +582,7 @@ exports[`JSON Schema test suite default.json matches snapshot 1`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -548,6 +601,7 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
@@ -557,10 +611,12 @@ exports[`JSON Schema test suite default.json matches snapshot 2`] = `
   function f1(v0) {
     if (typeof v0 === 'string') {
       if (v0.length < 4) {
+        /* minLength */
         return 'error';
       }
     }
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -577,6 +633,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 1`] = `
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar !== undefined) {
         if (v0.foo === undefined) {
+          /* dependencies[bar] */
           return 'error';
         }
       }
@@ -595,9 +652,11 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 2`] = `
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.quux !== undefined) {
         if (v0.foo === undefined) {
+          /* dependencies[quux] */
           return 'error';
         }
         if (v0.bar === undefined) {
+          /* dependencies[quux] */
           return 'error';
         }
       }
@@ -615,6 +674,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
   function f0(v0) {
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar !== undefined && f1(v0) !== null) {
+        /* dependencies[bar] */
         return 'error';
       }
     }
@@ -626,12 +686,14 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
@@ -640,6 +702,7 @@ exports[`JSON Schema test suite dependencies.json matches snapshot 3`] = `
   }
   function f2(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -665,6 +728,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 1`] = `
       (v1)++;
     }
     if (v1 === 0) {
+      /* enum */
       return 'error';
     }
     return null;
@@ -696,6 +760,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 2`] = `
       (v1)++;
     }
     if (v1 === 0) {
+      /* enum */
       return 'error';
     }
     return null;
@@ -714,22 +779,26 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.bar === undefined) {
+        /* required[bar] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -741,6 +810,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
       (v1)++;
     }
     if (v1 === 0) {
+      /* enum */
       return 'error';
     }
     return null;
@@ -752,6 +822,7 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
       (v1)++;
     }
     if (v1 === 0) {
+      /* enum */
       return 'error';
     }
     return null;
@@ -780,6 +851,7 @@ exports[`JSON Schema test suite items.json matches snapshot 1`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -794,21 +866,25 @@ exports[`JSON Schema test suite items.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     if (0 < v0.length && f1(v0[0]) !== null) {
+      /* items[0] */
       return 'error';
     }
     if (1 < v0.length && f2(v0[1]) !== null) {
+      /* items[1] */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -824,6 +900,7 @@ exports[`JSON Schema test suite maxItems.json matches snapshot 1`] = `
   function f0(v0) {
     if (Array.isArray(v0)) {
       if (v0.length > 2) {
+        /* maxItems */
         return 'error';
       }
     }
@@ -840,6 +917,7 @@ exports[`JSON Schema test suite maxLength.json matches snapshot 1`] = `
   function f0(v0) {
     if (typeof v0 === 'string') {
       if (v0.length > 2) {
+        /* maxLength */
         return 'error';
       }
     }
@@ -856,6 +934,7 @@ exports[`JSON Schema test suite maxProperties.json matches snapshot 1`] = `
   function f0(v0) {
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (Object.keys(v0).length > 2) {
+        /* maxProperties */
         return 'error';
       }
     }
@@ -872,6 +951,7 @@ exports[`JSON Schema test suite maximum.json matches snapshot 1`] = `
   function f0(v0) {
     if (typeof v0 === 'number') {
       if (v0 > 3) {
+        /* maximum */
         return 'error';
       }
     }
@@ -888,6 +968,7 @@ exports[`JSON Schema test suite maximum.json matches snapshot 2`] = `
   function f0(v0) {
     if (typeof v0 === 'number') {
       if (v0 >= 3) {
+        /* maximum */
         return 'error';
       }
     }
@@ -904,6 +985,7 @@ exports[`JSON Schema test suite minItems.json matches snapshot 1`] = `
   function f0(v0) {
     if (Array.isArray(v0)) {
       if (v0.length < 1) {
+        /* minItems */
         return 'error';
       }
     }
@@ -920,6 +1002,7 @@ exports[`JSON Schema test suite minLength.json matches snapshot 1`] = `
   function f0(v0) {
     if (typeof v0 === 'string') {
       if (v0.length < 2) {
+        /* minLength */
         return 'error';
       }
     }
@@ -936,6 +1019,7 @@ exports[`JSON Schema test suite minProperties.json matches snapshot 1`] = `
   function f0(v0) {
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (Object.keys(v0).length < 1) {
+        /* minProperties */
         return 'error';
       }
     }
@@ -952,6 +1036,7 @@ exports[`JSON Schema test suite minimum.json matches snapshot 1`] = `
   function f0(v0) {
     if (typeof v0 === 'number') {
       if (v0 < 1.1) {
+        /* minimum */
         return 'error';
       }
     }
@@ -968,6 +1053,7 @@ exports[`JSON Schema test suite minimum.json matches snapshot 2`] = `
   function f0(v0) {
     if (typeof v0 === 'number') {
       if (v0 <= 1.1) {
+        /* minimum */
         return 'error';
       }
     }
@@ -986,6 +1072,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 1`] = `
     if (typeof v0 === 'number') {
       v1 = v0 / 2;
       if (typeof v1 !== 'number' || v1 % 1 !== 0) {
+        /* multipleOf */
         return 'error';
       }
     }
@@ -1004,6 +1091,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 2`] = `
     if (typeof v0 === 'number') {
       v1 = v0 / 1.5;
       if (typeof v1 !== 'number' || v1 % 1 !== 0) {
+        /* multipleOf */
         return 'error';
       }
     }
@@ -1022,6 +1110,7 @@ exports[`JSON Schema test suite multipleOf.json matches snapshot 3`] = `
     if (typeof v0 === 'number') {
       v1 = v0 / 0.0001;
       if (typeof v1 !== 'number' || v1 % 1 !== 0) {
+        /* multipleOf */
         return 'error';
       }
     }
@@ -1039,12 +1128,14 @@ exports[`JSON Schema test suite not.json matches snapshot 1`] = `
     var v1;
     v1 = f1(v0);
     if (v1 === null) {
+      /* not */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1061,6 +1152,7 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
     var v1;
     v1 = f1(v0);
     if (v1 === null) {
+      /* not */
       return 'error';
     }
     return null;
@@ -1075,6 +1167,7 @@ exports[`JSON Schema test suite not.json matches snapshot 2`] = `
       (v1)++;
     }
     if (v1 === 2) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1091,6 +1184,7 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
     var v1;
     v1 = f1(v0);
     if (v1 === null) {
+      /* not */
       return 'error';
     }
     return null;
@@ -1101,17 +1195,20 @@ exports[`JSON Schema test suite not.json matches snapshot 3`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1130,6 +1227,7 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
@@ -1140,6 +1238,7 @@ exports[`JSON Schema test suite not.json matches snapshot 4`] = `
     var v1;
     v1 = f2(v0);
     if (v1 === null) {
+      /* not */
       return 'error';
     }
     return null;
@@ -1165,12 +1264,14 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
       (v1)++;
     }
     if (v1 !== 1) {
+      /* oneOf */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1178,6 +1279,7 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 1`] = `
   function f2(v0) {
     if (typeof v0 === 'number') {
       if (v0 < 2) {
+        /* minimum */
         return 'error';
       }
     }
@@ -1201,9 +1303,11 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
       (v1)++;
     }
     if (v1 !== 1) {
+      /* oneOf */
       return 'error';
     }
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1211,6 +1315,7 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
   function f1(v0) {
     if (typeof v0 === 'string') {
       if (v0.length < 2) {
+        /* minLength */
         return 'error';
       }
     }
@@ -1219,6 +1324,7 @@ exports[`JSON Schema test suite oneOf.json matches snapshot 2`] = `
   function f2(v0) {
     if (typeof v0 === 'string') {
       if (v0.length > 4) {
+        /* maxLength */
         return 'error';
       }
     }
@@ -1235,6 +1341,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 1`] = `
   function f0(v0) {
     if (typeof v0 === 'string') {
       if (!(v0.match(/^a*$/))) {
+        /* pattern */
         return 'error';
       }
     }
@@ -1251,6 +1358,7 @@ exports[`JSON Schema test suite pattern.json matches snapshot 2`] = `
   function f0(v0) {
     if (typeof v0 === 'string') {
       if (!(v0.match(/a+/))) {
+        /* pattern */
         return 'error';
       }
     }
@@ -1271,6 +1379,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
         v2 = v0[v1];
         if (v1.match(/f.*o/)) {
           if (f1(v2) !== null) {
+            /* properties[f.*o] */
             return 'error';
           }
         }
@@ -1280,6 +1389,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 1`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1299,11 +1409,13 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
         v2 = v0[v1];
         if (v1.match(/a*/)) {
           if (f1(v2) !== null) {
+            /* properties[a*] */
             return 'error';
           }
         }
         if (v1.match(/aaa*/)) {
           if (f2(v2) !== null) {
+            /* properties[aaa*] */
             return 'error';
           }
         }
@@ -1313,6 +1425,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1320,6 +1433,7 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 2`] = `
   function f2(v0) {
     if (typeof v0 === 'number') {
       if (v0 > 20) {
+        /* maximum */
         return 'error';
       }
     }
@@ -1340,11 +1454,13 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
         v2 = v0[v1];
         if (v1.match(/[0-9]{2,}/)) {
           if (f1(v2) !== null) {
+            /* properties[[0-9]{2,}] */
             return 'error';
           }
         }
         if (v1.match(/X_/)) {
           if (f2(v2) !== null) {
+            /* properties[X_] */
             return 'error';
           }
         }
@@ -1354,12 +1470,14 @@ exports[`JSON Schema test suite patternProperties.json matches snapshot 3`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'boolean') {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1378,12 +1496,14 @@ exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
@@ -1392,12 +1512,14 @@ exports[`JSON Schema test suite properties.json matches snapshot 1`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1418,6 +1540,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
         v3 = false;
         if (v1 === 'foo') {
           if (f1(v2) !== null) {
+            /* properties[foo] */
             return 'error';
           } else {
             v3 = true;
@@ -1425,6 +1548,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
         }
         if (v1 === 'bar') {
           if (f2(v2) !== null) {
+            /* properties[bar] */
             return 'error';
           } else {
             v3 = true;
@@ -1432,6 +1556,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
         }
         if (v1.match(/f.o/)) {
           if (f3(v2) !== null) {
+            /* properties[f.o] */
             return 'error';
           } else {
             v3 = true;
@@ -1439,6 +1564,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
         }
         if (v3 === false) {
           if (f4(v2) !== null) {
+            /* additionalProperties */
             return 'error';
           }
         }
@@ -1449,16 +1575,19 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
   function f1(v0) {
     if (Array.isArray(v0)) {
       if (v0.length > 3) {
+        /* maxItems */
         return 'error';
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1466,6 +1595,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
   function f3(v0) {
     if (Array.isArray(v0)) {
       if (v0.length < 2) {
+        /* minItems */
         return 'error';
       }
     }
@@ -1473,6 +1603,7 @@ exports[`JSON Schema test suite properties.json matches snapshot 2`] = `
   }
   function f4(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1493,12 +1624,14 @@ exports[`JSON Schema test suite ref.json matches snapshot 1`] = `
         v3 = false;
         if (v1 === 'foo') {
           if (f0(v2) !== null) {
+            /* properties[foo] */
             return 'error';
           } else {
             v3 = true;
           }
         }
         if (v3 === false) {
+          /* additionalProperties */
           return 'error';
         }
       }
@@ -1519,12 +1652,14 @@ exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
@@ -1533,6 +1668,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 2`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1547,15 +1683,18 @@ exports[`JSON Schema test suite ref.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
     if (0 < v0.length && f1(v0[0]) !== null) {
+      /* items[0] */
       return 'error';
     }
     if (1 < v0.length && f1(v0[1]) !== null) {
+      /* items[1] */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1574,18 +1713,21 @@ exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
       v1 = v0.tilda;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[tilda] */
           return 'error';
         }
       }
       v1 = v0.slash;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[slash] */
           return 'error';
         }
       }
       v1 = v0.percent;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[percent] */
           return 'error';
         }
       }
@@ -1594,6 +1736,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 4`] = `
   }
   function f4(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1608,6 +1751,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 5`] = `
 "(function() {
   function f3(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1626,6 +1770,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
@@ -1634,6 +1779,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 6`] = `
   }
   function f2(v0) {
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1663,6 +1809,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
       v1 = v0.$ref;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[$ref] */
           return 'error';
         }
       }
@@ -1671,6 +1818,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 8`] = `
   }
   function f1(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1689,31 +1837,37 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
       v1 = v0.meta;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[meta] */
           return 'error';
         }
       }
       v1 = v0.nodes;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[nodes] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.meta === undefined) {
+        /* required[meta] */
         return 'error';
       }
       if (v0.nodes === undefined) {
+        /* required[nodes] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1731,6 +1885,7 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1752,18 +1907,21 @@ exports[`JSON Schema test suite required.json matches snapshot 1`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
       v1 = v0.bar;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[bar] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.foo === undefined) {
+        /* required[foo] */
         return 'error';
       }
     }
@@ -1786,6 +1944,7 @@ exports[`JSON Schema test suite required.json matches snapshot 2`] = `
       v1 = v0.foo;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[foo] */
           return 'error';
         }
       }
@@ -1805,6 +1964,7 @@ exports[`JSON Schema test suite type.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1819,6 +1979,7 @@ exports[`JSON Schema test suite type.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 !== 'number') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1833,6 +1994,7 @@ exports[`JSON Schema test suite type.json matches snapshot 3`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1847,6 +2009,7 @@ exports[`JSON Schema test suite type.json matches snapshot 4`] = `
 "(function() {
   function f0(v0) {
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1861,6 +2024,7 @@ exports[`JSON Schema test suite type.json matches snapshot 5`] = `
 "(function() {
   function f0(v0) {
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1875,6 +2039,7 @@ exports[`JSON Schema test suite type.json matches snapshot 6`] = `
 "(function() {
   function f0(v0) {
     if (typeof v0 !== 'boolean') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1889,6 +2054,7 @@ exports[`JSON Schema test suite type.json matches snapshot 7`] = `
 "(function() {
   function f0(v0) {
     if (v0 !== null) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1911,6 +2077,7 @@ exports[`JSON Schema test suite type.json matches snapshot 8`] = `
       (v1)++;
     }
     if (v1 === 2) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1933,6 +2100,7 @@ exports[`JSON Schema test suite uniqueItems.json matches snapshot 1`] = `
         v1[v3] = true;
       }
       if (Object.keys(v1).length !== v0.length) {
+        /* uniqueItems */
         return 'error';
       }
     }

@@ -12,7 +12,7 @@ const _pattern = (schema: JsonSchema, symbol: VarType, context: Context): JsAst 
         Ast.PropertyAccess(symbol, 'match'),
         Ast.Literal(`/${pattern}/`),
       )),
-      context.error(),
+      context.error(schema, 'pattern'),
     );
     return util.typeCheck('string', symbol, check);
   } else {

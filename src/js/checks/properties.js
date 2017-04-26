@@ -7,6 +7,7 @@ import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
 
 const additionalChecks = (
+  schema: JsonSchema,
   properties: $PropertyType<JsonSchema, 'properties'>,
   patternProperties: $PropertyType<JsonSchema, 'patternProperties'>,
   additionalProperties: $PropertyType<JsonSchema, 'additionalProperties'>,
@@ -23,6 +24,7 @@ const additionalChecks = (
   const propertyChecks = _.map(properties, (subSchema, key) => ({
     predicate: Ast.Binop.Eq(keySym, Ast.StringLiteral(key)),
     subSchema,
+    error: context.error(schema, `properties[${key}]`),
   }));
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
     predicate: Ast.Call(
@@ -30,32 +32,34 @@ const additionalChecks = (
       Ast.Literal(`/${pattern}/`),
     ),
     subSchema,
+    error: context.error(schema, `properties[${pattern}]`),
   }));
   const allChecks = [...propertyChecks, ...patternChecks];
 
   if (additionalProperties === undefined || additionalProperties === null || additionalProperties === true) {
     // There are properties/patternProperties, but no additionalProperties. In
     // this case, we don't need to mark non-matches
-    return Ast.Body(..._.map(allChecks, ({predicate, subSchema}) => {
+    return Ast.Body(..._.map(allChecks, ({predicate, subSchema, error}) => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         predicate,
         Ast.If(
           Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
-          context.error(),
+          error,
         ),
       );
     }));
   } else if (allChecks.length === 0) {
+    const error = context.error(schema, 'additionalProperties');
     // There are no properties nor patternProperties, but additionalProperties.
     // In this case, we can always run additionalProperties checks.
     if (additionalProperties === false) {
-      return context.error();
+      return error;
     } else {
       const fnSym = context.symbolForSchema(additionalProperties);
       return Ast.If(
         Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
-        context.error(),
+        error,
       );
     }
   } else {
@@ -63,25 +67,26 @@ const additionalChecks = (
     // this case, we need to check if we've hit a property/patternProperty to
     // decide whether or not to check additionalProperties.
     const hitSym = context.gensym();
-    const checks = _.map(allChecks, ({predicate, subSchema}) => {
+    const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
       const fnSym = context.symbolForSchema(subSchema);
       return Ast.If(
         predicate,
         Ast.If(
           Ast.Binop.Neq(Ast.Call(fnSym, valSym), Ast.Null),
-          context.error(),
+          error,
           Ast.Assignment(hitSym, Ast.True),
         ),
       );
     });
+    const additionalError = context.error(schema, 'additionalProperties');
     const additionalCheck = Ast.If(
       Ast.Binop.Eq(hitSym, Ast.False),
-      additionalProperties === false ? context.error() : Ast.If(
+      additionalProperties === false ? additionalError : Ast.If(
         Ast.Binop.Neq(
           Ast.Call(context.symbolForSchema(additionalProperties), valSym),
           Ast.Null,
         ),
-        context.error(),
+        additionalError,
       ),
     );
     return Ast.Body(
@@ -110,6 +115,7 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
     const loop = Ast.ForIn(keySym, symbol, Ast.Body(
       Ast.Assignment(valSym, Ast.BracketAccess(symbol, keySym)),
       additionalChecks(
+        schema,
         schema.properties,
         schema.patternProperties,
         schema.additionalProperties,
@@ -130,7 +136,7 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
           Ast.Binop.Neq(sym, Ast.Undefined),
           Ast.If(
             Ast.Binop.Neq(Ast.Call(fnSym, sym), Ast.Null),
-            context.error(),
+            context.error(schema, `properties[${key}]`),
           ),
         ),
       );

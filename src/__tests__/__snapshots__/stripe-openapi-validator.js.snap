@@ -8,229 +8,275 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.active_payment_methods;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[active_payment_methods] */
           return 'error';
         }
       }
       v1 = v0.business_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_name] */
           return 'error';
         }
       }
       v1 = v0.business_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_url] */
           return 'error';
         }
       }
       v1 = v0.charges_enabled;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[charges_enabled] */
           return 'error';
         }
       }
       v1 = v0.country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[country] */
           return 'error';
         }
       }
       v1 = v0.debit_negative_balances;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[debit_negative_balances] */
           return 'error';
         }
       }
       v1 = v0.decline_charge_on;
       if (v1 !== undefined) {
         if (f139(v1) !== null) {
+          /* properties[decline_charge_on] */
           return 'error';
         }
       }
       v1 = v0.default_currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[default_currency] */
           return 'error';
         }
       }
       v1 = v0.details_submitted;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[details_submitted] */
           return 'error';
         }
       }
       v1 = v0.display_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[display_name] */
           return 'error';
         }
       }
       v1 = v0.email;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[email] */
           return 'error';
         }
       }
       v1 = v0.external_accounts;
       if (v1 !== undefined) {
         if (f12(v1) !== null) {
+          /* properties[external_accounts] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.legal_entity;
       if (v1 !== undefined) {
         if (f145(v1) !== null) {
+          /* properties[legal_entity] */
           return 'error';
         }
       }
       v1 = v0.managed;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[managed] */
           return 'error';
         }
       }
       v1 = v0.mcc;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[mcc] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.orders;
       if (v1 !== undefined) {
         if (f146(v1) !== null) {
+          /* properties[orders] */
           return 'error';
         }
       }
       v1 = v0.payout_schedule;
       if (v1 !== undefined) {
         if (f147(v1) !== null) {
+          /* properties[payout_schedule] */
           return 'error';
         }
       }
       v1 = v0.payout_statement_descriptor;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[payout_statement_descriptor] */
           return 'error';
         }
       }
       v1 = v0.payouts_enabled;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[payouts_enabled] */
           return 'error';
         }
       }
       v1 = v0.product_description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[product_description] */
           return 'error';
         }
       }
       v1 = v0.statement_descriptor;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[statement_descriptor] */
           return 'error';
         }
       }
       v1 = v0.support_email;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[support_email] */
           return 'error';
         }
       }
       v1 = v0.support_phone;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[support_phone] */
           return 'error';
         }
       }
       v1 = v0.timezone;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[timezone] */
           return 'error';
         }
       }
       v1 = v0.tos_acceptance;
       if (v1 !== undefined) {
         if (f148(v1) !== null) {
+          /* properties[tos_acceptance] */
           return 'error';
         }
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
         if (f149(v1) !== null) {
+          /* properties[verification] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.active_payment_methods === undefined) {
+        /* required[active_payment_methods] */
         return 'error';
       }
       if (v0.charges_enabled === undefined) {
+        /* required[charges_enabled] */
         return 'error';
       }
       if (v0.country === undefined) {
+        /* required[country] */
         return 'error';
       }
       if (v0.debit_negative_balances === undefined) {
+        /* required[debit_negative_balances] */
         return 'error';
       }
       if (v0.decline_charge_on === undefined) {
+        /* required[decline_charge_on] */
         return 'error';
       }
       if (v0.default_currency === undefined) {
+        /* required[default_currency] */
         return 'error';
       }
       if (v0.details_submitted === undefined) {
+        /* required[details_submitted] */
         return 'error';
       }
       if (v0.external_accounts === undefined) {
+        /* required[external_accounts] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.legal_entity === undefined) {
+        /* required[legal_entity] */
         return 'error';
       }
       if (v0.managed === undefined) {
+        /* required[managed] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.payout_schedule === undefined) {
+        /* required[payout_schedule] */
         return 'error';
       }
       if (v0.payouts_enabled === undefined) {
+        /* required[payouts_enabled] */
         return 'error';
       }
       if (v0.tos_acceptance === undefined) {
+        /* required[tos_acceptance] */
         return 'error';
       }
       if (v0.verification === undefined) {
+        /* required[verification] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -241,118 +287,143 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.available_on;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[available_on] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.fee;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[fee] */
           return 'error';
         }
       }
       v1 = v0.fee_details;
       if (v1 !== undefined) {
         if (f150(v1) !== null) {
+          /* properties[fee_details] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.net;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[net] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.source;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[source] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.available_on === undefined) {
+        /* required[available_on] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.fee === undefined) {
+        /* required[fee] */
         return 'error';
       }
       if (v0.fee_details === undefined) {
+        /* required[fee_details] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.net === undefined) {
+        /* required[net] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -363,217 +434,257 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.account;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[account] */
           return 'error';
         }
       }
       v1 = v0.address_city;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_city] */
           return 'error';
         }
       }
       v1 = v0.address_country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_country] */
           return 'error';
         }
       }
       v1 = v0.address_line1;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_line1] */
           return 'error';
         }
       }
       v1 = v0.address_line1_check;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_line1_check] */
           return 'error';
         }
       }
       v1 = v0.address_line2;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_line2] */
           return 'error';
         }
       }
       v1 = v0.address_state;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_state] */
           return 'error';
         }
       }
       v1 = v0.address_zip;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_zip] */
           return 'error';
         }
       }
       v1 = v0.address_zip_check;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_zip_check] */
           return 'error';
         }
       }
       v1 = v0.available_payout_methods;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[available_payout_methods] */
           return 'error';
         }
       }
       v1 = v0.brand;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[brand] */
           return 'error';
         }
       }
       v1 = v0.country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[country] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.cvc_check;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[cvc_check] */
           return 'error';
         }
       }
       v1 = v0.default_for_currency;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[default_for_currency] */
           return 'error';
         }
       }
       v1 = v0.dynamic_last4;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[dynamic_last4] */
           return 'error';
         }
       }
       v1 = v0.estimated_availability;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[estimated_availability] */
           return 'error';
         }
       }
       v1 = v0.exp_month;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[exp_month] */
           return 'error';
         }
       }
       v1 = v0.exp_year;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[exp_year] */
           return 'error';
         }
       }
       v1 = v0.fingerprint;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[fingerprint] */
           return 'error';
         }
       }
       v1 = v0.funding;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[funding] */
           return 'error';
         }
       }
       v1 = v0.google_reference;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[google_reference] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.last4;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last4] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[name] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.recipient;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[recipient] */
           return 'error';
         }
       }
       v1 = v0.three_d_secure;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[three_d_secure] */
           return 'error';
         }
       }
       v1 = v0.tokenization_method;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[tokenization_method] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.brand === undefined) {
+        /* required[brand] */
         return 'error';
       }
       if (v0.exp_month === undefined) {
+        /* required[exp_month] */
         return 'error';
       }
       if (v0.exp_year === undefined) {
+        /* required[exp_year] */
         return 'error';
       }
       if (v0.funding === undefined) {
+        /* required[funding] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.last4 === undefined) {
+        /* required[last4] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -584,277 +695,330 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.amount_authorized;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount_authorized] */
           return 'error';
         }
       }
       v1 = v0.amount_captured;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount_captured] */
           return 'error';
         }
       }
       v1 = v0.amount_refunded;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount_refunded] */
           return 'error';
         }
       }
       v1 = v0.application;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[application] */
           return 'error';
         }
       }
       v1 = v0.application_fee;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[application_fee] */
           return 'error';
         }
       }
       v1 = v0.balance_transaction;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[balance_transaction] */
           return 'error';
         }
       }
       v1 = v0.captured;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[captured] */
           return 'error';
         }
       }
       v1 = v0.card;
       if (v1 !== undefined) {
         if (f42(v1) !== null) {
+          /* properties[card] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.destination;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[destination] */
           return 'error';
         }
       }
       v1 = v0.dispute;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[dispute] */
           return 'error';
         }
       }
       v1 = v0.failure_code;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[failure_code] */
           return 'error';
         }
       }
       v1 = v0.failure_message;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[failure_message] */
           return 'error';
         }
       }
       v1 = v0.fraud_details;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[fraud_details] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.invoice;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[invoice] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.on_behalf_of;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[on_behalf_of] */
           return 'error';
         }
       }
       v1 = v0.order;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[order] */
           return 'error';
         }
       }
       v1 = v0.outcome;
       if (v1 !== undefined) {
         if (f151(v1) !== null) {
+          /* properties[outcome] */
           return 'error';
         }
       }
       v1 = v0.paid;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[paid] */
           return 'error';
         }
       }
       v1 = v0.receipt_email;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[receipt_email] */
           return 'error';
         }
       }
       v1 = v0.receipt_number;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[receipt_number] */
           return 'error';
         }
       }
       v1 = v0.refunded;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[refunded] */
           return 'error';
         }
       }
       v1 = v0.refunds;
       if (v1 !== undefined) {
         if (f93(v1) !== null) {
+          /* properties[refunds] */
           return 'error';
         }
       }
       v1 = v0.review;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[review] */
           return 'error';
         }
       }
       v1 = v0.shipping;
       if (v1 !== undefined) {
         if (f153(v1) !== null) {
+          /* properties[shipping] */
           return 'error';
         }
       }
       v1 = v0.source_transfer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[source_transfer] */
           return 'error';
         }
       }
       v1 = v0.statement_descriptor;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[statement_descriptor] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
       v1 = v0.transfer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[transfer] */
           return 'error';
         }
       }
       v1 = v0.transfer_group;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[transfer_group] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.amount_captured === undefined) {
+        /* required[amount_captured] */
         return 'error';
       }
       if (v0.amount_refunded === undefined) {
+        /* required[amount_refunded] */
         return 'error';
       }
       if (v0.captured === undefined) {
+        /* required[captured] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.paid === undefined) {
+        /* required[paid] */
         return 'error';
       }
       if (v0.refunded === undefined) {
+        /* required[refunded] */
         return 'error';
       }
       if (v0.refunds === undefined) {
+        /* required[refunds] */
         return 'error';
       }
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -865,115 +1029,138 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount_off;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount_off] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.duration;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[duration] */
           return 'error';
         }
       }
       v1 = v0.duration_in_months;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[duration_in_months] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.max_redemptions;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[max_redemptions] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.percent_off;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[percent_off] */
           return 'error';
         }
       }
       v1 = v0.redeem_by;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[redeem_by] */
           return 'error';
         }
       }
       v1 = v0.times_redeemed;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[times_redeemed] */
           return 'error';
         }
       }
       v1 = v0.valid;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[valid] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.duration === undefined) {
+        /* required[duration] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.times_redeemed === undefined) {
+        /* required[times_redeemed] */
         return 'error';
       }
       if (v0.valid === undefined) {
+        /* required[valid] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -984,160 +1171,191 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.account_balance;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[account_balance] */
           return 'error';
         }
       }
       v1 = v0.alipay_accounts;
       if (v1 !== undefined) {
         if (f113(v1) !== null) {
+          /* properties[alipay_accounts] */
           return 'error';
         }
       }
       v1 = v0.bank_accounts;
       if (v1 !== undefined) {
         if (f114(v1) !== null) {
+          /* properties[bank_accounts] */
           return 'error';
         }
       }
       v1 = v0.business_vat_id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_vat_id] */
           return 'error';
         }
       }
       v1 = v0.cards;
       if (v1 !== undefined) {
         if (f116(v1) !== null) {
+          /* properties[cards] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.default_bank_account;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[default_bank_account] */
           return 'error';
         }
       }
       v1 = v0.default_card;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[default_card] */
           return 'error';
         }
       }
       v1 = v0.default_source;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[default_source] */
           return 'error';
         }
       }
       v1 = v0.delinquent;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[delinquent] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.discount;
       if (v1 !== undefined) {
         if (f125(v1) !== null) {
+          /* properties[discount] */
           return 'error';
         }
       }
       v1 = v0.email;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[email] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.shipping;
       if (v1 !== undefined) {
         if (f157(v1) !== null) {
+          /* properties[shipping] */
           return 'error';
         }
       }
       v1 = v0.sources;
       if (v1 !== undefined) {
         if (f12(v1) !== null) {
+          /* properties[sources] */
           return 'error';
         }
       }
       v1 = v0.subscriptions;
       if (v1 !== undefined) {
         if (f124(v1) !== null) {
+          /* properties[subscriptions] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.account_balance === undefined) {
+        /* required[account_balance] */
         return 'error';
       }
       if (v0.cards === undefined) {
+        /* required[cards] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.sources === undefined) {
+        /* required[sources] */
         return 'error';
       }
       if (v0.subscriptions === undefined) {
+        /* required[subscriptions] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1148,52 +1366,62 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.coupon;
       if (v1 !== undefined) {
         if (f101(v1) !== null) {
+          /* properties[coupon] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.end;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[end] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.start;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[start] */
           return 'error';
         }
       }
       v1 = v0.subscription;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[subscription] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.coupon === undefined) {
+        /* required[coupon] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.start === undefined) {
+        /* required[start] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1204,151 +1432,183 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.balance_transactions;
       if (v1 !== undefined) {
         if (f30(v1) !== null) {
+          /* properties[balance_transactions] */
           return 'error';
         }
       }
       v1 = v0.charge;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[charge] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.evidence;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[evidence] */
           return 'error';
         }
       }
       v1 = v0.evidence_details;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[evidence_details] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.is_charge_refundable;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[is_charge_refundable] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.reason;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[reason] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.balance_transactions === undefined) {
+        /* required[balance_transactions] */
         return 'error';
       }
       if (v0.charge === undefined) {
+        /* required[charge] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.evidence === undefined) {
+        /* required[evidence] */
         return 'error';
       }
       if (v0.evidence_details === undefined) {
+        /* required[evidence_details] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.is_charge_refundable === undefined) {
+        /* required[is_charge_refundable] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.reason === undefined) {
+        /* required[reason] */
         return 'error';
       }
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f1(v0) {
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f4(v0) {
     if (typeof v0 !== 'boolean') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1359,61 +1619,73 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f140(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f17(v0) {
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f31(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1424,49 +1696,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f152(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1477,49 +1759,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f154(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1530,49 +1822,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f155(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1583,49 +1885,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f156(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1636,49 +1948,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f158(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1689,25 +2011,30 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.avs_failure;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[avs_failure] */
           return 'error';
         }
       }
       v1 = v0.cvc_failure;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[cvc_failure] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.avs_failure === undefined) {
+        /* required[avs_failure] */
         return 'error';
       }
       if (v0.cvc_failure === undefined) {
+        /* required[cvc_failure] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1725,6 +2052,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1736,9 +2064,11 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       (v1)++;
     }
     if (v1 === 0) {
+      /* enum */
       return 'error';
     }
     if (typeof v0 !== 'string') {
+      /* type */
       return 'error';
     }
     return null;
@@ -1749,187 +2079,222 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.additional_owners;
       if (v1 !== undefined) {
         if (f220(v1) !== null) {
+          /* properties[additional_owners] */
           return 'error';
         }
       }
       v1 = v0.address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[address] */
           return 'error';
         }
       }
       v1 = v0.address_kana;
       if (v1 !== undefined) {
         if (f222(v1) !== null) {
+          /* properties[address_kana] */
           return 'error';
         }
       }
       v1 = v0.address_kanji;
       if (v1 !== undefined) {
         if (f222(v1) !== null) {
+          /* properties[address_kanji] */
           return 'error';
         }
       }
       v1 = v0.business_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_name] */
           return 'error';
         }
       }
       v1 = v0.business_name_kana;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_name_kana] */
           return 'error';
         }
       }
       v1 = v0.business_name_kanji;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[business_name_kanji] */
           return 'error';
         }
       }
       v1 = v0.business_tax_id_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[business_tax_id_provided] */
           return 'error';
         }
       }
       v1 = v0.business_vat_id_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[business_vat_id_provided] */
           return 'error';
         }
       }
       v1 = v0.dob;
       if (v1 !== undefined) {
         if (f223(v1) !== null) {
+          /* properties[dob] */
           return 'error';
         }
       }
       v1 = v0.first_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[first_name] */
           return 'error';
         }
       }
       v1 = v0.first_name_kana;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[first_name_kana] */
           return 'error';
         }
       }
       v1 = v0.first_name_kanji;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[first_name_kanji] */
           return 'error';
         }
       }
       v1 = v0.gender;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[gender] */
           return 'error';
         }
       }
       v1 = v0.last_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last_name] */
           return 'error';
         }
       }
       v1 = v0.last_name_kana;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last_name_kana] */
           return 'error';
         }
       }
       v1 = v0.last_name_kanji;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last_name_kanji] */
           return 'error';
         }
       }
       v1 = v0.maiden_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[maiden_name] */
           return 'error';
         }
       }
       v1 = v0.personal_address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[personal_address] */
           return 'error';
         }
       }
       v1 = v0.personal_address_kana;
       if (v1 !== undefined) {
         if (f222(v1) !== null) {
+          /* properties[personal_address_kana] */
           return 'error';
         }
       }
       v1 = v0.personal_address_kanji;
       if (v1 !== undefined) {
         if (f222(v1) !== null) {
+          /* properties[personal_address_kanji] */
           return 'error';
         }
       }
       v1 = v0.personal_id_number_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[personal_id_number_provided] */
           return 'error';
         }
       }
       v1 = v0.phone_number;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[phone_number] */
           return 'error';
         }
       }
       v1 = v0.ssn_last_4_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[ssn_last_4_provided] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
         if (f224(v1) !== null) {
+          /* properties[verification] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.address === undefined) {
+        /* required[address] */
         return 'error';
       }
       if (v0.business_tax_id_provided === undefined) {
+        /* required[business_tax_id_provided] */
         return 'error';
       }
       if (v0.business_vat_id_provided === undefined) {
+        /* required[business_vat_id_provided] */
         return 'error';
       }
       if (v0.dob === undefined) {
+        /* required[dob] */
         return 'error';
       }
       if (v0.personal_address === undefined) {
+        /* required[personal_address] */
         return 'error';
       }
       if (v0.personal_id_number_provided === undefined) {
+        /* required[personal_id_number_provided] */
         return 'error';
       }
       if (v0.ssn_last_4_provided === undefined) {
+        /* required[ssn_last_4_provided] */
         return 'error';
       }
       if (v0.verification === undefined) {
+        /* required[verification] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -1940,64 +2305,77 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.authorization;
       if (v1 !== undefined) {
         if (f225(v1) !== null) {
+          /* properties[authorization] */
           return 'error';
         }
       }
       v1 = v0.channels;
       if (v1 !== undefined) {
         if (f226(v1) !== null) {
+          /* properties[channels] */
           return 'error';
         }
       }
       v1 = v0.create_order_hook_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[create_order_hook_url] */
           return 'error';
         }
       }
       v1 = v0.order_management;
       if (v1 !== undefined) {
         if (f227(v1) !== null) {
+          /* properties[order_management] */
           return 'error';
         }
       }
       v1 = v0.pay_order_hook_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[pay_order_hook_url] */
           return 'error';
         }
       }
       v1 = v0.shipping;
       if (v1 !== undefined) {
         if (f228(v1) !== null) {
+          /* properties[shipping] */
           return 'error';
         }
       }
       v1 = v0.taxes;
       if (v1 !== undefined) {
         if (f229(v1) !== null) {
+          /* properties[taxes] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.authorization === undefined) {
+        /* required[authorization] */
         return 'error';
       }
       if (v0.channels === undefined) {
+        /* required[channels] */
         return 'error';
       }
       if (v0.order_management === undefined) {
+        /* required[order_management] */
         return 'error';
       }
       if (v0.shipping === undefined) {
+        /* required[shipping] */
         return 'error';
       }
       if (v0.taxes === undefined) {
+        /* required[taxes] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2008,37 +2386,44 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.delay_days;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[delay_days] */
           return 'error';
         }
       }
       v1 = v0.interval;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[interval] */
           return 'error';
         }
       }
       v1 = v0.monthly_anchor;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[monthly_anchor] */
           return 'error';
         }
       }
       v1 = v0.weekly_anchor;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[weekly_anchor] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.delay_days === undefined) {
+        /* required[delay_days] */
         return 'error';
       }
       if (v0.interval === undefined) {
+        /* required[interval] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2049,23 +2434,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.date;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[date] */
           return 'error';
         }
       }
       v1 = v0.ip;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[ip] */
           return 'error';
         }
       }
       v1 = v0.user_agent;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[user_agent] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2076,28 +2465,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.disabled_reason;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[disabled_reason] */
           return 'error';
         }
       }
       v1 = v0.due_by;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[due_by] */
           return 'error';
         }
       }
       v1 = v0.fields_needed;
       if (v1 !== undefined) {
         if (f1(v1) !== null) {
+          /* properties[fields_needed] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.fields_needed === undefined) {
+        /* required[fields_needed] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2108,46 +2502,55 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.application;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[application] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2158,46 +2561,54 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.network_status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[network_status] */
           return 'error';
         }
       }
       v1 = v0.reason;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[reason] */
           return 'error';
         }
       }
       v1 = v0.risk_level;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[risk_level] */
           return 'error';
         }
       }
       v1 = v0.rule;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[rule] */
           return 'error';
         }
       }
       v1 = v0.seller_message;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[seller_message] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2215,6 +2626,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2225,43 +2637,51 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[address] */
           return 'error';
         }
       }
       v1 = v0.carrier;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[carrier] */
           return 'error';
         }
       }
       v1 = v0.name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[name] */
           return 'error';
         }
       }
       v1 = v0.phone;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[phone] */
           return 'error';
         }
       }
       v1 = v0.tracking_number;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[tracking_number] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.address === undefined) {
+        /* required[address] */
         return 'error';
       }
       if (v0.name === undefined) {
+        /* required[name] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2279,6 +2699,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2296,6 +2717,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2313,6 +2735,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2323,31 +2746,37 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[address] */
           return 'error';
         }
       }
       v1 = v0.name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[name] */
           return 'error';
         }
       }
       v1 = v0.phone;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[phone] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.address === undefined) {
+        /* required[address] */
         return 'error';
       }
       if (v0.name === undefined) {
+        /* required[name] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2365,6 +2794,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2375,46 +2805,55 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[address] */
           return 'error';
         }
       }
       v1 = v0.dob;
       if (v1 !== undefined) {
         if (f223(v1) !== null) {
+          /* properties[dob] */
           return 'error';
         }
       }
       v1 = v0.first_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[first_name] */
           return 'error';
         }
       }
       v1 = v0.last_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last_name] */
           return 'error';
         }
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
         if (f224(v1) !== null) {
+          /* properties[verification] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.address === undefined) {
+        /* required[address] */
         return 'error';
       }
       if (v0.dob === undefined) {
+        /* required[dob] */
         return 'error';
       }
       if (v0.verification === undefined) {
+        /* required[verification] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2425,41 +2864,48 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.city;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[city] */
           return 'error';
         }
       }
       v1 = v0.country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[country] */
           return 'error';
         }
       }
       v1 = v0.line1;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[line1] */
           return 'error';
         }
       }
       v1 = v0.line2;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[line2] */
           return 'error';
         }
       }
       v1 = v0.postal_code;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[postal_code] */
           return 'error';
         }
       }
       v1 = v0.state;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[state] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2470,47 +2916,55 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.city;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[city] */
           return 'error';
         }
       }
       v1 = v0.country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[country] */
           return 'error';
         }
       }
       v1 = v0.line1;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[line1] */
           return 'error';
         }
       }
       v1 = v0.line2;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[line2] */
           return 'error';
         }
       }
       v1 = v0.postal_code;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[postal_code] */
           return 'error';
         }
       }
       v1 = v0.state;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[state] */
           return 'error';
         }
       }
       v1 = v0.town;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[town] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2521,23 +2975,27 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.day;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[day] */
           return 'error';
         }
       }
       v1 = v0.month;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[month] */
           return 'error';
         }
       }
       v1 = v0.year;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[year] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2548,34 +3006,40 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.details;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[details] */
           return 'error';
         }
       }
       v1 = v0.details_code;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[details_code] */
           return 'error';
         }
       }
       v1 = v0.document;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[document] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2586,28 +3050,33 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.issuer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[issuer] */
           return 'error';
         }
       }
       v1 = v0.provider;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2618,11 +3087,13 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.twitter;
       if (v1 !== undefined) {
         if (f302(v1) !== null) {
+          /* properties[twitter] */
           return 'error';
         }
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2633,22 +3104,26 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.provider;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2659,70 +3134,82 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.free_above;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[free_above] */
           return 'error';
         }
       }
       v1 = v0.from_address;
       if (v1 !== undefined) {
         if (f221(v1) !== null) {
+          /* properties[from_address] */
           return 'error';
         }
       }
       v1 = v0.from_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[from_name] */
           return 'error';
         }
       }
       v1 = v0.provider;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider] */
           return 'error';
         }
       }
       v1 = v0.provider_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider_url] */
           return 'error';
         }
       }
       v1 = v0.rates;
       if (v1 !== undefined) {
         if (f303(v1) !== null) {
+          /* properties[rates] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2733,40 +3220,47 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.provider;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider] */
           return 'error';
         }
       }
       v1 = v0.provider_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[provider_url] */
           return 'error';
         }
       }
       v1 = v0.rate;
       if (v1 !== undefined) {
         if (f260(v1) !== null) {
+          /* properties[rate] */
           return 'error';
         }
       }
       v1 = v0.type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[type] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.type === undefined) {
+        /* required[type] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2777,97 +3271,116 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.balance_transaction;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[balance_transaction] */
           return 'error';
         }
       }
       v1 = v0.charge;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[charge] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.reason;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[reason] */
           return 'error';
         }
       }
       v1 = v0.receipt_number;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[receipt_number] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2878,106 +3391,128 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.fingerprint;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[fingerprint] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.payment_amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[payment_amount] */
           return 'error';
         }
       }
       v1 = v0.payment_currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[payment_currency] */
           return 'error';
         }
       }
       v1 = v0.reusable;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[reusable] */
           return 'error';
         }
       }
       v1 = v0.used;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[used] */
           return 'error';
         }
       }
       v1 = v0.username;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[username] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.fingerprint === undefined) {
+        /* required[fingerprint] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.reusable === undefined) {
+        /* required[reusable] */
         return 'error';
       }
       if (v0.used === undefined) {
+        /* required[used] */
         return 'error';
       }
       if (v0.username === undefined) {
+        /* required[username] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -2988,169 +3523,200 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.account;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[account] */
           return 'error';
         }
       }
       v1 = v0.account_holder_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[account_holder_name] */
           return 'error';
         }
       }
       v1 = v0.account_holder_type;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[account_holder_type] */
           return 'error';
         }
       }
       v1 = v0.address_city;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_city] */
           return 'error';
         }
       }
       v1 = v0.address_line1;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_line1] */
           return 'error';
         }
       }
       v1 = v0.address_line2;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_line2] */
           return 'error';
         }
       }
       v1 = v0.address_state;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_state] */
           return 'error';
         }
       }
       v1 = v0.address_zip;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[address_zip] */
           return 'error';
         }
       }
       v1 = v0.allows_debits;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[allows_debits] */
           return 'error';
         }
       }
       v1 = v0.bank_name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[bank_name] */
           return 'error';
         }
       }
       v1 = v0.country;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[country] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.customer_reference;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer_reference] */
           return 'error';
         }
       }
       v1 = v0.default_for_currency;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[default_for_currency] */
           return 'error';
         }
       }
       v1 = v0.fingerprint;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[fingerprint] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.last4;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[last4] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.reusable;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[reusable] */
           return 'error';
         }
       }
       v1 = v0.routing_number;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[routing_number] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
       v1 = v0.used;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[used] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.country === undefined) {
+        /* required[country] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.last4 === undefined) {
+        /* required[last4] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3161,202 +3727,240 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.account_balance;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[account_balance] */
           return 'error';
         }
       }
       v1 = v0.application_fee_percent;
       if (v1 !== undefined) {
         if (f260(v1) !== null) {
+          /* properties[application_fee_percent] */
           return 'error';
         }
       }
       v1 = v0.billing;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[billing] */
           return 'error';
         }
       }
       v1 = v0.cancel_at_period_end;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[cancel_at_period_end] */
           return 'error';
         }
       }
       v1 = v0.canceled_at;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[canceled_at] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.current_period_end;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[current_period_end] */
           return 'error';
         }
       }
       v1 = v0.current_period_start;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[current_period_start] */
           return 'error';
         }
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[customer] */
           return 'error';
         }
       }
       v1 = v0.days_until_due;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[days_until_due] */
           return 'error';
         }
       }
       v1 = v0.discount;
       if (v1 !== undefined) {
         if (f125(v1) !== null) {
+          /* properties[discount] */
           return 'error';
         }
       }
       v1 = v0.ended_at;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[ended_at] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.items;
       if (v1 !== undefined) {
         if (f293(v1) !== null) {
+          /* properties[items] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.max_occurrences;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[max_occurrences] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.on_behalf_of;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[on_behalf_of] */
           return 'error';
         }
       }
       v1 = v0.plan;
       if (v1 !== undefined) {
         if (f305(v1) !== null) {
+          /* properties[plan] */
           return 'error';
         }
       }
       v1 = v0.quantity;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[quantity] */
           return 'error';
         }
       }
       v1 = v0.retains_own_balance;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[retains_own_balance] */
           return 'error';
         }
       }
       v1 = v0.start;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[start] */
           return 'error';
         }
       }
       v1 = v0.status;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[status] */
           return 'error';
         }
       }
       v1 = v0.tax_percent;
       if (v1 !== undefined) {
         if (f260(v1) !== null) {
+          /* properties[tax_percent] */
           return 'error';
         }
       }
       v1 = v0.trial_end;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[trial_end] */
           return 'error';
         }
       }
       v1 = v0.trial_start;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[trial_start] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.cancel_at_period_end === undefined) {
+        /* required[cancel_at_period_end] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.customer === undefined) {
+        /* required[customer] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.start === undefined) {
+        /* required[start] */
         return 'error';
       }
       if (v0.status === undefined) {
+        /* required[status] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
   }
   function f260(v0) {
     if (typeof v0 !== 'number') {
+      /* type */
       return 'error';
     }
     return null;
@@ -3367,49 +3971,59 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.data;
       if (v1 !== undefined) {
         if (f304(v1) !== null) {
+          /* properties[data] */
           return 'error';
         }
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[has_more] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f142(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.total_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[total_count] */
           return 'error';
         }
       }
       v1 = v0.url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[url] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.data === undefined) {
+        /* required[data] */
         return 'error';
       }
       if (v0.has_more === undefined) {
+        /* required[has_more] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.url === undefined) {
+        /* required[url] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3420,79 +4034,94 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.enabled;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[enabled] */
           return 'error';
         }
       }
       v1 = v0.marketplace_id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[marketplace_id] */
           return 'error';
         }
       }
       v1 = v0.merchant_id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[merchant_id] */
           return 'error';
         }
       }
       v1 = v0.oauth_token_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[oauth_token_provided] */
           return 'error';
         }
       }
       v1 = v0.oauth_token_secret_provided;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[oauth_token_secret_provided] */
           return 'error';
         }
       }
       v1 = v0.privacy_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[privacy_url] */
           return 'error';
         }
       }
       v1 = v0.sales_terms;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[sales_terms] */
           return 'error';
         }
       }
       v1 = v0.shipping_policy;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[shipping_policy] */
           return 'error';
         }
       }
       v1 = v0.terms_url;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[terms_url] */
           return 'error';
         }
       }
       v1 = v0.username;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[username] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.enabled === undefined) {
+        /* required[enabled] */
         return 'error';
       }
       if (v0.oauth_token_provided === undefined) {
+        /* required[oauth_token_provided] */
         return 'error';
       }
       if (v0.oauth_token_secret_provided === undefined) {
+        /* required[oauth_token_secret_provided] */
         return 'error';
       }
       if (v0.username === undefined) {
+        /* required[username] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3503,34 +4132,41 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.description;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[description] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.description === undefined) {
+        /* required[description] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3548,6 +4184,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       }
     }
     if (!(Array.isArray(v0))) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3558,109 +4195,132 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.amount;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[amount] */
           return 'error';
         }
       }
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[currency] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.interval;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[interval] */
           return 'error';
         }
       }
       v1 = v0.interval_count;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[interval_count] */
           return 'error';
         }
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
         if (f4(v1) !== null) {
+          /* properties[livemode] */
           return 'error';
         }
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
         if (f17(v1) !== null) {
+          /* properties[metadata] */
           return 'error';
         }
       }
       v1 = v0.name;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[name] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.statement_descriptor;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[statement_descriptor] */
           return 'error';
         }
       }
       v1 = v0.trial_period_days;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[trial_period_days] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.amount === undefined) {
+        /* required[amount] */
         return 'error';
       }
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.currency === undefined) {
+        /* required[currency] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.interval === undefined) {
+        /* required[interval] */
         return 'error';
       }
       if (v0.interval_count === undefined) {
+        /* required[interval_count] */
         return 'error';
       }
       if (v0.livemode === undefined) {
+        /* required[livemode] */
         return 'error';
       }
       if (v0.metadata === undefined) {
+        /* required[metadata] */
         return 'error';
       }
       if (v0.name === undefined) {
+        /* required[name] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;
@@ -3671,52 +4331,63 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       v1 = v0.created;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[created] */
           return 'error';
         }
       }
       v1 = v0.id;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[id] */
           return 'error';
         }
       }
       v1 = v0.object;
       if (v1 !== undefined) {
         if (f2(v1) !== null) {
+          /* properties[object] */
           return 'error';
         }
       }
       v1 = v0.plan;
       if (v1 !== undefined) {
         if (f305(v1) !== null) {
+          /* properties[plan] */
           return 'error';
         }
       }
       v1 = v0.quantity;
       if (v1 !== undefined) {
         if (f31(v1) !== null) {
+          /* properties[quantity] */
           return 'error';
         }
       }
     }
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       if (v0.created === undefined) {
+        /* required[created] */
         return 'error';
       }
       if (v0.id === undefined) {
+        /* required[id] */
         return 'error';
       }
       if (v0.object === undefined) {
+        /* required[object] */
         return 'error';
       }
       if (v0.plan === undefined) {
+        /* required[plan] */
         return 'error';
       }
       if (v0.quantity === undefined) {
+        /* required[quantity] */
         return 'error';
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      /* type */
       return 'error';
     }
     return null;

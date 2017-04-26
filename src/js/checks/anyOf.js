@@ -22,7 +22,7 @@ const anyOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     return Ast.Body(
       Ast.Assignment(count, Ast.NumLiteral(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Eq(count, Ast.NumLiteral(0)), context.error()),
+      Ast.If(Ast.Binop.Eq(count, Ast.NumLiteral(0)), context.error(schema, 'anyOf')),
     );
   } else {
     return Ast.Empty;

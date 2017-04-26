@@ -17,16 +17,17 @@ const predicate = (type: string | JsonSchema, symbol: VarType, context: Context)
 
 const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const {type} = schema;
+  const error = context.error(schema, 'type');
   if (typeof type === 'string') {
     return Ast.If(
       Ast.Unop.Not(util.primitivePredicate(type, symbol)),
-      context.error(),
+      error,
     );
   } else if (Array.isArray(type)) {
     if (type.length === 1) {
       return Ast.If(
         Ast.Unop.Not(predicate(type[0], symbol, context)),
-        context.error(),
+        error,
       );
     } else if (type.length > 1) {
       // var count = 0;
@@ -45,7 +46,7 @@ const _type = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       return Ast.Body(
         Ast.Assignment(count, Ast.NumLiteral(0)),
         Ast.Body(...checks),
-        Ast.If(Ast.Binop.Eq(count, Ast.NumLiteral(type.length)), context.error()),
+        Ast.If(Ast.Binop.Eq(count, Ast.NumLiteral(type.length)), error),
       );
     } else {
       return Ast.Empty;

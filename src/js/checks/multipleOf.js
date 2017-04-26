@@ -12,7 +12,7 @@ const _multipleOf = (schema: JsonSchema, symbol: VarType, context: Context): JsA
       Ast.Assignment(divided, Ast.Binop.Div(symbol, Ast.NumLiteral(multipleOf))),
       Ast.If(
         Ast.Unop.Not(util.primitivePredicate('integer', divided)),
-        context.error(),
+        context.error(schema, 'multipleOf'),
       ),
     ));
   } else {

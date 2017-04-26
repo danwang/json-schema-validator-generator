@@ -7,13 +7,14 @@ import type {JsAst, VarType} from 'js/ast/ast.js';
 
 const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: VarType, context: Context): JsAst => {
   const {additionalItems} = schema;
+  const error = context.error(schema, 'additionalItems');
   if (additionalItems === false) {
     return Ast.If(
       Ast.Binop.Gt(
         Ast.PropertyAccess(symbol, 'length'),
         Ast.NumLiteral(items.length),
       ),
-      context.error(),
+      error,
     );
   } else if (additionalItems && typeof additionalItems === 'object') {
     const fnSym = context.symbolForSchema(additionalItems);
@@ -27,7 +28,7 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
         Ast.Body(
           Ast.If(
             Ast.Binop.Neq(Ast.Call(fnSym, Ast.BracketAccess(symbol, i)), Ast.Null),
-            context.error(),
+            error,
           ),
         ),
       ),
@@ -51,7 +52,7 @@ const items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
             Ast.Null,
           ),
         ),
-        context.error(),
+        context.error(schema, `items[${i}]`),
       );
     });
     return Ast.Body(additionalCheck, ...checks);
