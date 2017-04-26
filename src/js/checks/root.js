@@ -15,7 +15,7 @@ import required from 'js/checks/required.js';
 import type from 'js/checks/type.js';
 import uniqueItems from 'js/checks/uniqueItems.js';
 
-import type {Context} from 'types.js';
+import type {Context} from 'js/generate.js';
 
 import Ast from 'js/jsast/ast.js';
 import type {Function1Type} from 'js/jsast/ast.js';

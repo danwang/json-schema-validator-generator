@@ -1,5 +1,5 @@
 // @flow
-import type {Context} from 'types.js';
+import type {Context} from 'js/generate.js';
 import Ast from 'js/jsast/ast.js';
 import type {JsAst, VarType} from 'js/jsast/ast.js';
 import util from 'util.js';

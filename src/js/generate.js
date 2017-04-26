@@ -6,11 +6,18 @@ import simplify from 'js/jsast/simplify.js';
 import render from 'js/jsast/render.js';
 import uniqFuncs from 'js/jsast/uniq-funcs.js';
 import util from 'util.js';
-import type {VarType} from 'js/jsast/ast.js';
+import type {JsAst, VarType} from 'js/jsast/ast.js';
 
 const gengensym = () => {
   const g = util.gengensym();
   return (...args) => Ast.Var(g(...args));
+};
+
+export type Context = {
+  gensym: () => VarType,
+  error: () => JsAst,
+  symbolForSchema: (schema: JsonSchema) => VarType,
+  rootSchema: JsonSchema,
 };
 
 type Schemas = {[key: string]: JsonSchema};
