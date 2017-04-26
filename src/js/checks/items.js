@@ -1,6 +1,5 @@
 // @flow
 import _ from 'lodash';
-import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
@@ -67,7 +66,7 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
         ),
       ),
     );
-    return util.typeCheck('array', symbol, check);
+    return M.TypeCheck('array', symbol, check);
   } else {
     return Ast.Empty;
   }

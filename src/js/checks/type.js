@@ -1,6 +1,5 @@
 // @flow
 import _ from 'lodash';
-import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
@@ -9,7 +8,7 @@ import M from 'js/ast/macros';
 const predicate = (type: string | JsonSchema, symbol: VarType, context: Context) => {
   if (typeof type === 'string') {
     // $FlowFixMe Wait until we can refine string -> enum
-    return Ast.Unop.Not(util.primitivePredicate(type, symbol));
+    return Ast.Unop.Not(M.PrimitivePredicate(type, symbol));
   } else {
     return M.FailedCheck(type, symbol, context);
   }

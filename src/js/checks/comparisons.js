@@ -1,8 +1,8 @@
 // @flow
-import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 type Field = (
   'minimum' |
@@ -39,19 +39,19 @@ const comparisons = (schema: JsonSchema, symbol: VarType, context: Context): JsA
   };
 
   return Ast.Body(
-    util.typeCheck('number', symbol, Ast.Body(
+    M.TypeCheck('number', symbol, Ast.Body(
       comparison(symbol, schema.exclusiveMinimum ? Ast.Binop.Lte : Ast.Binop.Lt, 'minimum'),
       comparison(symbol, schema.exclusiveMaximum ? Ast.Binop.Gte : Ast.Binop.Gt, 'maximum'),
     )),
-    util.typeCheck('string', symbol, Ast.Body(
+    M.TypeCheck('string', symbol, Ast.Body(
       comparison(symbolLength, Ast.Binop.Lt, 'minLength'),
       comparison(symbolLength, Ast.Binop.Gt, 'maxLength'),
     )),
-    util.typeCheck('array', symbol, Ast.Body(
+    M.TypeCheck('array', symbol, Ast.Body(
       comparison(symbolLength, Ast.Binop.Lt, 'minItems'),
       comparison(symbolLength, Ast.Binop.Gt, 'maxItems'),
     )),
-    util.typeCheck('object', symbol, Ast.Body(
+    M.TypeCheck('object', symbol, Ast.Body(
       comparison(keysLength, Ast.Binop.Lt, 'minProperties'),
       comparison(keysLength, Ast.Binop.Gt, 'maxProperties'),
     )),

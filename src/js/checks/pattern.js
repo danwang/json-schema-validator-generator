@@ -1,8 +1,8 @@
 // @flow
-import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import M from 'js/ast/macros';
 
 const _pattern = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const {pattern} = schema;
@@ -14,7 +14,7 @@ const _pattern = (schema: JsonSchema, symbol: VarType, context: Context): JsAst 
       )),
       context.error(schema, 'pattern'),
     );
-    return util.typeCheck('string', symbol, check);
+    return M.TypeCheck('string', symbol, check);
   } else {
     return Ast.Empty;
   }

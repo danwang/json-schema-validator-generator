@@ -2,14 +2,14 @@
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
-import util from 'util.js';
+import M from 'js/ast/macros';
 
 const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.uniqueItems) {
     const obj = context.gensym();
     const i = context.gensym();
     const stringified = context.gensym();
-    return util.typeCheck('array', symbol, Ast.Body(
+    return M.TypeCheck('array', symbol, Ast.Body(
       Ast.Assignment(obj, Ast.Literal('{}')),
       Ast.Assignment(i, Ast.NumLiteral(0)),
       Ast.For(

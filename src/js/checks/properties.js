@@ -1,6 +1,5 @@
 // @flow
 import _ from 'lodash';
-import util from 'util.js';
 import type {Context} from 'js/generate.js';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
@@ -118,7 +117,7 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
         context,
       ),
     ));
-    return util.typeCheck('object', symbol, loop);
+    return M.TypeCheck('object', symbol, loop);
   } else if (schema.properties) {
     // Static list of properties to check
     const sym = context.gensym();
@@ -134,7 +133,7 @@ const properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAs
         ),
       );
     }));
-    return util.typeCheck('object', symbol, checks);
+    return M.TypeCheck('object', symbol, checks);
   } else {
     return Ast.Empty;
   }
