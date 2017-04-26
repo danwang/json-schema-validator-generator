@@ -15,7 +15,7 @@ const gengensym = () => {
 
 export type Context = {
   gensym: () => VarType,
-  error: (schema?: JsonSchema, reason?: string) => JsAst,
+  error: (schema: JsonSchema, reason: string) => JsAst,
   symbolForSchema: (schema: JsonSchema) => VarType,
   rootSchema: JsonSchema,
 };
@@ -47,8 +47,8 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
 
   const makeContext = () => ({
     gensym: gengensym(),
-    error: (subSchema?: JsonSchema, reason?: string) => Ast.Body(
-      reason ? Ast.Comment(reason) : Ast.Empty,
+    error: (subSchema: JsonSchema, reason: string) => Ast.Body(
+      Ast.Comment(reason),
       Ast.Return(Ast.StringLiteral('error')),
     ),
     symbolForSchema,

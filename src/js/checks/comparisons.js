@@ -16,7 +16,7 @@ type Field = (
   'minProperties' |
   'maxProperties'
 );
-type Binop = (JsAst, JsAst) => JsAst;
+type Binop = (left: JsAst, right: JsAst) => JsAst;
 
 const comparisons = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const symbolLength = Ast.PropertyAccess(symbol, 'length');
