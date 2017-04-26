@@ -120,6 +120,11 @@ const simplify = (ast: JsAst): JsAst => {
       return ast;
     case 'function1':
       return Ast.Function1(ast.name, ast.argument, simplify(ast.body));
+    case 'binop':
+      return Ast.Binop.Any(ast.comparator)(
+        simplify(ast.left),
+        simplify(ast.right),
+      );
     case 'unop':
       return simplifyUnop(ast);
     default:

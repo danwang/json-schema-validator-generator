@@ -8,7 +8,10 @@ import M from 'js/ast/macros';
 const allOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.allOf) {
     const nodes = _.map(schema.allOf, (subSchema) => {
-      return M.Delegate(subSchema, symbol, context, context.error(schema, 'allOf'));
+      return Ast.If(
+        M.FailedCheck(subSchema, symbol, context),
+        context.error(schema, 'allOf'),
+      );
     });
     return Ast.Body(...nodes);
   } else {

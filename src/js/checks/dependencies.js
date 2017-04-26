@@ -30,7 +30,10 @@ const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): Js
       } else {
         return Ast.If(
           Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
-          M.Delegate(check, symbol, context, error),
+          Ast.If(
+            M.FailedCheck(check, symbol, context),
+            error,
+          ),
         );
       }
     });

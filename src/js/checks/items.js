@@ -25,10 +25,8 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
         Ast.Empty,
         Ast.Binop.Lt(i, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(i),
-        M.Delegate(
-          additionalItems,
-          Ast.BracketAccess(symbol, i),
-          context,
+        Ast.If(
+          M.FailedCheck(additionalItems, Ast.BracketAccess(symbol, i), context),
           error,
         ),
       ),
@@ -46,10 +44,8 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
     const checks = _.map(items, (subSchema, i) => {
       return Ast.If(
         Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
-        M.Delegate(
-          subSchema,
-          Ast.BracketAccess(symbol, Ast.NumLiteral(i)),
-          context,
+        Ast.If(
+          M.FailedCheck(subSchema, Ast.BracketAccess(symbol, Ast.NumLiteral(i)), context),
           context.error(schema, `items[${i}]`),
         ),
       );
@@ -65,10 +61,8 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
         Ast.Empty,
         Ast.Binop.Lt(counter, Ast.PropertyAccess(symbol, 'length')),
         Ast.Unop.Incr(counter),
-        M.Delegate(
-          items,
-          Ast.BracketAccess(symbol, counter),
-          context,
+        Ast.If(
+          M.FailedCheck(items, Ast.BracketAccess(symbol, counter), context),
           context.error(schema, 'items'),
         ),
       ),
