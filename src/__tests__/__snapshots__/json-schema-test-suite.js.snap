@@ -33,10 +33,9 @@ exports[`JSON Schema test suite additionalItems.json matches snapshot 1`] = `
 exports[`JSON Schema test suite additionalItems.json matches snapshot 2`] = `
 "(function() {
   function f0(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f1(v0[v1]) !== null) {
           return 'items';
@@ -702,10 +701,9 @@ exports[`JSON Schema test suite enum.json matches snapshot 3`] = `
 exports[`JSON Schema test suite items.json matches snapshot 1`] = `
 "(function() {
   function f0(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f1(v0[v1]) !== null) {
           return 'items';
@@ -1573,10 +1571,9 @@ exports[`JSON Schema test suite ref.json matches snapshot 9`] = `
     return null;
   }
   function f2(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f3(v0[v1]) !== null) {
           return 'items';

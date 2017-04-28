@@ -52,10 +52,8 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
     return Ast.Body(additionalCheck, ...checks);
   } else if (items) {
     const counter = context.gensym();
-    const result = context.gensym();
     const check = Ast.Body(
       Ast.Assignment(counter, Ast.NumLiteral(0)),
-      Ast.Assignment(result, Ast.Null),
       Ast.For(
         Ast.Empty,
         Ast.Binop.Lt(counter, Ast.PropertyAccess(symbol, 'length')),

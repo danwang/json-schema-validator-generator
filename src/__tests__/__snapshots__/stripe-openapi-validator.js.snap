@@ -1396,10 +1396,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f140(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f17(v0[v1]) !== null) {
           return 'items';
@@ -1785,10 +1784,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f152(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f230(v0[v1]) !== null) {
           return 'items';
@@ -1838,10 +1836,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f154(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f232(v0[v1]) !== null) {
           return 'items';
@@ -1854,10 +1851,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f155(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f233(v0[v1]) !== null) {
           return 'items';
@@ -1870,10 +1866,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f156(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f42(v0[v1]) !== null) {
           return 'items';
@@ -1915,10 +1910,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f158(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f234(v0[v1]) !== null) {
           return 'items';
@@ -2842,10 +2836,9 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return null;
   }
   function f304(v0) {
-    var v1, v2;
+    var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      v2 = null;
       for (; v1 < v0.length; (v1)++) {
         if (f314(v0[v1]) !== null) {
           return 'items';
