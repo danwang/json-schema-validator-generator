@@ -121,6 +121,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return `typeof ${render(ast.child, depth)}`;
     case 'comment':
       return `/* ${ast.comment} */`;
+    case 'error':
+      return '';
     default:
       throw new Error(`Unexpected AST: ${ast}`);
   }

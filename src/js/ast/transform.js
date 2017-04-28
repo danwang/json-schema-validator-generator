@@ -57,6 +57,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return Ast.TypeOf(recur(ast.child));
       case 'comment':
         return ast;
+      case 'error':
+        return ast;
       default:
         throw new Error(`Unexpected AST: ${ast}`);
     }

@@ -21,7 +21,8 @@ export type JsAst = (
   PropertyAccessType |
   BracketAccessType |
   TypeOfType |
-  CommentType
+  CommentType |
+  ErrorType
 );
 type AssignmentType = {
   type: 'assignment',
@@ -109,6 +110,12 @@ export type TypeOfType = {
 export type CommentType = {
   type: 'comment',
   comment: string,
+};
+export type ErrorType = {
+  type: 'error',
+  path: string,
+  check: string,
+  subCheck: ?string,
 };
 
 const Function1 = (
@@ -224,6 +231,14 @@ const TypeOf = (child: JsAst): TypeOfType => {
   };
 };
 const Comment = (comment: string): CommentType => ({type: 'comment', comment});
+const Error = (path: string, check: string, subCheck: ?string): ErrorType => {
+  return {
+    type: 'error',
+    path,
+    check,
+    subCheck,
+  };
+};
 
 export default {
   Function1,
@@ -260,6 +275,7 @@ export default {
   BracketAccess,
   TypeOf,
   Comment,
+  Error,
   Null: Literal('null'),
   Undefined: Literal('undefined'),
   True: Literal('true'),
