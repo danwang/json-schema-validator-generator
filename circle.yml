@@ -4,3 +4,6 @@ dependencies:
 test:
   override:
     - yarn jest
+machine:
+  node:
+    version: 6.5.0
