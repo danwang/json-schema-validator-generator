@@ -1,6 +1,6 @@
 # json-schema-validator-generator
 
-A [Flow](https://flow.org/) type and JS validator code generator for [JSON Schema](http://json-schema.org/).
+A [Flow](https://flow.org/) type and JS validator code generator for [JSON Schema](http://json-schema.org/). ![Circle CI build status](https://circleci.com/gh/danwang/json-schema-validator-generator.svg?style=shield&circle-token=e55c75fb4868a71bbd2fba3479cbd8e056cb2548)
 
 ## Install
 ```
