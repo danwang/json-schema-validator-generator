@@ -7,7 +7,7 @@ const FailedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): Js
   const fnSym = context.symbolForSchema(subSchema);
   return Ast.Binop.Neq(
     Ast.Call(fnSym, symbol),
-    Ast.Null,
+    Ast.NumLiteral(0),
   );
 };
 
@@ -15,7 +15,7 @@ const PassedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): Js
   const fnSym = context.symbolForSchema(subSchema);
   return Ast.Binop.Eq(
     Ast.Call(fnSym, symbol),
-    Ast.Null,
+    Ast.NumLiteral(0),
   );
 };
 

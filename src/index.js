@@ -10,7 +10,7 @@ type Generated = {
 };
 
 const generate = (anything: mixed, anyShape: Object = {root: anything}): Generated => {
-  if (validator.JsonSchema(anything) !== null) {
+  if (validator.JsonSchema(anything) !== 0) {
     throw new Error('Invalid schema.');
   } else {
     const schema: JsonSchema = (anything: any);

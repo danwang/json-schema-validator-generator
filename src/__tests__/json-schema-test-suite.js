@@ -80,8 +80,8 @@ describe('JSON Schema test suite', () => {
           describe(description, () => {
             const {description: testDescription, data, valid} = test;
             if (_.get(SKIPPED_TESTS, [fileName, description, testDescription], true)) {
-              it(description, () => {
-                expect(validator(data) === null).toBe(valid);
+              it(testDescription, () => {
+                expect(validator(data) === 0).toBe(valid);
               });
             }
           });

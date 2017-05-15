@@ -22,9 +22,9 @@ console.log(js);
 // (function() {
 //   function f0(v0) {
 //     if (typeof v0 !== 'string') {
-//       return "error";
+//       return 1;
 //     }
-//     return null;
+//     return 0;
 //   }
 //   return {
 //     root: f0,
@@ -36,10 +36,10 @@ console.log(js);
 The generated flow string is meant for direct consumption in a project's [library definitions](https://flow.org/en/docs/libdefs/creation/). See [scripts/generate.js](https://github.com/danwang/json-schema-validator-generator/blob/master/scripts/generate.js) for an example script which writes flow types to [src/decls/json-schema.js](https://github.com/danwang/json-schema-validator-generator/blob/master/src/decls/json-schema.js).
 
 ### JS Output
-The generated JS string is an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns the string `'error'` if the model is invalid or `null` otherwise.
+The generated JS string is an [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) that evaluates to an object whose values are validator functions. Each validator returns a number with `0` representing a valid model and a nonzero number otherwise.
 
 ```js
-type Validator = (data: mixed) => 'error' | null;
+type Validator = (data: mixed) => number;
 ```
 
 It's recommended to write the generated JS to the filesystem, but it's possible to use the generated code at runtime.
@@ -85,10 +85,10 @@ const schema = {
 const {flow, js} = generate(schema, {node: schema.definitions.node});
 const nodeValidator = eval(js).node;
 
-console.log(nodeValidator({left: 1, right: 2})); // null
-console.log(nodeValidator({left: 1, right: {left: 2, right: 3}})); // null
+console.log(nodeValidator({left: 1, right: 2})); // 0
+console.log(nodeValidator({left: 1, right: {left: 2, right: 3}})); // 0
 
-console.log(nodeValidator(1)); // 'error'
-console.log(nodeValidator({left: 1})); // 'error'
-console.log(nodeValidator({left: 1, right: '2'})); // 'error'
+console.log(nodeValidator(1)); // error
+console.log(nodeValidator({left: 1})); // error
+console.log(nodeValidator({left: 1, right: '2'})); // error
 ```

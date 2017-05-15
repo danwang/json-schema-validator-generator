@@ -7,1408 +7,2089 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.active_payment_methods;
       if (v1 !== undefined) {
-        if (f1(v1) !== null) {
-          return 'properties[active_payment_methods]';
+        if (f1(v1) !== 0) {
+          return 1;
         }
       } else {
-        return 'required[active_payment_methods]';
+        return 2;
       }
       v1 = v0.business_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_name]';
+      if (v1 !== undefined && f2(v1) !== 0) {
+        return 3;
       }
       v1 = v0.business_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_url]';
+      if (v1 !== undefined && f3(v1) !== 0) {
+        return 4;
       }
       v1 = v0.charges_enabled;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[charges_enabled]';
+        if (f4(v1) !== 0) {
+          return 5;
         }
       } else {
-        return 'required[charges_enabled]';
+        return 6;
       }
       v1 = v0.country;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[country]';
+        if (f5(v1) !== 0) {
+          return 7;
         }
       } else {
-        return 'required[country]';
+        return 8;
       }
       v1 = v0.debit_negative_balances;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[debit_negative_balances]';
+        if (f6(v1) !== 0) {
+          return 9;
         }
       } else {
-        return 'required[debit_negative_balances]';
+        return 10;
       }
       v1 = v0.decline_charge_on;
       if (v1 !== undefined) {
-        if (f139(v1) !== null) {
-          return 'properties[decline_charge_on]';
+        if (f139(v1) !== 0) {
+          return 11;
         }
       } else {
-        return 'required[decline_charge_on]';
+        return 12;
       }
       v1 = v0.default_currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[default_currency]';
+        if (f8(v1) !== 0) {
+          return 13;
         }
       } else {
-        return 'required[default_currency]';
+        return 14;
       }
       v1 = v0.details_submitted;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[details_submitted]';
+        if (f9(v1) !== 0) {
+          return 15;
         }
       } else {
-        return 'required[details_submitted]';
+        return 16;
       }
       v1 = v0.display_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[display_name]';
+      if (v1 !== undefined && f10(v1) !== 0) {
+        return 17;
       }
       v1 = v0.email;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[email]';
+      if (v1 !== undefined && f11(v1) !== 0) {
+        return 18;
       }
       v1 = v0.external_accounts;
       if (v1 !== undefined) {
-        if (f12(v1) !== null) {
-          return 'properties[external_accounts]';
+        if (f12(v1) !== 0) {
+          return 19;
         }
       } else {
-        return 'required[external_accounts]';
+        return 20;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 21;
         }
       } else {
-        return 'required[id]';
+        return 22;
       }
       v1 = v0.legal_entity;
       if (v1 !== undefined) {
-        if (f145(v1) !== null) {
-          return 'properties[legal_entity]';
+        if (f145(v1) !== 0) {
+          return 23;
         }
       } else {
-        return 'required[legal_entity]';
+        return 24;
       }
       v1 = v0.managed;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[managed]';
+        if (f15(v1) !== 0) {
+          return 25;
         }
       } else {
-        return 'required[managed]';
+        return 26;
       }
       v1 = v0.mcc;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[mcc]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 27;
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        return 'properties[metadata]';
+      if (v1 !== undefined && f17(v1) !== 0) {
+        return 28;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 29;
         }
       } else {
-        return 'required[object]';
+        return 30;
       }
       v1 = v0.orders;
-      if (v1 !== undefined && f146(v1) !== null) {
-        return 'properties[orders]';
+      if (v1 !== undefined && f146(v1) !== 0) {
+        return 31;
       }
       v1 = v0.payout_schedule;
       if (v1 !== undefined) {
-        if (f147(v1) !== null) {
-          return 'properties[payout_schedule]';
+        if (f147(v1) !== 0) {
+          return 32;
         }
       } else {
-        return 'required[payout_schedule]';
+        return 33;
       }
       v1 = v0.payout_statement_descriptor;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[payout_statement_descriptor]';
+      if (v1 !== undefined && f21(v1) !== 0) {
+        return 34;
       }
       v1 = v0.payouts_enabled;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[payouts_enabled]';
+        if (f22(v1) !== 0) {
+          return 35;
         }
       } else {
-        return 'required[payouts_enabled]';
+        return 36;
       }
       v1 = v0.product_description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[product_description]';
+      if (v1 !== undefined && f23(v1) !== 0) {
+        return 37;
       }
       v1 = v0.statement_descriptor;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[statement_descriptor]';
+      if (v1 !== undefined && f24(v1) !== 0) {
+        return 38;
       }
       v1 = v0.support_email;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[support_email]';
+      if (v1 !== undefined && f25(v1) !== 0) {
+        return 39;
       }
       v1 = v0.support_phone;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[support_phone]';
+      if (v1 !== undefined && f26(v1) !== 0) {
+        return 40;
       }
       v1 = v0.timezone;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[timezone]';
+      if (v1 !== undefined && f27(v1) !== 0) {
+        return 41;
       }
       v1 = v0.tos_acceptance;
       if (v1 !== undefined) {
-        if (f148(v1) !== null) {
-          return 'properties[tos_acceptance]';
+        if (f148(v1) !== 0) {
+          return 42;
         }
       } else {
-        return 'required[tos_acceptance]';
+        return 43;
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
-        if (f149(v1) !== null) {
-          return 'properties[verification]';
+        if (f149(v1) !== 0) {
+          return 44;
         }
       } else {
-        return 'required[verification]';
+        return 45;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 46;
     }
-    return null;
+    return 0;
   }
   function f30(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f31(v1) !== 0) {
+          return 47;
         }
       } else {
-        return 'required[amount]';
+        return 48;
       }
       v1 = v0.available_on;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[available_on]';
+        if (f32(v1) !== 0) {
+          return 49;
         }
       } else {
-        return 'required[available_on]';
+        return 50;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 51;
         }
       } else {
-        return 'required[created]';
+        return 52;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 53;
         }
       } else {
-        return 'required[currency]';
+        return 54;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 55;
       }
       v1 = v0.fee;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[fee]';
+        if (f36(v1) !== 0) {
+          return 56;
         }
       } else {
-        return 'required[fee]';
+        return 57;
       }
       v1 = v0.fee_details;
       if (v1 !== undefined) {
-        if (f150(v1) !== null) {
-          return 'properties[fee_details]';
+        if (f150(v1) !== 0) {
+          return 58;
         }
       } else {
-        return 'required[fee_details]';
+        return 59;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 60;
         }
       } else {
-        return 'required[id]';
+        return 61;
       }
       v1 = v0.net;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[net]';
+        if (f38(v1) !== 0) {
+          return 62;
         }
       } else {
-        return 'required[net]';
+        return 63;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 64;
         }
       } else {
-        return 'required[object]';
+        return 65;
       }
       v1 = v0.source;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[source]';
+      if (v1 !== undefined && f39(v1) !== 0) {
+        return 66;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f40(v1) !== 0) {
+          return 67;
         }
       } else {
-        return 'required[status]';
+        return 68;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f41(v1) !== 0) {
+          return 69;
         }
       } else {
-        return 'required[type]';
+        return 70;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 71;
     }
-    return null;
+    return 0;
   }
   function f42(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[account]';
+      if (v1 !== undefined && f43(v1) !== 0) {
+        return 72;
       }
       v1 = v0.address_city;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_city]';
+      if (v1 !== undefined && f44(v1) !== 0) {
+        return 73;
       }
       v1 = v0.address_country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_country]';
+      if (v1 !== undefined && f45(v1) !== 0) {
+        return 74;
       }
       v1 = v0.address_line1;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_line1]';
+      if (v1 !== undefined && f46(v1) !== 0) {
+        return 75;
       }
       v1 = v0.address_line1_check;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_line1_check]';
+      if (v1 !== undefined && f47(v1) !== 0) {
+        return 76;
       }
       v1 = v0.address_line2;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_line2]';
+      if (v1 !== undefined && f48(v1) !== 0) {
+        return 77;
       }
       v1 = v0.address_state;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_state]';
+      if (v1 !== undefined && f49(v1) !== 0) {
+        return 78;
       }
       v1 = v0.address_zip;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_zip]';
+      if (v1 !== undefined && f50(v1) !== 0) {
+        return 79;
       }
       v1 = v0.address_zip_check;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_zip_check]';
+      if (v1 !== undefined && f51(v1) !== 0) {
+        return 80;
       }
       v1 = v0.available_payout_methods;
-      if (v1 !== undefined && f1(v1) !== null) {
-        return 'properties[available_payout_methods]';
+      if (v1 !== undefined && f52(v1) !== 0) {
+        return 81;
       }
       v1 = v0.brand;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[brand]';
+        if (f53(v1) !== 0) {
+          return 82;
         }
       } else {
-        return 'required[brand]';
+        return 83;
       }
       v1 = v0.country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[country]';
+      if (v1 !== undefined && f54(v1) !== 0) {
+        return 84;
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[currency]';
+      if (v1 !== undefined && f55(v1) !== 0) {
+        return 85;
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer]';
+      if (v1 !== undefined && f56(v1) !== 0) {
+        return 86;
       }
       v1 = v0.cvc_check;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[cvc_check]';
+      if (v1 !== undefined && f57(v1) !== 0) {
+        return 87;
       }
       v1 = v0.default_for_currency;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[default_for_currency]';
+      if (v1 !== undefined && f58(v1) !== 0) {
+        return 88;
       }
       v1 = v0.dynamic_last4;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[dynamic_last4]';
+      if (v1 !== undefined && f59(v1) !== 0) {
+        return 89;
       }
       v1 = v0.estimated_availability;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[estimated_availability]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 90;
       }
       v1 = v0.exp_month;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[exp_month]';
+        if (f60(v1) !== 0) {
+          return 91;
         }
       } else {
-        return 'required[exp_month]';
+        return 92;
       }
       v1 = v0.exp_year;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[exp_year]';
+        if (f61(v1) !== 0) {
+          return 93;
         }
       } else {
-        return 'required[exp_year]';
+        return 94;
       }
       v1 = v0.fingerprint;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[fingerprint]';
+      if (v1 !== undefined && f62(v1) !== 0) {
+        return 95;
       }
       v1 = v0.funding;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[funding]';
+        if (f63(v1) !== 0) {
+          return 96;
         }
       } else {
-        return 'required[funding]';
+        return 97;
       }
       v1 = v0.google_reference;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[google_reference]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 98;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 99;
         }
       } else {
-        return 'required[id]';
+        return 100;
       }
       v1 = v0.last4;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[last4]';
+        if (f64(v1) !== 0) {
+          return 101;
         }
       } else {
-        return 'required[last4]';
+        return 102;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 103;
         }
       } else {
-        return 'required[metadata]';
+        return 104;
       }
       v1 = v0.name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[name]';
+      if (v1 !== undefined && f65(v1) !== 0) {
+        return 105;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 106;
         }
       } else {
-        return 'required[object]';
+        return 107;
       }
       v1 = v0.recipient;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[recipient]';
+      if (v1 !== undefined && f66(v1) !== 0) {
+        return 108;
       }
       v1 = v0.three_d_secure;
-      if (v1 !== undefined && f17(v1) !== null) {
-        return 'properties[three_d_secure]';
+      if (v1 !== undefined && f67(v1) !== 0) {
+        return 109;
       }
       v1 = v0.tokenization_method;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[tokenization_method]';
+      if (v1 !== undefined && f68(v1) !== 0) {
+        return 110;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 111;
     }
-    return null;
+    return 0;
   }
   function f69(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f70(v1) !== 0) {
+          return 112;
         }
       } else {
-        return 'required[amount]';
+        return 113;
       }
       v1 = v0.amount_authorized;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[amount_authorized]';
+      if (v1 !== undefined && f71(v1) !== 0) {
+        return 114;
       }
       v1 = v0.amount_captured;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount_captured]';
+        if (f71(v1) !== 0) {
+          return 115;
         }
       } else {
-        return 'required[amount_captured]';
+        return 116;
       }
       v1 = v0.amount_refunded;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount_refunded]';
+        if (f72(v1) !== 0) {
+          return 117;
         }
       } else {
-        return 'required[amount_refunded]';
+        return 118;
       }
       v1 = v0.application;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[application]';
+      if (v1 !== undefined && f73(v1) !== 0) {
+        return 119;
       }
       v1 = v0.application_fee;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[application_fee]';
+      if (v1 !== undefined && f74(v1) !== 0) {
+        return 120;
       }
       v1 = v0.balance_transaction;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[balance_transaction]';
+      if (v1 !== undefined && f75(v1) !== 0) {
+        return 121;
       }
       v1 = v0.captured;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[captured]';
+        if (f76(v1) !== 0) {
+          return 122;
         }
       } else {
-        return 'required[captured]';
+        return 123;
       }
       v1 = v0.card;
-      if (v1 !== undefined && f42(v1) !== null) {
-        return 'properties[card]';
+      if (v1 !== undefined && f42(v1) !== 0) {
+        return 124;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 125;
         }
       } else {
-        return 'required[created]';
+        return 126;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 127;
         }
       } else {
-        return 'required[currency]';
+        return 128;
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer]';
+      if (v1 !== undefined && f78(v1) !== 0) {
+        return 129;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 130;
       }
       v1 = v0.destination;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[destination]';
+      if (v1 !== undefined && f79(v1) !== 0) {
+        return 131;
       }
       v1 = v0.dispute;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[dispute]';
+      if (v1 !== undefined && f80(v1) !== 0) {
+        return 132;
       }
       v1 = v0.failure_code;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[failure_code]';
+      if (v1 !== undefined && f81(v1) !== 0) {
+        return 133;
       }
       v1 = v0.failure_message;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[failure_message]';
+      if (v1 !== undefined && f82(v1) !== 0) {
+        return 134;
       }
       v1 = v0.fraud_details;
-      if (v1 !== undefined && f17(v1) !== null) {
-        return 'properties[fraud_details]';
+      if (v1 !== undefined && f83(v1) !== 0) {
+        return 135;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 136;
         }
       } else {
-        return 'required[id]';
+        return 137;
       }
       v1 = v0.invoice;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[invoice]';
+      if (v1 !== undefined && f84(v1) !== 0) {
+        return 138;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 139;
         }
       } else {
-        return 'required[livemode]';
+        return 140;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 141;
         }
       } else {
-        return 'required[metadata]';
+        return 142;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 143;
         }
       } else {
-        return 'required[object]';
+        return 144;
       }
       v1 = v0.on_behalf_of;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[on_behalf_of]';
+      if (v1 !== undefined && f86(v1) !== 0) {
+        return 145;
       }
       v1 = v0.order;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[order]';
+      if (v1 !== undefined && f87(v1) !== 0) {
+        return 146;
       }
       v1 = v0.outcome;
-      if (v1 !== undefined && f151(v1) !== null) {
-        return 'properties[outcome]';
+      if (v1 !== undefined && f151(v1) !== 0) {
+        return 147;
       }
       v1 = v0.paid;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[paid]';
+        if (f89(v1) !== 0) {
+          return 148;
         }
       } else {
-        return 'required[paid]';
+        return 149;
       }
       v1 = v0.receipt_email;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[receipt_email]';
+      if (v1 !== undefined && f90(v1) !== 0) {
+        return 150;
       }
       v1 = v0.receipt_number;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[receipt_number]';
+      if (v1 !== undefined && f91(v1) !== 0) {
+        return 151;
       }
       v1 = v0.refunded;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[refunded]';
+        if (f92(v1) !== 0) {
+          return 152;
         }
       } else {
-        return 'required[refunded]';
+        return 153;
       }
       v1 = v0.refunds;
       if (v1 !== undefined) {
-        if (f93(v1) !== null) {
-          return 'properties[refunds]';
+        if (f93(v1) !== 0) {
+          return 154;
         }
       } else {
-        return 'required[refunds]';
+        return 155;
       }
       v1 = v0.review;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[review]';
+      if (v1 !== undefined && f94(v1) !== 0) {
+        return 156;
       }
       v1 = v0.shipping;
-      if (v1 !== undefined && f153(v1) !== null) {
-        return 'properties[shipping]';
+      if (v1 !== undefined && f153(v1) !== 0) {
+        return 157;
       }
       v1 = v0.source_transfer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[source_transfer]';
+      if (v1 !== undefined && f96(v1) !== 0) {
+        return 158;
       }
       v1 = v0.statement_descriptor;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[statement_descriptor]';
+      if (v1 !== undefined && f97(v1) !== 0) {
+        return 159;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f98(v1) !== 0) {
+          return 160;
         }
       } else {
-        return 'required[status]';
+        return 161;
       }
       v1 = v0.transfer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[transfer]';
+      if (v1 !== undefined && f99(v1) !== 0) {
+        return 162;
       }
       v1 = v0.transfer_group;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[transfer_group]';
+      if (v1 !== undefined && f100(v1) !== 0) {
+        return 163;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 164;
     }
-    return null;
+    return 0;
   }
   function f101(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount_off;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[amount_off]';
+      if (v1 !== undefined && f102(v1) !== 0) {
+        return 165;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 166;
         }
       } else {
-        return 'required[created]';
+        return 167;
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[currency]';
+      if (v1 !== undefined && f103(v1) !== 0) {
+        return 168;
       }
       v1 = v0.duration;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[duration]';
+        if (f104(v1) !== 0) {
+          return 169;
         }
       } else {
-        return 'required[duration]';
+        return 170;
       }
       v1 = v0.duration_in_months;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[duration_in_months]';
+      if (v1 !== undefined && f105(v1) !== 0) {
+        return 171;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 172;
         }
       } else {
-        return 'required[id]';
+        return 173;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 174;
         }
       } else {
-        return 'required[livemode]';
+        return 175;
       }
       v1 = v0.max_redemptions;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[max_redemptions]';
+      if (v1 !== undefined && f106(v1) !== 0) {
+        return 176;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 177;
         }
       } else {
-        return 'required[metadata]';
+        return 178;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 179;
         }
       } else {
-        return 'required[object]';
+        return 180;
       }
       v1 = v0.percent_off;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[percent_off]';
+      if (v1 !== undefined && f107(v1) !== 0) {
+        return 181;
       }
       v1 = v0.redeem_by;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[redeem_by]';
+      if (v1 !== undefined && f108(v1) !== 0) {
+        return 182;
       }
       v1 = v0.times_redeemed;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[times_redeemed]';
+        if (f109(v1) !== 0) {
+          return 183;
         }
       } else {
-        return 'required[times_redeemed]';
+        return 184;
       }
       v1 = v0.valid;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[valid]';
+        if (f110(v1) !== 0) {
+          return 185;
         }
       } else {
-        return 'required[valid]';
+        return 186;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 187;
     }
-    return null;
+    return 0;
   }
   function f111(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account_balance;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[account_balance]';
+        if (f112(v1) !== 0) {
+          return 188;
         }
       } else {
-        return 'required[account_balance]';
+        return 189;
       }
       v1 = v0.alipay_accounts;
-      if (v1 !== undefined && f113(v1) !== null) {
-        return 'properties[alipay_accounts]';
+      if (v1 !== undefined && f113(v1) !== 0) {
+        return 190;
       }
       v1 = v0.bank_accounts;
-      if (v1 !== undefined && f114(v1) !== null) {
-        return 'properties[bank_accounts]';
+      if (v1 !== undefined && f114(v1) !== 0) {
+        return 191;
       }
       v1 = v0.business_vat_id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_vat_id]';
+      if (v1 !== undefined && f115(v1) !== 0) {
+        return 192;
       }
       v1 = v0.cards;
       if (v1 !== undefined) {
-        if (f116(v1) !== null) {
-          return 'properties[cards]';
+        if (f116(v1) !== 0) {
+          return 193;
         }
       } else {
-        return 'required[cards]';
+        return 194;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 195;
         }
       } else {
-        return 'required[created]';
+        return 196;
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[currency]';
+      if (v1 !== undefined && f117(v1) !== 0) {
+        return 197;
       }
       v1 = v0.default_bank_account;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[default_bank_account]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 198;
       }
       v1 = v0.default_card;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[default_card]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 199;
       }
       v1 = v0.default_source;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[default_source]';
+      if (v1 !== undefined && f118(v1) !== 0) {
+        return 200;
       }
       v1 = v0.delinquent;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[delinquent]';
+      if (v1 !== undefined && f119(v1) !== 0) {
+        return 201;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 202;
       }
       v1 = v0.discount;
-      if (v1 !== undefined && f125(v1) !== null) {
-        return 'properties[discount]';
+      if (v1 !== undefined && f125(v1) !== 0) {
+        return 203;
       }
       v1 = v0.email;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[email]';
+      if (v1 !== undefined && f121(v1) !== 0) {
+        return 204;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 205;
         }
       } else {
-        return 'required[id]';
+        return 206;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 207;
         }
       } else {
-        return 'required[livemode]';
+        return 208;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 209;
         }
       } else {
-        return 'required[metadata]';
+        return 210;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 211;
         }
       } else {
-        return 'required[object]';
+        return 212;
       }
       v1 = v0.shipping;
-      if (v1 !== undefined && f157(v1) !== null) {
-        return 'properties[shipping]';
+      if (v1 !== undefined && f157(v1) !== 0) {
+        return 213;
       }
       v1 = v0.sources;
       if (v1 !== undefined) {
-        if (f12(v1) !== null) {
-          return 'properties[sources]';
+        if (f123(v1) !== 0) {
+          return 214;
         }
       } else {
-        return 'required[sources]';
+        return 215;
       }
       v1 = v0.subscriptions;
       if (v1 !== undefined) {
-        if (f124(v1) !== null) {
-          return 'properties[subscriptions]';
+        if (f124(v1) !== 0) {
+          return 216;
         }
       } else {
-        return 'required[subscriptions]';
+        return 217;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 218;
     }
-    return null;
+    return 0;
   }
   function f125(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.coupon;
       if (v1 !== undefined) {
-        if (f101(v1) !== null) {
-          return 'properties[coupon]';
+        if (f101(v1) !== 0) {
+          return 219;
         }
       } else {
-        return 'required[coupon]';
+        return 220;
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 221;
       }
       v1 = v0.end;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[end]';
+      if (v1 !== undefined && f127(v1) !== 0) {
+        return 222;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 223;
         }
       } else {
-        return 'required[object]';
+        return 224;
       }
       v1 = v0.start;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[start]';
+        if (f128(v1) !== 0) {
+          return 225;
         }
       } else {
-        return 'required[start]';
+        return 226;
       }
       v1 = v0.subscription;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[subscription]';
+      if (v1 !== undefined && f129(v1) !== 0) {
+        return 227;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 228;
     }
-    return null;
+    return 0;
   }
   function f130(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f131(v1) !== 0) {
+          return 229;
         }
       } else {
-        return 'required[amount]';
+        return 230;
       }
       v1 = v0.balance_transactions;
       if (v1 !== undefined) {
-        if (f30(v1) !== null) {
-          return 'properties[balance_transactions]';
+        if (f30(v1) !== 0) {
+          return 231;
         }
       } else {
-        return 'required[balance_transactions]';
+        return 232;
       }
       v1 = v0.charge;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[charge]';
+        if (f133(v1) !== 0) {
+          return 233;
         }
       } else {
-        return 'required[charge]';
+        return 234;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 235;
         }
       } else {
-        return 'required[created]';
+        return 236;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 237;
         }
       } else {
-        return 'required[currency]';
+        return 238;
       }
       v1 = v0.evidence;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[evidence]';
+        if (f134(v1) !== 0) {
+          return 239;
         }
       } else {
-        return 'required[evidence]';
+        return 240;
       }
       v1 = v0.evidence_details;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[evidence_details]';
+        if (f135(v1) !== 0) {
+          return 241;
         }
       } else {
-        return 'required[evidence_details]';
+        return 242;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 243;
         }
       } else {
-        return 'required[id]';
+        return 244;
       }
       v1 = v0.is_charge_refundable;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[is_charge_refundable]';
+        if (f136(v1) !== 0) {
+          return 245;
         }
       } else {
-        return 'required[is_charge_refundable]';
+        return 246;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 247;
         }
       } else {
-        return 'required[livemode]';
+        return 248;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 249;
         }
       } else {
-        return 'required[metadata]';
+        return 250;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 251;
         }
       } else {
-        return 'required[object]';
+        return 252;
       }
       v1 = v0.reason;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[reason]';
+        if (f137(v1) !== 0) {
+          return 253;
         }
       } else {
-        return 'required[reason]';
+        return 254;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f138(v1) !== 0) {
+          return 255;
         }
       } else {
-        return 'required[status]';
+        return 256;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 257;
     }
-    return null;
+    return 0;
   }
   function f1(v0) {
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 258;
     }
-    return null;
+    return 0;
   }
   function f2(v0) {
     if (typeof v0 !== 'string') {
-      return 'type';
+      return 259;
     }
-    return null;
+    return 0;
+  }
+  function f3(v0) {
+    if (typeof v0 !== 'string') {
+      return 260;
+    }
+    return 0;
   }
   function f4(v0) {
     if (typeof v0 !== 'boolean') {
-      return 'type';
+      return 261;
     }
-    return null;
+    return 0;
+  }
+  function f5(v0) {
+    if (typeof v0 !== 'string') {
+      return 262;
+    }
+    return 0;
+  }
+  function f6(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 263;
+    }
+    return 0;
+  }
+  function f8(v0) {
+    if (typeof v0 !== 'string') {
+      return 264;
+    }
+    return 0;
+  }
+  function f9(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 265;
+    }
+    return 0;
+  }
+  function f10(v0) {
+    if (typeof v0 !== 'string') {
+      return 266;
+    }
+    return 0;
+  }
+  function f11(v0) {
+    if (typeof v0 !== 'string') {
+      return 267;
+    }
+    return 0;
   }
   function f12(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f140(v1) !== null) {
-          return 'properties[data]';
+        if (f140(v1) !== 0) {
+          return 268;
         }
       } else {
-        return 'required[data]';
+        return 269;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 270;
         }
       } else {
-        return 'required[has_more]';
+        return 271;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 272;
         }
       } else {
-        return 'required[object]';
+        return 273;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 274;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 275;
         }
       } else {
-        return 'required[url]';
+        return 276;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 277;
     }
-    return null;
+    return 0;
+  }
+  function f13(v0) {
+    if (typeof v0 !== 'string') {
+      return 278;
+    }
+    return 0;
+  }
+  function f15(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 279;
+    }
+    return 0;
+  }
+  function f16(v0) {
+    if (typeof v0 !== 'string') {
+      return 280;
+    }
+    return 0;
   }
   function f17(v0) {
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 281;
     }
-    return null;
+    return 0;
+  }
+  function f18(v0) {
+    if (typeof v0 !== 'string') {
+      return 282;
+    }
+    return 0;
+  }
+  function f21(v0) {
+    if (typeof v0 !== 'string') {
+      return 283;
+    }
+    return 0;
+  }
+  function f22(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 284;
+    }
+    return 0;
+  }
+  function f23(v0) {
+    if (typeof v0 !== 'string') {
+      return 285;
+    }
+    return 0;
+  }
+  function f24(v0) {
+    if (typeof v0 !== 'string') {
+      return 286;
+    }
+    return 0;
+  }
+  function f25(v0) {
+    if (typeof v0 !== 'string') {
+      return 287;
+    }
+    return 0;
+  }
+  function f26(v0) {
+    if (typeof v0 !== 'string') {
+      return 288;
+    }
+    return 0;
+  }
+  function f27(v0) {
+    if (typeof v0 !== 'string') {
+      return 289;
+    }
+    return 0;
   }
   function f31(v0) {
     if (typeof v0 !== 'number' || v0 % 1 !== 0) {
-      return 'type';
+      return 290;
     }
-    return null;
+    return 0;
+  }
+  function f32(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 291;
+    }
+    return 0;
+  }
+  function f33(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 292;
+    }
+    return 0;
+  }
+  function f34(v0) {
+    if (typeof v0 !== 'string') {
+      return 293;
+    }
+    return 0;
+  }
+  function f35(v0) {
+    if (typeof v0 !== 'string') {
+      return 294;
+    }
+    return 0;
+  }
+  function f36(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 295;
+    }
+    return 0;
+  }
+  function f38(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 296;
+    }
+    return 0;
+  }
+  function f39(v0) {
+    if (typeof v0 !== 'string') {
+      return 297;
+    }
+    return 0;
+  }
+  function f40(v0) {
+    if (typeof v0 !== 'string') {
+      return 298;
+    }
+    return 0;
+  }
+  function f41(v0) {
+    if (typeof v0 !== 'string') {
+      return 299;
+    }
+    return 0;
+  }
+  function f43(v0) {
+    if (typeof v0 !== 'string') {
+      return 300;
+    }
+    return 0;
+  }
+  function f44(v0) {
+    if (typeof v0 !== 'string') {
+      return 301;
+    }
+    return 0;
+  }
+  function f45(v0) {
+    if (typeof v0 !== 'string') {
+      return 302;
+    }
+    return 0;
+  }
+  function f46(v0) {
+    if (typeof v0 !== 'string') {
+      return 303;
+    }
+    return 0;
+  }
+  function f47(v0) {
+    if (typeof v0 !== 'string') {
+      return 304;
+    }
+    return 0;
+  }
+  function f48(v0) {
+    if (typeof v0 !== 'string') {
+      return 305;
+    }
+    return 0;
+  }
+  function f49(v0) {
+    if (typeof v0 !== 'string') {
+      return 306;
+    }
+    return 0;
+  }
+  function f50(v0) {
+    if (typeof v0 !== 'string') {
+      return 307;
+    }
+    return 0;
+  }
+  function f51(v0) {
+    if (typeof v0 !== 'string') {
+      return 308;
+    }
+    return 0;
+  }
+  function f52(v0) {
+    if (!(Array.isArray(v0))) {
+      return 309;
+    }
+    return 0;
+  }
+  function f53(v0) {
+    if (typeof v0 !== 'string') {
+      return 310;
+    }
+    return 0;
+  }
+  function f54(v0) {
+    if (typeof v0 !== 'string') {
+      return 311;
+    }
+    return 0;
+  }
+  function f55(v0) {
+    if (typeof v0 !== 'string') {
+      return 312;
+    }
+    return 0;
+  }
+  function f56(v0) {
+    if (typeof v0 !== 'string') {
+      return 313;
+    }
+    return 0;
+  }
+  function f57(v0) {
+    if (typeof v0 !== 'string') {
+      return 314;
+    }
+    return 0;
+  }
+  function f58(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 315;
+    }
+    return 0;
+  }
+  function f59(v0) {
+    if (typeof v0 !== 'string') {
+      return 316;
+    }
+    return 0;
+  }
+  function f60(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 317;
+    }
+    return 0;
+  }
+  function f61(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 318;
+    }
+    return 0;
+  }
+  function f62(v0) {
+    if (typeof v0 !== 'string') {
+      return 319;
+    }
+    return 0;
+  }
+  function f63(v0) {
+    if (typeof v0 !== 'string') {
+      return 320;
+    }
+    return 0;
+  }
+  function f64(v0) {
+    if (typeof v0 !== 'string') {
+      return 321;
+    }
+    return 0;
+  }
+  function f65(v0) {
+    if (typeof v0 !== 'string') {
+      return 322;
+    }
+    return 0;
+  }
+  function f66(v0) {
+    if (typeof v0 !== 'string') {
+      return 323;
+    }
+    return 0;
+  }
+  function f67(v0) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 324;
+    }
+    return 0;
+  }
+  function f68(v0) {
+    if (typeof v0 !== 'string') {
+      return 325;
+    }
+    return 0;
+  }
+  function f70(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 326;
+    }
+    return 0;
+  }
+  function f71(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 327;
+    }
+    return 0;
+  }
+  function f72(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 328;
+    }
+    return 0;
+  }
+  function f73(v0) {
+    if (typeof v0 !== 'string') {
+      return 329;
+    }
+    return 0;
+  }
+  function f74(v0) {
+    if (typeof v0 !== 'string') {
+      return 330;
+    }
+    return 0;
+  }
+  function f75(v0) {
+    if (typeof v0 !== 'string') {
+      return 331;
+    }
+    return 0;
+  }
+  function f76(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 332;
+    }
+    return 0;
+  }
+  function f78(v0) {
+    if (typeof v0 !== 'string') {
+      return 333;
+    }
+    return 0;
+  }
+  function f79(v0) {
+    if (typeof v0 !== 'string') {
+      return 334;
+    }
+    return 0;
+  }
+  function f80(v0) {
+    if (typeof v0 !== 'string') {
+      return 335;
+    }
+    return 0;
+  }
+  function f81(v0) {
+    if (typeof v0 !== 'string') {
+      return 336;
+    }
+    return 0;
+  }
+  function f82(v0) {
+    if (typeof v0 !== 'string') {
+      return 337;
+    }
+    return 0;
+  }
+  function f83(v0) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 338;
+    }
+    return 0;
+  }
+  function f84(v0) {
+    if (typeof v0 !== 'string') {
+      return 339;
+    }
+    return 0;
+  }
+  function f85(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 340;
+    }
+    return 0;
+  }
+  function f86(v0) {
+    if (typeof v0 !== 'string') {
+      return 341;
+    }
+    return 0;
+  }
+  function f87(v0) {
+    if (typeof v0 !== 'string') {
+      return 342;
+    }
+    return 0;
+  }
+  function f89(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 343;
+    }
+    return 0;
+  }
+  function f90(v0) {
+    if (typeof v0 !== 'string') {
+      return 344;
+    }
+    return 0;
+  }
+  function f91(v0) {
+    if (typeof v0 !== 'string') {
+      return 345;
+    }
+    return 0;
+  }
+  function f92(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 346;
+    }
+    return 0;
   }
   function f93(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f152(v1) !== null) {
-          return 'properties[data]';
+        if (f152(v1) !== 0) {
+          return 347;
         }
       } else {
-        return 'required[data]';
+        return 348;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 349;
         }
       } else {
-        return 'required[has_more]';
+        return 350;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 351;
         }
       } else {
-        return 'required[object]';
+        return 352;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 353;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 354;
         }
       } else {
-        return 'required[url]';
+        return 355;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 356;
     }
-    return null;
+    return 0;
+  }
+  function f94(v0) {
+    if (typeof v0 !== 'string') {
+      return 357;
+    }
+    return 0;
+  }
+  function f96(v0) {
+    if (typeof v0 !== 'string') {
+      return 358;
+    }
+    return 0;
+  }
+  function f97(v0) {
+    if (typeof v0 !== 'string') {
+      return 359;
+    }
+    return 0;
+  }
+  function f98(v0) {
+    if (typeof v0 !== 'string') {
+      return 360;
+    }
+    return 0;
+  }
+  function f99(v0) {
+    if (typeof v0 !== 'string') {
+      return 361;
+    }
+    return 0;
+  }
+  function f100(v0) {
+    if (typeof v0 !== 'string') {
+      return 362;
+    }
+    return 0;
+  }
+  function f102(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 363;
+    }
+    return 0;
+  }
+  function f103(v0) {
+    if (typeof v0 !== 'string') {
+      return 364;
+    }
+    return 0;
+  }
+  function f104(v0) {
+    if (typeof v0 !== 'string') {
+      return 365;
+    }
+    return 0;
+  }
+  function f105(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 366;
+    }
+    return 0;
+  }
+  function f106(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 367;
+    }
+    return 0;
+  }
+  function f107(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 368;
+    }
+    return 0;
+  }
+  function f108(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 369;
+    }
+    return 0;
+  }
+  function f109(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 370;
+    }
+    return 0;
+  }
+  function f110(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 371;
+    }
+    return 0;
+  }
+  function f112(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 372;
+    }
+    return 0;
   }
   function f113(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f154(v1) !== null) {
-          return 'properties[data]';
+        if (f154(v1) !== 0) {
+          return 373;
         }
       } else {
-        return 'required[data]';
+        return 374;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 375;
         }
       } else {
-        return 'required[has_more]';
+        return 376;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 377;
         }
       } else {
-        return 'required[object]';
+        return 378;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 379;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 380;
         }
       } else {
-        return 'required[url]';
+        return 381;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 382;
     }
-    return null;
+    return 0;
   }
   function f114(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f155(v1) !== null) {
-          return 'properties[data]';
+        if (f155(v1) !== 0) {
+          return 383;
         }
       } else {
-        return 'required[data]';
+        return 384;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 385;
         }
       } else {
-        return 'required[has_more]';
+        return 386;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 387;
         }
       } else {
-        return 'required[object]';
+        return 388;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 389;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 390;
         }
       } else {
-        return 'required[url]';
+        return 391;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 392;
     }
-    return null;
+    return 0;
+  }
+  function f115(v0) {
+    if (typeof v0 !== 'string') {
+      return 393;
+    }
+    return 0;
   }
   function f116(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f156(v1) !== null) {
-          return 'properties[data]';
+        if (f156(v1) !== 0) {
+          return 394;
         }
       } else {
-        return 'required[data]';
+        return 395;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 396;
         }
       } else {
-        return 'required[has_more]';
+        return 397;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 398;
         }
       } else {
-        return 'required[object]';
+        return 399;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 400;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 401;
         }
       } else {
-        return 'required[url]';
+        return 402;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 403;
     }
-    return null;
+    return 0;
+  }
+  function f117(v0) {
+    if (typeof v0 !== 'string') {
+      return 404;
+    }
+    return 0;
+  }
+  function f118(v0) {
+    if (typeof v0 !== 'string') {
+      return 405;
+    }
+    return 0;
+  }
+  function f119(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 406;
+    }
+    return 0;
+  }
+  function f121(v0) {
+    if (typeof v0 !== 'string') {
+      return 407;
+    }
+    return 0;
+  }
+  function f123(v0) {
+    var v1;
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+      v1 = v0.data;
+      if (v1 !== undefined) {
+        if (f140(v1) !== 0) {
+          return 408;
+        }
+      } else {
+        return 409;
+      }
+      v1 = v0.has_more;
+      if (v1 !== undefined) {
+        if (f141(v1) !== 0) {
+          return 410;
+        }
+      } else {
+        return 411;
+      }
+      v1 = v0.object;
+      if (v1 !== undefined) {
+        if (f142(v1) !== 0) {
+          return 412;
+        }
+      } else {
+        return 413;
+      }
+      v1 = v0.total_count;
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 414;
+      }
+      v1 = v0.url;
+      if (v1 !== undefined) {
+        if (f144(v1) !== 0) {
+          return 415;
+        }
+      } else {
+        return 416;
+      }
+    }
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 417;
+    }
+    return 0;
   }
   function f124(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f158(v1) !== null) {
-          return 'properties[data]';
+        if (f158(v1) !== 0) {
+          return 418;
         }
       } else {
-        return 'required[data]';
+        return 419;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 420;
         }
       } else {
-        return 'required[has_more]';
+        return 421;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 422;
         }
       } else {
-        return 'required[object]';
+        return 423;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 424;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 425;
         }
       } else {
-        return 'required[url]';
+        return 426;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 427;
     }
-    return null;
+    return 0;
+  }
+  function f127(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 428;
+    }
+    return 0;
+  }
+  function f128(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 429;
+    }
+    return 0;
+  }
+  function f129(v0) {
+    if (typeof v0 !== 'string') {
+      return 430;
+    }
+    return 0;
+  }
+  function f131(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 431;
+    }
+    return 0;
+  }
+  function f133(v0) {
+    if (typeof v0 !== 'string') {
+      return 432;
+    }
+    return 0;
+  }
+  function f134(v0) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 433;
+    }
+    return 0;
+  }
+  function f135(v0) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 434;
+    }
+    return 0;
+  }
+  function f136(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 435;
+    }
+    return 0;
+  }
+  function f137(v0) {
+    if (typeof v0 !== 'string') {
+      return 436;
+    }
+    return 0;
+  }
+  function f138(v0) {
+    if (typeof v0 !== 'string') {
+      return 437;
+    }
+    return 0;
   }
   function f139(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.avs_failure;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[avs_failure]';
+        if (f159(v1) !== 0) {
+          return 438;
         }
       } else {
-        return 'required[avs_failure]';
+        return 439;
       }
       v1 = v0.cvc_failure;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[cvc_failure]';
+        if (f160(v1) !== 0) {
+          return 440;
         }
       } else {
-        return 'required[cvc_failure]';
+        return 441;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 442;
     }
-    return null;
+    return 0;
   }
   function f140(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f17(v0[v1]) !== null) {
-          return 'items';
+        if (f161(v0[v1]) !== 0) {
+          return 443;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 444;
     }
-    return null;
+    return 0;
+  }
+  function f141(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 445;
+    }
+    return 0;
   }
   function f142(v0) {
     var v1;
@@ -1417,1584 +2098,2325 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
       (v1)++;
     }
     if (v1 === 0) {
-      return 'enum';
+      return 446;
     }
     if (typeof v0 !== 'string') {
-      return 'type';
+      return 447;
     }
-    return null;
+    return 0;
+  }
+  function f143(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 448;
+    }
+    return 0;
+  }
+  function f144(v0) {
+    if (typeof v0 !== 'string') {
+      return 449;
+    }
+    return 0;
   }
   function f145(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.additional_owners;
-      if (v1 !== undefined && f220(v1) !== null) {
-        return 'properties[additional_owners]';
+      if (v1 !== undefined && f220(v1) !== 0) {
+        return 450;
       }
       v1 = v0.address;
       if (v1 !== undefined) {
-        if (f221(v1) !== null) {
-          return 'properties[address]';
+        if (f221(v1) !== 0) {
+          return 451;
         }
       } else {
-        return 'required[address]';
+        return 452;
       }
       v1 = v0.address_kana;
-      if (v1 !== undefined && f222(v1) !== null) {
-        return 'properties[address_kana]';
+      if (v1 !== undefined && f222(v1) !== 0) {
+        return 453;
       }
       v1 = v0.address_kanji;
-      if (v1 !== undefined && f222(v1) !== null) {
-        return 'properties[address_kanji]';
+      if (v1 !== undefined && f222(v1) !== 0) {
+        return 454;
       }
       v1 = v0.business_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_name]';
+      if (v1 !== undefined && f165(v1) !== 0) {
+        return 455;
       }
       v1 = v0.business_name_kana;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_name_kana]';
+      if (v1 !== undefined && f166(v1) !== 0) {
+        return 456;
       }
       v1 = v0.business_name_kanji;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[business_name_kanji]';
+      if (v1 !== undefined && f167(v1) !== 0) {
+        return 457;
       }
       v1 = v0.business_tax_id_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[business_tax_id_provided]';
+        if (f168(v1) !== 0) {
+          return 458;
         }
       } else {
-        return 'required[business_tax_id_provided]';
+        return 459;
       }
       v1 = v0.business_vat_id_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[business_vat_id_provided]';
+        if (f169(v1) !== 0) {
+          return 460;
         }
       } else {
-        return 'required[business_vat_id_provided]';
+        return 461;
       }
       v1 = v0.dob;
       if (v1 !== undefined) {
-        if (f223(v1) !== null) {
-          return 'properties[dob]';
+        if (f223(v1) !== 0) {
+          return 462;
         }
       } else {
-        return 'required[dob]';
+        return 463;
       }
       v1 = v0.first_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[first_name]';
+      if (v1 !== undefined && f171(v1) !== 0) {
+        return 464;
       }
       v1 = v0.first_name_kana;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[first_name_kana]';
+      if (v1 !== undefined && f172(v1) !== 0) {
+        return 465;
       }
       v1 = v0.first_name_kanji;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[first_name_kanji]';
+      if (v1 !== undefined && f173(v1) !== 0) {
+        return 466;
       }
       v1 = v0.gender;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[gender]';
+      if (v1 !== undefined && f174(v1) !== 0) {
+        return 467;
       }
       v1 = v0.last_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[last_name]';
+      if (v1 !== undefined && f175(v1) !== 0) {
+        return 468;
       }
       v1 = v0.last_name_kana;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[last_name_kana]';
+      if (v1 !== undefined && f176(v1) !== 0) {
+        return 469;
       }
       v1 = v0.last_name_kanji;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[last_name_kanji]';
+      if (v1 !== undefined && f177(v1) !== 0) {
+        return 470;
       }
       v1 = v0.maiden_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[maiden_name]';
+      if (v1 !== undefined && f178(v1) !== 0) {
+        return 471;
       }
       v1 = v0.personal_address;
       if (v1 !== undefined) {
-        if (f221(v1) !== null) {
-          return 'properties[personal_address]';
+        if (f221(v1) !== 0) {
+          return 472;
         }
       } else {
-        return 'required[personal_address]';
+        return 473;
       }
       v1 = v0.personal_address_kana;
-      if (v1 !== undefined && f222(v1) !== null) {
-        return 'properties[personal_address_kana]';
+      if (v1 !== undefined && f222(v1) !== 0) {
+        return 474;
       }
       v1 = v0.personal_address_kanji;
-      if (v1 !== undefined && f222(v1) !== null) {
-        return 'properties[personal_address_kanji]';
+      if (v1 !== undefined && f222(v1) !== 0) {
+        return 475;
       }
       v1 = v0.personal_id_number_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[personal_id_number_provided]';
+        if (f179(v1) !== 0) {
+          return 476;
         }
       } else {
-        return 'required[personal_id_number_provided]';
+        return 477;
       }
       v1 = v0.phone_number;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[phone_number]';
+      if (v1 !== undefined && f180(v1) !== 0) {
+        return 478;
       }
       v1 = v0.ssn_last_4_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[ssn_last_4_provided]';
+        if (f181(v1) !== 0) {
+          return 479;
         }
       } else {
-        return 'required[ssn_last_4_provided]';
+        return 480;
       }
       v1 = v0.type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[type]';
+      if (v1 !== undefined && f182(v1) !== 0) {
+        return 481;
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
-        if (f224(v1) !== null) {
-          return 'properties[verification]';
+        if (f224(v1) !== 0) {
+          return 482;
         }
       } else {
-        return 'required[verification]';
+        return 483;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 484;
     }
-    return null;
+    return 0;
   }
   function f146(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.authorization;
       if (v1 !== undefined) {
-        if (f225(v1) !== null) {
-          return 'properties[authorization]';
+        if (f225(v1) !== 0) {
+          return 485;
         }
       } else {
-        return 'required[authorization]';
+        return 486;
       }
       v1 = v0.channels;
       if (v1 !== undefined) {
-        if (f226(v1) !== null) {
-          return 'properties[channels]';
+        if (f226(v1) !== 0) {
+          return 487;
         }
       } else {
-        return 'required[channels]';
+        return 488;
       }
       v1 = v0.create_order_hook_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[create_order_hook_url]';
+      if (v1 !== undefined && f186(v1) !== 0) {
+        return 489;
       }
       v1 = v0.order_management;
       if (v1 !== undefined) {
-        if (f227(v1) !== null) {
-          return 'properties[order_management]';
+        if (f227(v1) !== 0) {
+          return 490;
         }
       } else {
-        return 'required[order_management]';
+        return 491;
       }
       v1 = v0.pay_order_hook_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[pay_order_hook_url]';
+      if (v1 !== undefined && f188(v1) !== 0) {
+        return 492;
       }
       v1 = v0.shipping;
       if (v1 !== undefined) {
-        if (f228(v1) !== null) {
-          return 'properties[shipping]';
+        if (f228(v1) !== 0) {
+          return 493;
         }
       } else {
-        return 'required[shipping]';
+        return 494;
       }
       v1 = v0.taxes;
       if (v1 !== undefined) {
-        if (f229(v1) !== null) {
-          return 'properties[taxes]';
+        if (f229(v1) !== 0) {
+          return 495;
         }
       } else {
-        return 'required[taxes]';
+        return 496;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 497;
     }
-    return null;
+    return 0;
   }
   function f147(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.delay_days;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[delay_days]';
+        if (f191(v1) !== 0) {
+          return 498;
         }
       } else {
-        return 'required[delay_days]';
+        return 499;
       }
       v1 = v0.interval;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[interval]';
+        if (f192(v1) !== 0) {
+          return 500;
         }
       } else {
-        return 'required[interval]';
+        return 501;
       }
       v1 = v0.monthly_anchor;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[monthly_anchor]';
+      if (v1 !== undefined && f193(v1) !== 0) {
+        return 502;
       }
       v1 = v0.weekly_anchor;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[weekly_anchor]';
+      if (v1 !== undefined && f194(v1) !== 0) {
+        return 503;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 504;
     }
-    return null;
+    return 0;
   }
   function f148(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.date;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[date]';
+      if (v1 !== undefined && f195(v1) !== 0) {
+        return 505;
       }
       v1 = v0.ip;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[ip]';
+      if (v1 !== undefined && f196(v1) !== 0) {
+        return 506;
       }
       v1 = v0.user_agent;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[user_agent]';
+      if (v1 !== undefined && f197(v1) !== 0) {
+        return 507;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 508;
     }
-    return null;
+    return 0;
   }
   function f149(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.disabled_reason;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[disabled_reason]';
+      if (v1 !== undefined && f198(v1) !== 0) {
+        return 509;
       }
       v1 = v0.due_by;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[due_by]';
+      if (v1 !== undefined && f199(v1) !== 0) {
+        return 510;
       }
       v1 = v0.fields_needed;
       if (v1 !== undefined) {
-        if (f1(v1) !== null) {
-          return 'properties[fields_needed]';
+        if (f200(v1) !== 0) {
+          return 511;
         }
       } else {
-        return 'required[fields_needed]';
+        return 512;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 513;
     }
-    return null;
+    return 0;
   }
   function f150(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f201(v1) !== 0) {
+          return 514;
         }
       } else {
-        return 'required[amount]';
+        return 515;
       }
       v1 = v0.application;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[application]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 516;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 517;
         }
       } else {
-        return 'required[currency]';
+        return 518;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 519;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f202(v1) !== 0) {
+          return 520;
         }
       } else {
-        return 'required[type]';
+        return 521;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 522;
     }
-    return null;
+    return 0;
   }
   function f151(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.network_status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[network_status]';
+      if (v1 !== undefined && f203(v1) !== 0) {
+        return 523;
       }
       v1 = v0.reason;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[reason]';
+      if (v1 !== undefined && f204(v1) !== 0) {
+        return 524;
       }
       v1 = v0.risk_level;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[risk_level]';
+      if (v1 !== undefined && f205(v1) !== 0) {
+        return 525;
       }
       v1 = v0.rule;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[rule]';
+      if (v1 !== undefined && f206(v1) !== 0) {
+        return 526;
       }
       v1 = v0.seller_message;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[seller_message]';
+      if (v1 !== undefined && f207(v1) !== 0) {
+        return 527;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f208(v1) !== 0) {
+          return 528;
         }
       } else {
-        return 'required[type]';
+        return 529;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 530;
     }
-    return null;
+    return 0;
   }
   function f152(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f230(v0[v1]) !== null) {
-          return 'items';
+        if (f230(v0[v1]) !== 0) {
+          return 531;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 532;
     }
-    return null;
+    return 0;
   }
   function f153(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
-        if (f221(v1) !== null) {
-          return 'properties[address]';
+        if (f231(v1) !== 0) {
+          return 533;
         }
       } else {
-        return 'required[address]';
+        return 534;
       }
       v1 = v0.carrier;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[carrier]';
+      if (v1 !== undefined && f211(v1) !== 0) {
+        return 535;
       }
       v1 = v0.name;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[name]';
+        if (f212(v1) !== 0) {
+          return 536;
         }
       } else {
-        return 'required[name]';
+        return 537;
       }
       v1 = v0.phone;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[phone]';
+      if (v1 !== undefined && f213(v1) !== 0) {
+        return 538;
       }
       v1 = v0.tracking_number;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[tracking_number]';
+      if (v1 !== undefined && f214(v1) !== 0) {
+        return 539;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 540;
     }
-    return null;
+    return 0;
   }
   function f154(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f232(v0[v1]) !== null) {
-          return 'items';
+        if (f232(v0[v1]) !== 0) {
+          return 541;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 542;
     }
-    return null;
+    return 0;
   }
   function f155(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f233(v0[v1]) !== null) {
-          return 'items';
+        if (f233(v0[v1]) !== 0) {
+          return 543;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 544;
     }
-    return null;
+    return 0;
   }
   function f156(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f42(v0[v1]) !== null) {
-          return 'items';
+        if (f42(v0[v1]) !== 0) {
+          return 545;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 546;
     }
-    return null;
+    return 0;
   }
   function f157(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
-        if (f221(v1) !== null) {
-          return 'properties[address]';
+        if (f231(v1) !== 0) {
+          return 547;
         }
       } else {
-        return 'required[address]';
+        return 548;
       }
       v1 = v0.name;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[name]';
+        if (f217(v1) !== 0) {
+          return 549;
         }
       } else {
-        return 'required[name]';
+        return 550;
       }
       v1 = v0.phone;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[phone]';
+      if (v1 !== undefined && f218(v1) !== 0) {
+        return 551;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 552;
     }
-    return null;
+    return 0;
   }
   function f158(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f234(v0[v1]) !== null) {
-          return 'items';
+        if (f234(v0[v1]) !== 0) {
+          return 553;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 554;
     }
-    return null;
+    return 0;
+  }
+  function f159(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 555;
+    }
+    return 0;
+  }
+  function f160(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 556;
+    }
+    return 0;
+  }
+  function f161(v0) {
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 557;
+    }
+    return 0;
+  }
+  function f165(v0) {
+    if (typeof v0 !== 'string') {
+      return 558;
+    }
+    return 0;
+  }
+  function f166(v0) {
+    if (typeof v0 !== 'string') {
+      return 559;
+    }
+    return 0;
+  }
+  function f167(v0) {
+    if (typeof v0 !== 'string') {
+      return 560;
+    }
+    return 0;
+  }
+  function f168(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 561;
+    }
+    return 0;
+  }
+  function f169(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 562;
+    }
+    return 0;
+  }
+  function f171(v0) {
+    if (typeof v0 !== 'string') {
+      return 563;
+    }
+    return 0;
+  }
+  function f172(v0) {
+    if (typeof v0 !== 'string') {
+      return 564;
+    }
+    return 0;
+  }
+  function f173(v0) {
+    if (typeof v0 !== 'string') {
+      return 565;
+    }
+    return 0;
+  }
+  function f174(v0) {
+    if (typeof v0 !== 'string') {
+      return 566;
+    }
+    return 0;
+  }
+  function f175(v0) {
+    if (typeof v0 !== 'string') {
+      return 567;
+    }
+    return 0;
+  }
+  function f176(v0) {
+    if (typeof v0 !== 'string') {
+      return 568;
+    }
+    return 0;
+  }
+  function f177(v0) {
+    if (typeof v0 !== 'string') {
+      return 569;
+    }
+    return 0;
+  }
+  function f178(v0) {
+    if (typeof v0 !== 'string') {
+      return 570;
+    }
+    return 0;
+  }
+  function f179(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 571;
+    }
+    return 0;
+  }
+  function f180(v0) {
+    if (typeof v0 !== 'string') {
+      return 572;
+    }
+    return 0;
+  }
+  function f181(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 573;
+    }
+    return 0;
+  }
+  function f182(v0) {
+    if (typeof v0 !== 'string') {
+      return 574;
+    }
+    return 0;
+  }
+  function f186(v0) {
+    if (typeof v0 !== 'string') {
+      return 575;
+    }
+    return 0;
+  }
+  function f188(v0) {
+    if (typeof v0 !== 'string') {
+      return 576;
+    }
+    return 0;
+  }
+  function f191(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 577;
+    }
+    return 0;
+  }
+  function f192(v0) {
+    if (typeof v0 !== 'string') {
+      return 578;
+    }
+    return 0;
+  }
+  function f193(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 579;
+    }
+    return 0;
+  }
+  function f194(v0) {
+    if (typeof v0 !== 'string') {
+      return 580;
+    }
+    return 0;
+  }
+  function f195(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 581;
+    }
+    return 0;
+  }
+  function f196(v0) {
+    if (typeof v0 !== 'string') {
+      return 582;
+    }
+    return 0;
+  }
+  function f197(v0) {
+    if (typeof v0 !== 'string') {
+      return 583;
+    }
+    return 0;
+  }
+  function f198(v0) {
+    if (typeof v0 !== 'string') {
+      return 584;
+    }
+    return 0;
+  }
+  function f199(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 585;
+    }
+    return 0;
+  }
+  function f200(v0) {
+    if (!(Array.isArray(v0))) {
+      return 586;
+    }
+    return 0;
+  }
+  function f201(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 587;
+    }
+    return 0;
+  }
+  function f202(v0) {
+    if (typeof v0 !== 'string') {
+      return 588;
+    }
+    return 0;
+  }
+  function f203(v0) {
+    if (typeof v0 !== 'string') {
+      return 589;
+    }
+    return 0;
+  }
+  function f204(v0) {
+    if (typeof v0 !== 'string') {
+      return 590;
+    }
+    return 0;
+  }
+  function f205(v0) {
+    if (typeof v0 !== 'string') {
+      return 591;
+    }
+    return 0;
+  }
+  function f206(v0) {
+    if (typeof v0 !== 'string') {
+      return 592;
+    }
+    return 0;
+  }
+  function f207(v0) {
+    if (typeof v0 !== 'string') {
+      return 593;
+    }
+    return 0;
+  }
+  function f208(v0) {
+    if (typeof v0 !== 'string') {
+      return 594;
+    }
+    return 0;
+  }
+  function f211(v0) {
+    if (typeof v0 !== 'string') {
+      return 595;
+    }
+    return 0;
+  }
+  function f212(v0) {
+    if (typeof v0 !== 'string') {
+      return 596;
+    }
+    return 0;
+  }
+  function f213(v0) {
+    if (typeof v0 !== 'string') {
+      return 597;
+    }
+    return 0;
+  }
+  function f214(v0) {
+    if (typeof v0 !== 'string') {
+      return 598;
+    }
+    return 0;
+  }
+  function f217(v0) {
+    if (typeof v0 !== 'string') {
+      return 599;
+    }
+    return 0;
+  }
+  function f218(v0) {
+    if (typeof v0 !== 'string') {
+      return 600;
+    }
+    return 0;
   }
   function f220(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.address;
       if (v1 !== undefined) {
-        if (f221(v1) !== null) {
-          return 'properties[address]';
+        if (f221(v1) !== 0) {
+          return 601;
         }
       } else {
-        return 'required[address]';
+        return 602;
       }
       v1 = v0.dob;
       if (v1 !== undefined) {
-        if (f223(v1) !== null) {
-          return 'properties[dob]';
+        if (f223(v1) !== 0) {
+          return 603;
         }
       } else {
-        return 'required[dob]';
+        return 604;
       }
       v1 = v0.first_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[first_name]';
+      if (v1 !== undefined && f235(v1) !== 0) {
+        return 605;
       }
       v1 = v0.last_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[last_name]';
+      if (v1 !== undefined && f236(v1) !== 0) {
+        return 606;
       }
       v1 = v0.verification;
       if (v1 !== undefined) {
-        if (f224(v1) !== null) {
-          return 'properties[verification]';
+        if (f224(v1) !== 0) {
+          return 607;
         }
       } else {
-        return 'required[verification]';
+        return 608;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 609;
     }
-    return null;
+    return 0;
   }
   function f221(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.city;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[city]';
+      if (v1 !== undefined && f44(v1) !== 0) {
+        return 610;
       }
       v1 = v0.country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[country]';
+      if (v1 !== undefined && f237(v1) !== 0) {
+        return 611;
       }
       v1 = v0.line1;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[line1]';
+      if (v1 !== undefined && f46(v1) !== 0) {
+        return 612;
       }
       v1 = v0.line2;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[line2]';
+      if (v1 !== undefined && f48(v1) !== 0) {
+        return 613;
       }
       v1 = v0.postal_code;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[postal_code]';
+      if (v1 !== undefined && f50(v1) !== 0) {
+        return 614;
       }
       v1 = v0.state;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[state]';
+      if (v1 !== undefined && f49(v1) !== 0) {
+        return 615;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 616;
     }
-    return null;
+    return 0;
   }
   function f222(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.city;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[city]';
+      if (v1 !== undefined && f238(v1) !== 0) {
+        return 617;
       }
       v1 = v0.country;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[country]';
+      if (v1 !== undefined && f237(v1) !== 0) {
+        return 618;
       }
       v1 = v0.line1;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[line1]';
+      if (v1 !== undefined && f239(v1) !== 0) {
+        return 619;
       }
       v1 = v0.line2;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[line2]';
+      if (v1 !== undefined && f240(v1) !== 0) {
+        return 620;
       }
       v1 = v0.postal_code;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[postal_code]';
+      if (v1 !== undefined && f50(v1) !== 0) {
+        return 621;
       }
       v1 = v0.state;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[state]';
+      if (v1 !== undefined && f241(v1) !== 0) {
+        return 622;
       }
       v1 = v0.town;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[town]';
+      if (v1 !== undefined && f242(v1) !== 0) {
+        return 623;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 624;
     }
-    return null;
+    return 0;
   }
   function f223(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.day;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[day]';
+      if (v1 !== undefined && f243(v1) !== 0) {
+        return 625;
       }
       v1 = v0.month;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[month]';
+      if (v1 !== undefined && f244(v1) !== 0) {
+        return 626;
       }
       v1 = v0.year;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[year]';
+      if (v1 !== undefined && f245(v1) !== 0) {
+        return 627;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 628;
     }
-    return null;
+    return 0;
   }
   function f224(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.details;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[details]';
+      if (v1 !== undefined && f246(v1) !== 0) {
+        return 629;
       }
       v1 = v0.details_code;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[details_code]';
+      if (v1 !== undefined && f247(v1) !== 0) {
+        return 630;
       }
       v1 = v0.document;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[document]';
+      if (v1 !== undefined && f248(v1) !== 0) {
+        return 631;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f249(v1) !== 0) {
+          return 632;
         }
       } else {
-        return 'required[status]';
+        return 633;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 634;
     }
-    return null;
+    return 0;
   }
   function f225(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.issuer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[issuer]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 635;
       }
       v1 = v0.provider;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 636;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f16(v1) !== 0) {
+          return 637;
         }
       } else {
-        return 'required[type]';
+        return 638;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 639;
     }
-    return null;
+    return 0;
   }
   function f226(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.twitter;
-      if (v1 !== undefined && f302(v1) !== null) {
-        return 'properties[twitter]';
+      if (v1 !== undefined && f302(v1) !== 0) {
+        return 640;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 641;
     }
-    return null;
+    return 0;
   }
   function f227(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.provider;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 642;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f16(v1) !== 0) {
+          return 643;
         }
       } else {
-        return 'required[type]';
+        return 644;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 645;
     }
-    return null;
+    return 0;
   }
   function f228(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[amount]';
+      if (v1 !== undefined && f71(v1) !== 0) {
+        return 646;
       }
       v1 = v0.currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[currency]';
+      if (v1 !== undefined && f251(v1) !== 0) {
+        return 647;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 648;
       }
       v1 = v0.free_above;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[free_above]';
+      if (v1 !== undefined && f252(v1) !== 0) {
+        return 649;
       }
       v1 = v0.from_address;
-      if (v1 !== undefined && f221(v1) !== null) {
-        return 'properties[from_address]';
+      if (v1 !== undefined && f231(v1) !== 0) {
+        return 650;
       }
       v1 = v0.from_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[from_name]';
+      if (v1 !== undefined && f253(v1) !== 0) {
+        return 651;
       }
       v1 = v0.provider;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider]';
+      if (v1 !== undefined && f254(v1) !== 0) {
+        return 652;
       }
       v1 = v0.provider_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider_url]';
+      if (v1 !== undefined && f255(v1) !== 0) {
+        return 653;
       }
       v1 = v0.rates;
-      if (v1 !== undefined && f303(v1) !== null) {
-        return 'properties[rates]';
+      if (v1 !== undefined && f303(v1) !== 0) {
+        return 654;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f257(v1) !== 0) {
+          return 655;
         }
       } else {
-        return 'required[type]';
+        return 656;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 657;
     }
-    return null;
+    return 0;
   }
   function f229(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 658;
       }
       v1 = v0.provider;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider]';
+      if (v1 !== undefined && f258(v1) !== 0) {
+        return 659;
       }
       v1 = v0.provider_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[provider_url]';
+      if (v1 !== undefined && f259(v1) !== 0) {
+        return 660;
       }
       v1 = v0.rate;
-      if (v1 !== undefined && f260(v1) !== null) {
-        return 'properties[rate]';
+      if (v1 !== undefined && f260(v1) !== 0) {
+        return 661;
       }
       v1 = v0.type;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[type]';
+        if (f261(v1) !== 0) {
+          return 662;
         }
       } else {
-        return 'required[type]';
+        return 663;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 664;
     }
-    return null;
+    return 0;
   }
   function f230(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f262(v1) !== 0) {
+          return 665;
         }
       } else {
-        return 'required[amount]';
+        return 666;
       }
       v1 = v0.balance_transaction;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[balance_transaction]';
+      if (v1 !== undefined && f263(v1) !== 0) {
+        return 667;
       }
       v1 = v0.charge;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[charge]';
+      if (v1 !== undefined && f264(v1) !== 0) {
+        return 668;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 669;
         }
       } else {
-        return 'required[created]';
+        return 670;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 671;
         }
       } else {
-        return 'required[currency]';
+        return 672;
       }
       v1 = v0.description;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[description]';
+      if (v1 !== undefined && f35(v1) !== 0) {
+        return 673;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 674;
         }
       } else {
-        return 'required[id]';
+        return 675;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 676;
         }
       } else {
-        return 'required[metadata]';
+        return 677;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 678;
         }
       } else {
-        return 'required[object]';
+        return 679;
       }
       v1 = v0.reason;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[reason]';
+      if (v1 !== undefined && f265(v1) !== 0) {
+        return 680;
       }
       v1 = v0.receipt_number;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[receipt_number]';
+      if (v1 !== undefined && f266(v1) !== 0) {
+        return 681;
       }
       v1 = v0.status;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[status]';
+      if (v1 !== undefined && f267(v1) !== 0) {
+        return 682;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 683;
     }
-    return null;
+    return 0;
+  }
+  function f231(v0) {
+    var v1;
+    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+      v1 = v0.city;
+      if (v1 !== undefined && f44(v1) !== 0) {
+        return 684;
+      }
+      v1 = v0.country;
+      if (v1 !== undefined && f237(v1) !== 0) {
+        return 685;
+      }
+      v1 = v0.line1;
+      if (v1 !== undefined && f46(v1) !== 0) {
+        return 686;
+      }
+      v1 = v0.line2;
+      if (v1 !== undefined && f48(v1) !== 0) {
+        return 687;
+      }
+      v1 = v0.postal_code;
+      if (v1 !== undefined && f50(v1) !== 0) {
+        return 688;
+      }
+      v1 = v0.state;
+      if (v1 !== undefined && f49(v1) !== 0) {
+        return 689;
+      }
+    }
+    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+      return 690;
+    }
+    return 0;
   }
   function f232(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 691;
         }
       } else {
-        return 'required[created]';
+        return 692;
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 693;
       }
       v1 = v0.fingerprint;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[fingerprint]';
+        if (f268(v1) !== 0) {
+          return 694;
         }
       } else {
-        return 'required[fingerprint]';
+        return 695;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 696;
         }
       } else {
-        return 'required[id]';
+        return 697;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 698;
         }
       } else {
-        return 'required[livemode]';
+        return 699;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 700;
         }
       } else {
-        return 'required[metadata]';
+        return 701;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 702;
         }
       } else {
-        return 'required[object]';
+        return 703;
       }
       v1 = v0.payment_amount;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[payment_amount]';
+      if (v1 !== undefined && f269(v1) !== 0) {
+        return 704;
       }
       v1 = v0.payment_currency;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[payment_currency]';
+      if (v1 !== undefined && f270(v1) !== 0) {
+        return 705;
       }
       v1 = v0.reusable;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[reusable]';
+        if (f271(v1) !== 0) {
+          return 706;
         }
       } else {
-        return 'required[reusable]';
+        return 707;
       }
       v1 = v0.used;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[used]';
+        if (f272(v1) !== 0) {
+          return 708;
         }
       } else {
-        return 'required[used]';
+        return 709;
       }
       v1 = v0.username;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[username]';
+        if (f273(v1) !== 0) {
+          return 710;
         }
       } else {
-        return 'required[username]';
+        return 711;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 712;
     }
-    return null;
+    return 0;
   }
   function f233(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[account]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 713;
       }
       v1 = v0.account_holder_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[account_holder_name]';
+      if (v1 !== undefined && f274(v1) !== 0) {
+        return 714;
       }
       v1 = v0.account_holder_type;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[account_holder_type]';
+      if (v1 !== undefined && f275(v1) !== 0) {
+        return 715;
       }
       v1 = v0.address_city;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_city]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 716;
       }
       v1 = v0.address_line1;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_line1]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 717;
       }
       v1 = v0.address_line2;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_line2]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 718;
       }
       v1 = v0.address_state;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_state]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 719;
       }
       v1 = v0.address_zip;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[address_zip]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 720;
       }
       v1 = v0.allows_debits;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[allows_debits]';
+      if (v1 !== undefined && f276(v1) !== 0) {
+        return 721;
       }
       v1 = v0.bank_name;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[bank_name]';
+      if (v1 !== undefined && f277(v1) !== 0) {
+        return 722;
       }
       v1 = v0.country;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[country]';
+        if (f278(v1) !== 0) {
+          return 723;
         }
       } else {
-        return 'required[country]';
+        return 724;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f279(v1) !== 0) {
+          return 725;
         }
       } else {
-        return 'required[currency]';
+        return 726;
       }
       v1 = v0.customer;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 727;
       }
       v1 = v0.customer_reference;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[customer_reference]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 728;
       }
       v1 = v0.default_for_currency;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[default_for_currency]';
+      if (v1 !== undefined && f280(v1) !== 0) {
+        return 729;
       }
       v1 = v0.fingerprint;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[fingerprint]';
+      if (v1 !== undefined && f281(v1) !== 0) {
+        return 730;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 731;
         }
       } else {
-        return 'required[id]';
+        return 732;
       }
       v1 = v0.last4;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[last4]';
+        if (f16(v1) !== 0) {
+          return 733;
         }
       } else {
-        return 'required[last4]';
+        return 734;
       }
       v1 = v0.metadata;
-      if (v1 !== undefined && f17(v1) !== null) {
-        return 'properties[metadata]';
+      if (v1 !== undefined && f17(v1) !== 0) {
+        return 735;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 736;
         }
       } else {
-        return 'required[object]';
+        return 737;
       }
       v1 = v0.reusable;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[reusable]';
+      if (v1 !== undefined && f276(v1) !== 0) {
+        return 738;
       }
       v1 = v0.routing_number;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[routing_number]';
+      if (v1 !== undefined && f282(v1) !== 0) {
+        return 739;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f283(v1) !== 0) {
+          return 740;
         }
       } else {
-        return 'required[status]';
+        return 741;
       }
       v1 = v0.used;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[used]';
+      if (v1 !== undefined && f276(v1) !== 0) {
+        return 742;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 743;
     }
-    return null;
+    return 0;
   }
   function f234(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.account_balance;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[account_balance]';
+      if (v1 !== undefined && f71(v1) !== 0) {
+        return 744;
       }
       v1 = v0.application_fee_percent;
-      if (v1 !== undefined && f260(v1) !== null) {
-        return 'properties[application_fee_percent]';
+      if (v1 !== undefined && f284(v1) !== 0) {
+        return 745;
       }
       v1 = v0.billing;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[billing]';
+      if (v1 !== undefined && f285(v1) !== 0) {
+        return 746;
       }
       v1 = v0.cancel_at_period_end;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[cancel_at_period_end]';
+        if (f286(v1) !== 0) {
+          return 747;
         }
       } else {
-        return 'required[cancel_at_period_end]';
+        return 748;
       }
       v1 = v0.canceled_at;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[canceled_at]';
+      if (v1 !== undefined && f287(v1) !== 0) {
+        return 749;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 750;
         }
       } else {
-        return 'required[created]';
+        return 751;
       }
       v1 = v0.current_period_end;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[current_period_end]';
+      if (v1 !== undefined && f288(v1) !== 0) {
+        return 752;
       }
       v1 = v0.current_period_start;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[current_period_start]';
+      if (v1 !== undefined && f289(v1) !== 0) {
+        return 753;
       }
       v1 = v0.customer;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[customer]';
+        if (f290(v1) !== 0) {
+          return 754;
         }
       } else {
-        return 'required[customer]';
+        return 755;
       }
       v1 = v0.days_until_due;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[days_until_due]';
+      if (v1 !== undefined && f291(v1) !== 0) {
+        return 756;
       }
       v1 = v0.discount;
-      if (v1 !== undefined && f125(v1) !== null) {
-        return 'properties[discount]';
+      if (v1 !== undefined && f125(v1) !== 0) {
+        return 757;
       }
       v1 = v0.ended_at;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[ended_at]';
+      if (v1 !== undefined && f292(v1) !== 0) {
+        return 758;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 759;
         }
       } else {
-        return 'required[id]';
+        return 760;
       }
       v1 = v0.items;
-      if (v1 !== undefined && f293(v1) !== null) {
-        return 'properties[items]';
+      if (v1 !== undefined && f293(v1) !== 0) {
+        return 761;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 762;
         }
       } else {
-        return 'required[livemode]';
+        return 763;
       }
       v1 = v0.max_occurrences;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[max_occurrences]';
+      if (v1 !== undefined && f71(v1) !== 0) {
+        return 764;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 765;
         }
       } else {
-        return 'required[metadata]';
+        return 766;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 767;
         }
       } else {
-        return 'required[object]';
+        return 768;
       }
       v1 = v0.on_behalf_of;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[on_behalf_of]';
+      if (v1 !== undefined && f294(v1) !== 0) {
+        return 769;
       }
       v1 = v0.plan;
-      if (v1 !== undefined && f305(v1) !== null) {
-        return 'properties[plan]';
+      if (v1 !== undefined && f305(v1) !== 0) {
+        return 770;
       }
       v1 = v0.quantity;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[quantity]';
+      if (v1 !== undefined && f296(v1) !== 0) {
+        return 771;
       }
       v1 = v0.retains_own_balance;
-      if (v1 !== undefined && f4(v1) !== null) {
-        return 'properties[retains_own_balance]';
+      if (v1 !== undefined && f276(v1) !== 0) {
+        return 772;
       }
       v1 = v0.start;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[start]';
+        if (f297(v1) !== 0) {
+          return 773;
         }
       } else {
-        return 'required[start]';
+        return 774;
       }
       v1 = v0.status;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[status]';
+        if (f298(v1) !== 0) {
+          return 775;
         }
       } else {
-        return 'required[status]';
+        return 776;
       }
       v1 = v0.tax_percent;
-      if (v1 !== undefined && f260(v1) !== null) {
-        return 'properties[tax_percent]';
+      if (v1 !== undefined && f299(v1) !== 0) {
+        return 777;
       }
       v1 = v0.trial_end;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[trial_end]';
+      if (v1 !== undefined && f300(v1) !== 0) {
+        return 778;
       }
       v1 = v0.trial_start;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[trial_start]';
+      if (v1 !== undefined && f301(v1) !== 0) {
+        return 779;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 780;
     }
-    return null;
+    return 0;
+  }
+  function f235(v0) {
+    if (typeof v0 !== 'string') {
+      return 781;
+    }
+    return 0;
+  }
+  function f236(v0) {
+    if (typeof v0 !== 'string') {
+      return 782;
+    }
+    return 0;
+  }
+  function f237(v0) {
+    if (typeof v0 !== 'string') {
+      return 783;
+    }
+    return 0;
+  }
+  function f238(v0) {
+    if (typeof v0 !== 'string') {
+      return 784;
+    }
+    return 0;
+  }
+  function f239(v0) {
+    if (typeof v0 !== 'string') {
+      return 785;
+    }
+    return 0;
+  }
+  function f240(v0) {
+    if (typeof v0 !== 'string') {
+      return 786;
+    }
+    return 0;
+  }
+  function f241(v0) {
+    if (typeof v0 !== 'string') {
+      return 787;
+    }
+    return 0;
+  }
+  function f242(v0) {
+    if (typeof v0 !== 'string') {
+      return 788;
+    }
+    return 0;
+  }
+  function f243(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 789;
+    }
+    return 0;
+  }
+  function f244(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 790;
+    }
+    return 0;
+  }
+  function f245(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 791;
+    }
+    return 0;
+  }
+  function f246(v0) {
+    if (typeof v0 !== 'string') {
+      return 792;
+    }
+    return 0;
+  }
+  function f247(v0) {
+    if (typeof v0 !== 'string') {
+      return 793;
+    }
+    return 0;
+  }
+  function f248(v0) {
+    if (typeof v0 !== 'string') {
+      return 794;
+    }
+    return 0;
+  }
+  function f249(v0) {
+    if (typeof v0 !== 'string') {
+      return 795;
+    }
+    return 0;
+  }
+  function f251(v0) {
+    if (typeof v0 !== 'string') {
+      return 796;
+    }
+    return 0;
+  }
+  function f252(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 797;
+    }
+    return 0;
+  }
+  function f253(v0) {
+    if (typeof v0 !== 'string') {
+      return 798;
+    }
+    return 0;
+  }
+  function f254(v0) {
+    if (typeof v0 !== 'string') {
+      return 799;
+    }
+    return 0;
+  }
+  function f255(v0) {
+    if (typeof v0 !== 'string') {
+      return 800;
+    }
+    return 0;
+  }
+  function f257(v0) {
+    if (typeof v0 !== 'string') {
+      return 801;
+    }
+    return 0;
+  }
+  function f258(v0) {
+    if (typeof v0 !== 'string') {
+      return 802;
+    }
+    return 0;
+  }
+  function f259(v0) {
+    if (typeof v0 !== 'string') {
+      return 803;
+    }
+    return 0;
   }
   function f260(v0) {
     if (typeof v0 !== 'number') {
-      return 'type';
+      return 804;
     }
-    return null;
+    return 0;
+  }
+  function f261(v0) {
+    if (typeof v0 !== 'string') {
+      return 805;
+    }
+    return 0;
+  }
+  function f262(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 806;
+    }
+    return 0;
+  }
+  function f263(v0) {
+    if (typeof v0 !== 'string') {
+      return 807;
+    }
+    return 0;
+  }
+  function f264(v0) {
+    if (typeof v0 !== 'string') {
+      return 808;
+    }
+    return 0;
+  }
+  function f265(v0) {
+    if (typeof v0 !== 'string') {
+      return 809;
+    }
+    return 0;
+  }
+  function f266(v0) {
+    if (typeof v0 !== 'string') {
+      return 810;
+    }
+    return 0;
+  }
+  function f267(v0) {
+    if (typeof v0 !== 'string') {
+      return 811;
+    }
+    return 0;
+  }
+  function f268(v0) {
+    if (typeof v0 !== 'string') {
+      return 812;
+    }
+    return 0;
+  }
+  function f269(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 813;
+    }
+    return 0;
+  }
+  function f270(v0) {
+    if (typeof v0 !== 'string') {
+      return 814;
+    }
+    return 0;
+  }
+  function f271(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 815;
+    }
+    return 0;
+  }
+  function f272(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 816;
+    }
+    return 0;
+  }
+  function f273(v0) {
+    if (typeof v0 !== 'string') {
+      return 817;
+    }
+    return 0;
+  }
+  function f274(v0) {
+    if (typeof v0 !== 'string') {
+      return 818;
+    }
+    return 0;
+  }
+  function f275(v0) {
+    if (typeof v0 !== 'string') {
+      return 819;
+    }
+    return 0;
+  }
+  function f276(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 820;
+    }
+    return 0;
+  }
+  function f277(v0) {
+    if (typeof v0 !== 'string') {
+      return 821;
+    }
+    return 0;
+  }
+  function f278(v0) {
+    if (typeof v0 !== 'string') {
+      return 822;
+    }
+    return 0;
+  }
+  function f279(v0) {
+    if (typeof v0 !== 'string') {
+      return 823;
+    }
+    return 0;
+  }
+  function f280(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 824;
+    }
+    return 0;
+  }
+  function f281(v0) {
+    if (typeof v0 !== 'string') {
+      return 825;
+    }
+    return 0;
+  }
+  function f282(v0) {
+    if (typeof v0 !== 'string') {
+      return 826;
+    }
+    return 0;
+  }
+  function f283(v0) {
+    if (typeof v0 !== 'string') {
+      return 827;
+    }
+    return 0;
+  }
+  function f284(v0) {
+    if (typeof v0 !== 'number') {
+      return 828;
+    }
+    return 0;
+  }
+  function f285(v0) {
+    if (typeof v0 !== 'string') {
+      return 829;
+    }
+    return 0;
+  }
+  function f286(v0) {
+    if (typeof v0 !== 'boolean') {
+      return 830;
+    }
+    return 0;
+  }
+  function f287(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 831;
+    }
+    return 0;
+  }
+  function f288(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 832;
+    }
+    return 0;
+  }
+  function f289(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 833;
+    }
+    return 0;
+  }
+  function f290(v0) {
+    if (typeof v0 !== 'string') {
+      return 834;
+    }
+    return 0;
+  }
+  function f291(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 835;
+    }
+    return 0;
+  }
+  function f292(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 836;
+    }
+    return 0;
   }
   function f293(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.data;
       if (v1 !== undefined) {
-        if (f304(v1) !== null) {
-          return 'properties[data]';
+        if (f304(v1) !== 0) {
+          return 837;
         }
       } else {
-        return 'required[data]';
+        return 838;
       }
       v1 = v0.has_more;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[has_more]';
+        if (f141(v1) !== 0) {
+          return 839;
         }
       } else {
-        return 'required[has_more]';
+        return 840;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f142(v1) !== null) {
-          return 'properties[object]';
+        if (f142(v1) !== 0) {
+          return 841;
         }
       } else {
-        return 'required[object]';
+        return 842;
       }
       v1 = v0.total_count;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[total_count]';
+      if (v1 !== undefined && f143(v1) !== 0) {
+        return 843;
       }
       v1 = v0.url;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[url]';
+        if (f144(v1) !== 0) {
+          return 844;
         }
       } else {
-        return 'required[url]';
+        return 845;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 846;
     }
-    return null;
+    return 0;
+  }
+  function f294(v0) {
+    if (typeof v0 !== 'string') {
+      return 847;
+    }
+    return 0;
+  }
+  function f296(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 848;
+    }
+    return 0;
+  }
+  function f297(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 849;
+    }
+    return 0;
+  }
+  function f298(v0) {
+    if (typeof v0 !== 'string') {
+      return 850;
+    }
+    return 0;
+  }
+  function f299(v0) {
+    if (typeof v0 !== 'number') {
+      return 851;
+    }
+    return 0;
+  }
+  function f300(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 852;
+    }
+    return 0;
+  }
+  function f301(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 853;
+    }
+    return 0;
   }
   function f302(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.enabled;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[enabled]';
+        if (f276(v1) !== 0) {
+          return 854;
         }
       } else {
-        return 'required[enabled]';
+        return 855;
       }
       v1 = v0.marketplace_id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[marketplace_id]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 856;
       }
       v1 = v0.merchant_id;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[merchant_id]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 857;
       }
       v1 = v0.oauth_token_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[oauth_token_provided]';
+        if (f276(v1) !== 0) {
+          return 858;
         }
       } else {
-        return 'required[oauth_token_provided]';
+        return 859;
       }
       v1 = v0.oauth_token_secret_provided;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[oauth_token_secret_provided]';
+        if (f276(v1) !== 0) {
+          return 860;
         }
       } else {
-        return 'required[oauth_token_secret_provided]';
+        return 861;
       }
       v1 = v0.privacy_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[privacy_url]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 862;
       }
       v1 = v0.sales_terms;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[sales_terms]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 863;
       }
       v1 = v0.shipping_policy;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[shipping_policy]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 864;
       }
       v1 = v0.terms_url;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[terms_url]';
+      if (v1 !== undefined && f16(v1) !== 0) {
+        return 865;
       }
       v1 = v0.username;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[username]';
+        if (f16(v1) !== 0) {
+          return 866;
         }
       } else {
-        return 'required[username]';
+        return 867;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 868;
     }
-    return null;
+    return 0;
   }
   function f303(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f306(v1) !== 0) {
+          return 869;
         }
       } else {
-        return 'required[amount]';
+        return 870;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 871;
         }
       } else {
-        return 'required[currency]';
+        return 872;
       }
       v1 = v0.description;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[description]';
+        if (f35(v1) !== 0) {
+          return 873;
         }
       } else {
-        return 'required[description]';
+        return 874;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 875;
     }
-    return null;
+    return 0;
   }
   function f304(v0) {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
       for (; v1 < v0.length; (v1)++) {
-        if (f314(v0[v1]) !== null) {
-          return 'items';
+        if (f314(v0[v1]) !== 0) {
+          return 876;
         }
       }
     }
     if (!(Array.isArray(v0))) {
-      return 'type';
+      return 877;
     }
-    return null;
+    return 0;
   }
   function f305(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.amount;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[amount]';
+        if (f308(v1) !== 0) {
+          return 878;
         }
       } else {
-        return 'required[amount]';
+        return 879;
       }
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 880;
         }
       } else {
-        return 'required[created]';
+        return 881;
       }
       v1 = v0.currency;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[currency]';
+        if (f34(v1) !== 0) {
+          return 882;
         }
       } else {
-        return 'required[currency]';
+        return 883;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 884;
         }
       } else {
-        return 'required[id]';
+        return 885;
       }
       v1 = v0.interval;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[interval]';
+        if (f309(v1) !== 0) {
+          return 886;
         }
       } else {
-        return 'required[interval]';
+        return 887;
       }
       v1 = v0.interval_count;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[interval_count]';
+        if (f310(v1) !== 0) {
+          return 888;
         }
       } else {
-        return 'required[interval_count]';
+        return 889;
       }
       v1 = v0.livemode;
       if (v1 !== undefined) {
-        if (f4(v1) !== null) {
-          return 'properties[livemode]';
+        if (f85(v1) !== 0) {
+          return 890;
         }
       } else {
-        return 'required[livemode]';
+        return 891;
       }
       v1 = v0.metadata;
       if (v1 !== undefined) {
-        if (f17(v1) !== null) {
-          return 'properties[metadata]';
+        if (f17(v1) !== 0) {
+          return 892;
         }
       } else {
-        return 'required[metadata]';
+        return 893;
       }
       v1 = v0.name;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[name]';
+        if (f311(v1) !== 0) {
+          return 894;
         }
       } else {
-        return 'required[name]';
+        return 895;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 896;
         }
       } else {
-        return 'required[object]';
+        return 897;
       }
       v1 = v0.statement_descriptor;
-      if (v1 !== undefined && f2(v1) !== null) {
-        return 'properties[statement_descriptor]';
+      if (v1 !== undefined && f312(v1) !== 0) {
+        return 898;
       }
       v1 = v0.trial_period_days;
-      if (v1 !== undefined && f31(v1) !== null) {
-        return 'properties[trial_period_days]';
+      if (v1 !== undefined && f313(v1) !== 0) {
+        return 899;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 900;
     }
-    return null;
+    return 0;
+  }
+  function f306(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 901;
+    }
+    return 0;
+  }
+  function f308(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 902;
+    }
+    return 0;
+  }
+  function f309(v0) {
+    if (typeof v0 !== 'string') {
+      return 903;
+    }
+    return 0;
+  }
+  function f310(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 904;
+    }
+    return 0;
+  }
+  function f311(v0) {
+    if (typeof v0 !== 'string') {
+      return 905;
+    }
+    return 0;
+  }
+  function f312(v0) {
+    if (typeof v0 !== 'string') {
+      return 906;
+    }
+    return 0;
+  }
+  function f313(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 907;
+    }
+    return 0;
   }
   function f314(v0) {
     var v1;
     if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
       v1 = v0.created;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[created]';
+        if (f33(v1) !== 0) {
+          return 908;
         }
       } else {
-        return 'required[created]';
+        return 909;
       }
       v1 = v0.id;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[id]';
+        if (f13(v1) !== 0) {
+          return 910;
         }
       } else {
-        return 'required[id]';
+        return 911;
       }
       v1 = v0.object;
       if (v1 !== undefined) {
-        if (f2(v1) !== null) {
-          return 'properties[object]';
+        if (f18(v1) !== 0) {
+          return 912;
         }
       } else {
-        return 'required[object]';
+        return 913;
       }
       v1 = v0.plan;
       if (v1 !== undefined) {
-        if (f305(v1) !== null) {
-          return 'properties[plan]';
+        if (f305(v1) !== 0) {
+          return 914;
         }
       } else {
-        return 'required[plan]';
+        return 915;
       }
       v1 = v0.quantity;
       if (v1 !== undefined) {
-        if (f31(v1) !== null) {
-          return 'properties[quantity]';
+        if (f315(v1) !== 0) {
+          return 916;
         }
       } else {
-        return 'required[quantity]';
+        return 917;
       }
     }
     if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
-      return 'type';
+      return 918;
     }
-    return null;
+    return 0;
+  }
+  function f315(v0) {
+    if (typeof v0 !== 'number' || v0 % 1 !== 0) {
+      return 919;
+    }
+    return 0;
   }
   return {
     account: f0,

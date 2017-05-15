@@ -3,6 +3,8 @@ import _ from 'lodash';
 import root from 'js/checks/root.js';
 import Ast from 'js/ast/ast.js';
 import simplify from 'js/ast/simplify.js';
+import getErrors from 'js/ast/get-errors.js';
+import replaceErrors from 'js/ast/replace-errors.js';
 import render from 'js/ast/render.js';
 import uniqFuncs from 'js/ast/uniq-funcs.js';
 import util from 'util.js';
@@ -47,8 +49,9 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
 
   const makeContext = () => ({
     gensym: gengensym(),
-    error: (subSchema: JsonSchema, reason: string) => Ast.Body(
-      Ast.Return(Ast.StringLiteral(reason)),
+    error: (subSchema: JsonSchema, reason: string) => Ast.Error(
+      subSchema,
+      reason,
     ),
     symbolForSchema,
     rootSchema: schema,
@@ -71,7 +74,14 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
     ...simplifiedResults,
     Ast.Return(Ast.ObjectLiteral(schemaObject)),
   );
-  const body = render(simplify(uniqFuncs(simplify(ast))), 1);
+  const nameForSchema = (subSchema) => {
+    return _.findKey(shape, (s) => s === subSchema) || symbolForSchema(subSchema).value;
+  };
+  const errors = getErrors(ast);
+  const replaced = replaceErrors(ast, errors, nameForSchema);
+  const simplified = simplify(uniqFuncs(simplify(replaced)));
+
+  const body = render(simplified, 1);
   return [
     '(function() {',
     body,

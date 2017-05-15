@@ -113,9 +113,8 @@ export type CommentType = {
 };
 export type ErrorType = {
   type: 'error',
-  path: string,
-  check: string,
-  subCheck: ?string,
+  schema: JsonSchema,
+  reason: string,
 };
 
 const Function1 = (
@@ -231,12 +230,11 @@ const TypeOf = (child: JsAst): TypeOfType => {
   };
 };
 const Comment = (comment: string): CommentType => ({type: 'comment', comment});
-const Error = (path: string, check: string, subCheck: ?string): ErrorType => {
+const Error = (schema: JsonSchema, reason: string): ErrorType => {
   return {
     type: 'error',
-    path,
-    check,
-    subCheck,
+    schema,
+    reason,
   };
 };
 
