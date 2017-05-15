@@ -6,7 +6,8 @@
     "flow": "flow",
     "lint": "eslint src",
     "jest": "jest --config jestconfig.json",
-    "build": "babel ./src --out-dir ./dist/"
+    "build": "babel ./src --out-dir ./dist/",
+    "test": "yarn flow && yarn lint && yarn jest"
   },
   "license": "MIT",
   "dependencies": {
