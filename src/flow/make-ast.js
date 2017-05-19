@@ -19,6 +19,8 @@ const makeAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
     }
   } else if (schema.enum) {
     return Ast.Union(_.map(schema.enum, Ast.Exact));
+  } else if (schema.oneOf) {
+    return Ast.Union(_.map(schema.oneOf, (a) => makeAst(a, refResolver)));
   } else if (schema.anyOf) {
     return Ast.Union(_.map(schema.anyOf, (a) => makeAst(a, refResolver)));
   } else if (schema.allOf) {
