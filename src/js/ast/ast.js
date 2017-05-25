@@ -115,6 +115,7 @@ export type ErrorType = {
   type: 'error',
   schema: JsonSchema,
   reason: string,
+  subreason: ?JsAst,
 };
 
 const Function1 = (
@@ -230,11 +231,12 @@ const TypeOf = (child: JsAst): TypeOfType => {
   };
 };
 const Comment = (comment: string): CommentType => ({type: 'comment', comment});
-const Error = (schema: JsonSchema, reason: string): ErrorType => {
+const Error = (schema: JsonSchema, reason: string, subreason: ?JsAst): ErrorType => {
   return {
     type: 'error',
     schema,
     reason,
+    subreason,
   };
 };
 

@@ -3,20 +3,22 @@ import type {Context} from 'js/generate.js';
 import type {JsAst} from 'js/ast/ast.js';
 import Ast from 'js/ast/ast.js';
 
+const IsError = (symbol: JsAst): JsAst => {
+  return Ast.Binop.Neq(symbol, Ast.NumLiteral(0));
+};
+
 const FailedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
   const fnSym = context.symbolForSchema(subSchema);
-  return Ast.Binop.Neq(
-    Ast.Call(fnSym, symbol),
-    Ast.NumLiteral(0),
-  );
+  return IsError(Ast.Call(fnSym, symbol));
 };
 
 const PassedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
-  const fnSym = context.symbolForSchema(subSchema);
-  return Ast.Binop.Eq(
-    Ast.Call(fnSym, symbol),
-    Ast.NumLiteral(0),
-  );
+  return Ast.Unop.Not(FailedCheck(subSchema, symbol, context));
+};
+
+const Check = (subSchema: JsonSchema, symbol: JsAst, context: Context) => {
+  const check = context.symbolForSchema(subSchema);
+  return Ast.Call(check, symbol);
 };
 
 export type BaseType = (
@@ -66,6 +68,8 @@ const TypeCheck = (type: BaseType, symbol: JsAst, body: JsAst): JsAst => {
 export default {
   FailedCheck,
   PassedCheck,
+  IsError,
+  Check,
   PrimitivePredicate,
   TypeCheck,
 };

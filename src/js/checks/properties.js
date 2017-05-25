@@ -14,9 +14,13 @@ const additionalPropertiesCheck = (
   if (additionalProperties === false) {
     return context.error(schema, 'additionalProperties');
   } else if (additionalProperties && typeof additionalProperties === 'object') {
-    return Ast.If(
-      M.FailedCheck(additionalProperties, symbol, context),
-      context.error(schema, 'additionalProperties'),
+    const checkResult = context.gensym();
+    return Ast.Body(
+      Ast.Assignment(checkResult, M.Check(additionalProperties, symbol, context)),
+      Ast.If(
+        M.IsError(checkResult),
+        context.error(schema, 'additionalProperties', checkResult),
+      ),
     );
   } else {
     return Ast.Empty;
@@ -41,7 +45,7 @@ const additionalChecks = (
   const propertyChecks = _.map(properties, (subSchema, key) => ({
     predicate: Ast.Binop.Eq(keySym, Ast.StringLiteral(key)),
     subSchema,
-    error: context.error(schema, `properties[${key}]`),
+    message: `properties[${key}]`,
   }));
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
     predicate: Ast.Call(
@@ -49,19 +53,23 @@ const additionalChecks = (
       Ast.Literal(`/${pattern}/`),
     ),
     subSchema,
-    error: context.error(schema, `properties[${pattern}]`),
+    message: `properties[${pattern}]`,
   }));
   const allChecks = [...propertyChecks, ...patternChecks];
   // Two cases where we don't need a hit counter:
   //   - There are no additionalProperties or patternProperties
   //   - There are no properties
   if (allChecks.length === 0 || (additionalProperties === undefined || additionalProperties === true)) {
-    const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
+    const checkResult = context.gensym();
+    const checks = _.map(allChecks, ({predicate, subSchema, message}) => {
       return Ast.If(
         predicate,
-        Ast.If(
-          M.FailedCheck(subSchema, valSym, context),
-          error,
+        Ast.Body(
+          Ast.Assignment(checkResult, M.Check(subSchema, valSym, context)),
+          Ast.If(
+            M.IsError(checkResult),
+            context.error(schema, message, checkResult),
+          ),
         ),
       );
     });
@@ -70,14 +78,20 @@ const additionalChecks = (
       additionalPropertiesCheck(schema, valSym, context),
     );
   } else {
+    const checkResult = context.gensym();
     const hitSym = context.gensym();
-    const checks = _.map(allChecks, ({predicate, subSchema, error}) => {
-      return Ast.If(
-        predicate,
+    const checks = _.map(allChecks, ({predicate, subSchema, message}) => {
+      return Ast.Body(
         Ast.If(
-          M.FailedCheck(subSchema, valSym, context),
-          error,
-          Ast.Assignment(hitSym, Ast.True),
+          predicate,
+          Ast.Body(
+            Ast.Assignment(checkResult, M.Check(subSchema, valSym, context)),
+            Ast.If(
+              M.IsError(checkResult),
+              context.error(schema, message, checkResult),
+              Ast.Assignment(hitSym, Ast.True),
+            ),
+          ),
         ),
       );
     });
@@ -96,6 +110,7 @@ const _properties = (schema: JsonSchema, symbol: VarType, context: Context): JsA
   const {properties, required, patternProperties, additionalProperties} = schema;
   if (!patternProperties && (additionalProperties === undefined || additionalProperties === true)) {
     // Static list of properties to check
+    const checkResult = context.gensym();
     const sym = context.gensym();
     const checks = Ast.Body(..._.flatMap(properties, (subSchema, key) => {
       const isRequired = _.includes(required, key);
@@ -103,9 +118,12 @@ const _properties = (schema: JsonSchema, symbol: VarType, context: Context): JsA
         Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
         Ast.If(
           Ast.Binop.Neq(sym, Ast.Undefined),
-          Ast.If(
-            M.FailedCheck(subSchema, sym, context),
-            context.error(schema, `properties[${key}]`),
+          Ast.Body(
+            Ast.Assignment(checkResult, M.Check(subSchema, sym, context)),
+            Ast.If(
+              M.IsError(checkResult),
+              context.error(schema, `properties[${key}]`, checkResult),
+            ),
           ),
           isRequired ? context.error(schema, `required[${key}]`) : Ast.Empty,
         ),

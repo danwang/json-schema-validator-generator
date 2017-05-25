@@ -14,12 +14,28 @@ const replaceErrors = (
   const cache = {};
   const t = transform((ast: JsAst, recur: Transform): JsAst => {
     if (ast.type === 'error') {
-      const {schema, reason} = ast;
+      const {schema, reason, subreason} = ast;
       const message = `${nameForSchema(schema)}: ${reason}`;
       if (!cache.hasOwnProperty(message)) {
         cache[message] = id++;
       }
-      return Ast.Return(Ast.NumLiteral(cache[message]));
+      if (subreason) {
+        return Ast.Body(
+          Ast.Comment(message),
+          Ast.Return(Ast.Call(
+            Ast.PropertyAccess(subreason, 'concat'),
+            Ast.NumLiteral(cache[message]),
+          )),
+        );
+      } else {
+        // Lazy!
+        return Ast.Body(
+          Ast.Comment(message),
+          Ast.Return(
+            Ast.BracketAccess(Ast.Empty, Ast.NumLiteral(cache[message])),
+          ),
+        );
+      }
     } else {
       return recur(ast);
     }
