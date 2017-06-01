@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stripe openapi generates flow types for the entire spec 1`] = `
-"declare type Account = {
+"type Account = {
   active_payment_methods: Array<mixed>,
   business_name?: string,
   business_url?: string,
@@ -38,7 +38,7 @@ exports[`Stripe openapi generates flow types for the entire spec 1`] = `
   tos_acceptance: T4,
   verification: T5,
 };
-declare type BalanceTransaction = {
+type BalanceTransaction = {
   amount: number,
   available_on: number,
   created: number,
@@ -53,7 +53,7 @@ declare type BalanceTransaction = {
   status: string,
   type: string,
 };
-declare type Card = {
+type Card = {
   account?: string,
   address_city?: string,
   address_country?: string,
@@ -86,7 +86,7 @@ declare type Card = {
   three_d_secure?: {[key: string]: mixed},
   tokenization_method?: string,
 };
-declare type Charge = {
+type Charge = {
   amount: number,
   amount_authorized?: number,
   amount_captured: number,
@@ -132,7 +132,7 @@ declare type Charge = {
   transfer?: string,
   transfer_group?: string,
 };
-declare type Coupon = {
+type Coupon = {
   amount_off?: number,
   created: number,
   currency?: string,
@@ -148,7 +148,7 @@ declare type Coupon = {
   times_redeemed: number,
   valid: boolean,
 };
-declare type Customer = {
+type Customer = {
   account_balance: number,
   alipay_accounts?: {
     data: Array<T10>,
@@ -201,7 +201,7 @@ declare type Customer = {
     url: string,
   },
 };
-declare type Discount = {
+type Discount = {
   coupon: Coupon,
   customer?: string,
   end?: number,
@@ -209,7 +209,7 @@ declare type Discount = {
   start: number,
   subscription?: string,
 };
-declare type Dispute = {
+type Dispute = {
   amount: number,
   balance_transactions: BalanceTransaction,
   charge: string,

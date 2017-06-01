@@ -2,6 +2,7 @@
 import type {Context} from 'js/generate.js';
 import type {JsAst} from 'js/ast/ast.js';
 import Ast from 'js/ast/ast.js';
+import type {JsonSchema} from 'generated-types.js';
 
 const IsError = (symbol: JsAst): JsAst => {
   return Ast.Binop.Neq(symbol, Ast.NumLiteral(0));

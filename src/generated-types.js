@@ -1,6 +1,6 @@
 
 /* eslint-disable */
-declare type JsonSchema = {
+export type JsonSchema = {
   id?: string,
   $schema?: string,
   title?: string,
@@ -34,8 +34,8 @@ declare type JsonSchema = {
   oneOf?: T2,
   not?: JsonSchema,
 };
-type T0 = number;
-type T1 = T0 & mixed;
-type T2 = Array<JsonSchema>;
-type T3 = Array<string>;
-type T4 = "array" | "boolean" | "integer" | "null" | "number" | "object" | "string";
+export type T0 = number;
+export type T1 = T0 & mixed;
+export type T2 = Array<JsonSchema>;
+export type T3 = Array<string>;
+export type T4 = "array" | "boolean" | "integer" | "null" | "number" | "object" | "string";

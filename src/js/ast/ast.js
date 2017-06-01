@@ -1,5 +1,6 @@
 // @flow
 /* eslint-disable no-use-before-define */
+import type {JsonSchema} from 'generated-types.js';
 
 // Statements
 export type JsAst = (

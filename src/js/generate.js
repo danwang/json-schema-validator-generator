@@ -9,6 +9,7 @@ import render from 'js/ast/render.js';
 import uniqFuncs from 'js/ast/uniq-funcs.js';
 import util from 'util.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
+import type {JsonSchema} from 'generated-types.js';
 
 const gengensym = () => {
   const g = util.gengensym();

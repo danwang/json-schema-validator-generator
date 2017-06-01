@@ -1,11 +1,28 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-    "transform-flow-strip-types",
-    "transform-object-rest-spread",
-    "syntax-trailing-function-commas",
-    ["module-resolver", {
-      "root": ["./src"]
-    }]
-  ]
+  "env": {
+    "es5": {
+      "presets": ["es2015"],
+      "plugins": [
+        "transform-flow-strip-types",
+        "transform-object-rest-spread",
+        ["module-resolver", {
+          "root": ["./src"]
+        }]
+      ]
+    },
+    "flow": {
+      "parserOpts": {
+        "plugins": [
+          "objectRestSpread",
+          "flow",
+        ]
+      },
+      "plugins": [
+        "transform-object-rest-spread",
+        ["module-resolver", {
+          "root": ["./src"]
+        }]
+      ]
+    }
+  }
 }

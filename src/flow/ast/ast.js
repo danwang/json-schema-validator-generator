@@ -9,12 +9,12 @@ type StringType = {type: 'string'};
 type DeclarationType = {
   type: 'declaration',
   name: string,
-  value: FlowType,
+  value: FlowAst,
 };
 type TypeType = {
   type: 'type',
   name: string,
-  value: FlowType,
+  value: FlowAst,
 };
 type LiteralType = {
   type: 'literal',
@@ -26,36 +26,36 @@ type ExactType = {
 };
 export type OptionalType = {
   type: 'optional',
-  child: FlowType,
+  child: FlowAst,
 };
 type ArrayType = {
   type: 'array',
-  child: FlowType,
+  child: FlowAst,
 };
 export type TupleType = {
   type: 'tuple',
-  children: Array<FlowType>,
+  children: Array<FlowAst>,
 };
 export type RecordType = {
   type: 'record',
   fields: {
-    [key: string]: FlowType,
+    [key: string]: FlowAst,
   },
 };
 type MapType = {
   type: 'map',
-  child: FlowType,
+  child: FlowAst,
 };
 type UnionType = {
   type: 'union',
-  children: Array<FlowType>,
+  children: Array<FlowAst>,
 };
 type IntersectionType = {
   type: 'intersection',
-  children: Array<FlowType>,
+  children: Array<FlowAst>,
 };
 
-export type FlowType = (
+export type FlowAst = (
   MixedType |
   BooleanType |
   NullType |
@@ -80,17 +80,17 @@ const Null: NullType = {type: 'null'};
 const Number: NumberType = {type: 'number'};
 const String: StringType = {type: 'string'};
 
-const Declaration = (name: string, value: FlowType): DeclarationType => ({type: 'declaration', name, value});
-const Type = (name: string, value: FlowType): TypeType => ({type: 'type', name, value});
+const Declaration = (name: string, value: FlowAst): DeclarationType => ({type: 'declaration', name, value});
+const Type = (name: string, value: FlowAst): TypeType => ({type: 'type', name, value});
 const Literal = (value: string): LiteralType => ({type: 'literal', value});
 const Exact = (value: mixed): ExactType => ({type: 'exact', value});
-const Optional = (child: FlowType): OptionalType => ({type: 'optional', child});
-const Array = (child: FlowType): ArrayType => ({type: 'array', child});
-const Tuple = (children: Array<FlowType>): TupleType => ({type: 'tuple', children});
-const Record = (fields: {[key: string]: FlowType}): RecordType => ({type: 'record', fields});
-const Map = (child: FlowType): MapType => ({type: 'map', child});
-const Union = (children: Array<FlowType>): UnionType => ({type: 'union', children});
-const Intersection = (children: Array<FlowType>): IntersectionType => ({type: 'intersection', children});
+const Optional = (child: FlowAst): OptionalType => ({type: 'optional', child});
+const Array = (child: FlowAst): ArrayType => ({type: 'array', child});
+const Tuple = (children: Array<FlowAst>): TupleType => ({type: 'tuple', children});
+const Record = (fields: {[key: string]: FlowAst}): RecordType => ({type: 'record', fields});
+const Map = (child: FlowAst): MapType => ({type: 'map', child});
+const Union = (children: Array<FlowAst>): UnionType => ({type: 'union', children});
+const Intersection = (children: Array<FlowAst>): IntersectionType => ({type: 'intersection', children});
 
 export default {
   Mixed,

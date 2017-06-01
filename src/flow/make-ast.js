@@ -2,13 +2,13 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import Ast from 'flow/ast/ast.js';
-import type {FlowType} from 'flow/ast/ast.js';
+import type {FlowAst} from 'flow/ast/ast.js';
 import simplify from 'flow/simplify.js';
 
 const defaultResolver = () => null;
 
 type RefResolver = (ref: string) => ?string;
-const makeAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
+const makeAst = (schema: JsonSchema, refResolver: RefResolver): FlowAst => {
   if (schema.$ref) {
     // $FlowFixMe
     const resolved = refResolver(schema.$ref);
@@ -58,7 +58,7 @@ const makeAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
   }
 };
 
-const makeObjectAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
+const makeObjectAst = (schema: JsonSchema, refResolver: RefResolver): FlowAst => {
   // If properties, use emit a record. Otherwise, emit a map. We don't use
   // patternProperties because it's not expressable in flow.
   if (schema.properties) {
@@ -81,7 +81,7 @@ const makeObjectAst = (schema: JsonSchema, refResolver: RefResolver): FlowType =
   }
 };
 
-const makeArrayAst = (schema: JsonSchema, refResolver: RefResolver): FlowType => {
+const makeArrayAst = (schema: JsonSchema, refResolver: RefResolver): FlowAst => {
   if (schema.items) {
     if (Array.isArray(schema.items)) {
       return Ast.Tuple(_.map(schema.items, (t) => makeAst(t, refResolver)));

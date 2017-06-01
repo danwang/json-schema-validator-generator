@@ -1,7 +1,7 @@
 // @flow
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
-import type {FlowType, TupleType, RecordType} from 'flow/ast/ast.js';
+import type {FlowAst, TupleType, RecordType} from 'flow/ast/ast.js';
 import util from 'util.js';
 
 const renderExact = (value: mixed, depth: number) => JSON.stringify(value);
@@ -34,12 +34,12 @@ const renderRecord = (ft: RecordType, depth: number) => {
   ].join('\n');
 };
 
-const render = (ft: FlowType, depth: number = 0): string => {
+const render = (ft: FlowAst, depth: number = 0): string => {
   switch (ft.type) {
     case 'declaration':
       return `declare type ${ft.name} = ${render(ft.value, depth)};`;
     case 'type':
-      return `type ${ft.name} = ${render(ft.value, depth)};`;
+      return `export type ${ft.name} = ${render(ft.value, depth)};`;
     case 'literal':
       return ft.value;
     case 'exact':

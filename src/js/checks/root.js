@@ -14,6 +14,7 @@ import ref from 'js/checks/ref.js';
 import type from 'js/checks/type.js';
 import uniqueItems from 'js/checks/uniqueItems.js';
 
+import type {JsonSchema} from 'generated-types.js';
 import type {Context} from 'js/generate.js';
 
 import Ast from 'js/ast/ast.js';

@@ -1,9 +1,10 @@
 // @flow
 import Ast from 'flow/ast/ast.js';
-import type {FlowType} from 'flow/ast/ast.js';
+import type {FlowAst} from 'flow/ast/ast.js';
 import makeAst from 'flow/make-ast.js';
+import type {JsonSchema} from 'generated-types.js';
 
-const assertType = (schema: JsonSchema, ft: FlowType) => {
+const assertType = (schema: JsonSchema, ft: FlowAst) => {
   expect(makeAst(schema)).toEqual(ft);
 };
 

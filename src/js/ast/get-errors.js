@@ -2,6 +2,7 @@
 import type {JsAst} from 'js/ast/ast.js';
 import collect from 'js/ast/collect.js';
 import type {Collect} from 'js/ast/collect.js';
+import type {JsonSchema} from 'generated-types.js';
 
 export type ErrorCode = {
   schema: JsonSchema,

@@ -4,6 +4,7 @@ import transform from 'js/ast/transform.js';
 import type {ErrorCode} from 'js/ast/get-errors';
 import type {Transform} from 'js/ast/transform.js';
 import type {JsAst} from 'js/ast/ast.js';
+import type {JsonSchema} from 'generated-types.js';
 
 const replaceErrors = (
   root: JsAst,

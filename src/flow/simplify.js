@@ -2,7 +2,7 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import Ast from 'flow/ast/ast.js';
-import type {FlowType, OptionalType} from 'flow/ast/ast.js';
+import type {FlowAst, OptionalType} from 'flow/ast/ast.js';
 
 const simplifyOptional = (ft: OptionalType) => {
   const {child} = ft;
@@ -14,7 +14,7 @@ const simplifyOptional = (ft: OptionalType) => {
       return Ast.Optional(simplified);
   }
 };
-const simplifyIU = (Constructor: (c: Array<FlowType>) => FlowType, children: Array<FlowType>) => {
+const simplifyIU = (Constructor: (c: Array<FlowAst>) => FlowAst, children: Array<FlowAst>) => {
   const unique = _.uniqWith(_.map(children, simplify), _.isEqual);
   if (unique.length === 1) {
     return unique[0];
@@ -23,7 +23,7 @@ const simplifyIU = (Constructor: (c: Array<FlowType>) => FlowType, children: Arr
   }
 };
 
-const simplify = (ft: FlowType): FlowType => {
+const simplify = (ft: FlowAst): FlowAst => {
   switch (ft.type) {
     case 'declaration':
       return Ast.Declaration(ft.name, simplify(ft.value));

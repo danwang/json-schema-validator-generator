@@ -1,5 +1,6 @@
 // @flow
 import validator from 'generated-validator.js';
+import generateFlowAsts from 'flow/generateFlowAsts.js';
 import generateFlow from 'flow/generate.js';
 import generateValidator from 'js/generate.js';
 
@@ -16,6 +17,7 @@ const generate = (anything: mixed, anyShape: Object = {root: anything}): Generat
     const schema: JsonSchema = (anything: any);
     const shape: Schemas = (anyShape: any);
     return {
+      flowAst: generateFlowAsts(schema, shape),
       flow: generateFlow(schema, shape),
       js: generateValidator(schema, shape),
     };
