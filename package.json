@@ -1,13 +1,13 @@
 {
   "name": "json-schema-validator-generator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
     "lint": "eslint src",
     "jest": "jest --config jestconfig.json",
     "build": "yarn transpile && yarn transpile-flow && yarn copy-flow && yarn copy-packagejson",
-    "transpile": "BABEL_ENV='es5' babel ./src --out-dir ./dist/ --ignore '**/__tests__/*.js'",
+    "transpile": "BABEL_ENV='test' babel ./src --out-dir ./dist/ --ignore '**/__tests__/*.js'",
     "transpile-flow": "BABEL_ENV='flow' babel ./src --out-dir ./dist-flow/ --ignore '**/__tests__/*.js'",
     "copy-flow": "cd dist-flow && pax -wrs'/\\.js$/\\.js\\.flow/' *.js ../dist",
     "copy-packagejson": "cp package.json ./dist",

@@ -2,6 +2,7 @@
 import _ from 'lodash';
 import generateFlowAsts from 'flow/generateFlowAsts.js';
 import render from 'flow/render.js';
+import type {JsonSchema} from 'generated-types.js';
 
 type Schemas = {[key: string]: JsonSchema};
 // Accepts the same arguments as js/generate

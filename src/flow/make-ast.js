@@ -4,6 +4,7 @@ import _ from 'lodash';
 import Ast from 'flow/ast/ast.js';
 import type {FlowAst} from 'flow/ast/ast.js';
 import simplify from 'flow/simplify.js';
+import type {JsonSchema} from 'generated-types.js';
 
 const defaultResolver = () => null;
 

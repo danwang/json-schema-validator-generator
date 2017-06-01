@@ -10,7 +10,7 @@ const JS_OUTPUT = path.join(__dirname, '../src/generated-validator.js');
 
 const generated = generator(spec, {JsonSchema: spec});
 
-const flowContents = `
+const flowContents = `// @flow
 /* eslint-disable */
 ${generated.flow}
 `;

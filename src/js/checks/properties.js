@@ -49,7 +49,7 @@ const additionalChecks = (
     message: `properties[${key}]`,
   }));
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
-    predicate: Ast.Call(
+    predicate: Ast.Call1(
       Ast.PropertyAccess(keySym, 'match'),
       Ast.Literal(`/${pattern}/`),
     ),

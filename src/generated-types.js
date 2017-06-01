@@ -1,4 +1,4 @@
-
+// @flow
 /* eslint-disable */
 export type JsonSchema = {
   id?: string,

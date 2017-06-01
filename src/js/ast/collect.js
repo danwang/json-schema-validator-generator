@@ -48,10 +48,16 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
         return [];
       case 'literal':
         return [];
-      case 'call':
+      case 'call1':
         return [
           ...recur(ast.fn),
           ...recur(ast.arg),
+        ];
+      case 'call2':
+        return [
+          ...recur(ast.fn),
+          ...recur(ast.arg1),
+          ...recur(ast.arg2),
         ];
       case 'unop':
         return recur(ast.child);

@@ -23,7 +23,7 @@ const replaceErrors = (
       if (subreason) {
         return Ast.Body(
           Ast.Comment(message),
-          Ast.Return(Ast.Call(
+          Ast.Return(Ast.Call1(
             Ast.PropertyAccess(subreason, 'concat'),
             Ast.NumLiteral(cache[message]),
           )),

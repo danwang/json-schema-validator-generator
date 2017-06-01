@@ -10,7 +10,7 @@ const IsError = (symbol: JsAst): JsAst => {
 
 const FailedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
   const fnSym = context.symbolForSchema(subSchema);
-  return IsError(Ast.Call(fnSym, symbol));
+  return IsError(Ast.Call1(fnSym, symbol));
 };
 
 const PassedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
@@ -19,7 +19,7 @@ const PassedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): Js
 
 const Check = (subSchema: JsonSchema, symbol: JsAst, context: Context) => {
   const check = context.symbolForSchema(subSchema);
-  return Ast.Call(check, symbol);
+  return Ast.Call1(check, symbol);
 };
 
 export type BaseType = (
@@ -48,11 +48,11 @@ const PrimitivePredicate = (type: BaseType, symbol: JsAst): JsAst => {
         symbol,
         Ast.Binop.And(
           Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('object')),
-          Ast.Unop.Not(Ast.Call('Array.isArray', symbol)),
+          Ast.Unop.Not(Ast.Call1('Array.isArray', symbol)),
         ),
       );
     case 'array':
-      return Ast.Call('Array.isArray', symbol);
+      return Ast.Call1('Array.isArray', symbol);
     case 'boolean':
       return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('boolean'));
     case 'null':

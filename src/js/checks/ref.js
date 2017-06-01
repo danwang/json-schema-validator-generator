@@ -11,7 +11,7 @@ const ref = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if ($ref && typeof $ref === 'string' && $ref.startsWith('#')) {
     const subSchema = jsonpointer.get(context.rootSchema, decodeURIComponent($ref.substring(1)));
     const fnSym = context.symbolForSchema(subSchema);
-    return Ast.Return(Ast.Call(fnSym, symbol));
+    return Ast.Return(Ast.Call1(fnSym, symbol));
   } else {
     return Ast.Empty;
   }

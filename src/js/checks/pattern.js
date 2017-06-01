@@ -9,7 +9,7 @@ const _pattern = (schema: JsonSchema, symbol: VarType, context: Context): JsAst 
   const {pattern} = schema;
   if (pattern) {
     const check = Ast.If(
-      Ast.Unop.Not(Ast.Call(
+      Ast.Unop.Not(Ast.Call1(
         Ast.PropertyAccess(symbol, 'match'),
         Ast.Literal(`/${pattern}/`),
       )),

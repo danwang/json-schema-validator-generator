@@ -1,6 +1,9 @@
 [libs]
 src/decls/
 
+[ignore]
+.*/dist-flow/.*
+
 [options]
 module.file_ext=.js
 module.file_ext=.json

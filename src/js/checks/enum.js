@@ -27,7 +27,7 @@ const _enum = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
       } else {
         return Ast.If(
           Ast.Binop.Eq(
-            Ast.Call('JSON.stringify', symbol),
+            Ast.Call1('JSON.stringify', symbol),
             Ast.StringLiteral(JSON.stringify(value)),
           ),
           Ast.Unop.Incr(match),

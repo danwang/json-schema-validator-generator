@@ -21,7 +21,7 @@ type Binop = (left: JsAst, right: JsAst) => JsAst;
 
 const comparisons = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   const symbolLength = Ast.PropertyAccess(symbol, 'length');
-  const keysLength = Ast.PropertyAccess(Ast.Call('Object.keys', symbol), 'length');
+  const keysLength = Ast.PropertyAccess(Ast.Call1('Object.keys', symbol), 'length');
 
   const comparison = (
     sym: JsAst,

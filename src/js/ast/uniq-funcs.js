@@ -32,7 +32,7 @@ const delegateReplacements = (fns: Array<Function1Type>, nameToId: NameToId): Re
     if (body.type === 'body' && body.body.length === 1) {
       const line = body.body[0];
       if (line.type === 'return') {
-        if (line.value.type === 'call') {
+        if (line.value.type === 'call1') {
           const {fn, arg} = line.value;
           if (fn.type === 'var') {
             if (arg.value === argument.value) {

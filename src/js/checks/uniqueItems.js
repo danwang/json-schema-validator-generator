@@ -20,7 +20,7 @@ const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsA
         Ast.Body(
           Ast.Assignment(
             stringified,
-            Ast.Call('JSON.stringify', Ast.BracketAccess(symbol, i)),
+            Ast.Call1('JSON.stringify', Ast.BracketAccess(symbol, i)),
           ),
           Ast.Assignment(
             Ast.BracketAccess(obj, stringified),
@@ -30,7 +30,7 @@ const uniqueItems = (schema: JsonSchema, symbol: VarType, context: Context): JsA
       ),
       Ast.If(
         Ast.Binop.Neq(
-          Ast.PropertyAccess(Ast.Call('Object.keys', obj), 'length'),
+          Ast.PropertyAccess(Ast.Call1('Object.keys', obj), 'length'),
           Ast.PropertyAccess(symbol, 'length'),
         ),
         context.error(schema, 'uniqueItems'),

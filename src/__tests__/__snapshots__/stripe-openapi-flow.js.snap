@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Stripe openapi generates flow types for the entire spec 1`] = `
-"type Account = {
+"export type Account = {
   active_payment_methods: Array<mixed>,
   business_name?: string,
   business_url?: string,
@@ -38,7 +38,7 @@ exports[`Stripe openapi generates flow types for the entire spec 1`] = `
   tos_acceptance: T4,
   verification: T5,
 };
-type BalanceTransaction = {
+export type BalanceTransaction = {
   amount: number,
   available_on: number,
   created: number,
@@ -53,7 +53,7 @@ type BalanceTransaction = {
   status: string,
   type: string,
 };
-type Card = {
+export type Card = {
   account?: string,
   address_city?: string,
   address_country?: string,
@@ -86,7 +86,7 @@ type Card = {
   three_d_secure?: {[key: string]: mixed},
   tokenization_method?: string,
 };
-type Charge = {
+export type Charge = {
   amount: number,
   amount_authorized?: number,
   amount_captured: number,
@@ -132,7 +132,7 @@ type Charge = {
   transfer?: string,
   transfer_group?: string,
 };
-type Coupon = {
+export type Coupon = {
   amount_off?: number,
   created: number,
   currency?: string,
@@ -148,7 +148,7 @@ type Coupon = {
   times_redeemed: number,
   valid: boolean,
 };
-type Customer = {
+export type Customer = {
   account_balance: number,
   alipay_accounts?: {
     data: Array<T10>,
@@ -201,7 +201,7 @@ type Customer = {
     url: string,
   },
 };
-type Discount = {
+export type Discount = {
   coupon: Coupon,
   customer?: string,
   end?: number,
@@ -209,7 +209,7 @@ type Discount = {
   start: number,
   subscription?: string,
 };
-type Dispute = {
+export type Dispute = {
   amount: number,
   balance_transactions: BalanceTransaction,
   charge: string,
@@ -225,11 +225,11 @@ type Dispute = {
   reason: string,
   status: string,
 };
-type T0 = {
+export type T0 = {
   avs_failure: boolean,
   cvc_failure: boolean,
 };
-type T1 = {
+export type T1 = {
   additional_owners?: T14,
   address: T15,
   address_kana?: T16,
@@ -257,7 +257,7 @@ type T1 = {
   type?: string,
   verification: T18,
 };
-type T2 = {
+export type T2 = {
   authorization: T19,
   channels: T20,
   create_order_hook_url?: string,
@@ -266,30 +266,30 @@ type T2 = {
   shipping: T22,
   taxes: T23,
 };
-type T3 = {
+export type T3 = {
   delay_days: number,
   interval: string,
   monthly_anchor?: number,
   weekly_anchor?: string,
 };
-type T4 = {
+export type T4 = {
   date?: number,
   ip?: string,
   user_agent?: string,
 };
-type T5 = {
+export type T5 = {
   disabled_reason?: string,
   due_by?: number,
   fields_needed: Array<mixed>,
 };
-type T6 = {
+export type T6 = {
   amount: number,
   application?: string,
   currency: string,
   description?: string,
   type: string,
 };
-type T7 = {
+export type T7 = {
   network_status?: string,
   reason?: string,
   risk_level?: string,
@@ -297,7 +297,7 @@ type T7 = {
   seller_message?: string,
   type: string,
 };
-type T8 = {
+export type T8 = {
   amount: number,
   balance_transaction?: string,
   charge?: string,
@@ -311,14 +311,14 @@ type T8 = {
   receipt_number?: string,
   status?: string,
 };
-type T9 = {
+export type T9 = {
   address: T24,
   carrier?: string,
   name: string,
   phone?: string,
   tracking_number?: string,
 };
-type T10 = {
+export type T10 = {
   created: number,
   customer?: string,
   fingerprint: string,
@@ -332,7 +332,7 @@ type T10 = {
   used: boolean,
   username: string,
 };
-type T11 = {
+export type T11 = {
   account?: string,
   account_holder_name?: string,
   account_holder_type?: string,
@@ -358,12 +358,12 @@ type T11 = {
   status: string,
   used?: boolean,
 };
-type T12 = {
+export type T12 = {
   address: T24,
   name: string,
   phone?: string,
 };
-type T13 = {
+export type T13 = {
   account_balance?: number,
   application_fee_percent?: number,
   billing?: string,
@@ -398,14 +398,14 @@ type T13 = {
   trial_end?: number,
   trial_start?: number,
 };
-type T14 = {
+export type T14 = {
   address: T15,
   dob: T17,
   first_name?: string,
   last_name?: string,
   verification: T18,
 };
-type T15 = {
+export type T15 = {
   city?: string,
   country?: string,
   line1?: string,
@@ -413,7 +413,7 @@ type T15 = {
   postal_code?: string,
   state?: string,
 };
-type T16 = {
+export type T16 = {
   city?: string,
   country?: string,
   line1?: string,
@@ -422,30 +422,30 @@ type T16 = {
   state?: string,
   town?: string,
 };
-type T17 = {
+export type T17 = {
   day?: number,
   month?: number,
   year?: number,
 };
-type T18 = {
+export type T18 = {
   details?: string,
   details_code?: string,
   document?: string,
   status: string,
 };
-type T19 = {
+export type T19 = {
   issuer?: string,
   provider?: string,
   type: string,
 };
-type T20 = {
+export type T20 = {
   twitter?: T27,
 };
-type T21 = {
+export type T21 = {
   provider?: string,
   type: string,
 };
-type T22 = {
+export type T22 = {
   amount?: number,
   currency?: string,
   description?: string,
@@ -457,14 +457,14 @@ type T22 = {
   rates?: T28,
   type: string,
 };
-type T23 = {
+export type T23 = {
   description?: string,
   provider?: string,
   provider_url?: string,
   rate?: number,
   type: string,
 };
-type T24 = {
+export type T24 = {
   city?: string,
   country?: string,
   line1?: string,
@@ -472,14 +472,14 @@ type T24 = {
   postal_code?: string,
   state?: string,
 };
-type T25 = {
+export type T25 = {
   created: number,
   id: string,
   object: string,
   plan: T26,
   quantity: number,
 };
-type T26 = {
+export type T26 = {
   amount: number,
   created: number,
   currency: string,
@@ -493,7 +493,7 @@ type T26 = {
   statement_descriptor?: string,
   trial_period_days?: number,
 };
-type T27 = {
+export type T27 = {
   enabled: boolean,
   marketplace_id?: string,
   merchant_id?: string,
@@ -505,7 +505,7 @@ type T27 = {
   terms_url?: string,
   username: string,
 };
-type T28 = {
+export type T28 = {
   amount: number,
   currency: string,
   description: string,

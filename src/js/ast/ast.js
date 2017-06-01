@@ -16,7 +16,8 @@ export type JsAst = (
   EmptyType |
   VarType |
   LiteralType |
-  CallType |
+  Call1Type |
+  Call2Type |
   UnopType |
   ObjectLiteralType |
   PropertyAccessType |
@@ -79,10 +80,16 @@ export type LiteralType = {
   type: 'literal',
   value: string,
 };
-type CallType = {
-  type: 'call',
+type Call1Type = {
+  type: 'call1',
   fn: JsAst,
   arg: JsAst,
+};
+type Call2Type = {
+  type: 'call2',
+  fn: JsAst,
+  arg1: JsAst,
+  arg2: JsAst,
 };
 export type UnopType = {
   type: 'unop',
@@ -190,11 +197,19 @@ const ForIn = (
 const Empty = {type: 'empty'};
 const Var = (value: string): VarType => ({type: 'var', value});
 const Literal = (value: string): LiteralType => ({type: 'literal', value});
-const Call = (fn: JsAst | string, arg: JsAst) => {
+const Call1 = (fn: JsAst | string, arg: JsAst): Call1Type => {
   return {
-    type: 'call',
+    type: 'call1',
     fn: (typeof fn === 'string') ? Literal(fn) : fn,
     arg,
+  };
+};
+const Call2 = (fn: JsAst | string, arg1: JsAst, arg2: JsAst): Call2Type => {
+  return {
+    type: 'call2',
+    fn: (typeof fn === 'string') ? Literal(fn) : fn,
+    arg1,
+    arg2,
   };
 };
 const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst): UnopType => {
@@ -265,7 +280,8 @@ export default {
   Empty,
   Var,
   Literal,
-  Call,
+  Call1,
+  Call2,
   Unop: {
     Not: _Unop('!', 'prefix'),
     Incr: _Unop('++', 'suffix'),

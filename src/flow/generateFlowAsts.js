@@ -5,6 +5,7 @@ import jsonpointer from 'json-pointer';
 import Ast from 'flow/ast/ast.js';
 import util from 'util.js';
 import type {FlowAst} from 'flow/ast/ast.js';
+import type {JsonSchema} from 'generated-types.js';
 
 type Schemas = {[key: string]: JsonSchema};
 const generateFlowAsts = (schema: JsonSchema, shape: Schemas = {root: schema}): Array<FlowAst> => {
