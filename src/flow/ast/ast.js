@@ -11,7 +11,7 @@ type DeclarationType = {
   name: string,
   value: FlowAst,
 };
-type TypeType = {
+export type TypeType = {
   type: 'type',
   name: string,
   value: FlowAst,
