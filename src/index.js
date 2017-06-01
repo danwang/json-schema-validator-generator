@@ -3,6 +3,7 @@ import validator from 'generated-validator.js';
 import generateFlowAsts from 'flow/generateFlowAsts.js';
 import generateFlow from 'flow/generate.js';
 import generateValidator from 'js/generate.js';
+import type {JsonSchema} from 'generated-types.js';
 
 type Schemas = {[key: string]: JsonSchema};
 type Generated = {
