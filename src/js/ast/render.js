@@ -2,7 +2,13 @@
 /* eslint-disable no-use-before-define */
 import _ from 'lodash';
 import type {
-  JsAst, IfType, ForType, ForInType, Function1Type, UnopType, ObjectLiteralType,
+  JsAst,
+  IfType,
+  ForType,
+  ForInType,
+  Function1Type,
+  UnopType,
+  ObjectLiteralType,
 } from 'js/ast/ast.js';
 import getVars from 'js/ast/get-vars.js';
 import util from 'util.js';
@@ -11,10 +17,9 @@ const renderIf = (ast: IfType, depth: number) => {
   const {predicate, body, elseBody} = ast;
 
   const elseString = render(elseBody, depth + 1);
-  const elseLines = elseString ? [
-    util.indent('} else {', depth),
-    elseString,
-  ] : [];
+  const elseLines = elseString
+    ? [util.indent('} else {', depth), elseString]
+    : [];
   return [
     `if (${render(predicate)}) {`,
     render(body, depth + 1),
@@ -44,9 +49,10 @@ const renderForIn = (ast: ForInType, depth: number) => {
 const renderFunction = (ast: Function1Type, depth: number) => {
   const {name, argument, body} = ast;
   const vars = getVars(body);
-  const varLines = vars.length === 0 ? [] : [
-    util.indent(`var ${vars.join(', ')};`, depth + 1),
-  ];
+  const varLines =
+    vars.length === 0
+      ? []
+      : [util.indent(`var ${vars.join(', ')};`, depth + 1)];
   return [
     `function ${render(name)}(${render(argument)}) {`,
     ...varLines,
@@ -70,14 +76,20 @@ const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
     const valueString = render(value, depth + 1);
     return util.indent(`${key}: ${valueString.trimLeft()},`, depth + 1);
   });
-  return [
-    util.indent('{', depth),
-    ...lines,
-    util.indent('}', depth),
-  ].join('\n');
+  return [util.indent('{', depth), ...lines, util.indent('}', depth)].join(
+    '\n'
+  );
 };
 
-const STATEMENTS_WITH_SEMIS = ['assignment', 'return', 'binop', 'call0', 'call1', 'call2', 'unop'];
+const STATEMENTS_WITH_SEMIS = [
+  'assignment',
+  'return',
+  'binop',
+  'call0',
+  'call1',
+  'call2',
+  'unop',
+];
 
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
@@ -88,7 +100,7 @@ const render = (ast: JsAst, depth: number = 0) => {
     case 'return':
       return `return ${render(ast.value, depth).trimLeft()}`;
     case 'body':
-      return _.map(ast.body, (s) => {
+      return _.map(ast.body, s => {
         const suffix = _.includes(STATEMENTS_WITH_SEMIS, s.type) ? ';' : '';
         const line = util.indent(render(s, depth), depth);
         return `${line}${suffix}`;
@@ -102,7 +114,10 @@ const render = (ast: JsAst, depth: number = 0) => {
     case 'function1':
       return renderFunction(ast, depth);
     case 'binop':
-      return `${render(ast.left, depth)} ${ast.comparator} ${render(ast.right, depth)}`;
+      return `${render(ast.left, depth)} ${ast.comparator} ${render(
+        ast.right,
+        depth
+      )}`;
     case 'var':
       return ast.value;
     case 'literal':

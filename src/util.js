@@ -2,7 +2,8 @@
 import _ from 'lodash';
 
 const INDENT = '  ';
-const indent = (line: string, depth: number) => `${_.repeat(INDENT, depth)}${line}`;
+const indent = (line: string, depth: number) =>
+  `${_.repeat(INDENT, depth)}${line}`;
 
 const gengensym = () => {
   const cache = {};
@@ -11,7 +12,6 @@ const gengensym = () => {
     return `${prefix}${cache[prefix]++}`;
   };
 };
-
 
 export default {
   indent,

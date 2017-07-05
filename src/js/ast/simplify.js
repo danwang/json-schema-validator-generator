@@ -13,12 +13,18 @@ const simplifyIf = (ast: IfType): JsAst => {
       return Ast.Empty;
     } else if (body.type === 'body') {
       const [first, ...rest] = body.body;
-      if (rest.length === 0 && first.type === 'if' && first.elseBody.type === 'empty') {
-        return simplify(Ast.If(
-          Ast.Binop.And(predicate, first.predicate),
-          first.body,
-          Ast.Empty,
-        ));
+      if (
+        rest.length === 0 &&
+        first.type === 'if' &&
+        first.elseBody.type === 'empty'
+      ) {
+        return simplify(
+          Ast.If(
+            Ast.Binop.And(predicate, first.predicate),
+            first.body,
+            Ast.Empty
+          )
+        );
       } else {
         return Ast.If(predicate, body, elseBody);
       }
@@ -31,7 +37,7 @@ const simplifyIf = (ast: IfType): JsAst => {
 };
 
 const simplifyBody = (ast: BodyType): JsAst => {
-  const mapped = _.flatMap(ast.body, (child) => {
+  const mapped = _.flatMap(ast.body, child => {
     const simplified = simplify(child);
     if (simplified.type === 'body') {
       return simplified.body;
@@ -42,7 +48,7 @@ const simplifyBody = (ast: BodyType): JsAst => {
     }
   });
 
-  const firstReturn = _.findIndex(mapped, (node) => node.type === 'return');
+  const firstReturn = _.findIndex(mapped, node => node.type === 'return');
   const body = firstReturn >= 0 ? mapped.slice(0, firstReturn + 1) : mapped;
   if (body.length === 0) {
     return Ast.Empty;
@@ -65,12 +71,12 @@ const simplifyUnop = (ast: UnopType): JsAst => {
         case '&&':
           return Ast.Binop.Or(
             simplify(Ast.Unop.Not(left)),
-            simplify(Ast.Unop.Not(right)),
+            simplify(Ast.Unop.Not(right))
           );
         case '||':
           return Ast.Binop.And(
             simplify(Ast.Unop.Not(left)),
-            simplify(Ast.Unop.Not(right)),
+            simplify(Ast.Unop.Not(right))
           );
         case '<':
           return Ast.Binop.Gte(left, right);
@@ -108,13 +114,13 @@ const simplify = (ast: JsAst): JsAst => {
         simplify(ast.init),
         simplify(ast.condition),
         simplify(ast.loop),
-        simplify(ast.body),
+        simplify(ast.body)
       );
     case 'forin':
       return Ast.ForIn(
         ast.variable,
         simplify(ast.iterator),
-        simplify(ast.body),
+        simplify(ast.body)
       );
     case 'empty':
       return ast;
@@ -123,7 +129,7 @@ const simplify = (ast: JsAst): JsAst => {
     case 'binop':
       return Ast.Binop.Any(ast.comparator)(
         simplify(ast.left),
-        simplify(ast.right),
+        simplify(ast.right)
       );
     case 'unop':
       return simplifyUnop(ast);

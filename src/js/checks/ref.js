@@ -9,7 +9,10 @@ const ref = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   // $FlowFixMe No ref in json schema json schema...
   const {$ref} = schema;
   if ($ref && typeof $ref === 'string' && $ref.startsWith('#')) {
-    const subSchema = jsonpointer.get(context.rootSchema, decodeURIComponent($ref.substring(1)));
+    const subSchema = jsonpointer.get(
+      context.rootSchema,
+      decodeURIComponent($ref.substring(1))
+    );
     const fnSym = context.symbolForSchema(subSchema);
     return Ast.Return(Ast.Call1(fnSym, symbol));
   } else {

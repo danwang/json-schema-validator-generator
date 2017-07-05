@@ -38,4 +38,11 @@ export type T0 = number;
 export type T1 = T0 & mixed;
 export type T2 = Array<JsonSchema>;
 export type T3 = Array<string>;
-export type T4 = "array" | "boolean" | "integer" | "null" | "number" | "object" | "string";
+export type T4 =
+  | 'array'
+  | 'boolean'
+  | 'integer'
+  | 'null'
+  | 'number'
+  | 'object'
+  | 'string';

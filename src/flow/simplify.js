@@ -14,7 +14,10 @@ const simplifyOptional = (ft: OptionalType) => {
       return Ast.Optional(simplified);
   }
 };
-const simplifyIU = (Constructor: (c: Array<FlowAst>) => FlowAst, children: Array<FlowAst>) => {
+const simplifyIU = (
+  Constructor: (c: Array<FlowAst>) => FlowAst,
+  children: Array<FlowAst>
+) => {
   const unique = _.uniqWith(_.map(children, simplify), _.isEqual);
   if (unique.length === 1) {
     return unique[0];

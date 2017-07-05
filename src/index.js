@@ -11,7 +11,10 @@ type Generated = {
   js: string,
 };
 
-const generate = (anything: mixed, anyShape: Object = {root: anything}): Generated => {
+const generate = (
+  anything: mixed,
+  anyShape: Object = {root: anything}
+): Generated => {
   if (validator.JsonSchema(anything) !== 0) {
     throw new Error('Invalid schema.');
   } else {

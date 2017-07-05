@@ -6,16 +6,20 @@ import type {JsAst, VarType} from 'js/ast/ast.js';
 import M from 'js/ast/macros';
 import type {JsonSchema} from 'generated-types.js';
 
-const allOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+const allOf = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context
+): JsAst => {
   if (schema.allOf) {
     const checkResult = context.gensym();
-    const nodes = _.map(schema.allOf, (subSchema) => {
+    const nodes = _.map(schema.allOf, subSchema => {
       return Ast.Body(
         Ast.Assignment(checkResult, M.Check(subSchema, symbol, context)),
         Ast.If(
           M.IsError(checkResult),
-          context.error(schema, 'allOf', checkResult),
-        ),
+          context.error(schema, 'allOf', checkResult)
+        )
       );
     });
     return Ast.Body(...nodes);

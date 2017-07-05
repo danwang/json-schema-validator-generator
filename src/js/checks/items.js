@@ -6,16 +6,21 @@ import type {JsAst, VarType} from 'js/ast/ast.js';
 import M from 'js/ast/macros';
 import type {JsonSchema} from 'generated-types.js';
 
-const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: VarType, context: Context): JsAst => {
+const _additionalItems = (
+  schema: JsonSchema,
+  items: Array<JsonSchema>,
+  symbol: VarType,
+  context: Context
+): JsAst => {
   const {additionalItems} = schema;
   const error = context.error(schema, 'additionalItems');
   if (additionalItems === false) {
     return Ast.If(
       Ast.Binop.Gt(
         Ast.PropertyAccess(symbol, 'length'),
-        Ast.NumLiteral(items.length),
+        Ast.NumLiteral(items.length)
       ),
-      error,
+      error
     );
   } else if (additionalItems && typeof additionalItems === 'object') {
     const i = context.gensym();
@@ -27,16 +32,20 @@ const _additionalItems = (schema: JsonSchema, items: Array<JsonSchema>, symbol: 
         Ast.Unop.Incr(i),
         Ast.If(
           M.FailedCheck(additionalItems, Ast.BracketAccess(symbol, i), context),
-          error,
-        ),
-      ),
+          error
+        )
+      )
     );
   } else {
     return Ast.Empty;
   }
 };
 
-const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+const _items = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context
+): JsAst => {
   const {items} = schema;
   if (Array.isArray(items)) {
     // Tuple. Handle each item individually.
@@ -45,9 +54,13 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
       return Ast.If(
         Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
         Ast.If(
-          M.FailedCheck(subSchema, Ast.BracketAccess(symbol, Ast.NumLiteral(i)), context),
-          context.error(schema, `items[${i}]`),
-        ),
+          M.FailedCheck(
+            subSchema,
+            Ast.BracketAccess(symbol, Ast.NumLiteral(i)),
+            context
+          ),
+          context.error(schema, `items[${i}]`)
+        )
       );
     });
     return Ast.Body(additionalCheck, ...checks);
@@ -61,9 +74,9 @@ const _items = (schema: JsonSchema, symbol: VarType, context: Context): JsAst =>
         Ast.Unop.Incr(counter),
         Ast.If(
           M.FailedCheck(items, Ast.BracketAccess(symbol, counter), context),
-          context.error(schema, 'items'),
-        ),
-      ),
+          context.error(schema, 'items')
+        )
+      )
     );
     return M.TypeCheck('array', symbol, check);
   } else {

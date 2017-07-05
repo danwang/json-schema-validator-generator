@@ -6,15 +6,11 @@ import util from 'util.js';
 
 const renderExact = (value: mixed, depth: number) => JSON.stringify(value);
 const renderTuple = (ft: TupleType, depth: number) => {
-  const contents = _.map(ft.children, (child) => {
+  const contents = _.map(ft.children, child => {
     const rendered = render(child, depth + 1);
     return util.indent(`${rendered},`, depth);
   });
-  return [
-    '[',
-    ...contents,
-    util.indent(']', depth),
-  ].join('\n');
+  return ['[', ...contents, util.indent(']', depth)].join('\n');
 };
 
 const renderRecord = (ft: RecordType, depth: number) => {
@@ -27,11 +23,7 @@ const renderRecord = (ft: RecordType, depth: number) => {
       return util.indent(`${key}: ${rendered},`, depth + 1);
     }
   });
-  return [
-    '{',
-    ...contents,
-    util.indent('}', depth),
-  ].join('\n');
+  return ['{', ...contents, util.indent('}', depth)].join('\n');
 };
 
 const render = (ft: FlowAst, depth: number = 0): string => {
@@ -61,9 +53,9 @@ const render = (ft: FlowAst, depth: number = 0): string => {
     case 'record':
       return renderRecord(ft, depth);
     case 'union':
-      return _.map(ft.children, (child) => render(child, depth)).join(' | ');
+      return _.map(ft.children, child => render(child, depth)).join(' | ');
     case 'intersection':
-      return _.map(ft.children, (child) => render(child, depth)).join(' & ');
+      return _.map(ft.children, child => render(child, depth)).join(' & ');
     default:
       return '';
   }

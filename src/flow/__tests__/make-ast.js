@@ -12,10 +12,7 @@ describe('makeAst', () => {
   describe('allOf', () => {
     it('works with primitive types', () => {
       const schema = {
-        allOf: [
-          {type: 'string'},
-          {type: 'null'},
-        ],
+        allOf: [{type: 'string'}, {type: 'null'}],
       };
 
       const expected = Ast.Intersection([Ast.String, Ast.Null]);
@@ -25,10 +22,7 @@ describe('makeAst', () => {
   describe('anyOf', () => {
     it('produces a union', () => {
       const schema = {
-        anyOf: [
-          {type: 'string'},
-          {type: 'null'},
-        ],
+        anyOf: [{type: 'string'}, {type: 'null'}],
       };
 
       const expected = Ast.Union([Ast.String, Ast.Null]);
@@ -37,11 +31,7 @@ describe('makeAst', () => {
 
     it('removes duplicates', () => {
       const schema = {
-        anyOf: [
-          {type: 'string'},
-          {type: 'string'},
-          {type: 'null'},
-        ],
+        anyOf: [{type: 'string'}, {type: 'string'}, {type: 'null'}],
       };
 
       const expected = Ast.Union([Ast.String, Ast.Null]);
@@ -76,18 +66,14 @@ describe('makeAst', () => {
     it('works with an array of schemas as items', () => {
       const schema = {
         type: 'array',
-        items: [
-          {type: 'string'},
-          {},
-        ],
+        items: [{type: 'string'}, {}],
       };
 
       const expected = Ast.Tuple([Ast.String, Ast.Mixed]);
       assertType(schema, expected);
     });
   });
-  it('oneOf', () => {
-  });
+  it('oneOf', () => {});
   describe('objects', () => {
     it('works with properties and required', () => {
       const schema = {

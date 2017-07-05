@@ -3,7 +3,7 @@
 export default (function() {
   function f0(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       if (v0.exclusiveMaximum !== undefined && v0.maximum === undefined) {
         /* JsonSchema: dependencies[exclusiveMaximum] */
         return [1];
@@ -13,7 +13,7 @@ export default (function() {
         return [2];
       }
     }
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.id;
       if (v2 !== undefined) {
         v1 = f1(v2);
@@ -271,7 +271,7 @@ export default (function() {
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* JsonSchema: type */
       return [35];
     }
@@ -329,8 +329,8 @@ export default (function() {
   function f10(v0) {
     var v1;
     v1 = 0;
-    f21(v0) === 0 && (v1)++;
-    f0(v0) === 0 && (v1)++;
+    f21(v0) === 0 && v1++;
+    f0(v0) === 0 && v1++;
     if (v1 === 0) {
       /* f10: anyOf */
       return [43];
@@ -340,8 +340,8 @@ export default (function() {
   function f11(v0) {
     var v1;
     v1 = 0;
-    f0(v0) === 0 && (v1)++;
-    f26(v0) === 0 && (v1)++;
+    f0(v0) === 0 && v1++;
+    f26(v0) === 0 && v1++;
     if (v1 === 0) {
       /* f11: anyOf */
       return [44];
@@ -350,7 +350,7 @@ export default (function() {
   }
   function f13(v0) {
     var v1, v2, v4;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v4 = f0(v2);
@@ -360,7 +360,7 @@ export default (function() {
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f13: type */
       return [46];
     }
@@ -368,7 +368,7 @@ export default (function() {
   }
   function f14(v0) {
     var v1, v2, v4;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       for (var v1 in v0) {
         v2 = v0[v1];
         v4 = f23(v2);
@@ -378,7 +378,7 @@ export default (function() {
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f14: type */
       return [48];
     }
@@ -390,14 +390,14 @@ export default (function() {
       /* f15: minItems */
       return [49];
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f15: type */
       return [50];
     }
     if (Array.isArray(v0)) {
       v3 = {};
       v4 = 0;
-      for (; v4 < v0.length; (v4)++) {
+      for (; v4 < v0.length; v4++) {
         v5 = JSON.stringify(v0[v4]);
         v3[v5] = true;
       }
@@ -411,8 +411,8 @@ export default (function() {
   function f16(v0) {
     var v1;
     v1 = 0;
-    f28(v0) === 0 && (v1)++;
-    f25(v0) === 0 && (v1)++;
+    f28(v0) === 0 && v1++;
+    f25(v0) === 0 && v1++;
     if (v1 === 0) {
       /* f16: anyOf */
       return [52];
@@ -455,7 +455,7 @@ export default (function() {
     var v1, v4, v5, v6;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f2(v0[v1]) !== 0) {
           /* f22: items */
           return [57];
@@ -466,14 +466,14 @@ export default (function() {
       /* f22: minItems */
       return [58];
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f22: type */
       return [59];
     }
     if (Array.isArray(v0)) {
       v4 = {};
       v5 = 0;
-      for (; v5 < v0.length; (v5)++) {
+      for (; v5 < v0.length; v5++) {
         v6 = JSON.stringify(v0[v5]);
         v4[v6] = true;
       }
@@ -487,8 +487,8 @@ export default (function() {
   function f23(v0) {
     var v1;
     v1 = 0;
-    f0(v0) === 0 && (v1)++;
-    f22(v0) === 0 && (v1)++;
+    f0(v0) === 0 && v1++;
+    f22(v0) === 0 && v1++;
     if (v1 === 0) {
       /* f23: anyOf */
       return [61];
@@ -499,7 +499,7 @@ export default (function() {
     var v1, v4, v5, v6;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f28(v0[v1]) !== 0) {
           /* f25: items */
           return [62];
@@ -510,14 +510,14 @@ export default (function() {
       /* f25: minItems */
       return [63];
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f25: type */
       return [64];
     }
     if (Array.isArray(v0)) {
       v4 = {};
       v5 = 0;
-      for (; v5 < v0.length; (v5)++) {
+      for (; v5 < v0.length; v5++) {
         v6 = JSON.stringify(v0[v5]);
         v4[v6] = true;
       }
@@ -532,7 +532,7 @@ export default (function() {
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f0(v0[v1]) !== 0) {
           /* f26: items */
           return [66];
@@ -543,7 +543,7 @@ export default (function() {
       /* f26: minItems */
       return [67];
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f26: type */
       return [68];
     }
@@ -553,25 +553,25 @@ export default (function() {
     var v1;
     v1 = 0;
     if (v0 === 'array') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'boolean') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'integer') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'null') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'number') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'object') {
-      (v1)++;
+      v1++;
     }
     if (v0 === 'string') {
-      (v1)++;
+      v1++;
     }
     if (v1 === 0) {
       /* f28: enum */
@@ -582,4 +582,4 @@ export default (function() {
   return {
     JsonSchema: f0,
   };
-}());
+})();

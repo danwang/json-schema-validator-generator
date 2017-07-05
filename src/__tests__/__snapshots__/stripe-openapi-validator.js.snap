@@ -4,7 +4,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
 "(function() {
   function f0(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.active_payment_methods;
       if (v2 !== undefined) {
         v1 = f1(v2);
@@ -286,7 +286,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [45];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* account: type */
       return [46];
     }
@@ -294,7 +294,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f30(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f31(v2);
@@ -433,7 +433,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [70];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* balance_transaction: type */
       return [71];
     }
@@ -441,7 +441,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f42(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.account;
       if (v2 !== undefined) {
         v1 = f43(v2);
@@ -715,7 +715,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* card: type */
       return [111];
     }
@@ -723,7 +723,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f69(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f70(v2);
@@ -1071,7 +1071,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* charge: type */
       return [164];
     }
@@ -1079,7 +1079,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f101(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount_off;
       if (v2 !== undefined) {
         v1 = f102(v2);
@@ -1217,7 +1217,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [186];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* coupon: type */
       return [187];
     }
@@ -1225,7 +1225,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f111(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.account_balance;
       if (v2 !== undefined) {
         v1 = f112(v2);
@@ -1422,7 +1422,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [217];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* customer: type */
       return [218];
     }
@@ -1430,7 +1430,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f125(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.coupon;
       if (v2 !== undefined) {
         v1 = f101(v2);
@@ -1489,7 +1489,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* discount: type */
       return [228];
     }
@@ -1497,7 +1497,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f130(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f131(v2);
@@ -1653,14 +1653,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [256];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* dispute: type */
       return [257];
     }
     return 0;
   }
   function f1(v0) {
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f1: type */
       return [258];
     }
@@ -1731,7 +1731,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f12(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f140(v2);
@@ -1785,7 +1785,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [276];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f12: type */
       return [277];
     }
@@ -1813,7 +1813,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f17(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f17: type */
       return [281];
     }
@@ -2009,7 +2009,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f52(v0) {
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f52: type */
       return [309];
     }
@@ -2114,7 +2114,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f67(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f67: type */
       return [324];
     }
@@ -2212,7 +2212,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f83(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f83: type */
       return [338];
     }
@@ -2276,7 +2276,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f93(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f152(v2);
@@ -2330,7 +2330,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [355];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f93: type */
       return [356];
     }
@@ -2450,7 +2450,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f113(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f154(v2);
@@ -2504,7 +2504,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [381];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f113: type */
       return [382];
     }
@@ -2512,7 +2512,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f114(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f155(v2);
@@ -2566,7 +2566,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [391];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f114: type */
       return [392];
     }
@@ -2581,7 +2581,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f116(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f156(v2);
@@ -2635,7 +2635,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [402];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f116: type */
       return [403];
     }
@@ -2671,7 +2671,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f123(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f140(v2);
@@ -2725,7 +2725,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [416];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f123: type */
       return [417];
     }
@@ -2733,7 +2733,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f124(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f158(v2);
@@ -2787,7 +2787,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [426];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f124: type */
       return [427];
     }
@@ -2829,14 +2829,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f134(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f134: type */
       return [433];
     }
     return 0;
   }
   function f135(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f135: type */
       return [434];
     }
@@ -2865,7 +2865,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f139(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.avs_failure;
       if (v2 !== undefined) {
         v1 = f159(v2);
@@ -2889,7 +2889,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [441];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f139: type */
       return [442];
     }
@@ -2899,14 +2899,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f161(v0[v1]) !== 0) {
           /* f140: items */
           return [443];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f140: type */
       return [444];
     }
@@ -2923,7 +2923,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     v1 = 0;
     if (v0 === 'list') {
-      (v1)++;
+      v1++;
     }
     if (v1 === 0) {
       /* f142: enum */
@@ -2951,7 +2951,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f145(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.additional_owners;
       if (v2 !== undefined) {
         v1 = f220(v2);
@@ -3185,7 +3185,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [483];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f145: type */
       return [484];
     }
@@ -3193,7 +3193,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f146(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.authorization;
       if (v2 !== undefined) {
         v1 = f225(v2);
@@ -3266,7 +3266,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [496];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f146: type */
       return [497];
     }
@@ -3274,7 +3274,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f147(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.delay_days;
       if (v2 !== undefined) {
         v1 = f191(v2);
@@ -3314,7 +3314,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f147: type */
       return [504];
     }
@@ -3322,7 +3322,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f148(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.date;
       if (v2 !== undefined) {
         v1 = f195(v2);
@@ -3348,7 +3348,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f148: type */
       return [508];
     }
@@ -3356,7 +3356,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f149(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.disabled_reason;
       if (v2 !== undefined) {
         v1 = f198(v2);
@@ -3385,7 +3385,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [512];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f149: type */
       return [513];
     }
@@ -3393,7 +3393,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f150(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f201(v2);
@@ -3444,7 +3444,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [521];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f150: type */
       return [522];
     }
@@ -3452,7 +3452,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f151(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.network_status;
       if (v2 !== undefined) {
         v1 = f203(v2);
@@ -3505,7 +3505,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [529];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f151: type */
       return [530];
     }
@@ -3515,14 +3515,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f230(v0[v1]) !== 0) {
           /* f152: items */
           return [531];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f152: type */
       return [532];
     }
@@ -3530,7 +3530,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f153(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.address;
       if (v2 !== undefined) {
         v1 = f231(v2);
@@ -3578,7 +3578,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f153: type */
       return [540];
     }
@@ -3588,14 +3588,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f232(v0[v1]) !== 0) {
           /* f154: items */
           return [541];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f154: type */
       return [542];
     }
@@ -3605,14 +3605,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f233(v0[v1]) !== 0) {
           /* f155: items */
           return [543];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f155: type */
       return [544];
     }
@@ -3622,14 +3622,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f42(v0[v1]) !== 0) {
           /* f156: items */
           return [545];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f156: type */
       return [546];
     }
@@ -3637,7 +3637,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f157(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.address;
       if (v2 !== undefined) {
         v1 = f231(v2);
@@ -3669,7 +3669,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f157: type */
       return [552];
     }
@@ -3679,14 +3679,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f234(v0[v1]) !== 0) {
           /* f158: items */
           return [553];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f158: type */
       return [554];
     }
@@ -3707,7 +3707,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f161(v0) {
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f161: type */
       return [557];
     }
@@ -3910,7 +3910,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     return 0;
   }
   function f200(v0) {
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f200: type */
       return [586];
     }
@@ -4016,7 +4016,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f220(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.address;
       if (v2 !== undefined) {
         v1 = f221(v2);
@@ -4067,7 +4067,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [608];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f220: type */
       return [609];
     }
@@ -4075,7 +4075,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f221(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.city;
       if (v2 !== undefined) {
         v1 = f44(v2);
@@ -4125,7 +4125,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f221: type */
       return [616];
     }
@@ -4133,7 +4133,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f222(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.city;
       if (v2 !== undefined) {
         v1 = f238(v2);
@@ -4191,7 +4191,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f222: type */
       return [624];
     }
@@ -4199,7 +4199,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f223(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.day;
       if (v2 !== undefined) {
         v1 = f243(v2);
@@ -4225,7 +4225,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f223: type */
       return [628];
     }
@@ -4233,7 +4233,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f224(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.details;
       if (v2 !== undefined) {
         v1 = f246(v2);
@@ -4270,7 +4270,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [633];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f224: type */
       return [634];
     }
@@ -4278,7 +4278,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f225(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.issuer;
       if (v2 !== undefined) {
         v1 = f16(v2);
@@ -4307,7 +4307,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [638];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f225: type */
       return [639];
     }
@@ -4315,7 +4315,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f226(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.twitter;
       if (v2 !== undefined) {
         v1 = f302(v2);
@@ -4325,7 +4325,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f226: type */
       return [641];
     }
@@ -4333,7 +4333,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f227(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.provider;
       if (v2 !== undefined) {
         v1 = f16(v2);
@@ -4354,7 +4354,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [644];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f227: type */
       return [645];
     }
@@ -4362,7 +4362,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f228(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f71(v2);
@@ -4447,7 +4447,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [656];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f228: type */
       return [657];
     }
@@ -4455,7 +4455,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f229(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.description;
       if (v2 !== undefined) {
         v1 = f35(v2);
@@ -4500,7 +4500,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [663];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f229: type */
       return [664];
     }
@@ -4508,7 +4508,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f230(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f262(v2);
@@ -4624,7 +4624,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f230: type */
       return [683];
     }
@@ -4632,7 +4632,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f231(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.city;
       if (v2 !== undefined) {
         v1 = f44(v2);
@@ -4682,7 +4682,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f231: type */
       return [690];
     }
@@ -4690,7 +4690,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f232(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.created;
       if (v2 !== undefined) {
         v1 = f33(v2);
@@ -4815,7 +4815,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [711];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f232: type */
       return [712];
     }
@@ -4823,7 +4823,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f233(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.account;
       if (v2 !== undefined) {
         v1 = f16(v2);
@@ -5035,7 +5035,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f233: type */
       return [743];
     }
@@ -5043,7 +5043,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f234(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.account_balance;
       if (v2 !== undefined) {
         v1 = f71(v2);
@@ -5288,7 +5288,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f234: type */
       return [780];
     }
@@ -5688,7 +5688,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f293(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.data;
       if (v2 !== undefined) {
         v1 = f304(v2);
@@ -5742,7 +5742,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [845];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f293: type */
       return [846];
     }
@@ -5799,7 +5799,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f302(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.enabled;
       if (v2 !== undefined) {
         v1 = f276(v2);
@@ -5893,7 +5893,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [867];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f302: type */
       return [868];
     }
@@ -5901,7 +5901,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f303(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f306(v2);
@@ -5936,7 +5936,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [874];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f303: type */
       return [875];
     }
@@ -5946,14 +5946,14 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     var v1;
     if (Array.isArray(v0)) {
       v1 = 0;
-      for (; v1 < v0.length; (v1)++) {
+      for (; v1 < v0.length; v1++) {
         if (f314(v0[v1]) !== 0) {
           /* f304: items */
           return [876];
         }
       }
     }
-    if (!(Array.isArray(v0))) {
+    if (!Array.isArray(v0)) {
       /* f304: type */
       return [877];
     }
@@ -5961,7 +5961,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f305(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.amount;
       if (v2 !== undefined) {
         v1 = f308(v2);
@@ -6089,7 +6089,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         }
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f305: type */
       return [900];
     }
@@ -6146,7 +6146,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
   }
   function f314(v0) {
     var v2, v1;
-    if (v0 && typeof v0 === 'object' && !(Array.isArray(v0))) {
+    if (v0 && typeof v0 === 'object' && !Array.isArray(v0)) {
       v2 = v0.created;
       if (v2 !== undefined) {
         v1 = f33(v2);
@@ -6203,7 +6203,7 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
         return [917];
       }
     }
-    if (!(v0) || typeof v0 !== 'object' || Array.isArray(v0)) {
+    if (!v0 || typeof v0 !== 'object' || Array.isArray(v0)) {
       /* f314: type */
       return [918];
     }
@@ -6226,5 +6226,6 @@ exports[`Stripe openapi generates a validator for the entire spec 1`] = `
     discount: f125,
     dispute: f130,
   };
-}())"
+})();
+"
 `;

@@ -3,30 +3,29 @@
 import type {JsonSchema} from 'generated-types.js';
 
 // Statements
-export type JsAst = (
-  AssignmentType |
-  IfType |
-  ReturnType |
-  BodyType |
-  ForType |
-  ForInType |
-  EmptyType |
-  Function1Type |
-  BinopType |
-  EmptyType |
-  VarType |
-  LiteralType |
-  Call0Type |
-  Call1Type |
-  Call2Type |
-  UnopType |
-  ObjectLiteralType |
-  PropertyAccessType |
-  BracketAccessType |
-  TypeOfType |
-  CommentType |
-  ErrorType
-);
+export type JsAst =
+  | AssignmentType
+  | IfType
+  | ReturnType
+  | BodyType
+  | ForType
+  | ForInType
+  | EmptyType
+  | Function1Type
+  | BinopType
+  | EmptyType
+  | VarType
+  | LiteralType
+  | Call0Type
+  | Call1Type
+  | Call2Type
+  | UnopType
+  | ObjectLiteralType
+  | PropertyAccessType
+  | BracketAccessType
+  | TypeOfType
+  | CommentType
+  | ErrorType;
 type AssignmentType = {
   type: 'assignment',
   variable: JsAst,
@@ -44,7 +43,7 @@ type ReturnType = {
 };
 export type BodyType = {
   type: 'body',
-  body: Array<JsAst>
+  body: Array<JsAst>,
 };
 export type ForType = {
   type: 'for',
@@ -134,14 +133,17 @@ export type ErrorType = {
 const Function1 = (
   name: VarType,
   argument: VarType,
-  body: JsAst,
+  body: JsAst
 ): Function1Type => ({
   type: 'function1',
   name,
   argument,
   body: Body(body),
 });
-const _Binop = (comparator: string) => (left: JsAst, right: JsAst): BinopType => {
+const _Binop = (comparator: string) => (
+  left: JsAst,
+  right: JsAst
+): BinopType => {
   return {
     type: 'binop',
     comparator,
@@ -171,7 +173,10 @@ const Return = (value: JsAst): ReturnType => {
   };
 };
 const Body = (...body: Array<JsAst>): BodyType | EmptyType => {
-  if (body.length === 1 && (body[0].type === 'body' || body[0].type === 'empty')) {
+  if (
+    body.length === 1 &&
+    (body[0].type === 'body' || body[0].type === 'empty')
+  ) {
     return body[0];
   } else {
     return {type: 'body', body};
@@ -181,7 +186,7 @@ const For = (
   init: JsAst,
   condition: JsAst,
   loop: JsAst,
-  body: JsAst,
+  body: JsAst
 ): ForType => ({
   type: 'for',
   init,
@@ -189,11 +194,7 @@ const For = (
   loop,
   body: Body(body),
 });
-const ForIn = (
-  variable: VarType,
-  iterator: JsAst,
-  body: JsAst,
-): ForInType => ({
+const ForIn = (variable: VarType, iterator: JsAst, body: JsAst): ForInType => ({
   type: 'forin',
   variable,
   iterator,
@@ -205,25 +206,27 @@ const Literal = (value: string): LiteralType => ({type: 'literal', value});
 const Call0 = (fn: JsAst | string): Call0Type => {
   return {
     type: 'call0',
-    fn: (typeof fn === 'string') ? Literal(fn) : fn,
+    fn: typeof fn === 'string' ? Literal(fn) : fn,
   };
 };
 const Call1 = (fn: JsAst | string, arg: JsAst): Call1Type => {
   return {
     type: 'call1',
-    fn: (typeof fn === 'string') ? Literal(fn) : fn,
+    fn: typeof fn === 'string' ? Literal(fn) : fn,
     arg,
   };
 };
 const Call2 = (fn: JsAst | string, arg1: JsAst, arg2: JsAst): Call2Type => {
   return {
     type: 'call2',
-    fn: (typeof fn === 'string') ? Literal(fn) : fn,
+    fn: typeof fn === 'string' ? Literal(fn) : fn,
     arg1,
     arg2,
   };
 };
-const _Unop = (op: string, style: 'prefix' | 'suffix') => (child: JsAst): UnopType => {
+const _Unop = (op: string, style: 'prefix' | 'suffix') => (
+  child: JsAst
+): UnopType => {
   return {
     type: 'unop',
     child,
@@ -258,7 +261,11 @@ const TypeOf = (child: JsAst): TypeOfType => {
   };
 };
 const Comment = (comment: string): CommentType => ({type: 'comment', comment});
-const Error = (schema: JsonSchema, reason: string, subreason: ?JsAst): ErrorType => {
+const Error = (
+  schema: JsonSchema,
+  reason: string,
+  subreason: ?JsAst
+): ErrorType => {
   return {
     type: 'error',
     schema,

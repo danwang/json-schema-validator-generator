@@ -8,10 +8,15 @@ import type {TypeType} from 'flow/ast/ast.js';
 import type {JsonSchema} from 'generated-types.js';
 
 type Schemas = {[key: string]: JsonSchema};
-const generateFlowAsts = (schema: JsonSchema, shape: Schemas = {root: schema}): Array<TypeType> => {
+const generateFlowAsts = (
+  schema: JsonSchema,
+  shape: Schemas = {root: schema}
+): Array<TypeType> => {
   const gensym = util.gengensym();
 
-  const cache = new WeakMap(_.map(shape, (subSchema, name) => [subSchema, name]));
+  const cache = new WeakMap(
+    _.map(shape, (subSchema, name) => [subSchema, name])
+  );
   const schemas = _.values(shape);
 
   const symbolForSchema = (schm: JsonSchema): string => {
@@ -24,7 +29,10 @@ const generateFlowAsts = (schema: JsonSchema, shape: Schemas = {root: schema}): 
 
   const refResolver = (ref: string): ?string => {
     if (ref.startsWith('#')) {
-      const subSchema = jsonpointer.get(schema, decodeURIComponent(ref.substring(1)));
+      const subSchema = jsonpointer.get(
+        schema,
+        decodeURIComponent(ref.substring(1))
+      );
       return symbolForSchema(subSchema);
     } else {
       return null;

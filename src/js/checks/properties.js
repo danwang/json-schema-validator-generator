@@ -9,7 +9,7 @@ import type {JsonSchema} from 'generated-types.js';
 const additionalPropertiesCheck = (
   schema: JsonSchema,
   symbol: VarType,
-  context: Context,
+  context: Context
 ): JsAst => {
   const {additionalProperties} = schema;
   if (additionalProperties === false) {
@@ -17,11 +17,14 @@ const additionalPropertiesCheck = (
   } else if (additionalProperties && typeof additionalProperties === 'object') {
     const checkResult = context.gensym();
     return Ast.Body(
-      Ast.Assignment(checkResult, M.Check(additionalProperties, symbol, context)),
+      Ast.Assignment(
+        checkResult,
+        M.Check(additionalProperties, symbol, context)
+      ),
       Ast.If(
         M.IsError(checkResult),
-        context.error(schema, 'additionalProperties', checkResult),
-      ),
+        context.error(schema, 'additionalProperties', checkResult)
+      )
     );
   } else {
     return Ast.Empty;
@@ -35,7 +38,7 @@ const additionalChecks = (
   additionalProperties: $PropertyType<JsonSchema, 'additionalProperties'>,
   keySym: VarType,
   valSym: VarType,
-  context: Context,
+  context: Context
 ): JsAst => {
   // This generates a block of code like
   //   if (key === "key1" && error(check1(data))) { (error) }
@@ -51,7 +54,7 @@ const additionalChecks = (
   const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
     predicate: Ast.Call1(
       Ast.PropertyAccess(keySym, 'match'),
-      Ast.Literal(`/${pattern}/`),
+      Ast.Literal(`/${pattern}/`)
     ),
     subSchema,
     message: `properties[${pattern}]`,
@@ -60,7 +63,10 @@ const additionalChecks = (
   // Two cases where we don't need a hit counter:
   //   - There are no additionalProperties or patternProperties
   //   - There are no properties
-  if (allChecks.length === 0 || (additionalProperties === undefined || additionalProperties === true)) {
+  if (
+    allChecks.length === 0 ||
+    (additionalProperties === undefined || additionalProperties === true)
+  ) {
     const checkResult = context.gensym();
     const checks = _.map(allChecks, ({predicate, subSchema, message}) => {
       return Ast.If(
@@ -69,14 +75,14 @@ const additionalChecks = (
           Ast.Assignment(checkResult, M.Check(subSchema, valSym, context)),
           Ast.If(
             M.IsError(checkResult),
-            context.error(schema, message, checkResult),
-          ),
-        ),
+            context.error(schema, message, checkResult)
+          )
+        )
       );
     });
     return Ast.Body(
       ...checks,
-      additionalPropertiesCheck(schema, valSym, context),
+      additionalPropertiesCheck(schema, valSym, context)
     );
   } else {
     const checkResult = context.gensym();
@@ -90,10 +96,10 @@ const additionalChecks = (
             Ast.If(
               M.IsError(checkResult),
               context.error(schema, message, checkResult),
-              Ast.Assignment(hitSym, Ast.True),
-            ),
-          ),
-        ),
+              Ast.Assignment(hitSym, Ast.True)
+            )
+          )
+        )
       );
     });
     return Ast.Body(
@@ -101,35 +107,49 @@ const additionalChecks = (
       ...checks,
       Ast.If(
         Ast.Binop.Eq(hitSym, Ast.False),
-        additionalPropertiesCheck(schema, valSym, context),
-      ),
+        additionalPropertiesCheck(schema, valSym, context)
+      )
     );
   }
 };
 
-const _properties = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
-  const {properties, required, patternProperties, additionalProperties} = schema;
-  if (!patternProperties && (additionalProperties === undefined || additionalProperties === true)) {
+const _properties = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context
+): JsAst => {
+  const {
+    properties,
+    required,
+    patternProperties,
+    additionalProperties,
+  } = schema;
+  if (
+    !patternProperties &&
+    (additionalProperties === undefined || additionalProperties === true)
+  ) {
     // Static list of properties to check
     const checkResult = context.gensym();
     const sym = context.gensym();
-    const checks = Ast.Body(..._.flatMap(properties, (subSchema, key) => {
-      const isRequired = _.includes(required, key);
-      return Ast.Body(
-        Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
-        Ast.If(
-          Ast.Binop.Neq(sym, Ast.Undefined),
-          Ast.Body(
-            Ast.Assignment(checkResult, M.Check(subSchema, sym, context)),
-            Ast.If(
-              M.IsError(checkResult),
-              context.error(schema, `properties[${key}]`, checkResult),
+    const checks = Ast.Body(
+      ..._.flatMap(properties, (subSchema, key) => {
+        const isRequired = _.includes(required, key);
+        return Ast.Body(
+          Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),
+          Ast.If(
+            Ast.Binop.Neq(sym, Ast.Undefined),
+            Ast.Body(
+              Ast.Assignment(checkResult, M.Check(subSchema, sym, context)),
+              Ast.If(
+                M.IsError(checkResult),
+                context.error(schema, `properties[${key}]`, checkResult)
+              )
             ),
-          ),
-          isRequired ? context.error(schema, `required[${key}]`) : Ast.Empty,
-        ),
-      );
-    }));
+            isRequired ? context.error(schema, `required[${key}]`) : Ast.Empty
+          )
+        );
+      })
+    );
     return M.TypeCheck('object', symbol, checks);
   } else {
     // Need to loop through all properties to check. We'll generate a loop:
@@ -145,22 +165,26 @@ const _properties = (schema: JsonSchema, symbol: VarType, context: Context): JsA
     const keySym = context.gensym();
     const valSym = context.gensym();
 
-    const loop = Ast.ForIn(keySym, symbol, Ast.Body(
-      Ast.Assignment(valSym, Ast.BracketAccess(symbol, keySym)),
-      additionalChecks(
-        schema,
-        properties,
-        patternProperties,
-        additionalProperties,
-        keySym,
-        valSym,
-        context,
-      ),
-    ));
-    const requiredChecks = _.map(required, (property) => {
+    const loop = Ast.ForIn(
+      keySym,
+      symbol,
+      Ast.Body(
+        Ast.Assignment(valSym, Ast.BracketAccess(symbol, keySym)),
+        additionalChecks(
+          schema,
+          properties,
+          patternProperties,
+          additionalProperties,
+          keySym,
+          valSym,
+          context
+        )
+      )
+    );
+    const requiredChecks = _.map(required, property => {
       return Ast.If(
         Ast.Binop.Eq(Ast.PropertyAccess(symbol, property), Ast.Undefined),
-        context.error(schema, `required[${property}]`),
+        context.error(schema, `required[${property}]`)
       );
     });
     return M.TypeCheck('object', symbol, Ast.Body(loop, ...requiredChecks));

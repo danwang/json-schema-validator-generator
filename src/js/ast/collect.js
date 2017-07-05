@@ -4,7 +4,9 @@ import _ from 'lodash';
 import type {JsAst} from 'js/ast/ast.js';
 
 export type Collect<T> = (ast: JsAst) => Array<T>;
-const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Collect<T> => {
+const collect = <T>(
+  extractor: (ast: JsAst, recur: Collect<T>) => Array<T>
+): Collect<T> => {
   const _recur = (ast: JsAst): Array<T> => {
     switch (ast.type) {
       case 'assignment':
@@ -27,23 +29,13 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
           ...recur(ast.body),
         ];
       case 'forin':
-        return [
-          ...recur(ast.iterator),
-          ...recur(ast.body),
-        ];
+        return [...recur(ast.iterator), ...recur(ast.body)];
       case 'empty':
         return [];
       case 'function1':
-        return [
-          ...recur(ast.name),
-          ...recur(ast.argument),
-          ...recur(ast.body),
-        ];
+        return [...recur(ast.name), ...recur(ast.argument), ...recur(ast.body)];
       case 'binop':
-        return [
-          ...recur(ast.left),
-          ...recur(ast.right),
-        ];
+        return [...recur(ast.left), ...recur(ast.right)];
       case 'var':
         return [];
       case 'literal':
@@ -51,16 +43,9 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
       case 'call0':
         return recur(ast.fn);
       case 'call1':
-        return [
-          ...recur(ast.fn),
-          ...recur(ast.arg),
-        ];
+        return [...recur(ast.fn), ...recur(ast.arg)];
       case 'call2':
-        return [
-          ...recur(ast.fn),
-          ...recur(ast.arg1),
-          ...recur(ast.arg2),
-        ];
+        return [...recur(ast.fn), ...recur(ast.arg1), ...recur(ast.arg2)];
       case 'unop':
         return recur(ast.child);
       case 'objectliteral':
@@ -68,10 +53,7 @@ const collect = <T>(extractor: (ast: JsAst, recur: Collect<T>) => Array<T>): Col
       case 'propertyaccess':
         return recur(ast.obj);
       case 'bracketaccess':
-        return [
-          ...recur(ast.obj),
-          ...recur(ast.property),
-        ];
+        return [...recur(ast.obj), ...recur(ast.property)];
       case 'typeof':
         return recur(ast.child);
       case 'comment':

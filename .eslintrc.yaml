@@ -2,6 +2,9 @@
 extends:
   - 'stripe'
   - plugin:flowtype/recommended
+  - 'prettier'
+  - 'prettier/flowtype'
+  - 'prettier/react'
 rules:
   import/no-dynamic-require: 0
   no-plusplus: 0

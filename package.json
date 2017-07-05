@@ -1,17 +1,19 @@
 {
   "name": "json-schema-validator-generator",
-  "version": "1.1.5",
+  "version": "1.1.6",
   "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
     "lint": "eslint src",
+    "prettier": "cat .prettier | xargs prettier --write",
+    "prettier-check-stale": "cat .prettier | xargs prettier --list-different || (printf '\\nERROR: Please run \"yarn run prettier\" before commiting!\\n\\n' && exit 1)",
     "jest": "jest --config jestconfig.json",
     "build": "yarn transpile && yarn transpile-flow && yarn copy-flow && yarn copy-packagejson",
     "transpile": "BABEL_ENV='test' babel ./src --out-dir ./dist/ --ignore '**/__tests__/*.js'",
     "transpile-flow": "BABEL_ENV='flow' babel ./src --out-dir ./dist-flow/ --ignore '**/__tests__/*.js'",
     "copy-flow": "cd dist-flow && pax -wrs'/\\.js$/\\.js\\.flow/' *.js ../dist",
     "copy-packagejson": "cp package.json ./dist",
-    "test": "yarn flow && yarn lint && yarn jest"
+    "test": "yarn flow && yarn lint && yarn prettier-check-stale && yarn jest"
   },
   "repository": "github:danwang/json-schema-validator-generator",
   "homepage": "https://github.com/danwang/json-schema-validator-generator",
@@ -26,15 +28,18 @@
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "eslint": "^3.19.0",
+    "eslint-config-prettier": "^2.3.0",
     "eslint-config-stripe": "^1.0.12",
     "eslint-plugin-flowtype": "2.33.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "5.0.1",
+    "eslint-plugin-prettier": "^2.1.2",
     "eslint-plugin-react": "7.0.1",
     "flow-bin": "^0.49.1",
     "jest": "^19.0.2",
     "json-pointer": "^0.6.0",
     "lambdanwang": "^1.0.14",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "prettier": "^1.5.2"
   }
 }

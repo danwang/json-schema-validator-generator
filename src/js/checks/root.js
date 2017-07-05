@@ -39,13 +39,13 @@ const root = (schema: JsonSchema, context: Context): Function1Type => {
     pattern(schema, symbol, context),
     properties(schema, symbol, context),
     type(schema, symbol, context),
-    uniqueItems(schema, symbol, context),
+    uniqueItems(schema, symbol, context)
   );
 
   return Ast.Function1(
     fnSym,
     symbol,
-    Ast.Body(body, Ast.Return(Ast.NumLiteral(0))),
+    Ast.Body(body, Ast.Return(Ast.NumLiteral(0)))
   );
 };
 

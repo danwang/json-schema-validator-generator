@@ -9,7 +9,7 @@ const not = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
   if (schema.not) {
     return Ast.If(
       M.PassedCheck(schema.not, symbol, context),
-      context.error(schema, 'not'),
+      context.error(schema, 'not')
     );
   } else {
     return Ast.Empty;

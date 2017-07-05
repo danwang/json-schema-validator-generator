@@ -10,6 +10,7 @@ import uniqFuncs from 'js/ast/uniq-funcs.js';
 import util from 'util.js';
 import type {JsAst, VarType} from 'js/ast/ast.js';
 import type {JsonSchema} from 'generated-types.js';
+import prettier from 'prettier';
 
 const gengensym = () => {
   const g = util.gengensym();
@@ -29,7 +30,10 @@ type Schemas = {[key: string]: JsonSchema};
 // values are validators for the schemas.
 //
 // If no shape is passed, {root} is used.
-const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}): string => {
+const generateValidator = (
+  schema: JsonSchema,
+  shape: Schemas = {root: schema}
+): string => {
   const gensym = gengensym();
 
   const cache = new WeakMap();
@@ -37,7 +41,7 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
 
   const symbolForSchema = (schm: JsonSchema): VarType => {
     if (!cache.has(schm)) {
-      const match = _.find(schemas, (s) => _.isEqual(s, schm));
+      const match = _.find(schemas, s => _.isEqual(s, schm));
       if (match) {
         cache.set(schm, cache.get(match));
       } else {
@@ -50,17 +54,14 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
 
   const makeContext = () => ({
     gensym: gengensym(),
-    error: (subSchema: JsonSchema, reason: string, subreason?: JsAst) => Ast.Error(
-      subSchema,
-      reason,
-      subreason,
-    ),
+    error: (subSchema: JsonSchema, reason: string, subreason?: JsAst) =>
+      Ast.Error(subSchema, reason, subreason),
     symbolForSchema,
     rootSchema: schema,
   });
 
-  const baseSchemas = _.map(shape, (subSchema) => root(subSchema, makeContext()));
-  const results = _.keyBy(baseSchemas, (f) => f.name.value);
+  const baseSchemas = _.map(shape, subSchema => root(subSchema, makeContext()));
+  const results = _.keyBy(baseSchemas, f => f.name.value);
   let i = 1;
   while (i < schemas.length) {
     const next = root(schemas[i], makeContext());
@@ -71,24 +72,30 @@ const generateValidator = (schema: JsonSchema, shape: Schemas = {root: schema}):
   // TODO: Fix flow unhelpful error
   const simplifiedResults: any = _.values(results).map(simplify);
 
-  const schemaObject = _.mapValues(shape, (subSchema) => symbolForSchema(subSchema));
+  const schemaObject = _.mapValues(shape, subSchema =>
+    symbolForSchema(subSchema)
+  );
   const ast = Ast.Body(
     ...simplifiedResults,
-    Ast.Return(Ast.ObjectLiteral(schemaObject)),
+    Ast.Return(Ast.ObjectLiteral(schemaObject))
   );
-  const nameForSchema = (subSchema) => {
-    return _.findKey(shape, (s) => s === subSchema) || symbolForSchema(subSchema).value;
+  const nameForSchema = subSchema => {
+    return (
+      _.findKey(shape, s => s === subSchema) || symbolForSchema(subSchema).value
+    );
   };
   const errors = getErrors(ast);
   const replaced = replaceErrors(ast, errors, nameForSchema);
   const simplified = simplify(uniqFuncs(simplify(replaced)));
 
   const body = render(simplified, 1);
-  return [
-    '(function() {',
-    body,
-    '}())',
-  ].join('\n');
+  const generated = ['(function() {', body, '}())'].join('\n');
+  return prettier.format(generated, {
+    singleQuote: true,
+    trailingComma: 'es5',
+    bracketSpacing: false,
+    parser: 'flow',
+  });
 };
 
 export default generateValidator;

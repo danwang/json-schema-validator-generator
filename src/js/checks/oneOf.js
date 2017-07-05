@@ -6,7 +6,11 @@ import type {JsAst, VarType} from 'js/ast/ast.js';
 import M from 'js/ast/macros';
 import type {JsonSchema} from 'generated-types.js';
 
-const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+const oneOf = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context
+): JsAst => {
   if (schema.oneOf) {
     // var count = 0;
     //
@@ -15,16 +19,19 @@ const oneOf = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => 
     //
     // if (count !== 1) { (error) }
     const count = context.gensym();
-    const checks = _.map(schema.oneOf, (subSchema) => {
+    const checks = _.map(schema.oneOf, subSchema => {
       return Ast.If(
         M.PassedCheck(subSchema, symbol, context),
-        Ast.Unop.Incr(count),
+        Ast.Unop.Incr(count)
       );
     });
     return Ast.Body(
       Ast.Assignment(count, Ast.NumLiteral(0)),
       Ast.Body(...checks),
-      Ast.If(Ast.Binop.Neq(count, Ast.NumLiteral(1)), context.error(schema, 'oneOf')),
+      Ast.If(
+        Ast.Binop.Neq(count, Ast.NumLiteral(1)),
+        context.error(schema, 'oneOf')
+      )
     );
   } else {
     return Ast.Empty;

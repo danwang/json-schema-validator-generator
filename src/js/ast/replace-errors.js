@@ -9,7 +9,7 @@ import type {JsonSchema} from 'generated-types.js';
 const replaceErrors = (
   root: JsAst,
   errors: Array<ErrorCode>,
-  nameForSchema: (schema: JsonSchema) => string,
+  nameForSchema: (schema: JsonSchema) => string
 ) => {
   let id = 1;
   const cache = {};
@@ -23,18 +23,20 @@ const replaceErrors = (
       if (subreason) {
         return Ast.Body(
           Ast.Comment(message),
-          Ast.Return(Ast.Call1(
-            Ast.PropertyAccess(subreason, 'concat'),
-            Ast.NumLiteral(cache[message]),
-          )),
+          Ast.Return(
+            Ast.Call1(
+              Ast.PropertyAccess(subreason, 'concat'),
+              Ast.NumLiteral(cache[message])
+            )
+          )
         );
       } else {
         // Lazy!
         return Ast.Body(
           Ast.Comment(message),
           Ast.Return(
-            Ast.BracketAccess(Ast.Empty, Ast.NumLiteral(cache[message])),
-          ),
+            Ast.BracketAccess(Ast.Empty, Ast.NumLiteral(cache[message]))
+          )
         );
       }
     } else {

@@ -15,8 +15,14 @@ const MODELS = {
 };
 describe('Stripe openapi', () => {
   // $FlowFixMe
-  const spec = require(path.join(__dirname, '../../', 'openapi/openapi/spec2.json'));
+  const spec = require(path.join(
+    __dirname,
+    '../../',
+    'openapi/openapi/spec2.json'
+  ));
   it('generates flow types for the entire spec', () => {
-    expect(generateFlow(spec, _.mapValues(MODELS, (key) => spec.definitions[key]))).toMatchSnapshot();
+    expect(
+      generateFlow(spec, _.mapValues(MODELS, key => spec.definitions[key]))
+    ).toMatchSnapshot();
   });
 });

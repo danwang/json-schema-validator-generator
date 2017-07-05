@@ -62,24 +62,35 @@ const SKIPPED_TESTS = {
 };
 
 describe('JSON Schema test suite', () => {
-  const testsPath = path.join(__dirname, '../../', 'JSON-Schema-Test-Suite/tests/draft4/');
-  const testFiles = fs.readdirSync(testsPath)
-    .filter((fileName) => WHITELIST.indexOf(fileName) >= 0);
-  testFiles.forEach((fileName) => {
+  const testsPath = path.join(
+    __dirname,
+    '../../',
+    'JSON-Schema-Test-Suite/tests/draft4/'
+  );
+  const testFiles = fs
+    .readdirSync(testsPath)
+    .filter(fileName => WHITELIST.indexOf(fileName) >= 0);
+  testFiles.forEach(fileName => {
     describe(fileName, () => {
       // $FlowFixMe Dynamic require for DRY
       const groups = require(path.join(testsPath, fileName));
-      groups.forEach((group) => {
+      groups.forEach(group => {
         const {description, schema, tests} = group;
         const code = generateValidator(schema);
         it('matches snapshot', () => {
           expect(code).toMatchSnapshot();
         });
         const validator = eval(code).root; // eslint-disable-line no-eval
-        tests.forEach((test) => {
+        tests.forEach(test => {
           describe(description, () => {
             const {description: testDescription, data, valid} = test;
-            if (_.get(SKIPPED_TESTS, [fileName, description, testDescription], true)) {
+            if (
+              _.get(
+                SKIPPED_TESTS,
+                [fileName, description, testDescription],
+                true
+              )
+            ) {
               it(testDescription, () => {
                 expect(validator(data) === 0).toBe(valid);
               });

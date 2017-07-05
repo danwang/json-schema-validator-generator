@@ -8,12 +8,20 @@ const IsError = (symbol: JsAst): JsAst => {
   return Ast.Binop.Neq(symbol, Ast.NumLiteral(0));
 };
 
-const FailedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
+const FailedCheck = (
+  subSchema: JsonSchema,
+  symbol: JsAst,
+  context: Context
+): JsAst => {
   const fnSym = context.symbolForSchema(subSchema);
   return IsError(Ast.Call1(fnSym, symbol));
 };
 
-const PassedCheck = (subSchema: JsonSchema, symbol: JsAst, context: Context): JsAst => {
+const PassedCheck = (
+  subSchema: JsonSchema,
+  symbol: JsAst,
+  context: Context
+): JsAst => {
   return Ast.Unop.Not(FailedCheck(subSchema, symbol, context));
 };
 
@@ -22,22 +30,24 @@ const Check = (subSchema: JsonSchema, symbol: JsAst, context: Context) => {
   return Ast.Call1(check, symbol);
 };
 
-export type BaseType = (
-  'integer' |
-  'number' |
-  'string' |
-  'object' |
-  'array' |
-  'boolean' |
-  'null'
-);
+export type BaseType =
+  | 'integer'
+  | 'number'
+  | 'string'
+  | 'object'
+  | 'array'
+  | 'boolean'
+  | 'null';
 
 const PrimitivePredicate = (type: BaseType, symbol: JsAst): JsAst => {
   switch (type) {
     case 'integer':
       return Ast.Binop.And(
         Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('number')),
-        Ast.Binop.Eq(Ast.Binop.Mod(symbol, Ast.NumLiteral(1)), Ast.NumLiteral(0)),
+        Ast.Binop.Eq(
+          Ast.Binop.Mod(symbol, Ast.NumLiteral(1)),
+          Ast.NumLiteral(0)
+        )
       );
     case 'number':
       return Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('number'));
@@ -48,8 +58,8 @@ const PrimitivePredicate = (type: BaseType, symbol: JsAst): JsAst => {
         symbol,
         Ast.Binop.And(
           Ast.Binop.Eq(Ast.TypeOf(symbol), Ast.StringLiteral('object')),
-          Ast.Unop.Not(Ast.Call1('Array.isArray', symbol)),
-        ),
+          Ast.Unop.Not(Ast.Call1('Array.isArray', symbol))
+        )
       );
     case 'array':
       return Ast.Call1('Array.isArray', symbol);

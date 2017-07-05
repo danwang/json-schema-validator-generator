@@ -6,7 +6,11 @@ import type {JsAst, VarType} from 'js/ast/ast.js';
 import M from 'js/ast/macros';
 import type {JsonSchema} from 'generated-types.js';
 
-const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): JsAst => {
+const dependencies = (
+  schema: JsonSchema,
+  symbol: VarType,
+  context: Context
+): JsAst => {
   if (schema.dependencies) {
     const checks = _.map(schema.dependencies, (check, key) => {
       const error = context.error(schema, `dependencies[${key}]`);
@@ -14,26 +18,25 @@ const dependencies = (schema: JsonSchema, symbol: VarType, context: Context): Js
         return Ast.If(
           Ast.Binop.And(
             Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
-            Ast.Binop.Eq(Ast.PropertyAccess(symbol, check), Ast.Undefined),
+            Ast.Binop.Eq(Ast.PropertyAccess(symbol, check), Ast.Undefined)
           ),
-          error,
+          error
         );
       } else if (Array.isArray(check)) {
-        const ifs = check.map((k) => Ast.If(
-          Ast.Binop.Eq(Ast.PropertyAccess(symbol, k), Ast.Undefined),
-          error,
-        ));
+        const ifs = check.map(k =>
+          Ast.If(
+            Ast.Binop.Eq(Ast.PropertyAccess(symbol, k), Ast.Undefined),
+            error
+          )
+        );
         return Ast.If(
           Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
-          Ast.Body(...ifs),
+          Ast.Body(...ifs)
         );
       } else {
         return Ast.If(
           Ast.Binop.Neq(Ast.PropertyAccess(symbol, key), Ast.Undefined),
-          Ast.If(
-            M.FailedCheck(check, symbol, context),
-            error,
-          ),
+          Ast.If(M.FailedCheck(check, symbol, context), error)
         );
       }
     });
