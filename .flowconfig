@@ -1,3 +1,6 @@
+[version]
+0.49.1
+
 [libs]
 src/decls/
 
@@ -6,6 +9,9 @@ src/decls/
 .*node_modules/eslint-plugin-jsx-a11y/.*
 
 [options]
+suppress_comment=\\(.\\|\n\\)*\\$ExpectError
+suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe
+
 module.file_ext=.js
 module.file_ext=.json
 

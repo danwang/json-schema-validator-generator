@@ -3,7 +3,7 @@ import _ from 'lodash';
 import Ast from 'js/ast/ast.js';
 import type {JsAst, Function1Type} from 'js/ast/ast.js';
 import transform from 'js/ast/transform.js';
-import compose from 'compose.js';
+import compose from 'lambdanwang/compose';
 import collect from 'js/ast/collect.js';
 import type {Collect} from 'js/ast/collect.js';
 import type {Transform} from 'js/ast/transform.js';
