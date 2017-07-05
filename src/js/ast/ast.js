@@ -16,6 +16,7 @@ export type JsAst = (
   EmptyType |
   VarType |
   LiteralType |
+  Call0Type |
   Call1Type |
   Call2Type |
   UnopType |
@@ -79,6 +80,10 @@ export type VarType = {
 export type LiteralType = {
   type: 'literal',
   value: string,
+};
+type Call0Type = {
+  type: 'call0',
+  fn: JsAst,
 };
 type Call1Type = {
   type: 'call1',
@@ -197,6 +202,12 @@ const ForIn = (
 const Empty = {type: 'empty'};
 const Var = (value: string): VarType => ({type: 'var', value});
 const Literal = (value: string): LiteralType => ({type: 'literal', value});
+const Call0 = (fn: JsAst | string): Call0Type => {
+  return {
+    type: 'call0',
+    fn: (typeof fn === 'string') ? Literal(fn) : fn,
+  };
+};
 const Call1 = (fn: JsAst | string, arg: JsAst): Call1Type => {
   return {
     type: 'call1',
@@ -280,6 +291,7 @@ export default {
   Empty,
   Var,
   Literal,
+  Call0,
   Call1,
   Call2,
   Unop: {

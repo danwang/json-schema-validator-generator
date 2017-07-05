@@ -43,6 +43,8 @@ const transform = (partial: (ast: JsAst, recur: Transform) => JsAst) => {
         return ast;
       case 'literal':
         return ast;
+      case 'call0':
+        return Ast.Call0(recur(ast.fn));
       case 'call1':
         return Ast.Call1(recur(ast.fn), recur(ast.arg));
       case 'call2':

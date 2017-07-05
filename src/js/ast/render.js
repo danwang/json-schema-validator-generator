@@ -77,7 +77,7 @@ const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
   ].join('\n');
 };
 
-const STATEMENTS_WITH_SEMIS = ['assignment', 'return', 'binop', 'call1', 'call2', 'unop'];
+const STATEMENTS_WITH_SEMIS = ['assignment', 'return', 'binop', 'call0', 'call1', 'call2', 'unop'];
 
 const render = (ast: JsAst, depth: number = 0) => {
   switch (ast.type) {
@@ -107,6 +107,8 @@ const render = (ast: JsAst, depth: number = 0) => {
       return ast.value;
     case 'literal':
       return ast.value;
+    case 'call0':
+      return `${render(ast.fn)}()`;
     case 'call1':
       return `${render(ast.fn)}(${render(ast.arg)})`;
     case 'call2':
