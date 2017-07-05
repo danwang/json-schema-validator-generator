@@ -88,7 +88,7 @@ const generateValidator = (
   const replaced = replaceErrors(ast, errors, nameForSchema);
   const simplified = simplify(uniqFuncs(simplify(replaced)));
 
-  const body = render(simplified, 1);
+  const body = render(simplified);
   const generated = ['(function() {', body, '}())'].join('\n');
   return prettier.format(generated, {
     singleQuote: true,

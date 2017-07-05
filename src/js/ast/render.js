@@ -11,57 +11,48 @@ import type {
   ObjectLiteralType,
 } from 'js/ast/ast.js';
 import getVars from 'js/ast/get-vars.js';
-import util from 'util.js';
 
-const renderIf = (ast: IfType, depth: number) => {
+const renderIf = (ast: IfType) => {
   const {predicate, body, elseBody} = ast;
 
-  const elseString = render(elseBody, depth + 1);
-  const elseLines = elseString
-    ? [util.indent('} else {', depth), elseString]
-    : [];
-  return [
-    `if (${render(predicate)}) {`,
-    render(body, depth + 1),
-    ...elseLines,
-    util.indent('}', depth),
-  ].join('\n');
+  const elseString = render(elseBody);
+  const elseLines = elseString ? ['} else {', elseString] : [];
+  return [`if (${render(predicate)}) {`, render(body), ...elseLines, '}'].join(
+    '\n'
+  );
 };
 
-const renderFor = (ast: ForType, depth: number) => {
+const renderFor = (ast: ForType) => {
   const {init, condition, loop, body} = ast;
   return [
     `for (${render(init)}; ${render(condition)}; ${render(loop)}) {`,
-    render(body, depth + 1),
-    util.indent('}', depth),
+    render(body),
+    '}',
   ].join('\n');
 };
 
-const renderForIn = (ast: ForInType, depth: number) => {
+const renderForIn = (ast: ForInType) => {
   const {variable, iterator, body} = ast;
   return [
     `for (var ${render(variable)} in ${render(iterator)}) {`,
-    render(body, depth + 1),
-    util.indent('}', depth),
+    render(body),
+    '}',
   ].join('\n');
 };
 
-const renderFunction = (ast: Function1Type, depth: number) => {
+const renderFunction = (ast: Function1Type) => {
   const {name, argument, body} = ast;
   const vars = getVars(body);
-  const varLines =
-    vars.length === 0
-      ? []
-      : [util.indent(`var ${vars.join(', ')};`, depth + 1)];
+  const varLines = vars.length === 0 ? [] : [`var ${vars.join(', ')};`];
   return [
     `function ${render(name)}(${render(argument)}) {`,
     ...varLines,
-    render(body, depth + 1),
-    util.indent('}', depth),
+    render(body),
+    '}',
   ].join('\n');
 };
 
-const renderUnop = (ast: UnopType, depth: number) => {
+const renderUnop = (ast: UnopType) => {
   const child = `(${render(ast.child)})`;
   if (ast.style === 'prefix') {
     return `${ast.op}${child}`;
@@ -70,15 +61,13 @@ const renderUnop = (ast: UnopType, depth: number) => {
   }
 };
 
-const renderObjectLiteral = (ast: ObjectLiteralType, depth: number) => {
+const renderObjectLiteral = (ast: ObjectLiteralType) => {
   const {object} = ast;
   const lines = _.map(object, (value, key) => {
-    const valueString = render(value, depth + 1);
-    return util.indent(`${key}: ${valueString.trimLeft()},`, depth + 1);
+    const valueString = render(value);
+    return `${key}: ${valueString.trimLeft()},`;
   });
-  return [util.indent('{', depth), ...lines, util.indent('}', depth)].join(
-    '\n'
-  );
+  return ['{', ...lines, '}'].join('\n');
 };
 
 const STATEMENTS_WITH_SEMIS = [
@@ -91,33 +80,30 @@ const STATEMENTS_WITH_SEMIS = [
   'unop',
 ];
 
-const render = (ast: JsAst, depth: number = 0) => {
+const render = (ast: JsAst) => {
   switch (ast.type) {
     case 'assignment':
       return `${render(ast.variable)} = ${render(ast.value)}`;
     case 'if':
-      return renderIf(ast, depth);
+      return renderIf(ast);
     case 'return':
-      return `return ${render(ast.value, depth).trimLeft()}`;
+      return `return ${render(ast.value).trimLeft()}`;
     case 'body':
       return _.map(ast.body, s => {
         const suffix = _.includes(STATEMENTS_WITH_SEMIS, s.type) ? ';' : '';
-        const line = util.indent(render(s, depth), depth);
+        const line = render(s);
         return `${line}${suffix}`;
       }).join('\n');
     case 'for':
-      return renderFor(ast, depth);
+      return renderFor(ast);
     case 'forin':
-      return renderForIn(ast, depth);
+      return renderForIn(ast);
     case 'empty':
       return '';
     case 'function1':
-      return renderFunction(ast, depth);
+      return renderFunction(ast);
     case 'binop':
-      return `${render(ast.left, depth)} ${ast.comparator} ${render(
-        ast.right,
-        depth
-      )}`;
+      return `${render(ast.left)} ${ast.comparator} ${render(ast.right)}`;
     case 'var':
       return ast.value;
     case 'literal':
@@ -129,15 +115,15 @@ const render = (ast: JsAst, depth: number = 0) => {
     case 'call2':
       return `${render(ast.fn)}(${render(ast.arg1)}, ${render(ast.arg2)})`;
     case 'unop':
-      return renderUnop(ast, depth);
+      return renderUnop(ast);
     case 'objectliteral':
-      return renderObjectLiteral(ast, depth);
+      return renderObjectLiteral(ast);
     case 'propertyaccess':
-      return `${render(ast.obj, depth)}.${ast.property}`;
+      return `${render(ast.obj)}.${ast.property}`;
     case 'bracketaccess':
-      return `${render(ast.obj, depth)}[${render(ast.property, depth)}]`;
+      return `${render(ast.obj)}[${render(ast.property)}]`;
     case 'typeof':
-      return `typeof ${render(ast.child, depth)}`;
+      return `typeof ${render(ast.child)}`;
     case 'comment':
       return `/* ${ast.comment} */`;
     case 'error':
