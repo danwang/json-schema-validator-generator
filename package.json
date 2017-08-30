@@ -1,6 +1,6 @@
 {
   "name": "json-schema-validator-generator",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
@@ -11,7 +11,7 @@
     "build": "yarn transpile && yarn transpile-flow && yarn copy-flow && yarn copy-packagejson",
     "transpile": "BABEL_ENV='test' babel ./src --out-dir ./dist/ --ignore '**/__tests__/*.js'",
     "transpile-flow": "BABEL_ENV='flow' babel ./src --out-dir ./dist-flow/ --ignore '**/__tests__/*.js'",
-    "copy-flow": "cd dist-flow && pax -wrs'/\\.js$/\\.js\\.flow/' *.js ../dist",
+    "copy-flow": "find dist-flow -type f -print | xargs -I {} rename -s \".js\" \".flow.js\" -s \"dist-flow\" \"dist\" {}",
     "copy-packagejson": "cp package.json ./dist",
     "test": "yarn flow && yarn lint && yarn prettier-check-stale && yarn jest"
   },
