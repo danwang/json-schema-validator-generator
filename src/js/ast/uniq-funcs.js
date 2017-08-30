@@ -32,7 +32,9 @@ const delegateReplacements = (
   fns: Array<Function1Type>,
   nameToId: NameToId
 ): Replacements => {
-  const entries = _.flatMap(fns, (ast: Function1Type) => {
+  const entries = _.flatMap(fns, (ast: Function1Type): Array<
+    [number, number]
+  > => {
     const {name, argument, body} = ast;
     if (body.type === 'body' && body.body.length === 1) {
       const line = body.body[0];
@@ -52,7 +54,9 @@ const delegateReplacements = (
   return simplify(new Map(entries));
 };
 
-const _getFuncs = collect((ast: JsAst, recur: Collect<JsAst>) => {
+const _getFuncs = collect((ast: JsAst, recur: Collect<Function1Type>): Array<
+  Function1Type
+> => {
   if (ast.type === 'function1') {
     return [ast];
   } else {

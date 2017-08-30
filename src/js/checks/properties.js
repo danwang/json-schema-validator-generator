@@ -46,19 +46,22 @@ const additionalChecks = (
   //   if (key.match(/pattern3/) && error(check3(data))) { (error) }
   //   if (key.match(/pattern4/) && error(check4(data))) { (error) }
   //   if (!hit && error(additionalCheck(data))) { (error) }
-  const propertyChecks = _.map(properties, (subSchema, key) => ({
+  const propertyChecks = _.map(properties, (subSchema, key: string) => ({
     predicate: Ast.Binop.Eq(keySym, Ast.StringLiteral(key)),
     subSchema,
     message: `properties[${key}]`,
   }));
-  const patternChecks = _.map(patternProperties, (subSchema, pattern) => ({
-    predicate: Ast.Call1(
-      Ast.PropertyAccess(keySym, 'match'),
-      Ast.Literal(`/${pattern}/`)
-    ),
-    subSchema,
-    message: `properties[${pattern}]`,
-  }));
+  const patternChecks = _.map(
+    patternProperties,
+    (subSchema, pattern: string) => ({
+      predicate: Ast.Call1(
+        Ast.PropertyAccess(keySym, 'match'),
+        Ast.Literal(`/${pattern}/`)
+      ),
+      subSchema,
+      message: `properties[${pattern}]`,
+    })
+  );
   const allChecks = [...propertyChecks, ...patternChecks];
   // Two cases where we don't need a hit counter:
   //   - There are no additionalProperties or patternProperties
@@ -132,7 +135,7 @@ const _properties = (
     const checkResult = context.gensym();
     const sym = context.gensym();
     const checks = Ast.Body(
-      ..._.flatMap(properties, (subSchema, key) => {
+      ..._.flatMap(properties, (subSchema, key: string) => {
         const isRequired = _.includes(required, key);
         return Ast.Body(
           Ast.Assignment(sym, Ast.PropertyAccess(symbol, key)),

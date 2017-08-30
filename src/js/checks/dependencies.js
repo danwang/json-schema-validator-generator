@@ -12,7 +12,7 @@ const dependencies = (
   context: Context
 ): JsAst => {
   if (schema.dependencies) {
-    const checks = _.map(schema.dependencies, (check, key) => {
+    const checks = _.map(schema.dependencies, (check, key: string) => {
       const error = context.error(schema, `dependencies[${key}]`);
       if (typeof check === 'string') {
         return Ast.If(

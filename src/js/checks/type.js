@@ -12,8 +12,8 @@ const predicate = (
   context: Context
 ) => {
   if (typeof type === 'string') {
-    // $FlowFixMe Wait until we can refine string -> enum
-    return Ast.Unop.Not(M.PrimitivePredicate(type, symbol));
+    // Wait until we can refine string -> enum
+    return Ast.Unop.Not(M.PrimitivePredicate((type: any), symbol));
   } else {
     return M.FailedCheck(type, symbol, context);
   }

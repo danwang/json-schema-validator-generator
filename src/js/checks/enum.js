@@ -22,8 +22,12 @@ const _enum = (
 ): JsAst => {
   if (schema.enum) {
     const match = context.gensym();
-    const checks: Array<JsAst> = _.map(schema.enum, value => {
-      if (typeof value !== 'object') {
+    const checks: Array<JsAst> = _.map(schema.enum, (value: mixed) => {
+      if (
+        typeof value === 'number' ||
+        typeof value === 'boolean' ||
+        typeof value === 'string'
+      ) {
         return Ast.If(
           Ast.Binop.Eq(symbol, baseLiteral(value)),
           Ast.Unop.Incr(match)

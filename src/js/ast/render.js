@@ -63,7 +63,7 @@ const renderUnop = (ast: UnopType) => {
 
 const renderObjectLiteral = (ast: ObjectLiteralType) => {
   const {object} = ast;
-  const lines = _.map(object, (value, key) => {
+  const lines = _.map(object, (value, key: string) => {
     const valueString = render(value);
     return `${key}: ${valueString.trimLeft()},`;
   });

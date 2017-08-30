@@ -50,7 +50,7 @@ const _items = (
   if (Array.isArray(items)) {
     // Tuple. Handle each item individually.
     const additionalCheck = _additionalItems(schema, items, symbol, context);
-    const checks = _.map(items, (subSchema, i) => {
+    const checks = _.map(items, (subSchema, i: number) => {
       return Ast.If(
         Ast.Binop.Lt(Ast.NumLiteral(i), Ast.PropertyAccess(symbol, 'length')),
         Ast.If(

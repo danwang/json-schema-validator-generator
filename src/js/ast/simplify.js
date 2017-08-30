@@ -37,7 +37,7 @@ const simplifyIf = (ast: IfType): JsAst => {
 };
 
 const simplifyBody = (ast: BodyType): JsAst => {
-  const mapped = _.flatMap(ast.body, child => {
+  const mapped = _.flatMap(ast.body, (child): Array<JsAst> => {
     const simplified = simplify(child);
     if (simplified.type === 'body') {
       return simplified.body;
