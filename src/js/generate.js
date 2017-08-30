@@ -19,7 +19,7 @@ const gengensym = () => {
 
 export type Context = {
   gensym: () => VarType,
-  error: (JsonSchema, string, subreason?: JsAst) => JsAst,
+  error: (schema: JsonSchema, reason: string, subreason?: JsAst) => JsAst,
   symbolForSchema: (schema: JsonSchema) => VarType,
   rootSchema: JsonSchema,
 };

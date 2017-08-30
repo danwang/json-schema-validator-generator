@@ -5,6 +5,7 @@
 src/decls/
 
 [ignore]
+.*/dist/.*
 .*/dist-flow/.*
 .*node_modules/config-chain/.*
 .*node_modules/eslint-plugin-jsx-a11y/.*

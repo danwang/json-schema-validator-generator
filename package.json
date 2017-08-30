@@ -1,6 +1,6 @@
 {
   "name": "json-schema-validator-generator",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "main": "dist/index.js",
   "scripts": {
     "flow": "flow",
@@ -8,7 +8,7 @@
     "prettier": "cat .prettier | xargs prettier --write",
     "prettier-check-stale": "cat .prettier | xargs prettier --list-different || (printf '\\nERROR: Please run \"yarn run prettier\" before commiting!\\n\\n' && exit 1)",
     "jest": "jest --config jestconfig.json",
-    "build": "yarn transpile && yarn transpile-flow && yarn copy-flow && yarn copy-packagejson",
+    "build": "rm -rf dist && yarn transpile && yarn transpile-flow && yarn copy-flow && yarn copy-packagejson",
     "transpile": "BABEL_ENV='test' babel ./src --out-dir ./dist/ --ignore '**/__tests__/*.js'",
     "transpile-flow": "BABEL_ENV='flow' babel ./src --out-dir ./dist-flow/ --ignore '**/__tests__/*.js'",
     "copy-flow": "find dist-flow -type f -print | xargs -I {} rename -s \".js\" \".flow.js\" -s \"dist-flow\" \"dist\" {}",
